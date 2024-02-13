@@ -10,6 +10,22 @@ Before you begin, ensure you have the following installed on your system:
 - Composer
 - Node.js and npm
 
+## Database setup
+
+You will require to have the database setup in order to run the project. 
+You can find the database file shared here https://drive.google.com/file/d/13xx4VNioN381e9rP84JABC_xJXDs8S2V/view
+
+Download it and import it to your local database manager ensure your local env looks something like this
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=kaddah
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 ## Initial Setup
 
 1. Clone the repository to your local machine:
