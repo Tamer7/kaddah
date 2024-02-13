@@ -1,0 +1,15 @@
+[20-Aug-2023 08:41:55 UTC] PHP Fatal error:  Cannot use temporary expression in write context in /home/xhloma2016/kaddahcleaning/storage/framework/views/44b7cd03faf3cc0fec6f8db8282fe1cf563a87e6.php on line 18
+[20-Aug-2023 08:59:54 UTC] PHP Fatal error:  Cannot use temporary expression in write context in /home/xhloma2016/kaddahcleaning/storage/framework/views/44b7cd03faf3cc0fec6f8db8282fe1cf563a87e6.php on line 19
+[20-Aug-2023 09:01:07 UTC] PHP Fatal error:  Cannot use temporary expression in write context in /home/xhloma2016/kaddahcleaning/storage/framework/views/44b7cd03faf3cc0fec6f8db8282fe1cf563a87e6.php on line 19
+[05-Sep-2023 08:22:33 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 38827816 bytes) in /home/xhloma2016/kaddahcleaning/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php on line 63
+[06-Sep-2023 11:05:49 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 38851608 bytes) in /home/xhloma2016/kaddahcleaning/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php on line 63
+[06-Sep-2023 11:06:16 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 39057448 bytes) in /home/xhloma2016/kaddahcleaning/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php on line 63
+[29-Sep-2023 12:02:37 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 90112 bytes) in /home/xhloma2016/kaddahcleaning/vendor/tcg/voyager/src/Http/Controllers/VoyagerCompassController.php on line 291
+[10-Oct-2023 14:36:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function php_info() in /home/xhloma2016/kaddahcleaning/public/info.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/xhloma2016/kaddahcleaning/public/info.php on line 2
+[10-Oct-2023 14:37:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function info() in /home/xhloma2016/kaddahcleaning/public/info.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/xhloma2016/kaddahcleaning/public/info.php on line 2
