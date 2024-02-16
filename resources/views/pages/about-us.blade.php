@@ -1,15 +1,15 @@
 <x-layout title="About">
-  <div class="py-16">
+  <div class="lg:py-16 sm:py-8 py-4 px-8">
     <h1 class="font-semibold text-center text-[42px] text-[theme(colors.blue)]">Your Partners in Cleaning</h1>
     <p class="flex justify-center mt-6">
-      <span class="w-[543px] text-center text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
+      <span class="max-w-[543px] text-center text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
     </p>
   </div>
 
-  <div class="py-5 px-20 relative">
-    <div class="p-16 pt-12 rounded-[40px] bg-[#E5F8FF] our-story">
+  <div class="py-5 lg:px-20 px-8 relative">
+    <div class="lg:p-16 lg:pt-12 p-8 rounded-[40px] bg-[#E5F8FF] our-story">
       <div class="text-center text-2xl">Our Story</div>
-      <div class="grid grid-cols-8 max-h-[480px] min-h-[200px] mt-3">
+      <div class="lg:grid lg:grid-cols-8 lg:max-h-[480px] lg:min-h-[200px] mt-3">
         
         <div class="sr-only" data-te-nav-ref role="tablist">
           <div id="our_story_1_image_pill" data-te-nav-active role="tab" aria-selected="true" data-te-target="#our_story_1_image"></div>
@@ -17,7 +17,7 @@
           <div id="our_story_3_image_pill" data-te-nav role="tab" aria-selected="false" data-te-target="#our_story_3_image"></div>
         </div>
 
-        <div class="col-span-3 flex">
+        <div class="lg:col-span-3 flex">
           <div
             id="our_story_1_image"
             data-te-tab-active
@@ -149,8 +149,8 @@
     </div>
 
     <div class="py-12">
-      <div class="grid grid-cols-2 gap-12">
-        <div class="flex flex-col text-center px-[70px]">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="flex flex-col text-center lg:px-[70px] sm:px-16 px-8">
           <div class="flex justify-center">
             <img
               class="max-h-[320px] mt-3 mb-5"
@@ -163,7 +163,7 @@
           </p>
         </div>
 
-        <div class="flex flex-col text-center px-[70px]">
+        <div class="flex flex-col text-center px-[70px] sm:px-16 px-8">
           <div class="flex justify-center">
             <img
               class="max-h-[320px] mt-3 mb-5"
@@ -179,7 +179,7 @@
     </div>
 
     <div class="py-12">
-      <div class="relative isolate overflow-hidden bg-[theme(colors.blue)] px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+      <div class="relative isolate overflow-hidden bg-[theme(colors.blue)] px-6 pt-16 sm:rounded-3xl rounded-xl lg:px-24 lg:pt-0 sm:px-12 md:pt-24 px-8 lg:flex lg:gap-x-20">
         <div class="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
           <h2 class="text-3xl font-semibold tracking-tight text-white">Download Our Company profile</h2>
           <p class="mt-6 text-lg leading-8 text-white">Break the Figma limits and explore the endless possibilities with Anima.</p>
@@ -187,16 +187,16 @@
             <a href="#" class="rounded-[20px] bg-white px-12 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
-        <div class="relative mt-16 h-80 lg:mt-8">
-          <img class="absolute left-0 top-0 w-[584px] max-w-none" src="{{ asset('images/about/Mockup.png') }}" alt="App screenshot" width="1824" height="1080">
+        <div class="relative mt-16 h-80 lg:mt-8 flex">
+          <img class="lg:absolute lg:left-0 lg:top-0 lg:w-[584px] sm:w-auto w-full sm:h-full mx-auto max-w-none" src="{{ asset('images/about/Mockup.png') }}" alt="App screenshot">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="bg-[#E5F8FF] px-[168px] py-[90px]" style="background-image: url('images/about/back_1.svg')">
+  <div class="bg-[#E5F8FF] lg:px-[168px] sm:px-24 px-8 lg:py-[90px] py-8" style="background-image: url('images/about/back_1.svg')">
     <h3 class="text-3xl font-semibold">Industries we serve</h3>
-    <div class="mt-[50px] grid grid-cols-3 gap-8">
+    <div class="mt-[50px] grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Janitor.svg') }}" alt="">
@@ -242,10 +242,13 @@
     </div>
   </div>
 
-  <div class="px-[110px] py-[70px]">
+  <div class="lg:px-[110px] sm:px-16 px-8 lg:py-[70px] py-8">
     <div class="flex justify-between">
       <h3 class="text-3xl font-semibold">They Satisfied With Our Service</h3>
-      <a href="#" class="font-bold my-auto text-[theme(colors.blue)]">View All Brands</a>
+      <a href="#" class="font-bold my-auto text-[theme(colors.blue)]">
+        <span class="lg:inline-block hidden">View All Brands</span>
+        <i class="lg:hidden fa-solid fa-arrow-right"></i>
+      </a>
     </div>
     <div class="mt-[62px]">
       <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
@@ -254,11 +257,11 @@
     </div>
   </div>
 
-  <div class="px-[210px] py-[100px] grid grid-cols-2 gap-10">
+  <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
     <div>
-      <img class="absolute -translate-y-1/4" src="{{ asset('images/about/image 54.png')}}" alt="">
+      <img class="lg:absolute lg:-translate-y-1/4" src="{{ asset('images/about/image 54.png')}}" alt="">
     </div>
-    <div class="px-[80px]">
+    <div class="lg:px-[80px] px-8">
       <h3 class="text-3xl font-semibold py-5">Our Branches</h3>
       <div class="mt-5">
         <h5 class="text-xl">Dubai</h5>
