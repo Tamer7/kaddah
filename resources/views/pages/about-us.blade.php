@@ -9,7 +9,7 @@
   <div class="py-5 lg:px-20 px-8 relative">
     <div class="lg:p-16 lg:pt-12 p-8 rounded-[40px] bg-[#E5F8FF] our-story">
       <div class="text-center text-2xl">Our Story</div>
-      <div class="lg:grid lg:grid-cols-8 lg:max-h-[480px] lg:min-h-[200px] mt-3">
+      <div class="grid lg:grid-cols-8 lg:max-h-[480px] lg:min-h-[200px] mt-3">
         
         <div class="sr-only" data-te-nav-ref role="tablist">
           <div id="our_story_1_image_pill" data-te-nav-active role="tab" aria-selected="true" data-te-target="#our_story_1_image"></div>
@@ -17,7 +17,7 @@
           <div id="our_story_3_image_pill" data-te-nav role="tab" aria-selected="false" data-te-target="#our_story_3_image"></div>
         </div>
 
-        <div class="lg:col-span-3 flex">
+        <div class="lg:col-span-3 lg:order-first order-1 flex">
           <div
             id="our_story_1_image"
             data-te-tab-active
@@ -56,15 +56,14 @@
           </div>
         </div>
 
-        <div
+        <div class="col-span-1 lg:text-right p-4 lg:flex items-center"
           data-te-nav-ref
-          role="tablist"
-          class="col-span-1 text-right p-4 flex items-center">
+          role="tablist">
           <div
             data-te-perfect-scrollbar-init
             data-te-suppress-scroll-x="true"
             role="presentation"
-            class="overflow-hidden min-h-[300px] py-5 pr-5 relative after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[1px] after:bg-gray-500"
+            class="overflow-hidden lg:min-h-[300px] flex flex-row gap-8 lg:gap-4 lg:flex-col lg:p-5 relative lg:after:content-[''] lg:after:absolute lg:after:right-0 lg:after:top-0 lg:after:bottom-0 lg:after:w-[1px] lg:after:bg-gray-500"
           >
             <div
               type="button"
@@ -94,11 +93,11 @@
           </div>
         </div>
 
-        <div class="col-start-5 col-span-4 flex">
+        <div class="lg:col-start-5 lg:col-span-4 order-2 flex lg:text-left text-center">
           <div
             id="our_story_1"
             data-te-tab-active
-            class="hidden opacity-100 transition-opacity durelativeration-150 p-3 pl-16 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-100 transition-opacity durelativeration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
             role="tabpanel"
             aria-labelledby="our_story_1-tab"
             >
@@ -114,7 +113,7 @@
           <div
             id="our_story_2"
             data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 p-3 pl-16 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
             role="tabpanel"
             aria-labelledby="our_story_2-tab"
             >
@@ -130,7 +129,7 @@
           <div
             id="our_story_3"
             data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 p-3 pl-16 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
             role="tabpanel"
             aria-labelledby="our_story_3-tab"
             >
