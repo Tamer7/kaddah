@@ -161,7 +161,7 @@
           </p>
         </div>
 
-        <div class="flex flex-col text-center px-[70px] sm:px-16 px-8">
+        <div class="flex flex-col text-center lg:px-[70px] sm:px-16 px-8">
           <div class="flex justify-center">
             <img
               class="max-h-[320px] mt-3 mb-5"
@@ -196,42 +196,42 @@
     <h3 class="text-3xl font-semibold">Industries we serve</h3>
     <div class="mt-[50px] grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Janitor.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Commercial cleaning</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Commercial cleaning providers understand the need for versatile and durable machinery suitable for various settings, including offices, retail spaces, and hospitality venues.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Out Patient Department.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Healthcare</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Our clients in the healthcare sector face stringent hygiene and infection control requirements.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Factory.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Industrial</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Industries and manufacturing sites regularly face difficult cleaning requirements with heavy-duty machinery, grease, and industrial residues.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Student Center.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Education</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Educational institutes require user-friendly, reliable cleaning equipment that offer minimal disruption to the education setting.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Service Bell.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Hospitality</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Hotels, resorts, cruise ships, and others in the hospitality sector require efficient, fast, and reliable solutions that can clean guest rooms, lobbies, dining spaces, and other areas in accordance with the industry's high cleanliness standards.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
-        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-start">
+        <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
           <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Pizza.svg') }}" alt="">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Food service</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Kitchens, restaurants, food processing plants, and others in the food service sector require chemicals and cleaning equipment that can simultaneously cover their intensive cleaning requirements and match the strict regulations and standards of sanitization required in the food service sector.</p>
