@@ -20,7 +20,7 @@
       <div class="flex lg:flex-1 p-21">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Cleany</span>
-          <span class="font-semibold text-xl lg:pl-20 md:pl-6">Cleany</span>
+          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -32,12 +32,11 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-28">
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">Product</a>
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">Brands</a>
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">About</a>
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">Blog</a>
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">Events</a>
-        <a href="#" class="text-sm leading-6 hover:text-[theme(colors.blue)]">Contract</a>
+        <a href="/" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Product</a>
+        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
+        <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
+        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
+        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       </div>
@@ -50,7 +49,7 @@
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Cleany</span>
-            <span class="font-semibold text-xl">Cleany</span>
+            <img src="{{ asset('images/about/image 37.png') }}" alt="">
           </a>
           <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
