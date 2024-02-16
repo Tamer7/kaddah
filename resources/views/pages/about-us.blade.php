@@ -257,7 +257,7 @@
   </div>
 
   <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
-    <div>
+    <div class="mx-auto lg:mx-0">
       <img class="lg:absolute lg:-translate-y-1/4" src="{{ asset('images/about/image 54.png')}}" alt="">
     </div>
     <div class="lg:px-[80px] px-8">
