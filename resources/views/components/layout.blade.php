@@ -61,12 +61,11 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">Products</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">Brands</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">About</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">Blog</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">Events</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:bg-gray-50">Contract</a>
+              <a href="/" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Product</a>
+              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
+              <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
+              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
+              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
             </div>
           </div>
         </div>
