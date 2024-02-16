@@ -20,11 +20,11 @@
       <div class="flex lg:flex-1 p-21">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Cleany</span>
-          <span class="font-semibold text-xl pl-20">Cleany</span>
+          <span class="font-semibold text-xl lg:pl-20 md:pl-6">Cleany</span>
         </a>
       </div>
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <button type="button" id="open_mobile_menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -43,16 +43,16 @@
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="lg:hidden invisible" id="mobile_menu" role="dialog" aria-modal="true">
+      <!-- Background backdrop, show/hide based on `lide-over state. -->
       <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Cleany</span>
             <span class="font-semibold text-xl">Cleany</span>
           </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+          <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -76,13 +76,13 @@
   </header>
 
   <main class="relative isolate pt-24">
-    <div class="absolute top-0 left-0">
+    <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
       <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
     </div>
 
     {{ $slot }}
 
-    <div class="absolute top-0 right-0">
+    <div class="absolute top-0 right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
       <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
     </div>
   </main>
@@ -115,6 +115,15 @@
   </footer>
 
   <script src="{{ asset('js/app.js') }}"></script>
+  <script>
+    const mobileMenu = document.getElementById('mobile_menu');
+    document.getElementById('open_mobile_menu').addEventListener('click', () => {
+      mobileMenu.classList.remove('invisible')
+    })
+    document.getElementById('close_mobile_menu').addEventListener('click', () => {
+      mobileMenu.classList.add('invisible');
+    })
+  </script>
   @stack('scripts')
   
 </body>
