@@ -2,12 +2,15 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\Request;
 use Illuminate\View\Component;
 
 class Layout extends Component
 {
 
     public $title = 'Kaddah Cleaning Equipment';
+
+    public $segment_1 = 'product';
 
     /**
      * Create a new component instance.
@@ -18,6 +21,8 @@ class Layout extends Component
     {
         //
         $this->title = $title ? "$title | {$this->title}" : $this->title;
+
+        $this->segment_1 = Request::segment(1);
     }
 
     /**
