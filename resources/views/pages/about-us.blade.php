@@ -6,7 +6,7 @@
     </p>
   </div>
 
-  <div class="py-7 px-20">
+  <div class="py-5 px-20 relative">
     <div class="p-16 pt-12 rounded-[40px] bg-[#E5F8FF] our-story">
       <div class="text-center text-2xl">Our Story</div>
       <div class="grid grid-cols-8 max-h-[480px] min-h-[200px] mt-3">

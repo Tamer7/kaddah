@@ -76,7 +76,15 @@
   </header>
 
   <main class="relative isolate pt-24">
+    <div class="absolute top-0 left-0">
+      <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
+    </div>
+
     {{ $slot }}
+
+    <div class="absolute top-0 right-0">
+      <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
+    </div>
   </main>
 
   <footer class="pt-[72px] pb-[42px] px-[220px] bg-[#e5f8ff]">
