@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +24,10 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', [MainController::class, 'index'])->name('home.index');
 
-Route::get('/contact-us', function() {
+Route::get('/contact-us', function () {
     return view('pages.contact');
 });
-Route::get('/about-us', function() {
+Route::get('/about-us', function () {
     return view('pages.about-us');
 });
 Route::post('/contact-us', [MainController::class, 'contactStore'])->name('contact.store');
@@ -59,7 +60,7 @@ Route::delete('/cart/{product}/{cart}', [CartController::class, 'destroy'])->nam
 
 Route::get('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');//->middleware('auth');
 Route::get('/cart/guest-checkout', [CartController::class, 'checkout'])->name('checkout.guest');
-Route::get('/checkout/request-quote/received', function() {
+Route::get('/checkout/request-quote/received', function () {
     return view('pages.thankyou');
 })->name('checkout.reqquote.received');
 
@@ -100,19 +101,19 @@ Route::get('/dashboard/cancel/{tracking_id}', [UserController::class, 'cancelOrd
 //     return view('pages/about');
 // });
 
-Route::get('/services', function() {
+Route::get('/services', function () {
     return view('pages/services');
 });
 
-Route::get('/media', function() {
+Route::get('/media', function () {
     return view('pages/media');
 });
 
-Route::get('/login-popup', function() {
+Route::get('/login-popup', function () {
     return view('pages.login-popup');
 })->name('login.popup');
 
-Route::post('/login', function() {
+Route::post('/login', function () {
     return view('pages.login-popup');
 })->name('login');
 
@@ -132,7 +133,7 @@ Route::get('/sendmail', function (Request $request) {
     print_r($m);
 });
 
-Route::get('/contact/received', function() {
+Route::get('/contact/received', function () {
     return view('email.thankyou');
 })->name('contact.received');
 

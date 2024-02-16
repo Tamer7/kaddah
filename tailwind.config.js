@@ -3,10 +3,20 @@ module.exports = {
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        blue: '#27aee4'
+      }
+    },
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+    }
   },
-  plugins: [],
+  plugins: [
+    require("tw-elements/dist/plugin.cjs")
+  ],
 }
 
