@@ -9,141 +9,76 @@
   <div class="py-5 lg:px-20 px-8 relative">
     <div class="lg:p-16 lg:pt-12 p-8 rounded-[40px] bg-[#E5F8FF] our-story">
       <div class="text-center text-2xl">Our Story</div>
-      <div class="grid lg:grid-cols-8 lg:max-h-[480px] lg:min-h-[200px] mt-3">
+      <div class="grid lg:grid-cols-8 lg:h-[480px] mt-3">
+
+        @php $data = ["1980s", "1990s", "2000s", "2010s", "2022s"] @endphp
         
         <div class="sr-only" data-te-nav-ref role="tablist">
-          <div id="our_story_1_image_pill" data-te-nav-active role="tab" aria-selected="true" data-te-target="#our_story_1_image"></div>
-          <div id="our_story_2_image_pill" data-te-nav role="tab" aria-selected="false" data-te-target="#our_story_2_image"></div>
-          <div id="our_story_3_image_pill" data-te-nav role="tab" aria-selected="false" data-te-target="#our_story_3_image"></div>
+          @foreach ($data as $item)
+            <div id="our_story_{{ $loop->index }}_image_pill" {{ $loop->first ? 'data-te-nav-active' : '' }} role="tab" aria-selected="true" data-te-target="#our_story_{{ $loop->index }}_image"></div>
+          @endforeach
         </div>
 
         <div class="lg:col-span-3 lg:order-first order-1 flex justify-center">
-          <div
-            id="our_story_1_image"
-            data-te-tab-active
-            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_1-tab"
-            >
-            <img
-              src="{{ asset('images/about/Group 47.png') }}"
-              class="block rounded-lg"
-              alt="Wild Landscape" />
-          </div>
-          <div
-            id="our_story_2_image"
-            data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_2-tab"
-            >
-            <img
-              src="{{ asset('images/about/Group 47.png') }}"
-              class="block rounded-lg"
-              alt="Wild Landscape" />
-          </div>
-          <div
-            id="our_story_3_image"
-            data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_3-tab"
-            >
-            <img
-              src="{{ asset('images/about/Group 47.png') }}"
-              class="block rounded-lg"
-              alt="Wild Landscape" />
-          </div>
+          @foreach ($data as $item)
+            <div
+              id="our_story_{{ $loop->index }}_image"
+              {{ $loop->first ? 'data-te-tab-active' : '' }}
+              class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+              role="tabpanel"
+              aria-labelledby="our_story_{{ $loop->index }}-tab"
+              >
+              <img
+                src="{{ asset('images/about/Group 47.png') }}"
+                class="block rounded-lg"
+                alt="Wild Landscape" />
+            </div>
+          @endforeach
         </div>
 
-        <div class="col-span-1 lg:text-right py-4 lg:p-4 overflow-auto"
+        <div class="col-span-1 lg:text-right py-4 overflow-auto flex lg:justify-end"
           data-te-nav-ref
           role="tablist">
           <div
             data-te-perfect-scrollbar-init
             role="presentation"
-            class="overflow-hidden lg:min-h-[300px] flex flex-row lg:flex-col lg:py-5 relative"
+            class="overflow-hidden flex flex-row lg:flex-col my-auto relative"
           >
-            <a
-              type="button"
-              data-te-target="#our_story_1"
-              data-te-nav-active
-              data-te-toggle="pill"
-              role="tab"
-              class="history cursor-pointer y-2 block border-0 lg:border-b-0 lg:border-r-2 border-gray-600 pr-4 lg:py-2 lg:pr-2 lg:text-3xl text-2xl font-medium leading-tight text-gray-500 hover:text-sky-300 hover:isolate hover:border-sky-300 focus:isolate focus:border-transparent data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:text-[theme(colors.blue)] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[theme(colors.blue)]-400 dark:data-[te-nav-active]:text-[theme(colors.blue)]-400"
-              aria-controls="our_story_1"
-              aria-selected="true">1980s</a>
-            <div
-              type="button"
-              data-te-target="#our_story_2"
-              data-te-toggle="pill"
-              role="tab"
-              class="history cursor-pointer y-2 block border-0 lg:border-b-0 lg:border-r-2 border-gray-600 pr-4 lg:py-2 lg:pr-2 lg:text-3xl text-2xl font-medium leading-tight text-gray-500 hover:text-sky-300 hover:isolate hover:border-sky-300 focus:isolate focus:border-transparent data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:text-[theme(colors.blue)] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[theme(colors.blue)]-400 dark:data-[te-nav-active]:text-[theme(colors.blue)]-400"
-              aria-controls="our_story_2"
-              aria-selected="false">1981s</div>
-            <div
-              type="button"
-              data-te-target="#our_story_3"
-              data-te-toggle="pill"
-              role="tab"
-              class="history cursor-pointer y-2 block border-0 lg:border-b-0 lg:border-r-2 border-gray-600 pr-4 lg:py-2 lg:pr-2 lg:text-3xl text-2xl font-medium leading-tight text-gray-500 hover:text-sky-300 hover:isolate hover:border-sky-300 focus:isolate focus:border-transparent data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:text-[theme(colors.blue)] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[theme(colors.blue)]-400 dark:data-[te-nav-active]:text-[theme(colors.blue)]-400"
-              aria-controls="our_story_3"
-              aria-selected="false">1982s</div>
+            @foreach ($data as $item)
+              <a
+                type="button"
+                data-te-target="#our_story_{{ $loop->index }}"
+                {{ $loop->first ? 'data-te-nav-active' : '' }}
+                data-te-toggle="pill"
+                role="tab"
+                class="history cursor-pointer font-medium y-2 block border-0 lg:border-b-0 lg:border-r border-black pr-4 lg:py-2 lg:pr-5 lg:text-3xl text-2xl font-medium leading-tight text-gray-500 hover:text-sky-300 hover:isolate focus:isolate focus:border-transparent data-[te-nav-active]:border-[theme(colors.blue)] lg:data-[te-nav-active]:border-r-4 data-[te-nav-active]:text-[theme(colors.blue)] dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-[theme(colors.blue)]-400 dark:data-[te-nav-active]:text-[theme(colors.blue)]-400"
+                aria-controls="our_story_{{ $loop->index }}"
+                aria-selected="true">{{ $item }}</a>
+            @endforeach
           </div>
         </div>
 
         <div class="lg:col-start-5 lg:col-span-4 order-2 flex lg:text-left text-center">
-          <div
-            id="our_story_1"
-            data-te-tab-active
-            class="hidden opacity-100 transition-opacity durelativeration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_1-tab"
-            >
-              <div class="flex items-center h-full">
-                <div>
-                  <h5 class="text-3xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">We proudly call ourselves the cleaning pioneers.</h5>
-                  <p class="text-neutral-400">
-                    Emerging from a modest warehouse in the emirate of Sharjah back in the 1980s, we have become deeply embedded in the cleaning industry with a reputation that represents a trusted and well-known name in the region.
-                  </p>
+          @foreach ($data as $item)
+            <div
+              id="our_story_{{ $loop->index }}"
+              {{ $loop->first ? 'data-te-tab-active' : 'data-te-tab' }}
+              class="hidden opacity-100 transition-opacity durelativeration-150 p-3 lg:pl-24 lg:pr-4 ease-linear data-[te-tab-active]:block"
+              role="tabpanel"
+              aria-labelledby="our_story_{{ $loop->index }}-tab"
+              >
+                <div class="flex items-center h-full">
+                  <div>
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">We proudly call ourselves the cleaning pioneers.</h5>
+                    <p class="text-neutral-400 text-lg">
+                      Emerging from a modest warehouse in the emirate of Sharjah back in the 1980s, we have become deeply embedded in the cleaning industry with a reputation that represents a trusted and well-known name in the region.
+                    </p>
+                  </div>
                 </div>
-              </div>
-          </div>
-          <div
-            id="our_story_2"
-            data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_2-tab"
-            >
-              <div class="flex items-center h-full">
-                <div>
-                  <h5 class="text-3xl font-semibold mb-4 leading-[60px] text-gray-700">We proudly call ourselves the cleaning pioneers.</h5>
-                  <p class="text-neutral-400">
-                    Emerging from a modest warehouse in the emirate of Sharjah back in the 1980s, we have become deeply embedded in the cleaning industry with a reputation that represents a trusted and well-known name in the region.
-                  </p>
-                </div>
-              </div>
-          </div>
-          <div
-            id="our_story_3"
-            data-te-tab
-            class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-16 ease-linear data-[te-tab-active]:block"
-            role="tabpanel"
-            aria-labelledby="our_story_3-tab"
-            >
-              <div class="flex items-center h-full">
-                <div>
-                  <h5 class="text-3xl font-semibold mb-4 leading-[60px] text-gray-700">We proudly call ourselves the cleaning pioneers.</h5>
-                  <p class="text-neutral-400">
-                    Emerging from a modest warehouse in the emirate of Sharjah back in the 1980s, we have become deeply embedded in the cleaning industry with a reputation that represents a trusted and well-known name in the region.
-                  </p>
-                </div>
-              </div>
-          </div>
+            </div>
+          @endforeach
         </div>
       </div>
-
     </div>
 
     <div class="py-12">
