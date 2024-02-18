@@ -1,10 +1,12 @@
 <x-layout title="About">
-  <div class="lg:py-16 sm:py-8 py-4 px-8">
-    <h1 class="font-semibold text-center text-[42px] text-[theme(colors.blue)]">Your Partners in Cleaning</h1>
-    <p class="flex justify-center mt-6">
-      <span class="max-w-[543px] text-center text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-    </p>
-  </div>
+  <x-panel>
+    <x-slot name="title">
+      Your Partners in Cleaning
+    </x-slot>
+    <x-slot name="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    </x-slot>
+  </x-panel>
 
   <div class="py-5 lg:px-20 px-8 relative">
     <div class="lg:p-16 lg:pt-12 p-8 rounded-[40px] bg-[#E5F8FF] our-story">

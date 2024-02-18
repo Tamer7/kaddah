@@ -24,12 +24,21 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', [MainController::class, 'index'])->name('home.index');
 
-Route::get('/contact-us', function () {
-    return view('pages.contact');
+Route::get('/products', function () {
+    return view('pages.products');
 });
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
+
+
+
+Route::get('/contact-us', function () {
+    return view('pages.contact');
+});
+
+
+
 Route::post('/contact-us', [MainController::class, 'contactStore'])->name('contact.store');
 
 Route::get('/media/events', [MediaController::class, 'events'])->name('event.index');

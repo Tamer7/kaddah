@@ -16,7 +16,7 @@
 </head>
 <body>
   <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-9" aria-label="Global">
+    <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Cleany</span>
@@ -32,11 +32,12 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-28">
-        <a href="/" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Product</a>
+        <a href="/products" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
         <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
         <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
+        <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
+        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
+        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       </div>
@@ -45,7 +46,7 @@
     <div class="lg:hidden invisible" id="mobile_menu" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on `lide-over state. -->
       <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Cleany</span>
@@ -61,11 +62,12 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="/" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Product</a>
+              <a href="/products" {{ $segment_1 == null ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
               <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
               <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
+              <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
+              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
+              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@
 
     {{ $slot }}
 
-    <div class="absolute top-0 right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
+    <div class="absolute top-[17px] right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
       <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
     </div>
   </main>
