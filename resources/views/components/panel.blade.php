@@ -1,10 +1,10 @@
 {{-- <x-panel :breadcrumbs="undefined|array"></x-panel> --}}
 
+@aware(['breadcrumbs' => []])
+
 @php
 	$hasTitle = !empty($title);
 	$hasContent = !empty($content);
-
-	$breadcrumbs = $attributes['breadcrumbs'] ?? [];
 
 	$paddingY = 16;
 	if (!$hasContent) {
