@@ -13,12 +13,15 @@
   @csrf
 
   <title>{{ $title }}</title>
+
+  @stack('styles')
 </head>
-<body>
+<body class="relative">
+  <img src="/images/test/Home.png" alt="" class="absolute w-full opacity-20">
   <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Cleany</span>
           <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
         </a>
@@ -48,7 +51,7 @@
       <div class="fixed inset-0 z-50"></div>
       <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
+          <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Cleany</span>
             <img src="{{ asset('images/about/image 37.png') }}" alt="">
           </a>
@@ -76,15 +79,19 @@
   </header>
 
   <main class="relative isolate pt-24">
+    @if (empty($attributes["noDecorator"]))
     <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
       <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
     </div>
+    @endif
 
     {{ $slot }}
 
+    @if (empty($attributes["noDecorator"]))
     <div class="absolute top-[17px] right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
       <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
     </div>
+    @endif
   </main>
 
   <footer class="pt-[72px] pb-[42px] bg-[#e5f8ff]">

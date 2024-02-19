@@ -27,6 +27,16 @@ Route::get('/', [MainController::class, 'index'])->name('home.index');
 Route::get('/products', function () {
     return view('pages.products');
 });
+Route::get('/products/{product}', function ($product) {
+    $parents = [
+        [
+            'title' => 'All Categories',
+            'url' => '/products'
+        ]
+    ];
+    $title = $product;
+    return view('pages.products', compact('parents', 'title'));
+});
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });

@@ -177,20 +177,11 @@
     </div>
   </div>
 
-  <div class="lg:px-[110px] sm:px-16 px-8 lg:py-[70px] py-8">
-    <div class="flex justify-between">
-      <h3 class="text-3xl font-semibold">They Satisfied With Our Service</h3>
-      <a href="#" class="font-bold my-auto text-[theme(colors.blue)]">
-        <span class="lg:inline-block hidden">View All Brands</span>
-        <i class="lg:hidden fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-    <div class="mt-[62px]">
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt=""></div>
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
-    </div>
-  </div>
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands">
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt=""></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
+  </x-subpanel>
 
   <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
     <div class="mx-auto lg:mx-0">
