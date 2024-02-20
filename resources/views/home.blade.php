@@ -61,12 +61,14 @@
 @endphp
 
 <x-layout noDecorator>
-  <div class="px-24 relative lg:h-[600px] py-[106px]">
-    <div><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-    <h1 class="font-semibold text-[52px] text-[theme(colors.blue)] py-2 lg:w-[63%]">The region's biggest selection of cleaning solutions</h1>
-    <p class="lg:w-[500px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+  <div class="lg:px-24 px-8 relative lg:h-[600px] py-[106px]">
+    <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
+    <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2 lg:w-[63%] sm:w-[50%]">
+      The region's biggest selection of cleaning solutions
+    </h1>
+    <p class="sm:w-[500px] sm:text-left text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
-    <div class="flex mt-6">
+    <div class="flex mt-6 justify-center sm:justify-start">
       <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
         Our Products
       </a>
@@ -76,25 +78,25 @@
     </div>
 
     <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="absolute bottom-0 right-0">
+      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0">
     </div>
   </div>
 
-  <div class="pt-16 bg-[#E5F8FF]">
-    <div class="pl-32 py-24 flex">
+  <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
+    <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
       <img src="/images/home/Group 59.png" alt="" class="py-4">
-      <div class="pl-20">
-        <h2 class="font-bold text-[46px] lg:max-w-[500px] leading-[52px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
-        <ul class="list-image-[url(/images/checkmark.png)] mt-8">
-          <li class="py-3 pl-6 -ml-6 ist-inside lg:max-w-[500px] flex flex-col">
+      <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
+        <h2 class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
+        <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
+          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
             <h3 class="text-medium text-lg">Market Leaders</h3>
             <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
-          <li class="py-3 pl-6 -ml-6 ist-inside lg:max-w-[500px] flex flex-col">
+          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
             <h3 class="text-medium text-lg">We are Committed</h3>
             <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
-          <li class="py-3 pl-6 -ml-6 ist-inside lg:max-w-[500px] flex flex-col">
+          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
             <h3 class="text-medium text-lg">Trusted Professionals</h3>
             <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
@@ -112,7 +114,7 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
     </x-slot>
 
-    <div class="-mx-[64px] py-4">
+    <div class="lg:-mx-[64px] sm:-mx-4 py-4">
       <div id="carouselPanel"
         class="relative"
         data-te-carousel-init
@@ -128,7 +130,7 @@
               data-te-interval="8000"
               {{ $loop->first ? 'data-te-carousel-active' : ''}}
             >
-              <div class="grid grid-cols-4 gap-14 bg-white" role="presentation">
+              <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-14 bg-white" role="presentation">
                 <div class="category rounded-[30px] hover:border border-[theme(colors.blue)]"
                   data-te-toggle="pill"
                   data-te-target="#category_{{ $category['id'] }}"
@@ -208,7 +210,7 @@
       @endphp
 
       @foreach ($data as $item)
-        <div class="{{ $loop->index ===1 ? 'pt-6' : '' }}">
+        <div class="{{ $loop->index ===1 ? 'lg:pt-6' : '' }}">
           <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <a href="#!">
               <img
@@ -231,7 +233,7 @@
   </x-subpanel>
 
   <x-subpanel title="Read our latest events" more="View All Events">
-    <div class="-mx-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+    <div class="lg:-mx-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
       @php
         $events = [
           [
@@ -271,11 +273,31 @@
     <style>
       [data-te-carousel-active][data-te-carousel-item-end],
       [data-te-carousel-item-next] {
-        transform: translateX(25%);
+        transform: translateX(100%);
       }
       [data-te-carousel-active][data-te-carousel-item-start],
       [data-te-carousel-item-prev] {
-        transform: translateX(-25%);
+        transform: translateX(-100%);
+      }
+      @media (min-width: 640px) {
+        [data-te-carousel-active][data-te-carousel-item-end],
+        [data-te-carousel-item-next] {
+          transform: translateX(50%);
+        }
+        [data-te-carousel-active][data-te-carousel-item-start],
+        [data-te-carousel-item-prev] {
+          transform: translateX(-50%);
+        }
+      }
+      @media (min-width: 1024px) {
+        [data-te-carousel-active][data-te-carousel-item-end],
+        [data-te-carousel-item-next] {
+          transform: translateX(25%);
+        }
+        [data-te-carousel-active][data-te-carousel-item-start],
+        [data-te-carousel-item-prev] {
+          transform: translateX(-25%);
+        }
       }
       [data-te-carousel-item-start],
       [data-te-carousel-item-end] {

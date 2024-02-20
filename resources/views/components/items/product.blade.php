@@ -1,6 +1,6 @@
 <!-- attributes: product => [img, category.title, url(optional), title, type1, type2] -->
 
-<div class="px-4 py-2">
+<div class="px-4 py-2 lg:text-left text-center">
   <img class="mx-auto sm:max-h-[320px] max-h-[200px]" src="{{ $product['img'] }}" alt="">
   <div class="pt-5">{{ $product['category']['title'] }}</div>
   <a href="{{ $product['url'] ?? 'javascript:;' }}" class="underline">

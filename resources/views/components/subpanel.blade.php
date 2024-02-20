@@ -4,15 +4,17 @@
   @endif
 
   <div class="flex justify-between items-center">
-    @if (isset($customTitle))
-      {{ $customTitle }}
-    @elseif (isset($title))
-      <h3 class="text-4xl font-semibold">{{ $title }}</h3>
-    @endif
+    <div class="lg:flex">
+      @if (isset($customTitle))
+        {{ $customTitle }}
+      @elseif (isset($title))
+        <h3 class="text-4xl font-semibold">{{ $title }}</h3>
+      @endif
 
-    @if (isset($description))
-      <div class="max-w-[460px] text-lg">{{ $description }}</div>
-    @endif
+      @if (isset($description))
+        <div class="max-w-[460px] text-lg lg:ml-16">{{ $description }}</div>
+      @endif
+    </div>
 
     <a href="{{ $url ?? '#' }}" class="font-bold text-[theme(colors.blue)]">
       <span class="lg:inline-block hidden">{{ $more }}</span>

@@ -1,25 +1,20 @@
 import {
   Tab,
-  Carousel,
 } from "tw-elements";
-
-const carouselItems = document.querySelectorAll('#carouselPanel .carousel-item');
-carouselItems.forEach((el) => {
-  const minPerSlide = 4
-  let next = el.nextElementSibling
-  for (var i = 1; i < minPerSlide; i++) {
-    if (!next) {
-      next = carouselItems[0]
-    }
-    let node = next.children[0];
-    let cloneChild = node.cloneNode(true)
-    el.children[0].appendChild(cloneChild.children[0]);
-    next = next.nextElementSibling
-  }
-})
 
 const carouselPanel = document.getElementById('carouselPanel');
 const totalPanel = carouselPanel.parentElement;
+const carouselItems = carouselPanel.querySelectorAll('.carousel-item');
+let oldMinPerSlide = 1;
+
+const getMinPerSlide = () => {
+  if (window.innerWidth > 1024)
+    return 4;
+  else if (window.innerWidth > 640)
+    return 2;
+  else
+    return 1;
+};
 
 const closeNavPanel = (target) => {
   const activedNav = target.querySelector('[data-te-nav-active]');
@@ -29,6 +24,38 @@ const closeNavPanel = (target) => {
   activedNav.removeAttribute('data-te-nav-active');
   const tabPane = document.querySelector(activedNav.dataset.teTarget);
   tabPane.removeAttribute('data-te-tab-active');
+}
+
+
+const adjustCarousel = () => {
+  const minPerSlide = getMinPerSlide();
+  if (oldMinPerSlide == minPerSlide)
+    return;
+
+  closeNavPanel(carouselPanel)
+
+  carouselItems.forEach((el) => {
+    let node = el.children[0]
+    while (node.children[1])
+      node.removeChild(node.children[1]);
+  })
+  carouselItems.forEach((el) => {
+    let next = el.nextElementSibling
+    for (var i = 1; i < minPerSlide; i++) {
+      if (!next) {
+        next = carouselItems[0]
+      }
+      let node = next.children[0];
+      let cloneChild = node.cloneNode(true)
+      el.children[0].appendChild(cloneChild.children[0]);
+      next = next.nextElementSibling
+    }
+  })
+  oldMinPerSlide = minPerSlide;
+}
+adjustCarousel();
+window.onresize = () => {
+  adjustCarousel();
 }
 
 carouselPanel.addEventListener('slide.te.carousel', () => {
