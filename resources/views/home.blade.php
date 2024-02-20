@@ -5,7 +5,7 @@
       'id' => 1,
       'img' => '/images/test/image 19.png',
       'title' => 'Machinery',
-      'description' => 'Make your product more eye-catching with a touch of illustration'
+      'description' => 'Make your product more eye-catching with a touch of illustration',
     ],
     [
       'id' => 2,
@@ -19,6 +19,44 @@
       'title' => 'Cleaning tools & Equipment',
       'description' => 'Make your product more eye-catching with a touch of illustration'
     ]
+  ];
+
+  $prouductList = [
+    [
+      'id' => 1,
+      'img' => '/images/test/Team5.png',
+      'title' => 'Mop Head with Plastalsgkerlksd',
+      'type1' => 'AKC',
+      'type2' => 'CM34-SET',
+    ],
+    [
+      'id' => 2,
+      'img' => '/images/test/Team5.png',
+      'title' => 'Mop Head with Plastalsgkerlksd',
+      'type1' => 'AKC',
+      'type2' => 'CM34-SET',
+    ],
+    [
+      'id' => 3,
+      'img' => '/images/test/Team5.png',
+      'title' => 'Mop Head with Plastalsgkerlksd',
+      'type1' => 'AKC',
+      'type2' => 'CM34-SET',
+    ],
+    [
+      'id' => 4,
+      'img' => '/images/test/Team5.png',
+      'title' => 'Mop Head with Plastalsgkerlksd',
+      'type1' => 'AKC',
+      'type2' => 'CM34-SET',
+    ],
+    [
+      'id' => 5,
+      'img' => '/images/test/Team5.png',
+      'title' => 'Mop Head with Plastalsgkerlksd',
+      'type1' => 'AKC',
+      'type2' => 'CM34-SET',
+    ],
   ];
 @endphp
 
@@ -91,7 +129,7 @@
               {{ $loop->first ? 'data-te-carousel-active' : ''}}
             >
               <div class="grid grid-cols-4 gap-14 bg-white" role="presentation">
-                <div class="category rounded-[30px] hover:border-2 hover:border-[theme(colors.blue)]"
+                <div class="category rounded-[30px] hover:border border-[theme(colors.blue)]"
                   data-te-toggle="pill"
                   data-te-target="#category_{{ $category['id'] }}"
                   role="tab"
@@ -123,17 +161,109 @@
         </button>
       </div>
 
-      <div class="mb-6">
-        @foreach ($categoryList as $category)
-          <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-            id="category_{{ $category['id'] }}"
-            role="tabpanel"
-            aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
-            {{ $category['title'] }}
+      @foreach ($categoryList as $category)
+        @if ($loop->index > 4) @break @endif
+
+        <div class="hidden relative pt-6 -mx-6 transition-opacity opacity-0 duration-700 ease-linear data-[te-tab-active]:block"
+          id="category_{{ $category['id'] }}"
+          role="tabpanel"
+          aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
+          <div class="relative border rounded-[30px] border-[theme(colors.blue)]">
+            <div class="triangle border border-[theme(colors.blue)]"></div>
+            <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 py-6">
+              @foreach ($prouductList as $product)
+                @php $product['category'] = $category; @endphp
+                <x-items.product :product="$product" />
+              @endforeach
+            </div>
+            <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
+              <a href="#">View More Products <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
           </div>
-        @endforeach
-      </div>
+        </div>
+      @endforeach
+    </div>
+  </x-subpanel>
+
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="bg-[#E5F8FF]">
+    <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
+      @php
+        $data = [
+          [
+            'img' => '/images/test/LOGO 2.png',
+            'title' => 'Bridfestone',
+            'description' => 'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the '
+          ],
+          [
+            'img' => '/images/test/LOGO 3.png',
+            'title' => 'GIANT',
+            'description' => 'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the '
+          ],
+          [
+            'img' => '/images/test/LOGO 3.png',
+            'title' => 'GIANT',
+            'description' => 'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the '
+          ]
+        ];
+      @endphp
+
+      @foreach ($data as $item)
+        <div class="{{ $loop->index ===1 ? 'pt-6' : '' }}">
+          <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <a href="#!">
+              <img
+                class="rounded-t-lg"
+                src="{{ $item['img'] }}"
+                alt="" />
+            </a>
+            <div class="pt-6">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+                {{ $item['title'] }}
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                {{ $item['description']}}
+              </p>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </x-subpanel>
+
+  <x-subpanel title="Read our latest events" more="View All Events">
+    <div class="-mx-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+      @php
+        $events = [
+          [
+            'img' => '/images/test/Rectangle 46.png',
+            'title' => 'HIGH CLASS CLEANING',
+            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => \Carbon\Carbon::now()
+          ],
+          [
+            'img' => '/images/test/Rectangle 49.png',
+            'title' => 'QUICK WORKER FINDING',
+            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => \Carbon\Carbon::now()
+          ],
+          [
+            'img' => '/images/test/Rectangle 52.png',
+            'title' => 'CUSTOMIZED SERVICE',
+            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => \Carbon\Carbon::now()
+          ],
+          [
+            'img' => '/images/test/Rectangle 55.png',
+            'title' => 'TRAINED WORKERS',
+            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => \Carbon\Carbon::now()
+          ]
+        ]
+      @endphp
+
+      @foreach ($events as $event)
+        <x-items.event :event="$event" />
+      @endforeach
     </div>
   </x-subpanel>
 
@@ -150,6 +280,28 @@
       [data-te-carousel-item-start],
       [data-te-carousel-item-end] {
         transform: translateX(0);
+      }
+      [data-te-nav-active] {
+        border-width: 1px;
+      }
+
+      .triangle {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: -20px;
+        left: 60px;
+        margin: auto 0;
+        width: 42px;
+        height: 42px;
+        transform: rotate(-135deg);
+        background: white;
+        clip-path: polygon(
+          100% 100%,
+          2% 100%,
+          100% 2%
+        );
+        border-radius: 0 0 20px 0;
       }
     </style>
   @endpush

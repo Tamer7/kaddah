@@ -17,7 +17,7 @@
   @stack('styles')
 </head>
 <body class="relative">
-  <img src="/images/test/Home.png" alt="" class="absolute w-full opacity-20">
+  {{-- <img src="/images/test/Home.png" alt="" class="absolute w-full opacity-20"> --}}
   <header class="absolute inset-x-0 top-0 z-50">
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">

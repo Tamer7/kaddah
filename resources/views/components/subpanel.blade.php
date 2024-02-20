@@ -1,4 +1,4 @@
-<div class="lg:px-[116px] sm:px-16 px-8 lg:py-[70px] py-8">
+<div {{ $attributes->class(['lg:px-[116px]', 'sm:px-16', 'px-8', 'lg:py-[70px]', 'py-8']) }}>
   @if (isset($header))
     {{ $header }}
   @endif
