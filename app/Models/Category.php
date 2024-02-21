@@ -15,6 +15,19 @@ class Category extends Model
 
     protected $fillable = ['slug', 'name', 'id', 'parent_id'];
 
+    public function getParentList(Category $category)
+    {
+        if ($category->parent)
+            return $this->getParentList($category->parent)->push($category);
+
+        return collect([$category]);
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(self::class, 'parent_id', 'id');
+    }
+
     public function parentId()
     {
         return $this->belongsTo(self::class, 'parent_id', 'id')->with('parentId');

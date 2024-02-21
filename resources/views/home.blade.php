@@ -120,7 +120,7 @@
                 @if ($loop->index > 4) @break @endif
                 @php
                   $item = [
-                    'img' => asset('storage/'.$subcategory->image),
+                    'img' => asset('storage/' . $subcategory->image),
                     'title' => $subcategory->name
                   ]
                 @endphp

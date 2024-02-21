@@ -7,6 +7,7 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -24,19 +25,13 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', [MainController::class, 'index'])->name('home.index');
 
-Route::get('/products', function () {
-    return view('pages.products');
-});
-Route::get('/products/{product}', function ($product) {
-    $parents = [
-        [
-            'title' => 'All Categories',
-            'url' => '/products'
-        ]
-    ];
-    $title = $product;
-    return view('pages.products', compact('parents', 'title'));
-});
+Route::controller(CategoryController::class)
+    ->name('categories.')
+    ->group(function() {
+        Route::get('/categories', 'index')->name('index');
+        Route::get('/categories/{category}', 'subcategory')->name('sub');
+    }
+);
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
