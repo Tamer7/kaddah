@@ -1,7 +1,5 @@
 {{-- <x-panel :breadcrumbs="undefined|array"></x-panel> --}}
 
-@aware(['breadcrumbs' => []])
-
 @php
 	$hasTitle = !empty($title);
 	$hasContent = !empty($content);
@@ -13,11 +11,11 @@
 	}
 @endphp
 
-<div class="px-8 py-4 lg:px-48 lg:py-{{ $paddingY }}">
+<div class="px-8 py-4 lg:px-32 lg:py-{{ $paddingY }}">
 	<div class="relative flex items-center">
-		<div class="absolute font-bold text-lg">
+		<div class="absolute font-bold text-lg flex items-center">
 			@foreach ($breadcrumbs as $name => $url)
-				@if (!$loop->first) <i class="fa-solid fa-chevron-left mx-2 text-xs"></i>@endif <a href="{{ $url }}" class="underline">{{ $name }}</a>
+				@if (!$loop->first) <i class="fa-solid fa-chevron-left mx-2 text-xs"></i>@endif <a href="{{ $url }}" class="underline max-w-[130px] whitespace-nowrap overflow-hidden text-ellipsis">{{ $name }}</a>
 			@endforeach
 		</div>
 		@if ($title)

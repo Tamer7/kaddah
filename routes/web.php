@@ -8,6 +8,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -32,9 +33,27 @@ Route::controller(CategoryController::class)
         Route::get('/categories/{category}', 'subcategory')->name('sub');
     }
 );
+Route::controller(ProductController::class)
+    ->name('products.')
+    ->group(function() {
+        Route::get('/products', 'index')->name('index');
+        Route::get('/products/{product}', 'product')->name('product');
+    })
+;
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
