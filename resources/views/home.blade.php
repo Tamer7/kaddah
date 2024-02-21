@@ -1,65 +1,3 @@
-@php
-  // test
-  $categoryList = [
-    [
-      'id' => 1,
-      'img' => '/images/test/image 19.png',
-      'title' => 'Machinery',
-      'description' => 'Make your product more eye-catching with a touch of illustration',
-    ],
-    [
-      'id' => 2,
-      'img' => '/images/test/image 22.png',
-      'title' => 'Cleaning Trolley',
-      'description' => 'Make your product more eye-catching with a touch of illustration'
-    ],
-    [
-      'id' => 3,
-      'img' => '/images/test/image 32.png',
-      'title' => 'Cleaning tools & Equipment',
-      'description' => 'Make your product more eye-catching with a touch of illustration'
-    ]
-  ];
-
-  $prouductList = [
-    [
-      'id' => 1,
-      'img' => '/images/test/Team5.png',
-      'title' => 'Mop Head with Plastalsgkerlksd',
-      'type1' => 'AKC',
-      'type2' => 'CM34-SET',
-    ],
-    [
-      'id' => 2,
-      'img' => '/images/test/Team5.png',
-      'title' => 'Mop Head with Plastalsgkerlksd',
-      'type1' => 'AKC',
-      'type2' => 'CM34-SET',
-    ],
-    [
-      'id' => 3,
-      'img' => '/images/test/Team5.png',
-      'title' => 'Mop Head with Plastalsgkerlksd',
-      'type1' => 'AKC',
-      'type2' => 'CM34-SET',
-    ],
-    [
-      'id' => 4,
-      'img' => '/images/test/Team5.png',
-      'title' => 'Mop Head with Plastalsgkerlksd',
-      'type1' => 'AKC',
-      'type2' => 'CM34-SET',
-    ],
-    [
-      'id' => 5,
-      'img' => '/images/test/Team5.png',
-      'title' => 'Mop Head with Plastalsgkerlksd',
-      'type1' => 'AKC',
-      'type2' => 'CM34-SET',
-    ],
-  ];
-@endphp
-
 <x-layout noDecorator>
   <div class="lg:px-24 px-8 relative lg:h-[600px] py-[106px]">
     <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
@@ -124,7 +62,14 @@
           role="tablist"
           data-te-nav-ref
         >
-          @foreach ($categoryList as $category)
+          @foreach ($categories as $category)
+            @php
+              $item = [
+                'img' => asset('storage/'.$category->image),
+                'title' => $category->name
+              ]
+            @endphp
+
             <div class="carousel-item relative {{ $loop->first ? '' : 'hidden' }} float-left -mr-[100%] w-full transition-transform duration-[1200ms] ease-in-out motion-reduce:transition-none"
               data-te-carousel-item
               data-te-interval="8000"
@@ -138,7 +83,7 @@
                   aria-controls="tabs-messages"
                   aria-selected="false"
                 >
-                  <x-items.category :category="$category" />
+                  <x-items.category :category="$item" />
                 </div>
               </div>
             </div>
@@ -163,9 +108,7 @@
         </button>
       </div>
 
-      @foreach ($categoryList as $category)
-        @if ($loop->index > 4) @break @endif
-
+      @foreach ($categories as $category)
         <div class="hidden relative pt-6 -mx-6 transition-opacity opacity-0 duration-700 ease-linear data-[te-tab-active]:block"
           id="category_{{ $category['id'] }}"
           role="tabpanel"
@@ -173,9 +116,15 @@
           <div class="relative border rounded-[30px] border-[theme(colors.blue)]">
             <div class="triangle border border-[theme(colors.blue)]"></div>
             <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 py-6">
-              @foreach ($prouductList as $product)
-                @php $product['category'] = $category; @endphp
-                <x-items.product :product="$product" />
+              @foreach ($category->children as $subcategory)
+                @if ($loop->index > 4) @break @endif
+                @php
+                  $item = [
+                    'img' => asset('storage/'.$subcategory->image),
+                    'title' => $subcategory->name
+                  ]
+                @endphp
+                <x-items.category :category="$item" />
               @endforeach
             </div>
             <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">

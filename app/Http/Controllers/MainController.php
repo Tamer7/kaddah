@@ -19,7 +19,11 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $categories = Category::with(['products', 'children'])
+            ->whereNull('parent_id')
+            ->get();
+
+        return view('home', compact('categories'));
 
 
 
