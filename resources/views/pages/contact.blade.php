@@ -11,11 +11,11 @@
   <div class="lg:container py-8">
     <div class="">
       <div class="text-center text-[theme(colors.blue)] text-2xl">Message Us</div>
-      <div class="grid grid-rows-4 divide-y">
-        <div class="py-2">Your Name</div>
-        <div class="py-2">Phone Number</div>
-        <div class="py-2">Email</div>
-        <div class="py-2">Message</div>
+      <div class="grid grid-rows-4 divide-y  text-neutral-600">
+        <div class="py-4">Your Name</div>
+        <div class="py-4">Phone Number</div>
+        <div class="py-4">Email</div>
+        <div class="py-4">Message</div>
       </div>
       <button class="mt-8 rounded-full px-8 py-4 bg-gray-800 text-white">Apply</button>
     </div>
