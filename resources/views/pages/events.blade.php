@@ -8,7 +8,7 @@
     </x-slot>
   </x-panel>
 
-  <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2">
+  <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2 px-4 gap-8">
     @foreach ($events as $event)
       <x-items.event :event="$event" />
     @endforeach
