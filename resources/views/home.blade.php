@@ -185,30 +185,30 @@
     <div class="lg:-mx-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
       @php
         $events = [
-          [
-            'img' => '/images/test/Rectangle 46.png',
+          collect([
+            'image' => '/images/test/Rectangle 46.png',
             'title' => 'HIGH CLASS CLEANING',
-            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => \Carbon\Carbon::now()
-          ],
-          [
-            'img' => '/images/test/Rectangle 49.png',
+            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => '2024-2-24'
+          ]),
+          collect([
+            'image' => '/images/test/Rectangle 49.png',
             'title' => 'QUICK WORKER FINDING',
-            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => \Carbon\Carbon::now()
-          ],
-          [
-            'img' => '/images/test/Rectangle 52.png',
+            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => '2024-2-24'
+          ]),
+          collect([
+            'image' => '/images/test/Rectangle 52.png',
             'title' => 'CUSTOMIZED SERVICE',
-            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => \Carbon\Carbon::now()
-          ],
-          [
-            'img' => '/images/test/Rectangle 55.png',
+            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => '2024-2-24'
+          ]),
+          collect([
+            'image' => '/images/test/Rectangle 55.png',
             'title' => 'TRAINED WORKERS',
-            'description' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => \Carbon\Carbon::now()
-          ]
+            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
+            'date' => '2024-2-24'
+          ])
         ]
       @endphp
 

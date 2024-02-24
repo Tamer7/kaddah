@@ -1,11 +1,11 @@
-<x-layout title="todo" noDecorator>
+<x-layout title="{{ $product->name }}" noDecorator>
   <div class="lg:py-[20px] lg:px-[80px] p-8 grid lg:grid-cols-9 gap-4">
     <div class="col-span-1 grid lg:grid-rows-4 lg:grid-cols-1 grid-cols-4 gap-1"
       role="tablist"
       data-te-nav-ref
     >
       <div class="flex">
-        <img src="{{ asset("storage/{product->image}") }}"
+        <img src="{{ asset("storage/{$product->image}") }}"
           class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
           data-te-toggle="pill"
           data-te-target="#tabs-image-0"

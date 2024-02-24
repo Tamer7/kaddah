@@ -9,6 +9,8 @@
 		if ($hasTitle) $paddingY = 8;
 		else $paddingY = 4;
 	}
+
+	$breadcrumbs = $breadcrumbs ?? [];
 @endphp
 
 <div class="px-8 py-4 lg:px-32 lg:py-{{ $paddingY }}">

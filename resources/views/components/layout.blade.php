@@ -80,17 +80,17 @@
 
   <main class="relative isolate pt-24">
     @if (empty($attributes["noDecorator"]))
-    <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
-      <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
-    </div>
+      <div class="absolute top-0 left-0 -z-10 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
+        <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
+      </div>
     @endif
 
     {{ $slot }}
 
     @if (empty($attributes["noDecorator"]))
-    <div class="absolute top-[17px] right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
-      <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
-    </div>
+      <div class="absolute top-[17px] -z-10 right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
+        <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
+      </div>
     @endif
   </main>
 
