@@ -1,10 +1,10 @@
 <x-layout title="Events">
   <x-panel>
     <x-slot name="title">
-      All Events
+      Latest Events
     </x-slot>
     <x-slot name="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+      Get updated on the latest events happening at Kaddah Cleaning! Stay informed about our upcoming activities, promotions, and special offers.
     </x-slot>
   </x-panel>
 
