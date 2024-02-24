@@ -4,10 +4,11 @@ import {
   PerfectScrollbar,
   Tab,
   Carousel,
+  Collapse,
   initTE,
 } from "tw-elements";
 
-initTE({ PerfectScrollbar, Tab, Carousel });
+initTE({ PerfectScrollbar, Tab, Carousel, Collapse });
 
 const tabEleList = document.querySelectorAll('.our-story .history');
 tabEleList.forEach(el => el.addEventListener('show.te.tab', ({ target }) => {

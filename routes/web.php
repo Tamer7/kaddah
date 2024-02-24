@@ -54,12 +54,20 @@ Route::controller(ArticleController::class)
         Route::get('/blogs', 'index')->name('index');
     })
 ;
+Route::controller(BrandController::class)
+    ->name('brands.')
+    ->group(function() {
+        Route::get('/brands', 'index')->name('index');
+        Route::get('/brands/{slug}', 'show')->name('show');
+    })
+;
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
 Route::get('/contact-us', function () {
     return view('pages.contact');
 });
+
 
 
 
@@ -92,9 +100,6 @@ Route::get('/category', [ShopController::class, 'parent'])->name('category.paren
 Route::get('/category/{parent}', [ShopController::class, 'child'])->name('category.child');
 Route::get('/category/{parent}/{child}', [ShopController::class, 'products'])->name('category.products');
 Route::get('/category/{parent}/{child}/{slug}', [ShopController::class, 'product'])->name('product.show');
-
-Route::get('/brands', [BrandController::class, 'index'])->name('brand.index');
-Route::get('/brands/{slug}', [BrandController::class, 'show'])->name('brand.show');
 
 Route::get('/product/modal/{slug}', [MainController::class, 'modal'])->name('product.modal');
 

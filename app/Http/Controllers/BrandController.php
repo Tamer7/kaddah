@@ -11,18 +11,17 @@ use Carbon\Carbon;
 
 class BrandController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $allBrands = Brand::all();
 
         $brands = Brand::where('parent_id', null)->get();
         
-        return view('brands.brands')->with([
-            'brands'   =>   $brands,
-            'allBrands' =>  $allBrands
-        ]);
+        return view('brands.brands', compact('brands', 'allBrands'));
     }
 
-    public function show($slug) {
+    public function show($slug)
+    {
         if(request()->show) {
             $pagination = request()->show;
         } else {
