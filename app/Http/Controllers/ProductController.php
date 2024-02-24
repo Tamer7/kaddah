@@ -15,7 +15,7 @@ class ProductController extends Controller
         $categoryId = $request->category_id;
 
         $category = Category::find($categoryId);
-        $parents = $category->getParentList($category)
+        $parents = Category::getParentList($category)
             ->map(function ($_category) {
                 return [
                     'title' => $_category->name,
@@ -35,8 +35,31 @@ class ProductController extends Controller
         return view('pages.products', compact('parents', 'category', 'products'));
     }
 
-    public function product(Request $request)
+    public function product(Request $request, Product $product)
     {
-        return 'test';
+        $productId = $product->id;
+
+        $category = Category::where('id', $request->category_id)->first();
+
+        $categoryNames = Category::getParentList($category)
+            ->map(function ($_category) {
+                return $_category->name;
+            });
+            
+        $features = $product->features()->get();
+
+        $relate = $product->related()->count();
+
+        if ($relate > 0) {
+            $related = $product->related()->where('status', 1)->get();
+        } else {
+            $related = Product::whereHas('categories.products', function ($q) use ($productId) {
+                $q->where('product_id', $productId);
+            })->where('id', '<>', $productId)->where('status', 1)->inRandomOrder()->limit(10)->get();
+        }
+
+        $product->file = json_decode($product->file);
+        
+        return view('pages.product', compact('categoryNames', 'product', 'features', 'related'));
     }
 }

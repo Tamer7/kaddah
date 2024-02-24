@@ -13,10 +13,10 @@ class Category extends Model
 
     protected $fillable = ['slug', 'name', 'id', 'parent_id'];
 
-    public function getParentList(Category $category)
+    public static function getParentList(Category $category)
     {
         if ($category->parent)
-            return $this->getParentList($category->parent)->push($category);
+            return self::getParentList($category->parent)->push($category);
 
         return collect([$category]);
     }
