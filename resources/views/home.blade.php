@@ -189,25 +189,25 @@
             'image' => '/images/test/Rectangle 46.png',
             'title' => 'HIGH CLASS CLEANING',
             'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => '2024-2-24'
+            'created_at' => '2024-2-24'
           ]),
           collect([
             'image' => '/images/test/Rectangle 49.png',
             'title' => 'QUICK WORKER FINDING',
             'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => '2024-2-24'
+            'created_at' => '2024-2-24'
           ]),
           collect([
             'image' => '/images/test/Rectangle 52.png',
             'title' => 'CUSTOMIZED SERVICE',
             'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => '2024-2-24'
+            'created_at' => '2024-2-24'
           ]),
           collect([
             'image' => '/images/test/Rectangle 55.png',
             'title' => 'TRAINED WORKERS',
             'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'date' => '2024-2-24'
+            'created_at' => '2024-2-24'
           ])
         ]
       @endphp

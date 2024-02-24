@@ -57,23 +57,22 @@ Route::controller(ArticleController::class)
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/contact-us', function () {
     return view('pages.contact');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
