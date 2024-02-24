@@ -5,7 +5,7 @@
       data-te-nav-ref
     >
       <div class="flex">
-        <img src="{{ asset("images/test/Team5.png") }}"
+        <img src="{{ asset("storage/{product->image}") }}"
           class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
           data-te-toggle="pill"
           data-te-target="#tabs-image-0"
@@ -38,8 +38,7 @@
         role="tabpanel"
         aria-labelledby="tabs-home-tab"
         data-te-tab-active>
-        {{-- <img src="{{ asset("storage/{$product->image}") }}" alt="" class="lg:w-[480px] lg:h-[540px]"> --}}
-        <img src="{{ asset("images/test/Team5.png") }}" alt="" class="mx-auto max-h-[800px]">
+        <img src="{{ asset("storage/{$product->image}") }}" alt="" class="mx-auto max-h-[800px]">
       </div>
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
@@ -48,8 +47,7 @@
             id="tabs-image-{{ $index + 1 }}"
             role="tabpanel"
             aria-labelledby="tabs-image-tab">
-            {{-- <img src="{{ asset("storage/$image") }}" alt="" class="lg:w-[480px] lg:h-[540px]"> --}}
-            <img src="{{ asset("images/test/Team5.png") }}" alt="" class="mx-auto max-h-[800px]">
+            <img src="{{ asset("storage/$image") }}" alt="" class="mx-auto max-h-[800px]">
           </div>
         @endforeach
       @endif
@@ -58,8 +56,7 @@
       <div class="relative before:-z-10 before:absolute before:-top-[10px] before:-bottom-[10px] lg:before:-left-[400px] before:-left-8 lg:before:-right-[80px] before:-right-8 before:content-[''] before:bg-[#e5f8ff] lg:before:rounded-l-full">
         <div class="font-bold text-[21px]">Green Machine With Single Phase / 2 Hp</div>
         <div class="flex items-center py-8">
-          {{-- <img src="{{ asset('storage/'.$product->brand->image) }}" alt=""> --}}
-          <img src="{{ asset("images/test/Team5.png") }}" alt="" class="w-[108px] h-[60px]">
+          <img src="{{ asset('storage/'.$product->brand->image) }}" alt="" class="w-[108px] h-[60px]">
           <div class="ml-4">
             {{ $categoryNames->join(' < ') }}
           </div>
