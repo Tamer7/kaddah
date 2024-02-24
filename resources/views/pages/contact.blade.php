@@ -1,311 +1,252 @@
-@extends('master')
-
-@section('title', 'Contact Us')
-
-@section('content')
-
-<!-- Start of Main -->
-<main class="main">
-    <!-- Start of Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h1 class="page-title mb-0">
-                CONTACT US
-            </h1>
-        </div>
-    </div>
-    <br />
-    <!-- End of Page Header -->
-
-    <!-- Start of Breadcrumb -->
-    <!-- <nav class="breadcrumb-nav mb-10 pb-1">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="/">Home</a></li>
-                <li>Contact Us</li>
-            </ul>
-        </div>
-    </nav> -->
-    <!-- End of Breadcrumb -->
-
-    <!-- Start of PageContent -->
-    <div class="page-content contact-us">
-        <div class="container">
-            <section class="content-title-section mb-10">
-                <h3 class="title title-center mb-3">
-                    Our Contact Details
-                </h3>
-                <p class="text-center">
-                    Get in touch with us if you have any questions or feedback, or if you are interested in our
-                    cleaning solutions.
-                </p>
-            </section>
-            <!-- End of Contact Title Section -->
-
-            <section class="contact-information-section mb-10">
-                <div class="row cols-xl-4 cols-md-4 cols-sm-12" style="justify-content:space-evenly">
-                    <div class="icon-box text-center icon-box-primary mb-5">
-                        <span class="icon-box-icon icon-email">
-                            <i class="w-icon-envelop-closed"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h4 class="icon-box-title">E-mail Address</h4>
-                            <p><a href="mailto:info@kicuae.com">info@kicuae.com</a></p>
-                        </div>
-                    </div>
-                    <div class="icon-box text-center icon-box-primary mb-5">
-                        <span class="icon-box-icon icon-headphone">
-                            <i class="w-icon-headphone"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h4 class="icon-box-title">Phone Number</h4>
-                            <p><a href="tel:+97142384774">+971 4 238 4774</a></p>
-                        </div>
-                    </div>
-                    <div class="icon-box text-center icon-box-primary mb-5">
-                        <span class="icon-box-icon icon-map-marker">
-                            <i class="w-icon-map-marker"></i>
-                        </span>
-                        <div class="icon-box-content">
-                            <h4 class="icon-box-title">Address</h4>
-                            <p>Gate 1, Area 598, Building 1767,</p>
-                            <p>Street 40, DIP 1, Dubai, United Arab Emirates</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <!-- End of Contact Information section -->
-
-            <hr class="divider mb-10 pb-1">
-
-            <section class="contact-section">
-                <div class="row gutter-lg pb-3">
-                    <div class="col-lg-6 mb-8">
-                        <h4 class="title mb-3">FAQs</h4>
-                        <div class="accordion accordion-bg accordion-gutter-md accordion-border">
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#collapse1" class="collapse">What areas do you cover for shipping?</a>
-                                </div>
-                                <div id="collapse1" class="card-body expanded">
-                                    <p class="mb-0">
-                                        We provide shipping across the entire United Arab Emirates and offer export services to
-                                        countries within the GCC, the Middle East, and Africa.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#collapse2" class="expand">Do you provide rental cleaning equipment?</a>
-                                </div>
-                                <div id="collapse2" class="card-body collapsed">
-                                    <p class="mb-0">
-                                    At the minute, we do not rent out any of the cleaning equipment in our
-                                    catalogs. We do have plans however to operate a rent-out scheme in the distant future.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#collapse3" class="expand">How can I obtain a quotation for the products I need?</a>
-                                </div>
-                                <div id="collapse3" class="card-body collapsed">
-                                    <p class="mb-0">
-                                    You may request a quotation by adding the desired products to your cart
-                                    and providing your contact details. Once you submit your request for quotation, our sales team
-                                    will respond with an official quote within 24 hours.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#collapse4" class="expand">Do you offer demonstrations, training, or assembly for specific products?</a>
-                                </div>
-                                <div id="collapse4" class="card-body collapsed">
-                                    <p class="mb-0">
-                                        We are committed to ensuring your satisfaction and offer demonstrations, live training, and
-                                        product assembly as needed. Our knowledgeable sales team is available to assist with these
-                                        services.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header">
-                                    <a href="#collapse5" class="expand">What support is available through your after-sales customer service?</a>
-                                </div>
-                                <div id="collapse5" class="card-body collapsed">
-                                    <p class="mb-0">
-                                        Our after-sales support team is readily available to assist with additional requests, training
-                                        instructions, maintenance, and more. For urgent inquiries, please contact our main service
-                                        landline at <span><a href="tel:+97142384774">+971 4 238 4774.</a></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-8">
-                        <h4 class="title mb-3">Send Us a Message</h4>
-                        <form class="form contact-us-form" action="{{ route('contact.store') }}" method="post">
-                            @csrf
-                            <div class="form-group">
-                                <label for="username">Full Name *</label>
-                                <input type="text" name="name"
-                                    class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email_1">Contact Number *</label>
-                                <input type="text" name="mobile"
-                                    class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email_1">Email Address *</label>
-                                <input type="email" name="email"
-                                    class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea name="message" cols="30" rows="5"
-                                    class="form-control" required></textarea>
-                            </div>
-                            <!-- Google Recaptcha -->
-                            <div class="g-recaptcha mt-4" data-sitekey="{{config('services.recaptcha.key')}}" data-validate="{required:true}"></div>
-                            <button type="submit" class="btn btn-dark btn-rounded">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <!-- End of Contact Section -->
-            
-           <section>
-
-    <div class="base-header">
-        <h2>Showroom Locations</h2>
+<x-layout title="Contact-Us">
+  <x-panel>
+    <x-slot name="title">
+    Our Contact Details
+    </x-slot>
+    <x-slot name="content">
+    Get in touch with us if you have any questions or feedback, or if you are interested in our cleaning solutions.
+    </x-slot>
+  </x-panel>
+  
+  <div class="lg:container py-8">
+    <div class="">
+      <div class="text-center text-[theme(colors.blue)] text-2xl">Message Us</div>
+      <div class="grid grid-rows-4 divide-y">
+        <div class="py-2">Your Name</div>
+        <div class="py-2">Phone Number</div>
+        <div class="py-2">Email</div>
+        <div class="py-2">Message</div>
+      </div>
+      <button class="mt-8 rounded-full px-8 py-4 bg-gray-800 text-white">Apply</button>
     </div>
 
+    <div class="mt-16 rounded-2xl bg-[#e5f8ff] p-[60px]">
+      <div class="font-semibold text-[34px] text-center">FAQs</div>
+      <div class="mt-8">
+        <div id="accordionFlushExample" class="grid grid-row-4 gap-16">
+          <div class="rounded-2xl bg-white">
+            <h2 class="mb-0" id="flush-headingOne">
+              <button class="rounded-2xl group relative flex w-full items-center bg-white p-8 font-medium text-[22px] text-left text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne">
+                What areas do you cover for shipping?
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="!visible border-0 text-neutral-400"
+              data-te-collapse-item
+              data-te-collapse-show
+              aria-labelledby="flush-headingOne"
+              data-te-parent="#accordionFlushExample">
+              <div class="p-8 pt-0">
+                We provide shipping across the entire United Arab Emirates and offer export services to countries within the GCC, the Middle East, and Africa.
+              </div>
+            </div>
+          </div>
 
-    <div class="row contact_pg_address_row">
-        <div class="col-md-4 col-sm-6" style="flex: 1;">
-            <div class="contact_pg_address">
-                <div class="single_con_add">
-                    <i class="fa fa-home"></i>
-                    <span style="font-weight: bold;">Address:</span>
-                    <br>
-                    <span>Al Khabaisi | Speedex Center <br> Dubai - UAE </span>
-                </div>
+          <div class="rounded-2xl bg-white">
+            <h2 class="mb-0" id="flush-headingTwo">
+              <button class="rounded-2xl group relative flex w-full items-center border-0 bg-white p-8 font-medium text-[22px] text-left text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo">
+                Do you provide rental cleaning equipment?
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="!visible hidden text-neutral-400"
+              data-te-collapse-item
+              aria-labelledby="flush-headingTwo"
+              data-te-parent="#accordionFlushExample">
+              <div class="p-8 pt-0">
+                At the minute, we do not rent out any of the cleaning equipment in our catalogs. We do have plans however to operate a rent-out scheme in the distant future.
+              </div>
             </div>
-        </div>
-        <div class="col-md-12 col-sm-12" style="flex: 4;">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="500" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=AKC%20Cleaning%20Equipments%20speedex%20center&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    </iframe>
-                </div>
+          </div>
+
+          <div class="rounded-2xl bg-white">
+            <h2 class="mb-0" id="flush-headingThree">
+              <button class="rounded-2xl group relative flex w-full items-center border-0 bg-white p-8 font-medium text-[22px] text-left text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree">
+                How can I obtain a quotation for the products I need?
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="!visible hidden text-neutral-400"
+              data-te-collapse-item
+              aria-labelledby="flush-headingThree"
+              data-te-parent="#accordionFlushExample">
+              <div class="p-8 pt-0">
+                You may request a quotation by adding the desired products to your cart and providing your contact details. Once you submit your request for quotation, our sales team will respond with an official quote within 24 hours.
+              </div>
             </div>
+          </div>
+
+          <div class="rounded-2xl bg-white">
+            <h2 class="mb-0" id="flush-headingFour">
+              <button class="rounded-2xl group relative flex w-full items-center border-0 bg-white p-8 font-medium text-[22px] text-left text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour">
+                Do you offer demonstrations, training, or assembly for specific products?
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="!visible hidden text-neutral-400"
+              data-te-collapse-item
+              aria-labelledby="flush-headingFour"
+              data-te-parent="#accordionFlushExample">
+              <div class="p-8 pt-0">
+                We are committed to ensuring your satisfaction and offer demonstrations, live training, and
+                product assembly as needed. Our knowledgeable sales team is available to assist with these
+                services.
+              </div>
+            </div>
+          </div>
+          
+          <div class="rounded-2xl bg-white">
+            <h2 class="mb-0" id="flush-headingFive">
+              <button class="rounded-2xl group relative flex w-full items-center border-0 bg-white p-8 font-medium text-[22px] text-left text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
+                type="button"
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive">
+                What support is available through your after-sales customer service?
+                <span
+                  class="-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="!visible hidden text-neutral-400"
+              data-te-collapse-item
+              aria-labelledby="flush-headingFive"
+              data-te-parent="#accordionFlushExample">
+              <div class="p-8 pt-0">
+                Our after-sales support team is readily available to assist with additional requests, training
+                instructions, maintenance, and more. For urgent inquiries, please contact our main service
+                landline at <span><a href="tel:+97142384774">+971 4 238 4774.</a></span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="row contact_pg_address_row" >
-        <div class="col-md-4 col-sm-6" style="flex: 1;">
-            <!-- profile 4-->
-            <div class="contact_pg_address">
-                <div class="single_con_add">
-                    <i class="fa fa-home"></i>
-                    <span style="font-weight: bold;">Address:</span>
-                    <br>
-                    <span>Al Ras | Deira <br> Dubai - UAE</span>
-                    </p>
-                </div>
-            </div>
+    <div class="relative lg:px-[0] sm:px-16 px-8 lg:py-[160px] py-8 grid lg:grid-cols-2 gap-10">
+      <div class="mx-auto lg:mx-0">
+        <img class="lg:absolute lg:-translate-y-1/4" src="{{ asset('images/about/image 54.png')}}" alt="">
+      </div>
+      <div class="lg:px-[80px] px-8">
+        <h3 class="text-3xl font-semibold py-5">Our Branches</h3>
+        <div class="mt-5">
+          <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Dubai</h5>
+          <p class="text-neutral-400 mt-2 flex items-center">
+            <i class="fa-solid fa-phone-flip mr-4"></i>
+            Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt
+          </p>
         </div>
-        <div class="col-md-12 col-sm-12" style="flex: 4;">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="500" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=AKC%20Cleaning%20Equipments%20Al%20Khor%20Street&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    </iframe>
-                </div>
-            </div>
+        <div class="mt-5">
+          <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Abu Dahbi</h5>
+          <p class="text-neutral-400 mt-2 flex items-center">
+            <i class="fa-solid fa-phone-flip mr-4"></i>
+            Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt
+          </p>
         </div>
+      </div>
     </div>
-
-    <div class="row contact_pg_address_row">
-        <div class="col-md-4 col-sm-6" style="flex: 1;">
-            <div class="contact_pg_address">
-                <div class="single_con_add">
-                    <i class="fa fa-home"></i>
-                    <span style="font-weight: bold;">Address:</span>
-                    <br>
-                    <span>Mussafah Industrial Area
-                    <br> 
-                    Abu Dhabi - UAE</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-sm-12" style="flex: 4;">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29068.369012362575!2d54.470257!3d24.3970877!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e413e585a181f%3A0xd4d497fac88a266e!2sAKC%20Cleaning%20Equipments!5e0!3m2!1sen!2sae!4v1643358712844!5m2!1sen!2sae"
-                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row contact_pg_address_row">
-        <div class="col-md-4 col-sm-6" style="flex: 1;">
-            <div class="contact_pg_address">
-                <div class="single_con_add">
-                    <i class="fa fa-home"></i>
-                    <span style="font-weight: bold;">Address:</span>
-                    <br>
-                    <span>Head Office</span><br> 
-                    <span>Dubai Investment Park 1</span>
-                    <br>
-                    <span> Dubai - UAE</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-sm-12" style="flex: 4;">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3616.6287906257867!2d55.1510816!3d24.9787413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f73f1f7e6099f%3A0xfb33a0920d800dc5!2sKaddah%20Building%20Cleaning%20Equipment%20(%20AKC%20)!5e0!3m2!1sen!2sae!4v1695666473064!5m2!1sen!2sae"
-                        width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        </div>
-    </div>
-    <!-- End of PageContent -->
-</main>
-<!-- End of Main -->
-
-@endsection
-
-@section('js')
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-
-$(document).ready(function() {
-    setTimeout(() => {
-        const $recaptcha = document.querySelector('#g-recaptcha-response');
-        if ($recaptcha) {
-            $recaptcha.setAttribute('required', 'required');
-        }
-    }, 5000);
-});
-
-</script>
-@endsection
+  </div>
+</x-layout>
