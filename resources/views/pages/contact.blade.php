@@ -8,7 +8,7 @@
     </x-slot>
   </x-panel>
   
-  <div class="lg:container py-8">
+  <div class="lg:container p-8">
     <div class="">
       <div class="text-center text-[theme(colors.blue)] text-2xl">Message Us</div>
       <div class="grid grid-rows-4 divide-y  text-neutral-600">
@@ -20,7 +20,7 @@
       <button class="mt-8 rounded-full px-8 py-4 bg-gray-800 text-white">Apply</button>
     </div>
 
-    <div class="mt-16 rounded-2xl bg-[#e5f8ff] p-[60px]">
+    <div class="mt-16 rounded-2xl bg-[#e5f8ff] lg:p-[60px] p-8">
       <div class="font-semibold text-[34px] text-center">FAQs</div>
       <div class="mt-8">
         <div id="accordionFlushExample" class="grid grid-row-4 gap-16">
