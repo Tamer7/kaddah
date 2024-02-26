@@ -13,24 +13,36 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $categoryId = $request->category_id;
+        $search = $request->search;
 
-        $category = Category::find($categoryId);
-        $parents = Category::getParentList($category)
-            ->map(function ($_category) {
-                return [
-                    'title' => $_category->name,
-                    'url' => route('categories.sub', $_category->id)
-                ];
-            });
-        $parents->pop();
-        $parents->prepend([
-            'title' => 'All Categories',
-            'url' => '/categories'
-        ]);
-        $products = Product::whereHas('categories', function (Builder $query) use ($categoryId) {
+        $category = [];
+        $parents = collect([]);
+        if ($categoryId) {
+            $category = Category::find($categoryId);
+            $parents = Category::getParentList($category)
+                ->map(function ($_category) {
+                    return [
+                        'title' => $_category->name,
+                        'url' => route('categories.sub', $_category->id)
+                    ];
+                });
+            $parents->pop();
+            $parents->prepend([
+                'title' => 'All Categories',
+                'url' => '/categories'
+            ]);
+        }
+
+        $products = Product::where('status', 1);
+        if ($categoryId) {
+            $products = $products->whereHas('categories', function (Builder $query) use ($categoryId) {
                 $query->where('category_id', $categoryId);
-            })
-            ->get();
+            });
+        }
+        if ($search) {
+            $products = $products->search($search);
+        }
+        $products = $products->paginate(12);
 
         return view('pages.products', compact('parents', 'category', 'products'));
     }

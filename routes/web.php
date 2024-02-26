@@ -94,7 +94,7 @@ Route::get('/media/blogs/{slug}', [MediaController::class, 'blogShow'])->name('b
 
 Route::get('/latest-products', [ShopController::class, 'latest'])->name('products.latest');
 
-Route::get('/products/search', [ShopController::class, 'search'])->name('product.search');
+Route::get('/product/search', [ShopController::class, 'search'])->name('product.search');
 
 Route::get('/category', [ShopController::class, 'parent'])->name('category.parent.base');
 Route::get('/category/{parent}', [ShopController::class, 'child'])->name('category.child');

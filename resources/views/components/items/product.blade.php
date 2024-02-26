@@ -2,8 +2,8 @@
 
 <div class="px-4 py-2 lg:text-left text-center">
   <img class="mx-auto sm:max-h-[320px] max-h-[200px] min-h-[200px]" src="{{ asset('storage/' . $product->image) }}" alt="">
-  <div class="pt-5">{{ $category['title'] }}</div>
-  <a href="{{ route('products.product', ['product' => $product->id, 'category_id' => $category['id']]) }}" class="underline">
+  <div class="pt-5">{{ $category['title'] ?? 'Products' }}</div>
+  <a href="{{ route('products.product', ['product' => $product->id, 'category_id' => $category['id'] ?? '']) }}" class="underline">
     <div class="overflow-hidden text-ellipsis font-semibold text-lg whitespace-nowrap py-2">{{ $product->name }}</div>
   </a>
   <div class="overflow-hidden text-clip whitespace-nowrap">
