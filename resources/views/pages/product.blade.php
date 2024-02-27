@@ -172,7 +172,9 @@
   <div class="py-[40px] px-[100px]">
     <h2 class="text-3xl font-bold">Related Products</h2>
     <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-8">
-      <x-items.product :product="$product" :category="$product->categories->first()"/>
+      @foreach($related as $item)
+        <x-items.product :product="$item" :category="$item->categories->first()"/>
+      @endforeach
     </div>
   </div>
 </x-layout>
