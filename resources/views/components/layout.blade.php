@@ -136,6 +136,15 @@
     </div>
   </footer>
 
+  <script data-cfasync="false" src="{{asset('js/email-decode.min.js')}}"></script>
+  <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('vendor/jquery.plugin/jquery.plugin.min.js')}}"></script>
+  <script src="{{asset('vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+  <script src="{{asset('vendor/zoom/jquery.zoom.js')}}"></script>
+  <script src="{{asset('vendor/jquery.countdown/jquery.countdown.min.js')}}"></script>
+  <script src="{{asset('vendor/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{asset('vendor/skrollr/skrollr.min.js')}}"></script>
+
   <script src="{{ asset('js/app.js') }}"></script>
   <script>
     const mobileMenu = document.getElementById('mobile_menu');
