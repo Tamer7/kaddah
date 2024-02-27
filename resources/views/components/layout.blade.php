@@ -43,7 +43,7 @@
         <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <form class="relative mb-0 flex flex-wrap items-stretch" method="GET" action="{{ route('products.index') }}">
+        <form class="relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
           <style>
             #te-search-input:focus-within {
               box-shadow: inset 0 0 0 1px #3b71ca;
@@ -53,13 +53,6 @@
             placeholder="Search products"
             value="{{ Request::get('search') }}"
           >
-          <button class="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-700 dark:text-gray-200">
-            <span class="text-neutral-400" id="te-search-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="h-5 w-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
-              </svg>
-            </span>
-          </button>
         </form>
       </div>
     </nav>
