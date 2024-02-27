@@ -7,7 +7,8 @@
       <div>{{ \Carbon\Carbon::parse($event['created_at'])->shortMonthName }}</div>
     </div>
     <img class="rounded-xl w-full h-[177px]"
-      src="{{ asset('storage/'.$event['image']) }}"
+      {{-- src="{{ asset('storage/'.$event['image']) }}" --}}
+      src="{{ asset('images/test/Rectangle 46.png') }}"
       alt="" />
     <div class="p-6">
       <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 text-ellipsis overflow-hidden whitespace-nowrap">

@@ -1,7 +1,7 @@
 {{-- type of date must carbon --}}
 
 <div class="block relative rounded-xl bg-white border border-neutral-500">
-  <a href="{{ $blog->slug ? route('event.show', $blog->slug) : 'javascript:;' }}">
+  <a href="{{ $blog->slug ? route('blog.show', $blog->slug) : 'javascript:;' }}">
     <img class="rounded-xl w-full h-auto h-[177px]"
       src="{{ asset('storage/'.$blog->image) }}"
       alt="" />

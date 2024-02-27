@@ -52,6 +52,7 @@ Route::controller(ArticleController::class)
     ->name('blogs.')
     ->group(function() {
         Route::get('/blogs', 'index')->name('index');
+        Route::get('/blogs/{slug}', 'show')->name('show');
     })
 ;
 Route::controller(BrandController::class)
