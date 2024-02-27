@@ -11,13 +11,72 @@
   <div class="lg:container p-8">
     <div class="">
       <div class="text-center text-[theme(colors.blue)] text-2xl">Message Us</div>
-      <div class="grid grid-rows-4 divide-y  text-neutral-600">
-        <div class="py-4">Your Name</div>
-        <div class="py-4">Phone Number</div>
-        <div class="py-4">Email</div>
-        <div class="py-4">Message</div>
-      </div>
-      <button class="mt-8 rounded-full px-8 py-4 bg-gray-800 text-white">Apply</button>
+      <form class="contact-us-form mt-6" action="{{ route('contact.store') }}" method="post">
+        <div class="relative mb-6" data-te-input-wrapper-init>
+          <input
+            type="text"
+            name="name"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+            id="InputName"
+            placeholder="Your Name" />
+          <label
+            for="InputName"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+            >Your Name</label
+          >
+        </div>
+    
+        <div class="relative mb-6" data-te-input-wrapper-init>
+          <input
+            type="text"
+            name="mobile"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+            id="InputMobile"
+            placeholder="Enter Phone Number" />
+          <label
+            for="InputMobile"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+            >Phone Number</label
+          >
+        </div>
+    
+        <div class="relative mb-6" data-te-input-wrapper-init>
+          <input
+            type="email"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+            id="InputEmail"
+            placeholder="Enter email" />
+          <label
+            for="InputEmail"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+            >Email Address</label
+          >
+        </div>
+    
+        <div class="relative mb-6" data-te-input-wrapper-init>
+          <textarea
+            name="message"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+            id="InputMessage"
+            rows="3"
+            placeholder="Enter Message"></textarea>
+          <label
+            for="InputMessage"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+            >Message</label
+          >
+        </div>
+
+        <div class="g-recaptcha mt-4" data-sitekey="{{ config('services.recaptcha.key') }}" data-validate="{required:true}"></div>
+    
+        <button
+          type="submit"
+          class="inline-block rounded-full px-8 py-4 bg-gray-800 text-white font-medium leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+          data-te-ripple-init
+          data-te-ripple-color="light">
+          Apply
+        </button>
+      </form>
     </div>
 
     <div class="mt-16 rounded-2xl bg-[#e5f8ff] lg:p-[60px] p-8">
@@ -249,4 +308,38 @@
       </div>
     </div>
   </div>
+
+  @push('styles')
+    <style>
+      .contact-us-form .group:not([data-te-input-focused]) div {
+        border-radius: 0;
+        border-width: 0;
+        border-bottom-width: 1px;
+      }
+      #g-recaptcha-response {
+        display: block !important;
+        position: absolute;
+        margin: -78px 0 0 0 !important;
+        width: 302px !important;
+        height: 76px !important;
+        z-index: -999999;
+        opacity: 0;
+        min-height: auto;
+      }
+    </style>
+  @endpush
+
+  @push('scripts')
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      $(document).ready(function() {
+        setTimeout(() => {
+          const $recaptcha = document.querySelector('#g-recaptcha-response');
+          if ($recaptcha) {
+            $recaptcha.setAttribute('required', 'required');
+          }
+        }, 5000);
+      });
+    </script>
+  @endpush
 </x-layout>
