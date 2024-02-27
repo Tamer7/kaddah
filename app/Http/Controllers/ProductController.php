@@ -50,13 +50,17 @@ class ProductController extends Controller
     public function product(Request $request, Product $product)
     {
         $productId = $product->id;
+        $categoryId = $request->category_id;
 
-        $category = Category::where('id', $request->category_id)->first();
-
-        $categoryNames = Category::getParentList($category)
-            ->map(function ($_category) {
-                return $_category->name;
-            });
+        if ($categoryId) {
+            $category = Category::where('id', $request->category_id)->first();
+            $categoryNames = Category::getParentList($category)
+                ->map(function ($_category) {
+                    return $_category->name;
+                });
+        } else {
+            $categoryNames = collect([]);
+        }
             
         $features = $product->features()->get();
 
