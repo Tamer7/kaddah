@@ -3,8 +3,10 @@ import {
 } from "tw-elements";
 
 const carouselPanel = document.getElementById('carouselPanel');
+const carouselEventPanel = document.getElementById('carouselEventPanel');
 const totalPanel = carouselPanel.parentElement;
 const carouselItems = carouselPanel.querySelectorAll('.carousel-item');
+const carouselEventItems = carouselEventPanel.querySelectorAll('.carousel-item');
 let oldMinPerSlide = 1;
 
 const getMinPerSlide = () => {
@@ -26,7 +28,6 @@ const closeNavPanel = (target) => {
   tabPane.removeAttribute('data-te-tab-active');
 }
 
-
 const adjustCarousel = () => {
   const minPerSlide = getMinPerSlide();
   if (oldMinPerSlide == minPerSlide)
@@ -39,11 +40,24 @@ const adjustCarousel = () => {
     while (node.children[1])
       node.removeChild(node.children[1]);
   })
+
   carouselItems.forEach((el) => {
     let next = el.nextElementSibling
     for (var i = 1; i < minPerSlide; i++) {
       if (!next) {
         next = carouselItems[0]
+      }
+      let node = next.children[0];
+      let cloneChild = node.cloneNode(true)
+      el.children[0].appendChild(cloneChild.children[0]);
+      next = next.nextElementSibling
+    }
+  })
+  carouselEventItems.forEach((el) => {
+    let next = el.nextElementSibling
+    for (var i = 1; i < minPerSlide; i++) {
+      if (!next) {
+        next = carouselEventItems[0]
       }
       let node = next.children[0];
       let cloneChild = node.cloneNode(true)

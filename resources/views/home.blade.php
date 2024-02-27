@@ -183,39 +183,51 @@
   </x-subpanel>
 
   <x-subpanel title="Read our latest events" more="View All Events">
-    <div class="lg:-mx-8 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
-      @php
-        $events = [
-          collect([
-            'image' => '/images/test/Rectangle 46.png',
-            'title' => 'HIGH CLASS CLEANING',
-            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'created_at' => '2024-2-24'
-          ]),
-          collect([
-            'image' => '/images/test/Rectangle 49.png',
-            'title' => 'QUICK WORKER FINDING',
-            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'created_at' => '2024-2-24'
-          ]),
-          collect([
-            'image' => '/images/test/Rectangle 52.png',
-            'title' => 'CUSTOMIZED SERVICE',
-            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'created_at' => '2024-2-24'
-          ]),
-          collect([
-            'image' => '/images/test/Rectangle 55.png',
-            'title' => 'TRAINED WORKERS',
-            'excerpt' => 'Amet minim mollit non deserunt ullamcosit aliqua dolor.',
-            'created_at' => '2024-2-24'
-          ])
-        ]
-      @endphp
+    <div id="carouselEventPanel"
+      class="relative"
+      data-te-carousel-init
+      data-te-ride="carousel">
+      <!--Carousel items-->
+      <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+        role="tablist"
+        data-te-nav-ref
+      >
+        @foreach ($events as $event)
+          @php
+            $item = [
+              'img' => asset('storage/'.$category->image),
+              'title' => $category->name
+            ]
+          @endphp
 
-      @foreach ($events as $event)
-        <x-items.event :event="$event" />
-      @endforeach
+          <div class="carousel-item relative {{ $loop->first ? '' : 'hidden' }} float-left -mr-[100%] w-full transition-transform duration-[1200ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            data-te-interval="8000"
+            {{ $loop->first ? 'data-te-carousel-active' : ''}}
+          >
+            <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-14 bg-white" role="presentation">
+              <x-items.event :event="$event" />
+            </div>
+          </div>
+        @endforeach
+      </div>
+
+      <!--Carousel controls - prev item-->
+      <button
+        class="absolute left-0 top-2/4 z-[1] flex h-16 w-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+        type="button"
+        data-te-target="#carouselEventPanel"
+        data-te-slide="prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <!--Carousel controls - next item-->
+      <button
+        class="absolute right-0 top-2/4 z-[1] flex w-16 h-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+        type="button"
+        data-te-target="#carouselEventPanel"
+        data-te-slide="next">
+          <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </x-subpanel>
 

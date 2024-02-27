@@ -23,7 +23,10 @@ class MainController extends Controller
             ->whereNull('parent_id')
             ->get();
 
-        return view('home', compact('categories'));
+        $events = Post::where('status', 'PUBLISHED')
+            ->orderBy('published_date', 'DESC')->paginate(10);
+
+        return view('home', compact('categories', 'events'));
 
 
 
