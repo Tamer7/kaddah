@@ -14,6 +14,12 @@
 
   <title>{{ htmlspecialchars_decode($title) }}</title>
 
+  <style>
+    #te-search-input:focus-within {
+      box-shadow: inset 0 0 0 1px #3b71ca;
+    }
+  </style>
+
   @stack('styles')
 </head>
 <body class="relative">
@@ -42,14 +48,12 @@
         <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
         <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <form class="relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
-          <style>
-            #te-search-input:focus-within {
-              box-shadow: inset 0 0 0 1px #3b71ca;
-            }
-          </style>
-          <input id="te-search-input" name="search" autocomplete="off" type="search" class="focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:border-blue-600 focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
+      <div class="hidden lg:flex lg:flex-1 lg:justify-start">
+        <form class="group relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
+          <div class="rounded-full bg-[theme(colors.blue)] text-white px-2 py-1 group-hover:hidden">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
             placeholder="Search products"
             value="{{ Request::get('search') }}"
           >
