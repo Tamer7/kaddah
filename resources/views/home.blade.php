@@ -1,7 +1,7 @@
 <x-layout noDecorator>
   <div class="lg:px-24 px-8 relative lg:h-[600px] py-[106px]">
     <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-    <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2 lg:w-[63%] sm:w-[50%]">
+    <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2 lg:w-8/12 xl:w-full">
       The region's biggest selection of cleaning solutions
     </h1>
     <p class="sm:w-[500px] sm:text-left text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0">
+      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0 opacity-50">
     </div>
   </div>
 
@@ -121,14 +121,15 @@
                 @php
                   $item = [
                     'img' => asset('storage/' . $subcategory->image),
-                    'title' => $subcategory->name
+                    'title' => $subcategory->name,
+                    'url' => route('products.index', ['category_id' => $subcategory['id']])
                   ]
                 @endphp
                 <x-items.category :category="$item" />
               @endforeach
             </div>
             <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
-              <a href="#">View More Products <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="{{ route('categories.sub', ['category' => $category['id']]) }}">View More Products <i class="fa-solid fa-chevron-right"></i></a>
             </div>
           </div>
         </div>
