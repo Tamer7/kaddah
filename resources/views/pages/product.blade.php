@@ -53,7 +53,7 @@
       @endif
     </div>
     <div class='col-span-4'>
-      <div class="relative before:-z-10 before:absolute before:-top-[10px] before:-bottom-[10px] lg:before:-left-[400px] before:-left-8 lg:before:-right-[80px] before:-right-8 before:content-[''] before:bg-[#e5f8ff] lg:before:rounded-l-full">
+      <div class="relative before:-z-10 before:absolute before:-top-[10px] before:-bottom-[10px] lg:before:-left-[400px] before:-left-8 lg:before:-right-[80px] before:-right-8 before:content-[''] before:bg-[#27AEE5] before:opacity-5 lg:before:rounded-l-full">
         <div class="font-bold text-[21px]">Green Machine With Single Phase / 2 Hp</div>
         <div class="flex items-center py-8">
           <img src="{{ asset('storage/'.$product->brand->image) }}" alt="" class="w-[108px] h-[60px]">
@@ -84,14 +84,14 @@
   </div>
 
   <div class="py-8 lg:px-[100px] px-8">
-    <div class="rounded-3xl bg-[#e5f8ff] lg:p-8 p-4">
+    <div class="rounded-3xl bg-[#e5f8ff] lg:py-8 lg:px-16 p-4">
       <ul
         class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
         role="tablist"
         data-te-nav-ref>
         <li role="presentation">
           <a href="#tabs-description"
-            class="my-2 block border-x-0 border border-t-0 border-transparent lg:px-7 px-2 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-description"
             data-te-nav-active
@@ -104,7 +104,7 @@
         <li role="presentation">
           <a
             href="#tabs-tech_specification"
-            class="my-2 block border-x-0 border border-t-0 border-transparent lg:px-7 px-2 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-tech_specification"
             role="tab"
@@ -116,7 +116,7 @@
         <li role="presentation">
           <a
             href="#tabs-downloads"
-            class="my-2 block border-x-0 border border-t-0 border-transparent lg:px-7 px-2 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-downloads"
             role="tab"
