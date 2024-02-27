@@ -89,7 +89,7 @@
     </div>
   </header>
 
-  <main class="relative isolate pt-24">
+  <main class="relative isolate pt-24 min-h-[650px]">
     @if (empty($attributes["noDecorator"]))
       <div class="absolute top-0 left-0 -z-10 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
         <img src="{{ asset('images/about/Vector-left.png') }}" alt="">

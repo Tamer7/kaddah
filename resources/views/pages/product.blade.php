@@ -116,7 +116,7 @@
         <li role="presentation">
           <a
             href="#tabs-downloads"
-            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] text-[theme(colors.blue)] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-downloads"
             role="tab"
