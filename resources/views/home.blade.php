@@ -92,8 +92,7 @@
             @foreach($categories as $category)
               @php
                 $item = [
-                  // 'img' => asset('storage/'.$category->image),
-                  'img' => 'https://images.unsplash.com/photo-1598951092651-653c21f5d0b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
+                  'img' => asset('storage/'.$category->image),
                   'title' => $category->name,
                   'description' => $category->title,
                 ]
@@ -167,8 +166,7 @@
                   @foreach ($category->children as $subcategory)
                     @php
                       $item = [
-                        // 'img' => asset('storage/' . $subcategory->image),
-                        'img' => 'https://images.unsplash.com/photo-1598951092651-653c21f5d0b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
+                        'img' => asset('storage/' . $subcategory->image),
                         'title' => $subcategory->name,
                         'description' => $subcategory->title,
                         'url' => route('products.index', ['category_id' => $subcategory['id']])
