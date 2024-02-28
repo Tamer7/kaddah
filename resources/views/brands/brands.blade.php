@@ -11,43 +11,42 @@
   <div>
     <h2 class="text-3xl text-center pt-24 pb-16 font-bold">Global Partners</h2>
     <div class="rounded-xl bg-[#e5f8ff] px-[168px] py-[50px] grid lg:grid-cols-3 gap-4">
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
-      <div class="bg-white rounded-xl flex justify-center items-center">
-        <img src="/images/test/image 50.png" alt="">
-      </div>
+      @foreach ($globalBrands as $brand)
+        @php
+          $productsCount = $brand->products->count();
+        @endphp
+        <a href="{{ route('brands.show', $brand->id) }}" class="bg-white rounded-3xl flex justify-center items-center group relative h-[316px]">
+          {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
+          <img src="/images/test/image 50.png" alt="" class="{{ $productsCount > 0 ? 'group-hover:hidden' : '' }}">
+          @if ($productsCount > 0)
+            <div class="group-hover:opacity-100 opacity-0 absolute top-0 right-0 bottom-0 left-0 flex transition-opacity duration-300 items-center justify-center">
+              <img src="{{ asset('storage/', $brand->products[rund(0, $productsCount)]) }}" alt="">
+              <img src="/images/test/LOGO 3.png" alt="">
+            </div>
+          @endif
+        </a>
+      @endforeach
     </div>
 
     <div class="px-[124px] py-[51px]">
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
+        @foreach ($globalBrands as $brand)
+          <a href="{{ route('brands.show', $brand->id) }}">
+            {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
+            <img src="/images/test/image 50.png" alt="">
+          </a>
+        @endforeach
       </div>
       <div class="text-center font-semibold text-[34px]">
         Local Brands
       </div>
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
-        <img src="/images/test/image 50.png" alt="">
+        @foreach ($localBrands as $brand)
+          <a href="{{ route('brands.show', $brand->id) }}">
+            {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
+            <img src="/images/test/image 50.png" alt="">
+          </a>
+        @endforeach
       </div>
     </div>
   </div>

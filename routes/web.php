@@ -59,7 +59,7 @@ Route::controller(BrandController::class)
     ->name('brands.')
     ->group(function() {
         Route::get('/brands', 'index')->name('index');
-        Route::get('/brands/{slug}', 'show')->name('show');
+        Route::get('/brands/{brand}', 'show')->name('show');
     })
 ;
 Route::get('/about-us', function () {
