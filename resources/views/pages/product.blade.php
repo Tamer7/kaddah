@@ -5,8 +5,7 @@
       data-te-nav-ref
     >
       <div class="flex">
-        {{-- <img src="{{ asset("storage/{$product->image}") }}" --}}
-        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+        <img src="{{ asset("storage/{$product->image}") }}"
           class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
           data-te-toggle="pill"
           data-te-target="#tabs-image-0"
@@ -19,8 +18,7 @@
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
           <div class="flex">
-            {{-- <img src="{{ asset("storage/$image") }}" --}}
-            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+            <img src="{{ asset("storage/$image") }}"
               class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
               data-te-toggle="pill"
               data-te-target="#tabs-image-{{ $index + 1 }}"
@@ -34,136 +32,13 @@
     </div>
 
     <div class="col-span-4">
-                    <div class="product product-single row">
-                        <div class="col-md-4 mb-6">
-                            <div class="product-gallery product-gallery-sticky">
-                                <div class="swiper-container product-single-swiper swiper-theme nav-inner" data-swiper-options="{
-                                    'navigation': {
-                                        'nextEl': '.swiper-button-next',
-                                        'prevEl': '.swiper-button-prev'
-                                    }
-                                }">
-                                    <div class="swiper-wrapper row cols-1 gutter-no">
-                                        <div class="swiper-slide">
-                                            <figure class="product-image">
-                                                <img src="{{asset('storage/'.$product->image)}}"
-                                                    data-zoom-image="{{asset('storage/'.$product->image)}}"
-                                                    alt="{{$product->name}}" width="800" height="900">
-                                            </figure>
-                                        </div>
-                                        @if($product->images)
-                                            @foreach(json_decode($product->images) as $image)
-                                            <div class="swiper-slide">
-                                                <figure class="product-image">
-                                                    <img src="{{asset('storage/'.$image)}}"
-                                                        data-zoom-image="{{asset('storage/'.$image)}}"
-                                                        alt="{{$product->name}}" width="488" height="549">
-                                                </figure>
-                                            </div>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                    <button class="swiper-button-next"></button>
-                                    <button class="swiper-button-prev"></button>
-                                    <a href="#" class="product-gallery-btn product-image-full"><i class="w-icon-zoom"></i></a>
-                                </div>
-                                <div class="product-thumbs-wrap swiper-container" data-swiper-options="{
-                                    'navigation': {
-                                        'nextEl': '.swiper-button-next',
-                                        'prevEl': '.swiper-button-prev'
-                                    }
-                                }">
-                                    <div class="product-thumbs swiper-wrapper row cols-4 gutter-sm">
-
-                                        <div class="product-thumb swiper-slide">
-                                            <img src="{{asset('storage/'.$product->image)}}"
-                                                alt="{{$product->name}} Thumb" width="800" height="900">
-                                        </div>
-                                        @if($product->images)
-                                            @foreach(json_decode($product->images) as $image)
-                                            <div class="product-thumb swiper-slide">
-                                                <img src="{{asset('storage/'.$image)}}"
-                                                    alt="{{$product->name}} Thumb" width="800" height="900">
-                                            </div>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                    <button class="swiper-button-next"></button>
-                                    <button class="swiper-button-prev"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-8 mb-4 mb-md-6">
-                            <div class="product-details" data-sticky-options="{'minWidth': 767}">
-                                <h1 class="product-title">{{$product->name}}</h1>
-                                <div class="product-bm-wrapper">
-                                    <figure class="brand">
-                                        <img src="{{asset('storage/'.$product->brand->image)}}" alt="Brand"
-                                            width="102" height="48" />
-                                    </figure>
-                                    <div class="product-meta">
-                                        <div class="product-categories">
-                                            Main Category:
-                                            <span class="product-category"><a href="#">{{$parentCategory->name}}</a></span>
-                                        </div>
-                                        <div class="product-sku">
-                                            Sub Category: <span>{{$childCategory->name}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr class="product-divider">
-
-                                <div class="product-price"><ins class="new-price">{{$product->code}}</ins></div>
-
-                                <div class="product-short-desc">
-                                    <p>
-                                        {{$product->details}}
-                                    </p>
-                                    <ul class="list-type-check list-style-none">
-                                        <li>Origin: {{$product->origin}}</li>
-                                        <li>Warranty: {{$product->warranty}}</li>
-                                        <li>Brand Name: {{$product->brand->name}}</li>
-                                    </ul>
-                                </div>
-
-                                <hr class="product-divider">
-
-
-                                <div class="row">
-                                    <div class="product-form container">
-
-                                        <form action="javascript:void(0)" method="POST" class="add-to-cart cart-form" id="{{$product->id}}">
-                                            @csrf
-                                            <input type="hidden" name="id" value="{{$product->id}}">
-                                            <button type="submit" class="btn btn-primary btn-cart-design col-md-5" id="loading-alert-{{$product->id}}">
-                                                <i class="w-icon-cart"></i>
-                                                Add to Cart
-                                            </button>
-                                        </form>
-
-                                        <button class="d-none btn-cart" id="cart-response-{{$product->id}}">
-                                        </button>
-                                    </div>
-                                    <div class="product-form container col-md-5">
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
       <div
         class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
         id="tabs-image-0"
         role="tabpanel"
         aria-labelledby="tabs-home-tab"
         data-te-tab-active>
-        {{-- <img src="{{ asset("storage/{$product->image}") }}" alt="" class="mx-auto max-h-[800px]"> --}}
-        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" class="mx-auto max-h-[800px]">
+        <img src="{{ asset("storage/{$product->image}") }}" alt="" class="mx-auto max-h-[800px]">
       </div>
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
@@ -172,8 +47,7 @@
             id="tabs-image-{{ $index + 1 }}"
             role="tabpanel"
             aria-labelledby="tabs-image-tab">
-            {{-- <img src="{{ asset("storage/$image") }}" alt="" class="mx-auto max-h-[800px]"> --}}
-            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" class="mx-auto max-h-[800px]">
+            <img src="{{ asset("storage/$image") }}" alt="" class="mx-auto max-h-[800px]">
           </div>
         @endforeach
       @endif
@@ -379,58 +253,6 @@
       </div>
     </div>
   </div>
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides.
-        PhotoSwipe keeps only 3 of them in the DOM to save memory.
-        Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" aria-label="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--zoom" aria-label="Zoom in/out"></button>
-
-                <div class="pswp__preloader">
-                    <div class="loading-spin"></div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button--arrow--left" aria-label="Previous (arrow left)"></button>
-            <button class="pswp__button--arrow--right" aria-label="Next (arrow right)"></button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End of PhotoSwipe -->
-
 
   @push('scripts')
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>

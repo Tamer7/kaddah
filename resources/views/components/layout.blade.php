@@ -24,14 +24,6 @@
 
   @csrf
 
-  <!-- Default CSS -->
-  @if(request()->is('/'))
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-  @else
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style.min.css')}}">
-  @endif
-  
-  <link rel="stylesheet" type="text/css" href="{{asset('css/comon.css')}}">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
   <title>{{ htmlspecialchars_decode($title) }}</title>
