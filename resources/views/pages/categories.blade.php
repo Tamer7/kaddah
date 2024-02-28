@@ -13,7 +13,7 @@
   <x-panel :breadcrumbs="$breadcrumbs">
     <x-slot name="title">{{ $title }}</x-slot>
 
-    <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2">
+    <div class="lg:tw-container tw-py-8 tw-grid lg:tw-grid-cols-3 lg:tw-gap-3 sm:tw-grid-cols-2">
       @foreach ($categories as $category)
         @php
           $item = [

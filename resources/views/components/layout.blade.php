@@ -14,15 +14,17 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="{{asset('vendor/swiper/swiper-bundle.min.css')}}">
 
+  @csrf
+
   <!-- Default CSS -->
   @if(request()->is('/'))
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
   @else
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.min.css')}}">
   @endif
-    <link rel="stylesheet" type="text/css" href="{{asset('css/comon.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  @csrf
+  
+  <link rel="stylesheet" type="text/css" href="{{asset('css/comon.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
   <title>{{ htmlspecialchars_decode($title) }}</title>
 
@@ -36,38 +38,38 @@
 
   @stack('styles')
 </head>
-<body class="relative">
+<body class="tw-relative">
   {{-- <img src="/images/test/Home.png" alt="" class="absolute w-full opacity-20"> --}}
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
-      <div class="flex lg:flex-1 p-21">
-        <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Cleany</span>
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
+  <header class="tw-absolute tw-inset-x-0 tw-top-0 tw-z-50">
+    <nav class="tw-flex tw-items-center tw-justify-between tw-py-4 tw-px-9" aria-label="Global">
+      <div class="tw-flex lg:tw-flex-1 tw-p-21">
+        <a href="/" class="-tw-m-1.5 tw-p-1.5">
+          <span class="tw-sr-only">Cleany</span>
+          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:tw-pl-20 md:tw-pl-6">
         </a>
       </div>
-      <div class="flex lg:hidden">
-        <button type="button" id="open_mobile_menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <div class="tw-flex lg:tw-hidden">
+        <button type="button" id="open_mobile_menu" class="-tw-m-2.5 tw-inline-flex tw-items-center tw-justify-center tw-rounded-md tw-p-2.5 tw-text-gray-700">
+          <span class="tw-sr-only">Open main menu</span>
+          <svg class="tw-h-6 tw-w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-28">
-        <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
-        <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-        <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
-        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-sm leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
+      <div class="tw-hidden lg:tw-flex lg:tw-gap-x-28">
+        <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Products</a>
+        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Brands</a>
+        <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">About</a>
+        <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Blog</a>
+        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Events</a>
+        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="tw-text-lg tw-leading-6 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Contact</a>
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-start">
-        <form class="group relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
-          <div class="rounded-full bg-[theme(colors.blue)] text-white px-2 py-1 group-hover:hidden">
+      <div class="tw-hidden lg:tw-flex lg:tw-flex-1 lg:tw-justify-start">
+        <form class="tw-group tw-relative tw-mb-0 tw-flex tw-flex-wrap tw-items-stretch tw-ml-16" method="GET" action="{{ route('products.index') }}">
+          <div class="tw-rounded-full tw-text-sm tw-bg-[theme(colors.blue)] tw-text-white tw-px-2 tw-py-1 group-hover:tw-hidden">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
+          <input id="te-search-input" name="search" autocomplete="off" type="search" class="tw-hidden group-hover:tw-block focus:tw-shadow-te-blue tw-relative tw-m-0 tw-inline-block tw-w-[1%] tw-min-w-[225px] tw-flex-auto tw-rounded tw-border tw-border-solid tw-border-neutral-300 tw-bg-transparent tw-bg-clip-padding tw-px-3 tw-py-1 tw-text-base tw-font-normal tw-text-gray-700 tw-outline-none tw-transition tw-duration-300 tw-ease-in-out focus:tw-text-gray-700 dark:tw-border-neutral-600 dark:tw-text-gray-200 dark:placeholder:tw-text-gray-200"
             placeholder="Search products"
             value="{{ Request::get('search') }}"
           >
@@ -75,31 +77,31 @@
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden invisible" id="mobile_menu" role="dialog" aria-modal="true">
+    <div class="lg:tw-hidden tw-invisible" id="mobile_menu" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on `lide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Cleany</span>
+      <div class="tw-fixed tw-inset-0 tw-z-50"></div>
+      <div class="tw-fixed tw-inset-y-0 tw-right-0 tw-z-50 tw-w-full tw-overflow-y-auto tw-bg-white tw-py-4 tw-px-9 sm:tw-max-w-sm sm:tw-ring-1 sm:tw-ring-gray-900/10">
+        <div class="tw-flex tw-items-center tw-justify-between">
+          <a href="/" class="-tw-m-1.5 tw-p-1.5">
+            <span class="tw-sr-only">Cleany</span>
             <img src="{{ asset('images/about/image 37.png') }}" alt="">
           </a>
-          <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <button type="button" id="close_mobile_menu" class="-tw-m-2.5 tw-rounded-md tw-p-2.5 tw-text-gray-700">
+            <span class="tw-sr-only">Close menu</span>
+            <svg class="tw-h-6 tw-w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
-              <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-              <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
-              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
+        <div class="tw-mt-6 tw-flow-root">
+          <div class="-tw-my-6 tw-divide-y tw-divide-gray-500/10">
+            <div class="tw-space-y-2 tw-py-6">
+              <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Products</a>
+              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Brands</a>
+              <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">About</a>
+              <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Blog</a>
+              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Events</a>
+              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-tw-mx-3 tw-block tw-rounded-lg tw-px-3 tw-py-2 tw-text-base tw-leading-7 hover:tw-text-sky-300 data-[te-nav-active]:tw-text-[theme(colors.blue)]">Contact</a>
             </div>
           </div>
         </div>
@@ -107,9 +109,9 @@
     </div>
   </header>
 
-  <main class="relative isolate pt-24 min-h-[650px]">
+  <main class="tw-relative tw-isolate tw-pt-24 tw-min-h-[650px]">
     @if (empty($attributes["noDecorator"]))
-      <div class="absolute top-0 left-0 -z-10 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
+      <div class="tw-absolute tw-top-0 tw-left-0 -tw-z-10 -tw-translate-x-1/4 -tw-translate-y-16 tw-scale-50 md:tw-translate-x-0 md:tw-translate-y-0 md:tw-scale-100">
         <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
       </div>
     @endif
@@ -117,18 +119,18 @@
     {{ $slot }}
 
     @if (empty($attributes["noDecorator"]))
-      <div class="absolute top-[17px] -z-10 right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
+      <div class="tw-absolute tw-top-[17px] -tw-z-10 tw-right-0 tw-translate-x-1/4 -tw-translate-y-16 tw-scale-50 md:tw-translate-x-0 md:tw-translate-y-0 md:tw-scale-100">
         <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
       </div>
     @endif
   </main>
 
-  <footer class="pt-[72px] pb-[42px] bg-[#e5f8ff]">
-    <div class="lg:w-[985px] lg:px-0 px-8 mx-auto">
-      <div class="divide-y">
-        <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pr-20 lg:pb-0 pb-8">
-          <div class="flex justify-between items-center w-full">
+  <footer class="tw-pt-[72px] tw-pb-[42px] tw-bg-[#e5f8ff]">
+    <div class="lg:tw-w-[985px] lg:tw-px-0 tw-px-8 tw-mx-auto">
+      <div class="tw-divide-y">
+        <div class="tw-flex tw-flex-col lg:tw-flex-row tw-items-center tw-pb-[40px] tw-text-gray-600">
+          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:tw-pr-20 lg:tw-pb-0 tw-pb-8">
+          <div class="tw-flex tw-justify-between tw-items-center tw-w-full">
             <span>Products</span>
             <span>Brands</span>
             <span>About</span>
@@ -137,14 +139,14 @@
             <span>Contract</span>
           </div>
         </div>
-        <div class="flex flex-col lg:flex-row text-center justify-between items-center pt-[44px] text-neutral-400">
-          <div class="flex lg:gap-10 gap-3">
+        <div class="tw-flex tw-flex-col lg:tw-flex-row tw-text-center tw-justify-between tw-items-center tw-pt-[44px] tw-text-neutral-400">
+          <div class="tw-flex lg:tw-gap-10 tw-gap-3">
             <span>© 2024 Kaddah </span>
             <span>Privacy Policy</span>
             <span>Cookies Policy</span>
             <span>Terms of Service</span>
           </div>
-          <div class="flex gap-8 pt-10 lg:pt-0">
+          <div class="tw-flex tw-gap-8 tw-pt-10 lg:tw-pt-0">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-square-instagram"></i>
@@ -170,10 +172,10 @@
   <script>
     const mobileMenu = document.getElementById('mobile_menu');
     document.getElementById('open_mobile_menu').addEventListener('click', () => {
-      mobileMenu.classList.remove('invisible')
+      mobileMenu.classList.remove('tw-invisible')
     })
     document.getElementById('close_mobile_menu').addEventListener('click', () => {
-      mobileMenu.classList.add('invisible');
+      mobileMenu.classList.add('tw-invisible');
     })
   </script>
   <script src="{{asset('js/main.min.js')}}"></script>

@@ -8,7 +8,7 @@
     </x-slot>
   </x-panel>
 
-  <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2 gap-4 px-8">
+  <div class="lg:tw-container tw-py-8 tw-grid lg:tw-grid-cols-3 lg:tw-gap-3 sm:tw-grid-cols-2 tw-gap-4 tw-px-8">
     @foreach ($blogs as $blog)
       <x-items.blog :blog="$blog" />
     @endforeach
