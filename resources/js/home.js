@@ -2,21 +2,12 @@ import {
   Tab,
 } from "tw-elements";
 
-const carouselPanel = document.getElementById('carouselPanel');
-const carouselEventPanel = document.getElementById('carouselEventPanel');
-const totalPanel = carouselPanel.parentElement;
-const carouselItems = carouselPanel.querySelectorAll('.carousel-item');
-const carouselEventItems = carouselEventPanel.querySelectorAll('.carousel-item');
-let oldMinPerSlide = 1;
-
-const getMinPerSlide = () => {
-  if (window.innerWidth > 1024)
-    return 4;
-  else if (window.innerWidth > 640)
-    return 2;
-  else
-    return 1;
-};
+const totalPanel = document.getElementById('productOverview');
+$(() => {
+  totalPanel.querySelectorAll('.tab-panel').forEach(el => {
+    el.classList.add('tw-hidden');
+  })
+})
 
 const closeNavPanel = (target) => {
   const activedNav = target.querySelector('[data-te-nav-active]');
@@ -28,56 +19,31 @@ const closeNavPanel = (target) => {
   tabPane.removeAttribute('data-te-tab-active');
 }
 
-const adjustCarousel = () => {
-  const minPerSlide = getMinPerSlide();
-  if (oldMinPerSlide == minPerSlide)
-    return;
+$.fn.outerOffset = function () {
+  /// <summary>Returns an element's offset relative to its outer size; i.e., the sum of its left and top margin, padding, and border.</summary>
+  /// <returns type="Object">Outer offset</returns>
+  var margin = this.margin();
+  var padding = this.padding();
+  var border = this.border();
+  return {
+    x: margin.left + padding.left + border.left,
+    y: margin.top + padding.top + border.top
+  }
+};
 
-  closeNavPanel(carouselPanel)
 
-  carouselItems.forEach((el) => {
-    let node = el.children[0]
-    while (node.children[1])
-      node.removeChild(node.children[1]);
-  })
-
-  carouselItems.forEach((el) => {
-    let next = el.nextElementSibling
-    for (var i = 1; i < minPerSlide; i++) {
-      if (!next) {
-        next = carouselItems[0]
-      }
-      let node = next.children[0];
-      let cloneChild = node.cloneNode(true)
-      el.children[0].appendChild(cloneChild.children[0]);
-      next = next.nextElementSibling
-    }
-  })
-  carouselEventItems.forEach((el) => {
-    let next = el.nextElementSibling
-    for (var i = 1; i < minPerSlide; i++) {
-      if (!next) {
-        next = carouselEventItems[0]
-      }
-      let node = next.children[0];
-      let cloneChild = node.cloneNode(true)
-      el.children[0].appendChild(cloneChild.children[0]);
-      next = next.nextElementSibling
-    }
-  })
-  oldMinPerSlide = minPerSlide;
-}
-adjustCarousel();
-window.onresize = () => {
-  adjustCarousel();
-}
-
-carouselPanel.addEventListener('slide.te.carousel', () => {
-  closeNavPanel(carouselPanel);
-});
+$.fn.fixedPosition = function () {
+  var offset = this.offset();
+  var $doc = $(document);
+  // var bodyOffset = $(document.body).outerOffset();
+  return {
+    x: offset.left - $doc.scrollLeft(),
+    y: offset.top - $doc.scrollTop()
+  };
+};
 
 totalPanel.onmouseover = (ev) => {
-  const category = ev.target.closest('.category');
+  const category = ev.target.closest('.category-panel');
   const activedPanel = ev.target.closest('[data-te-tab-active]');
 
   if (!category && !activedPanel) {
@@ -89,12 +55,12 @@ totalPanel.onmouseover = (ev) => {
     const tabPane = document.querySelector(category.dataset.teTarget);
     const triangleIndicator = tabPane.querySelector('.triangle')
 
-    const left = category.offsetLeft + category.offsetWidth / 3;
+    var left = $(category).fixedPosition().x + category.offsetWidth / 3;
     triangleIndicator.style.left = `${left}px`;
   }
 }
 totalPanel.onmouseout = (ev) => {
-  const category = ev.target.closest('.category');
+  const category = ev.target.closest('.category-panel');
   const activedPanel = ev.target.closest('[data-te-tab-active]');
 
   if (!category && !activedPanel) {
