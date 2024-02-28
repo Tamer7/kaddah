@@ -22,8 +22,10 @@
             @php
               $product = $brand->products[rand(0, $productsCount-1)];
             @endphp
-            <div class="group-hover:opacity-100 opacity-0 absolute top-0 right-0 bottom-0 left-0 flex transition-opacity duration-300 items-center justify-center">
-              <img src="{{ asset("storage/".$product['image']) }}" alt="">
+            <div class="group-hover:opacity-100 p-4 opacity-0 absolute top-0 right-0 bottom-0 left-0 flex transition-opacity duration-300 items-center justify-center">
+              <div class="flex justify-center items-center w-full h-full">
+                <img src="{{ asset("storage/".$product['image']) }}" alt="" class="max-w-full max-h-full">
+              </div>
             </div>
           @endif
         </a>
