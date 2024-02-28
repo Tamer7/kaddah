@@ -1,12 +1,13 @@
 <x-layout title="{{ $product->name }}" noDecorator>
-  <div class="lg:tw-py-[20px] lg:tw-px-[80px] tw-p-8 tw-grid lg:tw-grid-cols-9 tw-gap-4">
-    <div class="tw-col-span-1 tw-grid lg:tw-grid-rows-4 lg:tw-grid-cols-1 tw-grid-cols-4 tw-gap-1"
+  <div class="lg:py-[20px] lg:px-[80px] p-8 grid lg:grid-cols-9 gap-4">
+    <div class="col-span-1 grid lg:grid-rows-4 lg:grid-cols-1 grid-cols-4 gap-1"
       role="tablist"
       data-te-nav-ref
     >
-      <div class="tw-flex">
-        <img src="{{ asset("storage/{$product->image}") }}"
-          class="tw-max-h-[122px] tw-m-auto hover:tw-cursor-pointer hover:tw-border hover:tw-border-[theme(colors.blue)] hover:tw-rounded-lg data-[te-nav-active]:tw-rounded-lg data-[te-nav-active]:tw-border data-[te-nav-active]:tw-border-[theme(colors.blue)] data-[te-nav-active]:tw-rounded-lg"
+      <div class="flex">
+        {{-- <img src="{{ asset("storage/{$product->image}") }}" --}}
+        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+          class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
           data-te-toggle="pill"
           data-te-target="#tabs-image-0"
           role="tab"
@@ -17,9 +18,10 @@
       </div>
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
-          <div class="tw-flex">
-            <img src="{{ asset("storage/$image") }}"
-              class="tw-max-h-[122px] tw-m-auto hover:tw-cursor-pointer hover:tw-border hover:tw-border-[theme(colors.blue)] hover:tw-rounded-lg data-[te-nav-active]:tw-rounded-lg data-[te-nav-active]:tw-border data-[te-nav-active]:tw-border-[theme(colors.blue)] data-[te-nav-active]:tw-rounded-lg"
+          <div class="flex">
+            {{-- <img src="{{ asset("storage/$image") }}" --}}
+            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+              class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
               data-te-toggle="pill"
               data-te-target="#tabs-image-{{ $index + 1 }}"
               role="tab"
@@ -31,67 +33,133 @@
       @endif
     </div>
 
-    <div class="tw-col-span-4">
+    <div class="col-span-4">
+          <div class="product-gallery product-gallery-sticky">
+              <div class="swiper-container product-single-swiper swiper-theme nav-inner" data-swiper-options="{
+                  'navigation': {
+                      'nextEl': '.swiper-button-next',
+                      'prevEl': '.swiper-button-prev'
+                  }
+              }">
+                  <div class="swiper-wrapper row cols-1 gutter-no">
+                      <div class="swiper-slide">
+                          <figure class="product-image">
+                              {{-- <img src="{{asset('storage/'.$product->image)}}"
+                                  data-zoom-image="{{asset('storage/'.$product->image)}}"
+                                  alt="{{$product->name}}" width="800" height="900"> --}}
+                              <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                                  data-zoom-image="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                                  alt="{{$product->name}}" width="800" height="900">
+                          </figure>
+                      </div>
+                      @if($product->images)
+                          @foreach(json_decode($product->images) as $image)
+                          <div class="swiper-slide">
+                              <figure class="product-image">
+                                  {{-- <img src="{{asset('storage/'.$image)}}"
+                                      data-zoom-image="{{asset('storage/'.$image)}}"
+                                      alt="{{$product->name}}" width="488" height="549"> --}}
+                                  <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                                      data-zoom-image="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                                      alt="{{$product->name}}" width="488" height="549">
+                              </figure>
+                          </div>
+                          @endforeach
+                      @endif
+                  </div>
+                  <button class="swiper-button-next"></button>
+                  <button class="swiper-button-prev"></button>
+                  <a href="#" class="product-gallery-btn product-image-full"><i class="w-icon-zoom"></i></a>
+              </div>
+              <div class="product-thumbs-wrap swiper-container" data-swiper-options="{
+                  'navigation': {
+                      'nextEl': '.swiper-button-next',
+                      'prevEl': '.swiper-button-prev'
+                  }
+              }">
+                  <div class="product-thumbs swiper-wrapper row cols-4 gutter-sm">
+
+                      <div class="product-thumb swiper-slide">
+                          <img src="{{asset('storage/'.$product->image)}}"
+                              alt="{{$product->name}} Thumb" width="800" height="900">
+                      </div>
+                      @if($product->images)
+                          @foreach(json_decode($product->images) as $image)
+                          <div class="product-thumb swiper-slide">
+                              <img src="{{asset('storage/'.$image)}}"
+                                  alt="{{$product->name}} Thumb" width="800" height="900">
+                          </div>
+                          @endforeach
+                      @endif
+                  </div>
+                  <button class="swiper-button-next"></button>
+                  <button class="swiper-button-prev"></button>
+              </div>
+          </div>
+
+
       <div
-        class="tw-hidden tw-opacity-100 tw-transition-opacity tw-duration-150 tw-ease-linear data-[te-tab-active]:tw-block"
+        class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
         id="tabs-image-0"
         role="tabpanel"
         aria-labelledby="tabs-home-tab"
         data-te-tab-active>
-        <img src="{{ asset("storage/{$product->image}") }}" alt="" class="tw-mx-auto tw-max-h-[800px]">
+        {{-- <img src="{{ asset("storage/{$product->image}") }}" alt="" class="mx-auto max-h-[800px]"> --}}
+        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" class="mx-auto max-h-[800px]">
       </div>
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
           <div
-            class="tw-hidden tw-opacity-0 tw-transition-opacity tw-duration-150 tw-ease-linear data-[te-tab-active]:tw-block"
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
             id="tabs-image-{{ $index + 1 }}"
             role="tabpanel"
             aria-labelledby="tabs-image-tab">
-            <img src="{{ asset("storage/$image") }}" alt="" class="tw-mx-auto tw-max-h-[800px]">
+            {{-- <img src="{{ asset("storage/$image") }}" alt="" class="mx-auto max-h-[800px]"> --}}
+            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="" class="mx-auto max-h-[800px]">
           </div>
         @endforeach
       @endif
     </div>
-    <div class='tw-col-span-4'>
-      <div class="tw-relative before:-tw-z-10 before:tw-absolute before:-tw-top-[10px] before:-tw-bottom-[10px] lg:before:-tw-left-[400px] before:-tw-left-8 lg:before:-tw-right-[80px] before:-tw-right-8 before:tw-content-[''] before:tw-bg-[#27AEE5] before:tw-opacity-5 lg:before:tw-rounded-l-full">
-        <div class="tw-font-bold tw-text-[21px]">Green Machine With Single Phase / 2 Hp</div>
-        <div class="tw-flex tw-items-center tw-py-8">
+    <div class='col-span-4'>
+      <div class="relative before:-z-10 before:absolute before:-top-[10px] before:-bottom-[10px] lg:before:-left-[400px] before:-left-8 lg:before:-right-[80px] before:-right-8 before:content-[''] before:bg-[#27AEE5] before:opacity-5 lg:before:rounded-l-full">
+        <div class="font-bold text-[21px]">Green Machine With Single Phase / 2 Hp</div>
+        <div class="flex items-center py-8">
           <img src="{{ asset('storage/'.$product->brand->image) }}" alt="" class="w-[108px] h-[60px]">
-          <div class="tw-ml-4">
+          <div class="ml-4">
             {{ $categoryNames->join(' < ') }}
           </div>
         </div>
         <div class="">
           <ins class="new-price">{{ $product->code }}</ins> - {{ $product->details }}
         </div>
-        <div class="tw-grid tw-grid-rows-3 tw-divide-y tw-pt-6 tw-w-[80%] tw-text-[#282938]">
-          <div class="tw-py-2">Brand Name: {{$product->brand->name}}</div>
-          <div class="tw-py-2">Warranty: {{$product->warranty}}</div>
-          <div class="tw-py-2">Origin: {{$product->origin}}</div>
+        <div class="grid grid-rows-3 divide-y pt-6 w-[80%] text-[#282938]">
+          <div class="py-2">Brand Name: {{$product->brand->name}}</div>
+          <div class="py-2">Warranty: {{$product->warranty}}</div>
+          <div class="py-2">Origin: {{$product->origin}}</div>
         </div>
-        <form action="javascript:void(0)" method="POST" class="tw-py-4 add-to-cart cart-form" id="{{ $product->id }}">
+        <form action="javascript:void(0)" method="POST" class="py-4 add-to-cart cart-form" id="{{ $product->id }}">
           @csrf
           <input type="hidden" name="id" value="{{$product->id}}">
-          <button type="submit" class="tw-px-8 tw-py-4 tw-bg-gray-700 tw-rounded-full tw-text-white" id="loading-alert-{{ $product->id }}">
+          <button type="submit" class="px-8 py-4 bg-gray-700 rounded-full text-white" id="loading-alert-{{ $product->id }}">
             Add to Cart
           </button>
         </form>
       </div>
-      <div class="tw-mt-12">
-        <video src="" class="tw-w-[500px] tw-h-[147px]"></video>
+      <div class="mt-12">
+        <video src="" class="w-[500px] h-[147px]"></video>
       </div>
     </div>
   </div>
 
-  <div class="tw-py-8 lg:tw-px-[100px] tw-px-8">
-    <div class="tw-rounded-3xl tw-bg-[#e5f8ff] lg:tw-py-8 lg:tw-px-16 tw-p-4">
+  <div class="py-8 lg:px-[100px] px-8">
+    <div class="rounded-3xl bg-[#e5f8ff] lg:py-8 lg:px-16 p-4">
       <ul
-        class="tw-mb-5 tw-flex tw-list-none tw-flex-row tw-flex-wrap tw-border-b-0 tw-pl-0"
+        class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
         role="tablist"
         data-te-nav-ref>
         <li role="presentation">
           <a href="#tabs-description"
-            class="tw-my-2 tw-block tw-border-x-0 tw-border-2 tw-border-t-0 tw-border-transparent tw-px-2 tw-pb-3.5 tw-pt-4 tw-text-[20px] tw-leading-tight hover:tw-isolate hover:border-transparent focus:tw-isolate focus:tw-border-transparent dark:tw-text-neutral-400 dark:hover:tw-bg-transparent data-[te-nav-active]:tw-border-gray-800 data-[te-nav-active]:tw-text-gray-800 data-[te-nav-active]:tw-font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-description"
             data-te-nav-active
@@ -104,7 +172,7 @@
         <li role="presentation">
           <a
             href="#tabs-tech_specification"
-            class="tw-my-2 tw-block tw-border-x-0 tw-border-2 tw-border-t-0 lg:tw-ml-16 tw-border-transparent tw-px-2 tw-pb-3.5 tw-pt-4 tw-text-[20px] leading-tight hover:tw-isolate hover:border-transparent focus:tw-isolate focus:border-transparent dark:tw-text-neutral-400 dark:hover:tw-bg-transparent data-[te-nav-active]:tw-border-gray-800 data-[te-nav-active]:tw-text-gray-800 data-[te-nav-active]:tw-font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-tech_specification"
             role="tab"
@@ -116,7 +184,7 @@
         <li role="presentation">
           <a
             href="#tabs-downloads"
-            class="tw-my-2 tw-block tw-border-x-0 tw-border-2 tw-border-t-0 lg:tw-ml-16 tw-border-transparent tw-px-2 tw-pb-3.5 tw-pt-4 tw-text-[20px] tw-text-[theme(colors.blue)] tw-leading-tight hover:tw-isolate hover:tw-border-transparent focus:tw-isolate focus:tw-border-transparent dark:tw-text-neutral-400 dark:hover:tw-bg-transparent data-[te-nav-active]:tw-border-gray-800 data-[te-nav-active]:tw-text-gray-800 data-[te-nav-active]:tw-font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] text-[theme(colors.blue)] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-downloads"
             role="tab"
@@ -128,9 +196,9 @@
       </ul>
 
       <!--Tabs content-->
-      <div class="tw-mb-6">
+      <div class="mb-6">
         <div
-          class="tw-hidden tw-opacity-100 tw-transition-opacity tw-duration-150 tw-ease-linear data-[te-tab-active]:tw-block"
+          class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
           id="tabs-description"
           role="tabpanel"
           aria-labelledby="tabs-home-tab"
@@ -138,7 +206,7 @@
           {!! $product->description !!}
         </div>
         <div
-          class="tw-hidden tw-opacity-0 tw-transition-opacity tw-duration-150 tw-ease-linear data-[te-tab-active]:tw-block"
+          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
           id="tabs-tech_specification"
           role="tabpanel"
           aria-labelledby="tabs-profile-tab">
@@ -152,7 +220,7 @@
           </table>
         </div>
         <div
-          class="tw-hidden tw-opacity-0 tw-transition-opacity tw-duration-150 tw-ease-linear data-[te-tab-active]:tw-block"
+          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
           id="tabs-downloads"
           role="tabpanel"
           aria-labelledby="tabs-profile-tab">
@@ -169,8 +237,8 @@
     </div>
   </div>
 
-  <div class="tw-py-[40px] tw-px-[100px]">
-    <h2 class="tw-text-3xl tw-font-bold">Related Products</h2>
+  <div class="py-[40px] px-[100px]">
+    <h2 class="text-3xl font-bold">Related Products</h2>
     <div x-data="{swiper: null}"
       x-init="swiper = new Swiper($refs.container, {
         loop: true,
@@ -192,11 +260,11 @@
           },
         },
       })"
-      class="tw-relative tw-w-10/12 tw-mx-auto tw-flex tw-flex-row tw-pt-4"
+      class="relative w-10/12 mx-auto flex flex-row pt-4"
     >
-      <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-z-10 tw-flex tw-items-center">
+      <div class="absolute inset-y-0 left-0 z-10 flex items-center">
         <button @click="swiper.slidePrev()" 
-            class="tw-bg-white -tw-ml-2 lg:-tw-ml-4 tw-flex tw-justify-center tw-items-center tw-w-10 tw-h-10 tw-rounded-full tw-shadow focus:tw-outline-none">
+            class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
           <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
         </button>
       </div>
@@ -204,19 +272,19 @@
       <div class="swiper-container" x-ref="container">
         <div class="swiper-wrapper">
           @foreach($related as $item)
-            <div class="swiper-slide tw-p-4">
-              <figure class="tw-group tw-relative">
-                <a href="{{ route('products.product', $item->id) }}" class="tw-flex tw-justify-center">
-                  <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="tw-h-[232px]" />
+            <div class="swiper-slide p-4">
+              <figure class="group relative">
+                <a href="{{ route('products.product', $item->id) }}" class="flex justify-center">
+                  <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="h-[232px]" />
                   @if($item->images)
                     @foreach(json_decode($item->images) as $image)
                       @if($loop->last)
-                        <img src="{{asset('storage/'.$image)}}" alt="Product" class="tw-absolute tw-opacity-0 group-hover:tw-opacity-100 tw-top-0 tw-left-0 tw-right-0 tw-left-0 tw-h-[232px] tw-transition-opacity tw-duration-300" />
+                        <img src="{{asset('storage/'.$image)}}" alt="Product" class="absolute opacity-0 group-hover:opacity-100 top-0 left-0 right-0 left-0 h-[232px] transition-opacity duration-300" />
                       @endif
                     @endforeach
                   @endif
                 </a>
-                <div class="product-action-vertical group-hover:tw-opacity-100 group-hover:tw-visible">
+                <div class="product-action-vertical group-hover:opacity-100 group-hover:visible">
                   <a href="javascript:void(0)" onclick="$('.cart-submit-{{$item->id}}').submit();"
                     class="btn-product-icon btn-cart-design w-icon-cart loader-alert-{{$item->id}}"></a>
                     <form action="javascript:void(0)" method="POST" class="add-to-cart cart-form cart-submit-{{$item->id}}" id="{{$item->id}}">
@@ -224,19 +292,19 @@
                       <input type="hidden" name="id" value="{{$item->id}}">
                     </form>
                 </div>
-                <div class="product-action tw-absolute tw-opacity-0 group-hover:tw-opacity-100 group-hover:tw-visible tw-right-0 tw-left-0 tw-bottom-0 tw-bg-gray-900 tw-text-white tw-font-semibold tw-flex tw-justify-center tw-transition-opacity tw-duration-300">
-                  <a href="javascript:void(0);" class="show-modal tw-py-4 tw-text-center"
+                <div class="product-action absolute opacity-0 group-hover:opacity-100 group-hover:visible right-0 left-0 bottom-0 bg-gray-900 text-white font-semibold flex justify-center transition-opacity duration-300">
+                  <a href="javascript:void(0);" class="show-modal py-4 text-center"
                     title="Quick View" id="{{$item->slug}}">Quick View</a>
                   <a href="javascript:void(0);" class="d-none btn-quickview" id="quickview-{{$item->id}}"></a>
                 </div>
               </figure>
               <div class="pt-8">
-                <h4 class="tw-font-medium tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis"><a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
+                <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis"><a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
                 </h4>
-                <div class="ratings-container tw-text-neutral-400 tw-text-sm">
+                <div class="ratings-container text-neutral-400 text-sm">
                   <a href="{{ route('brands.show', $item->brand->slug) }}" class="rating-reviews">{{$item->brand->name}}</a>
                 </div>
-                <div class="tw-font-semibold tw-text-lg tw-whitespace-nowrap tw-overflow-hidden tw-text-ellipsis">
+                <div class="font-semibold text-lg whitespace-nowrap overflow-hidden text-ellipsis">
                   <div class="product-price">{{$item->code}}</div>
                 </div>
               </div>
@@ -245,14 +313,66 @@
         </div>
       </div>
 
-      <div class="tw-absolute tw-inset-y-0 tw-right-0 tw-z-10 tw-flex tw-items-center">
+      <div class="absolute inset-y-0 right-0 z-10 flex items-center">
         <button @click="swiper.slideNext()"
-                class="tw-bg-white -tw-mr-2 lg:-tw-mr-4 tw-flex tw-justify-center tw-items-center tw-w-10 tw-h-10 tw-rounded-full tw-shadow focus:tw-outline-none">
+                class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
           <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
         </button>
       </div>
     </div>
   </div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides.
+        PhotoSwipe keeps only 3 of them in the DOM to save memory.
+        Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" aria-label="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--zoom" aria-label="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="loading-spin"></div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button--arrow--left" aria-label="Previous (arrow left)"></button>
+            <button class="pswp__button--arrow--right" aria-label="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of PhotoSwipe -->
+
 
   @push('scripts')
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>

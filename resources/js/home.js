@@ -5,7 +5,7 @@ import {
 const totalPanel = document.getElementById('productOverview');
 $(() => {
   totalPanel.querySelectorAll('.tab-panel').forEach(el => {
-    el.classList.add('tw-hidden');
+    el.classList.add('hidden');
   })
 })
 
