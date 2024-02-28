@@ -19,8 +19,11 @@
         <a href="{{ route('brands.show', $brand->id) }}" class="bg-white rounded-3xl flex justify-center items-center group relative h-[316px]">
           <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           @if ($productsCount > 0)
+            @php
+              $product = $brand->products[rand(0, $productsCount-1)];
+            @endphp
             <div class="group-hover:opacity-100 opacity-0 absolute top-0 right-0 bottom-0 left-0 flex transition-opacity duration-300 items-center justify-center">
-              <img src="{{ asset('storage/', $brand->products[rand(0, $productsCount-1)]) }}" alt="">
+              <img src="{{ asset("storage/".$product['image']) }}" alt="">
             </div>
           @endif
         </a>
