@@ -3,8 +3,9 @@
     <div>
       <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
       <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2">
-        The region's biggest selection of cleaning solutions
-      </h1>
+      The region's biggest selection of <br>cleaning solutions
+    </h1>
+
       <p class="lg:w-8/12 xl:w-full sm:text-left text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
       <div class="flex mt-6 justify-center sm:justify-start">
@@ -17,8 +18,8 @@
       </div>
     </div>
 
-    <div class="relative origin-bottom-right scale-125 -mt-[90px]">
-      <img src="/images/home/Mask group.png" alt="" class="sm:max-w-3/4 -top-[96px] right-0 opacity-80 -z-10">
+    <div class="flex">
+      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0">
     </div>
   </div>
 

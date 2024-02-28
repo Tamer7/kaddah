@@ -12,6 +12,7 @@
     <div class="">
       <div class="text-center text-[theme(colors.blue)] text-2xl">Message Us</div>
       <form class="contact-us-form mt-6" action="{{ route('contact.store') }}" method="post">
+        @csrf
         <div class="relative mb-6" data-te-input-wrapper-init>
           <input
             type="text"

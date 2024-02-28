@@ -139,12 +139,12 @@
             <span>About</span>
             <span>Blog</span>
             <span>Events</span>
-            <span>Contract</span>
+            <span>Contact</span>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row text-center justify-between items-center pt-[44px] text-neutral-400">
           <div class="flex lg:gap-10 gap-3">
-            <span>© 2024 Kaddah </span>
+            <span>© <?php echo date("Y"); ?> Kaddah </span>
             <span>Privacy Policy</span>
             <span>Cookies Policy</span>
             <span>Terms of Service</span>
