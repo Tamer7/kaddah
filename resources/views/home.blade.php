@@ -16,11 +16,11 @@
     </div>
 
     <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="tw-absolute sm:tw-max-w-3/4 -tw-top-[96px] tw-right-0 tw-opacity-50">
+      <img src="/images/home/Mask group.png" alt="" class="tw-absolute sm:tw-max-w-3/4 -tw-top-[96px] tw-right-0 tw-opacity-80 -tw-z-10">
     </div>
   </div>
 
-  <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
+  <div class="sm:tw-pt-16 tw-pt-8 tw-bg-[#E5F8FF]">
     <div class="lg:tw-pl-32 lg:tw-py-24 tw-p-8 tw-flex sm:tw-flex-row tw-flex-col">
       <img src="/images/home/Group 59.png" alt="" class="tw-py-4">
       <div class="lg:tw-pl-20 tw-pl-12 sm:tw-pt-0 tw-pt-4">
