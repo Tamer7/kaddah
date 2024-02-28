@@ -1,42 +1,42 @@
 <x-layout noDecorator>
-  <div class="lg:px-24 px-8 relative lg:h-[600px] py-[106px]">
-    <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-    <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2 lg:w-8/12 xl:w-full">
+  <div class="lg:tw-px-24 tw-px-8 tw-relative lg:tw-h-[600px] tw-py-[106px]">
+    <div class="sm:tw-pt-2 tw-pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
+    <h1 class="tw-font-semibold lg:tw-text-[52px] tw-text-[40px] sm:tw-text-left tw-text-center tw-text-[theme(colors.blue)] tw-py-2 lg:tw-w-8/12 xl:tw-w-full">
       The region's biggest selection of cleaning solutions
     </h1>
-    <p class=" lg:w-8/12 xl:w-full sm:text-left text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    <p class="lg:tw-w-8/12 xl:tw-w-full sm:tw-text-left tw-text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
-    <div class="flex mt-6 justify-center sm:justify-start">
-      <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+    <div class="tw-flex tw-mt-6 tw-justify-center sm:tw-justify-start">
+      <a href="/products" class="tw-bg-[theme(colors.blue)] tw-rounded-[28px] tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
         Our Products
       </a>
-      <a href="/about-us" class="bg-gray-800 rounded-[28px] ml-4 px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+      <a href="/about-us" class="tw-bg-gray-800 tw-rounded-[28px] tw-ml-4 tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
         About Us
       </a>
     </div>
 
     <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0 opacity-50">
+      <img src="/images/home/Mask group.png" alt="" class="tw-absolute sm:tw-max-w-3/4 -tw-top-[96px] tw-right-0 tw-opacity-50">
     </div>
   </div>
 
   <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
-    <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-      <img src="/images/home/Group 59.png" alt="" class="py-4">
-      <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
-        <h2 class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
-        <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
-          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">Market Leaders</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+    <div class="lg:tw-pl-32 lg:tw-py-24 tw-p-8 tw-flex sm:tw-flex-row tw-flex-col">
+      <img src="/images/home/Group 59.png" alt="" class="tw-py-4">
+      <div class="lg:tw-pl-20 tw-pl-12 sm:tw-pt-0 tw-pt-4">
+        <h2 class="tw-font-bold sm:tw-text-[46px] sm:tw-ml-0 -tw-ml-8 tw-text-[36px] lg:tw-max-w-[500px] sm:tw-leading-[52px] tw-leading-[40px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
+        <ul class="tw-list-image-[url(/images/checkmark.png)] marker:tw-mt-4 tw-mt-8">
+          <li class="tw-py-3 tw-pl-6 -tw-ml-6 lg:tw-max-w-[500px]">
+            <h3 class="tw-text-medium tw-text-lg">Market Leaders</h3>
+            <p class="tw-text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
-          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">We are Committed</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+          <li class="tw-py-3 tw-pl-6 -tw-ml-6 lg:tw-max-w-[500px]">
+            <h3 class="tw-text-medium tw-text-lg">We are Committed</h3>
+            <p class="tw-text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
-          <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">Trusted Professionals</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+          <li class="tw-py-3 tw-pl-6 -tw-ml-6 lg:tw-max-w-[500px]">
+            <h3 class="tw-text-medium tw-text-lg">Trusted Professionals</h3>
+            <p class="tw-text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
           </li>
         </ul>
       </div>
@@ -45,38 +45,39 @@
 
   <x-subpanel title="The Cleaning Pioneers" more="View All Categories">
     <x-slot name="header">
-      <div class="font-semibold text-2xl text-[theme(colors.blue)]">Main Categories</div>
+      <div class="tw-font-semibold tw-text-2xl tw-text-[theme(colors.blue)]">Main Categories</div>
     </x-slot>
 
     <x-slot name="description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
     </x-slot>
 
-    <div class="lg:-mx-[64px] sm:-mx-4 py-4">
+    <div class="lg:-tw-mx-[64px] sm:-tw-mx-4 tw-py-4">
       <div id="carouselPanel"
-        class="relative"
+        class="tw-relative"
         data-te-carousel-init
         data-te-ride="carousel">
         <!--Carousel items-->
-        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+        <div class="tw-relative tw-w-full tw-overflow-hidden after:tw-clear-both after:tw-block after:tw-content-['']"
           role="tablist"
           data-te-nav-ref
         >
           @foreach ($categories as $category)
             @php
               $item = [
-                'img' => asset('storage/'.$category->image),
+                // 'img' => asset('storage/'.$category->image),
+                'img' => 'https://images.unsplash.com/photo-1598951092651-653c21f5d0b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80',
                 'title' => $category->name
               ]
             @endphp
 
-            <div class="carousel-item relative {{ $loop->first ? '' : 'hidden' }} float-left -mr-[100%] w-full transition-transform duration-[1200ms] ease-in-out motion-reduce:transition-none"
+            <div class="carousel-item tw-relative {{ $loop->first ? '' : 'tw-hidden' }} tw-float-left -tw-mr-[100%] tw-w-full tw-transition-transform tw-duration-[1200ms] tw-ease-in-out motion-reduce:tw-transition-none"
               data-te-carousel-item
               data-te-interval="8000"
               {{ $loop->first ? 'data-te-carousel-active' : ''}}
             >
-              <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-14 bg-white" role="presentation">
-                <div class="category rounded-[30px] hover:border border-[theme(colors.blue)]"
+              <div class="tw-grid lg:tw-grid-cols-4 sm:tw-grid-cols-2 tw-gap-14 tw-bg-white" role="presentation">
+                <div class="category tw-rounded-[30px] hover:tw-border tw-border-[theme(colors.blue)]"
                   data-te-toggle="pill"
                   data-te-target="#category_{{ $category['id'] }}"
                   role="tab"
@@ -92,7 +93,7 @@
 
         <!--Carousel controls - prev item-->
         <button
-          class="absolute left-0 top-2/4 z-[1] flex h-16 w-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+          class="tw-absolute tw-left-0 tw-top-2/4 tw-z-[1] tw-flex tw-h-16 tw-w-16 -tw-translate-y-2/4 tw-items-center tw-justify-center tw-border-0 tw-p-0 tw-text-center tw-text-[theme(colors.blue)] tw-duration-150 tw-ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:tw-text-white hover:tw-bg-[theme(colors.blue)] focus:tw-text-white focus:tw-no-underline"
           type="button"
           data-te-target="#carouselPanel"
           data-te-slide="prev">
@@ -100,7 +101,7 @@
         </button>
         <!--Carousel controls - next item-->
         <button
-          class="absolute right-0 top-2/4 z-[1] flex w-16 h-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+          class="tw-absolute tw-right-0 tw-top-2/4 tw-z-[1] tw-flex tw-w-16 tw-h-16 -tw-translate-y-2/4 tw-items-center tw-justify-center tw-border-0 tw-p-0 tw-text-center tw-text-[theme(colors.blue)] tw-duration-150 tw-ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:tw-text-white hover:tw-bg-[theme(colors.blue)] focus:tw-text-white focus:tw-no-underline"
           type="button"
           data-te-target="#carouselPanel"
           data-te-slide="next">
@@ -109,13 +110,13 @@
       </div>
 
       @foreach ($categories as $category)
-        <div class="hidden relative pt-6 -mx-6 transition-opacity opacity-0 duration-700 ease-linear data-[te-tab-active]:block"
+        <div class="tw-hidden tw-relative tw-pt-6 -tw-mx-6 tw-transition-opacity tw-opacity-0 tw-duration-700 tw-ease-linear data-[te-tab-active]:tw-block"
           id="category_{{ $category['id'] }}"
           role="tabpanel"
           aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
-          <div class="relative border rounded-[30px] border-[theme(colors.blue)]">
-            <div class="triangle border border-[theme(colors.blue)]"></div>
-            <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 py-6">
+          <div class="tw-relative tw-border tw-rounded-[30px] tw-border-[theme(colors.blue)]">
+            <div class="triangle tw-border tw-border-[theme(colors.blue)]"></div>
+            <div class="tw-grid lg:tw-grid-cols-5 md:tw-grid-cols-3 sm:tw-grid-cols-2 tw-gap-8 tw-py-6">
               @foreach ($category->children as $subcategory)
                 @if ($loop->index > 4) @break @endif
                 @php
@@ -128,7 +129,7 @@
                 <x-items.category :category="$item" />
               @endforeach
             </div>
-            <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
+            <div class="tw-font-semibold tw-text-[22px] tw-text-center tw-py-3 tw-text-[theme(colors.blue)]">
               <a href="{{ route('categories.sub', ['category' => $category['id']]) }}">View More Products <i class="fa-solid fa-chevron-right"></i></a>
             </div>
           </div>
@@ -137,8 +138,8 @@
     </div>
   </x-subpanel>
 
-  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="bg-[#E5F8FF]">
-    <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="tw-bg-[#E5F8FF]">
+    <div class="tw-grid lg:tw-grid-cols-3 tw-gap-8 tw-pt-6 tw-px-4">
       @php
         $data = [
           [
@@ -161,18 +162,18 @@
 
       @foreach ($data as $item)
         <div class="{{ $loop->index ===1 ? 'lg:pt-6' : '' }}">
-          <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="tw-block tw-rounded-[32px] tw-p-6 tw-bg-white tw-shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:tw-bg-neutral-700">
             <a href="#!">
               <img
-                class="rounded-t-lg"
+                class="tw-rounded-t-lg"
                 src="{{ $item['img'] }}"
                 alt="" />
             </a>
-            <div class="pt-6">
-              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+            <div class="tw-pt-6">
+              <h5 class="tw-mb-2 tw-text-xl tw-font-medium tw-leading-tight tw-text-neutral-800 dark:tw-text-neutral-50">
                 {{ $item['title'] }}
               </h5>
-              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+              <p class="tw-mb-4 tw-text-base tw-text-neutral-600 dark:tw-text-neutral-200">
                 {{ $item['description']}}
               </p>
             </div>
@@ -184,11 +185,11 @@
 
   <x-subpanel title="Read our latest events" more="View All Events">
     <div id="carouselEventPanel"
-      class="relative"
+      class="tw-relative"
       data-te-carousel-init
       data-te-ride="carousel">
       <!--Carousel items-->
-      <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+      <div class="tw-relative tw-w-full tw-overflow-hidden after:tw-clear-both after:tw-block after:tw-content-['']"
         role="tablist"
         data-te-nav-ref
       >
@@ -200,12 +201,12 @@
             ]
           @endphp
 
-          <div class="carousel-item relative {{ $loop->first ? '' : 'hidden' }} float-left -mr-[100%] w-full transition-transform duration-[1200ms] ease-in-out motion-reduce:transition-none"
+          <div class="carousel-item tw-relative {{ $loop->first ? '' : 'tw-hidden' }} tw-float-left -tw-mr-[100%] tw-w-full tw-transition-transform tw-duration-[1200ms] tw-ease-in-out motion-reduce:tw-transition-none"
             data-te-carousel-item
             data-te-interval="8000"
             {{ $loop->first ? 'data-te-carousel-active' : ''}}
           >
-            <div class="grid lg:grid-cols-4 sm:grid-cols-2 gap-14 bg-white" role="presentation">
+            <div class="tw-grid lg:tw-grid-cols-4 sm:tw-grid-cols-2 tw-gap-14 tw-bg-white" role="presentation">
               <x-items.event :event="$event" />
             </div>
           </div>
@@ -214,7 +215,7 @@
 
       <!--Carousel controls - prev item-->
       <button
-        class="absolute left-0 top-2/4 z-[1] flex h-16 w-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+        class="tw-absolute tw-left-0 tw-top-2/4 tw-z-[1] tw-flex tw-h-16 tw-w-16 -tw-translate-y-2/4 tw-items-center tw-justify-center tw-border-0 tw-p-0 tw-text-center tw-text-[theme(colors.blue)] tw-duration-150 tw-ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:tw-text-white hover:tw-bg-[theme(colors.blue)] focus:tw-text-white focus:tw-no-underline"
         type="button"
         data-te-target="#carouselEventPanel"
         data-te-slide="prev">
@@ -222,7 +223,7 @@
       </button>
       <!--Carousel controls - next item-->
       <button
-        class="absolute right-0 top-2/4 z-[1] flex w-16 h-16 -translate-y-2/4 items-center justify-center border-0 p-0 text-center text-[theme(colors.blue)] duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:bg-[theme(colors.blue)] focus:text-white focus:no-underline"
+        class="tw-absolute tw-right-0 tw-top-2/4 tw-z-[1] tw-flex tw-w-16 tw-h-16 -tw-translate-y-2/4 tw-items-center tw-justify-center tw-border-0 tw-p-0 tw-text-center tw-text-[theme(colors.blue)] tw-duration-150 tw-ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:tw-text-white hover:tw-bg-[theme(colors.blue)] focus:tw-text-white focus:tw-no-underline"
         type="button"
         data-te-target="#carouselEventPanel"
         data-te-slide="next">

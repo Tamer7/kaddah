@@ -132,35 +132,35 @@
   <div class="tw-bg-[#E5F8FF] lg:tw-px-[168px] sm:tw-px-24 tw-px-8 lg:tw-py-[90px] tw-py-8" style="background-image: url('images/about/back_1.svg')">
     <h3 class="tw-text-3xl tw-font-semibold">Industries we serve</h3>
     <div class="tw-mt-[50px] tw-grid lg:tw-grid-cols-3 sm:tw-grid-cols-2 tw-gap-8">
-      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white group">
+      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white tw-group">
         <div class="tw-overflow-hidden tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center group-hover:tw-text-left group-hover:tw-items-start group-hover:tw-justify-center">
           <img class="tw-transition tw-ease-in-out tw-delay-1500 tw-w-20 group-hover:tw-w-8" src="{{ asset('images/about/icons/Janitor.svg') }}" alt="">
           <h3 class="tw-transition tw-ease-in-out tw-delay-1500 tw-text-3xl tw-font-bold tw-pt-8 tw-pb-6 group-hover:tw-pt-6 group-hover:tw-pb-4 group-hover:tw-text-xl">Commercial cleaning</h3>
           <p class="tw-transition tw-ease-in-out tw-delay-1500 tw-duration-300 tw-hidden group-hover:tw-block tw-max-h-[150px] tw-overflow-auto tw-text-neutral-400">Commercial cleaning providers understand the need for versatile and durable machinery suitable for various settings, including offices, retail spaces, and hospitality venues.</p>
         </div>
       </div>
-      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white group">
+      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white tw-group">
         <div class="tw-overflow-hidden tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center group-hover:tw-text-left group-hover:tw-items-start group-hover:tw-justify-center">
           <img class="tw-transition tw-ease-in-out tw-delay-1500 tw-w-20 group-hover:tw-w-8" src="{{ asset('images/about/icons/Out Patient Department.svg') }}" alt="">
           <h3 class="tw-transition tw-ease-in-out tw-delay-1500 tw-text-3xl tw-font-bold tw-pt-8 tw-pb-6 group-hover:tw-pt-6 group-hover:tw-pb-4 group-hover:tw-text-xl">Healthcare</h3>
           <p class="tw-transition tw-ease-in-out tw-delay-1500 tw-duration-300 tw-hidden group-hover:tw-block tw-max-h-[150px] tw-overflow-auto tw-text-neutral-400">Our clients in the healthcare sector face stringent hygiene and infection control requirements.</p>
         </div>
       </div>
-      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white group">
+      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white tw-group">
         <div class="tw-overflow-hidden tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center group-hover:tw-text-left group-hover:tw-items-start group-hover:tw-justify-center">
           <img class="tw-transition tw-ease-in-out tw-delay-1500 tw-w-20 group-hover:tw-w-8" src="{{ asset('images/about/icons/Factory.svg') }}" alt="">
           <h3 class="tw-transition tw-ease-in-out tw-delay-1500 tw-text-3xl tw-font-bold tw-pt-8 tw-pb-6 group-hover:tw-pt-6 group-hover:tw-pb-4 group-hover:tw-text-xl">Industrial</h3>
           <p class="tw-transition tw-ease-in-out tw-delay-1500 tw-duration-300 tw-hidden group-hover:tw-block tw-max-h-[150px] tw-overflow-auto tw-text-neutral-400">Industries and manufacturing sites regularly face difficult cleaning requirements with heavy-duty machinery, grease, and industrial residues.</p>
         </div>
       </div>
-      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white group">
+      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white tw-group">
         <div class="tw-overflow-hidden tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center group-hover:tw-text-left group-hover:tw-items-start group-hover:tw-justify-center">
           <img class="tw-transition tw-ease-in-out tw-delay-1500 tw-w-20 group-hover:tw-w-8" src="{{ asset('images/about/icons/Student Center.svg') }}" alt="">
           <h3 class="tw-transition tw-ease-in-out tw-delay-1500 tw-text-3xl tw-font-bold tw-tw-pt-8 tw-pb-6 group-hover:tw-pt-6 group-hover:tw-pb-4 group-hover:tw-text-xl">Education</h3>
           <p class="tw-transition tw-ease-in-out tw-delay-1500 tw-duration-300 tw-hidden group-hover:tw-block tw-max-h-[150px] tw-overflow-auto tw-text-neutral-400">Educational institutes require user-friendly, reliable cleaning equipment that offer minimal disruption to the education setting.</p>
         </div>
       </div>
-      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white group">
+      <div class="tw-rounded-[30px] tw-p-8 tw-h-[320px] tw-flex tw-justify-center tw-bg-white tw-group">
         <div class="tw-overflow-hidden tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-center group-hover:tw-text-left group-hover:tw-items-start group-hover:tw-justify-center">
           <img class="tw-transition tw-ease-in-out tw-delay-1500 tw-w-20 group-hover:tw-w-8" src="{{ asset('images/about/icons/Service Bell.svg') }}" alt="">
           <h3 class="tw-transition tw-ease-in-out tw-delay-1500 tw-text-3xl tw-font-bold tw-pt-8 tw-pb-6 group-hover:tw-pt-6 group-hover:tw-pb-4 group-hover:tw-text-xl">Hospitality</h3>

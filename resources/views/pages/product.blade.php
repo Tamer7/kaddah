@@ -207,13 +207,11 @@
             <div class="swiper-slide tw-p-4">
               <figure class="tw-group tw-relative">
                 <a href="{{ route('products.product', $item->id) }}" class="tw-flex tw-justify-center">
-                  {{-- <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="tw-h-[232px]" /> --}}
-                  <img src="https://images.unsplash.com/photo-1598951092651-653c21f5d0b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Product" class="tw-h-[232px]" />
+                  <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="tw-h-[232px]" />
                   @if($item->images)
                     @foreach(json_decode($item->images) as $image)
                       @if($loop->last)
-                        {{-- <img src="{{asset('storage/'.$image)}}" alt="Product" class="tw-absolute tw-opacity-0 group-hover:tw-opacity-100 tw-top-0 tw-left-0 tw-right-0 tw-left-0 tw-h-[232px] tw-transition-opacity tw-duration-300" /> --}}
-                        <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="Product" class="tw-absolute tw-opacity-0 group-hover:tw-opacity-100 tw-top-0 tw-left-0 tw-right-0 tw-left-0 tw-h-[232px] tw-transition-opacity tw-duration-300" />
+                        <img src="{{asset('storage/'.$image)}}" alt="Product" class="tw-absolute tw-opacity-0 group-hover:tw-opacity-100 tw-top-0 tw-left-0 tw-right-0 tw-left-0 tw-h-[232px] tw-transition-opacity tw-duration-300" />
                       @endif
                     @endforeach
                   @endif

@@ -124,7 +124,7 @@
 
           <div class="tw-rounded-2xl tw-bg-white">
             <h2 class="tw-mb-0" id="flush-headingTwo">
-              <button class="tw-rounded-2xl group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
+              <button class="tw-rounded-2xl tw-group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
                 type="button"
                 data-te-collapse-init
                 data-te-collapse-collapsed
@@ -163,7 +163,7 @@
 
           <div class="tw-rounded-2xl tw-bg-white">
             <h2 class="mb-0" id="flush-headingThree">
-              <button class="tw-rounded-2xl group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
+              <button class="tw-rounded-2xl tw-group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
                 type="button"
                 data-te-collapse-init
                 data-te-collapse-collapsed
@@ -202,7 +202,7 @@
 
           <div class="tw-rounded-2xl tw-bg-white">
             <h2 class="tw-mb-0" id="flush-headingFour">
-              <button class="tw-rounded-2xl group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
+              <button class="tw-rounded-2xl tw-group tw-relative tw-flex tw-w-full tw-items-center tw-border-0 tw-bg-white tw-p-8 tw-font-medium tw-text-[22px] tw-text-left tw-text-neutral-800 tw-transition [overflow-anchor:tw-none] hover:tw-z-[2] focus:tw-z-[3] focus:tw-outline-none dark:tw-bg-neutral-800 dark:tw-text-white [&:not([data-te-collapse-collapsed])]:tw-bg-white dark:[&:not([data-te-collapse-collapsed])]:tw-bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:tw-text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:tw-inset_0_-1px_0_rgba(75,85,99)]"
                 type="button"
                 data-te-collapse-init
                 data-te-collapse-collapsed
