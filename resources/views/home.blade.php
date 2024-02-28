@@ -1,22 +1,24 @@
 <x-layout noDecorator>
-  <div class="lg:tw-px-24 tw-px-8 tw-relative lg:tw-h-[600px] tw-py-[106px]">
-    <div class="sm:tw-pt-2 tw-pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-    <h1 class="tw-font-semibold lg:tw-text-[52px] tw-text-[40px] sm:tw-text-left tw-text-center tw-text-[theme(colors.blue)] tw-py-2 lg:tw-w-8/12 xl:tw-w-full">
-      The region's biggest selection of cleaning solutions
-    </h1>
-    <p class="lg:tw-w-8/12 xl:tw-w-full sm:tw-text-left tw-text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+  <div class="lg:tw-pl-24 tw-pl-8 tw-relative lg:tw-h-[600px] tw-py-[106px] tw-flex">
+    <div>
+      <div class="sm:tw-pt-2 tw-pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
+      <h1 class="tw-font-semibold lg:tw-text-[52px] tw-text-[40px] sm:tw-text-left tw-text-center tw-text-[theme(colors.blue)] tw-py-2">
+        The region's biggest selection of cleaning solutions
+      </h1>
+      <p class="lg:tw-w-8/12 xl:tw-w-full sm:tw-text-left tw-text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
-    <div class="tw-flex tw-mt-6 tw-justify-center sm:tw-justify-start">
-      <a href="/products" class="tw-bg-[theme(colors.blue)] tw-rounded-[28px] tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
-        Our Products
-      </a>
-      <a href="/about-us" class="tw-bg-gray-800 tw-rounded-[28px] tw-ml-4 tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
-        About Us
-      </a>
+      <div class="tw-flex tw-mt-6 tw-justify-center sm:tw-justify-start">
+        <a href="/products" class="tw-bg-[theme(colors.blue)] tw-rounded-[28px] tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
+          Our Products
+        </a>
+        <a href="/about-us" class="tw-bg-gray-800 tw-rounded-[28px] tw-ml-4 tw-px-12 tw-py-6 tw-text-sm tw-font-semibold tw-text-white hover:tw-opacity-80 focus-visible:tw-outline focus-visible:tw-outline-2 focus-visible:tw-outline-offset-2 focus-visible:tw-outline-white">
+          About Us
+        </a>
+      </div>
     </div>
 
-    <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="tw-absolute sm:tw-max-w-3/4 -tw-top-[96px] tw-right-0 tw-opacity-80 -tw-z-10">
+    <div class="tw-relative tw-origin-bottom-right tw-scale-125 -tw-mt-[90px]">
+      <img src="/images/home/Mask group.png" alt="" class="sm:tw-max-w-3/4 -tw-top-[96px] tw-right-0 tw-opacity-80 -tw-z-10">
     </div>
   </div>
 

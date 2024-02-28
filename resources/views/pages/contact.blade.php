@@ -21,7 +21,7 @@
             placeholder="Your Name" />
           <label
             for="InputName"
-            class="tw-pointer-events-none absolute tw-left-3 tw-top-0 tw-mb-0 tw-max-w-[90%] tw-origin-[0_0] truncate tw-pt-[0.37rem] tw-leading-[1.6] tw-text-neutral-500 tw-transition-all tw-duration-200 tw-ease-out peer-focus:-tw-translate-y-[0.9rem] peer-focus:tw-scale-[0.8] peer-focus:tw-text-primary peer-data-[te-input-state-active]:-tw-translate-y-[0.9rem] peer-data-[te-input-state-active]:tw-scale-[0.8] motion-reduce:tw-transition-none dark:tw-text-neutral-200 dark:peer-focus:tw-text-primary"
+            class="tw-pointer-events-none tw-absolute tw-left-3 tw-top-0 tw-mb-0 tw-max-w-[90%] tw-origin-[0_0] truncate tw-pt-[0.37rem] tw-leading-[1.6] tw-text-neutral-500 tw-transition-all tw-duration-200 tw-ease-out peer-focus:-tw-translate-y-[0.9rem] peer-focus:tw-scale-[0.8] peer-focus:tw-text-primary peer-data-[te-input-state-active]:-tw-translate-y-[0.9rem] peer-data-[te-input-state-active]:tw-scale-[0.8] motion-reduce:tw-transition-none dark:tw-text-neutral-200 dark:peer-focus:tw-text-primary"
             >Your Name</label
           >
         </div>
@@ -62,7 +62,7 @@
             placeholder="Enter Message"></textarea>
           <label
             for="InputMessage"
-            class="tw-pointer-events-none absolute tw-left-3 tw-top-0 tw-mb-0 tw-max-w-[90%] tw-origin-[0_0] truncate tw-pt-[0.37rem] tw-leading-[1.6] tw-text-neutral-500 tw-transition-all tw-duration-200 tw-ease-out peer-focus:-tw-translate-y-[0.9rem] peer-focus:tw-scale-[0.8] peer-focus:tw-text-primary peer-data-[te-input-state-active]:-tw-translate-y-[0.9rem] peer-data-[te-input-state-active]:tw-scale-[0.8] motion-reduce:tw-transition-none dark:tw-text-neutral-200 dark:peer-focus:tw-text-primary"
+            class="tw-pointer-events-none tw-absolute tw-left-3 tw-top-0 tw-mb-0 tw-max-w-[90%] tw-origin-[0_0] tw-truncate tw-pt-[0.37rem] tw-leading-[1.6] tw-text-neutral-500 tw-transition-all tw-duration-200 tw-ease-out peer-focus:-tw-translate-y-[0.9rem] peer-focus:tw-scale-[0.8] peer-focus:tw-text-primary peer-data-[te-input-state-active]:-tw-translate-y-[0.9rem] peer-data-[te-input-state-active]:tw-scale-[0.8] motion-reduce:tw-transition-none dark:tw-text-neutral-200 dark:peer-focus:tw-text-primary"
             >Message</label
           >
         </div>
