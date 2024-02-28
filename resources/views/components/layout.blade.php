@@ -167,7 +167,6 @@
     </div>
   </footer>
 
-  @include('mobile')
   <div class="product product-single product-popup scale-75 -translate-y-32" id="product-modal"></div>
   @include('modal')
 
