@@ -15,12 +15,12 @@ class BrandController extends Controller
     {
         $allBrands = Brand::all();
 
-        $globalBrands = Brand::with('products')
-            ->where('slug', 'partners')
-            ->get();
-        $localBrands = Brand::with('products')
-            ->where('slug', 'akc-brands')
-            ->get();
+        $globalBrands = Brand::where('slug', 'partners')
+            ->first()
+            ->children()->with('products')->get();
+        $localBrands = Brand::where('slug', 'akc-brands')
+            ->first()
+            ->children()->with('products')->get();
         
         return view('brands.brands', compact('globalBrands', 'localBrands'));
     }
