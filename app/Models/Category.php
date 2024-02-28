@@ -5,8 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\Product;
-
 class Category extends Model
 {
     use HasFactory;
@@ -14,6 +12,19 @@ class Category extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = ['slug', 'name', 'id', 'parent_id'];
+
+    public static function getParentList(Category $category)
+    {
+        if ($category->parent)
+            return self::getParentList($category->parent)->push($category);
+
+        return collect([$category]);
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(self::class, 'parent_id', 'id');
+    }
 
     public function parentId()
     {
@@ -25,7 +36,8 @@ class Category extends Model
        return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function products() {
+    public function products()
+    {
         return $this->belongsToMany(Product::class);
     }
 }

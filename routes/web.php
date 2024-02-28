@@ -7,6 +7,10 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
@@ -24,12 +28,63 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/', [MainController::class, 'index'])->name('home.index');
 
-Route::get('/contact-us', function () {
-    return view('pages.contact');
-});
+Route::controller(CategoryController::class)
+    ->name('categories.')
+    ->group(function() {
+        Route::get('/categories', 'index')->name('index');
+        Route::get('/categories/{category}', 'subcategory')->name('sub');
+    }
+);
+Route::controller(ProductController::class)
+    ->name('products.')
+    ->group(function() {
+        Route::get('/products', 'index')->name('index');
+        Route::get('/products/{product}', 'product')->name('product');
+    })
+;
+Route::controller(EventController::class)
+    ->name('events.')
+    ->group(function() {
+        Route::get('/events', 'index')->name('index');
+    })
+;
+Route::controller(ArticleController::class)
+    ->name('blogs.')
+    ->group(function() {
+        Route::get('/blogs', 'index')->name('index');
+        Route::get('/blogs/{slug}', 'show')->name('show');
+    })
+;
+Route::controller(BrandController::class)
+    ->name('brands.')
+    ->group(function() {
+        Route::get('/brands', 'index')->name('index');
+        Route::get('/brands/{slug}', 'show')->name('show');
+    })
+;
 Route::get('/about-us', function () {
     return view('pages.about-us');
 });
+Route::get('/contact-us', function () {
+    return view('pages.contact');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::post('/contact-us', [MainController::class, 'contactStore'])->name('contact.store');
 
 Route::get('/media/events', [MediaController::class, 'events'])->name('event.index');
@@ -40,15 +95,12 @@ Route::get('/media/blogs/{slug}', [MediaController::class, 'blogShow'])->name('b
 
 Route::get('/latest-products', [ShopController::class, 'latest'])->name('products.latest');
 
-Route::get('/products/search', [ShopController::class, 'search'])->name('product.search');
+Route::get('/product/search', [ShopController::class, 'search'])->name('product.search');
 
 Route::get('/category', [ShopController::class, 'parent'])->name('category.parent.base');
 Route::get('/category/{parent}', [ShopController::class, 'child'])->name('category.child');
 Route::get('/category/{parent}/{child}', [ShopController::class, 'products'])->name('category.products');
 Route::get('/category/{parent}/{child}/{slug}', [ShopController::class, 'product'])->name('product.show');
-
-Route::get('/brands', [BrandController::class, 'index'])->name('brand.index');
-Route::get('/brands/{slug}', [BrandController::class, 'show'])->name('brand.show');
 
 Route::get('/product/modal/{slug}', [MainController::class, 'modal'])->name('product.modal');
 

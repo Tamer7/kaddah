@@ -1,10 +1,12 @@
 <x-layout title="About">
-  <div class="lg:py-16 sm:py-8 py-4 px-8">
-    <h1 class="font-semibold text-center text-[42px] text-[theme(colors.blue)]">Your Partners in Cleaning</h1>
-    <p class="flex justify-center mt-6">
-      <span class="max-w-[543px] text-center text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-    </p>
-  </div>
+  <x-panel>
+    <x-slot name="title">
+      Your Partners in Cleaning
+    </x-slot>
+    <x-slot name="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    </x-slot>
+  </x-panel>
 
   <div class="py-5 lg:px-20 px-8 relative">
     <div class="lg:p-16 lg:pt-12 p-8 rounded-[40px] bg-[#E5F8FF] our-story">
@@ -63,7 +65,7 @@
             <div
               id="our_story_{{ $loop->index }}"
               {{ $loop->first ? 'data-te-tab-active' : 'data-te-tab' }}
-              class="hidden opacity-100 transition-opacity durelativeration-150 p-3 lg:pl-24 lg:pr-4 ease-linear data-[te-tab-active]:block"
+              class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-24 lg:pr-4 ease-linear data-[te-tab-active]:block"
               role="tabpanel"
               aria-labelledby="our_story_{{ $loop->index }}-tab"
               >
@@ -175,20 +177,11 @@
     </div>
   </div>
 
-  <div class="lg:px-[110px] sm:px-16 px-8 lg:py-[70px] py-8">
-    <div class="flex justify-between">
-      <h3 class="text-3xl font-semibold">They Satisfied With Our Service</h3>
-      <a href="#" class="font-bold my-auto text-[theme(colors.blue)]">
-        <span class="lg:inline-block hidden">View All Brands</span>
-        <i class="lg:hidden fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-    <div class="mt-[62px]">
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt=""></div>
-      <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
-    </div>
-  </div>
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands">
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt=""></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
+  </x-subpanel>
 
   <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
     <div class="mx-auto lg:mx-0">
