@@ -16,12 +16,10 @@
           $productsCount = $brand->products->count();
         @endphp
         <a href="{{ route('brands.show', $brand->id) }}" class="bg-white rounded-3xl flex justify-center items-center group relative h-[316px]">
-          {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
-          <img src="/images/test/image 50.png" alt="" class="{{ $productsCount > 0 ? 'group-hover:hidden' : '' }}">
+          <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           @if ($productsCount > 0)
             <div class="group-hover:opacity-100 opacity-0 absolute top-0 right-0 bottom-0 left-0 flex transition-opacity duration-300 items-center justify-center">
               <img src="{{ asset('storage/', $brand->products[rund(0, $productsCount)]) }}" alt="">
-              <img src="/images/test/LOGO 3.png" alt="">
             </div>
           @endif
         </a>
@@ -32,8 +30,7 @@
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
         @foreach ($globalBrands as $brand)
           <a href="{{ route('brands.show', $brand->id) }}">
-            {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
-            <img src="/images/test/image 50.png" alt="">
+            <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           </a>
         @endforeach
       </div>
@@ -43,8 +40,7 @@
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
         @foreach ($localBrands as $brand)
           <a href="{{ route('brands.show', $brand->id) }}">
-            {{-- <img src="{{ asset('storage/'.$brand->image) }}" alt=""> --}}
-            <img src="/images/test/image 50.png" alt="">
+            <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           </a>
         @endforeach
       </div>
