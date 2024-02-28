@@ -215,8 +215,8 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
   color: #fff;
   background-color: #333;
   border: 2px solid #333;
@@ -229,8 +229,6 @@ table {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  top: 1px;
-  left: 1px;
   z-index: -1;
 }
 

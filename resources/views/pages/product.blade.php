@@ -223,7 +223,6 @@
                       @csrf
                       <input type="hidden" name="id" value="{{$item->id}}">
                     </form>
-                  <button class="hidden btn-cart" id="cart-response-{{$item->id}}"></button>
                 </div>
                 <div class="product-action tw-absolute tw-opacity-0 group-hover:tw-opacity-100 group-hover:tw-visible tw-right-0 tw-left-0 tw-bottom-0 tw-bg-gray-900 tw-text-white tw-font-semibold tw-flex tw-justify-center tw-transition-opacity tw-duration-300">
                   <a href="javascript:void(0);" class="show-modal tw-py-4 tw-text-center"
@@ -247,7 +246,7 @@
       </div>
 
       <div class="tw-absolute tw-inset-y-0 tw-right-0 tw-z-10 tw-flex tw-items-center">
-        <button @click="swiper.slideNext()" 
+        <button @click="swiper.slideNext()"
                 class="tw-bg-white -tw-mr-2 lg:-tw-mr-4 tw-flex tw-justify-center tw-items-center tw-w-10 tw-h-10 tw-rounded-full tw-shadow focus:tw-outline-none">
           <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
         </button>
