@@ -1,24 +1,3 @@
-import {
-  Tab,
-} from "tw-elements";
-
-const totalPanel = document.getElementById('productOverview');
-$(() => {
-  totalPanel.querySelectorAll('.tab-panel').forEach(el => {
-    el.classList.add('hidden');
-  })
-})
-
-const closeNavPanel = (target) => {
-  const activedNav = target.querySelector('[data-te-nav-active]');
-  if (!activedNav)
-    return;
-
-  activedNav.removeAttribute('data-te-nav-active');
-  const tabPane = document.querySelector(activedNav.dataset.teTarget);
-  tabPane.removeAttribute('data-te-tab-active');
-}
-
 $.fn.outerOffset = function () {
   /// <summary>Returns an element's offset relative to its outer size; i.e., the sum of its left and top margin, padding, and border.</summary>
   /// <returns type="Object">Outer offset</returns>
@@ -31,7 +10,6 @@ $.fn.outerOffset = function () {
   }
 };
 
-
 $.fn.fixedPosition = function () {
   var offset = this.offset();
   var $doc = $(document);
@@ -42,28 +20,28 @@ $.fn.fixedPosition = function () {
   };
 };
 
-totalPanel.onmouseover = (ev) => {
-  const category = ev.target.closest('.category-panel');
-  const activedPanel = ev.target.closest('[data-te-tab-active]');
 
-  if (!category && !activedPanel) {
-    closeNavPanel(ev.currentTarget)
-  } else if (category) {
-    const tabInstance = new Tab(category);
-    tabInstance.show();
-
-    const tabPane = document.querySelector(category.dataset.teTarget);
+const totalPanel = document.getElementById('productOverview');
+totalPanel.querySelectorAll('.category-panel').forEach(el => {
+  el.addEventListener('shown.te.tab', ({target}) => {
+    const tabPane = totalPanel.querySelector(target.dataset.teTarget);
     const triangleIndicator = tabPane.querySelector('.triangle')
 
-    var left = $(category).fixedPosition().x + category.offsetWidth / 3;
+    var left = $(target).fixedPosition().x + target.offsetWidth / 3;
     triangleIndicator.style.left = `${left}px`;
+  })
+})
+totalPanel.querySelectorAll('.tab-close-btn').forEach(el => {
+  el.onclick = () => {
+    const tabPanel = el.closest('.tab-panel')
+    tabPanel.attributes.removeNamedItem('data-te-tab-active')
+    const category = totalPanel.querySelector(`[data-te-target="\#${tabPanel.id}"]`)
+    category.attributes.removeNamedItem('data-te-nav-active')
   }
-}
-totalPanel.onmouseout = (ev) => {
-  const category = ev.target.closest('.category-panel');
-  const activedPanel = ev.target.closest('[data-te-tab-active]');
+})
 
-  if (!category && !activedPanel) {
-    closeNavPanel(ev.currentTarget)
-  }
-}
+$(() => {
+  totalPanel.querySelectorAll('.tab-panel').forEach(el => {
+    el.classList.add('hidden');
+  })
+})

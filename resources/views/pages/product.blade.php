@@ -34,68 +34,126 @@
     </div>
 
     <div class="col-span-4">
-          <div class="product-gallery product-gallery-sticky">
-              <div class="swiper-container product-single-swiper swiper-theme nav-inner" data-swiper-options="{
-                  'navigation': {
-                      'nextEl': '.swiper-button-next',
-                      'prevEl': '.swiper-button-prev'
-                  }
-              }">
-                  <div class="swiper-wrapper row cols-1 gutter-no">
-                      <div class="swiper-slide">
-                          <figure class="product-image">
-                              {{-- <img src="{{asset('storage/'.$product->image)}}"
-                                  data-zoom-image="{{asset('storage/'.$product->image)}}"
-                                  alt="{{$product->name}}" width="800" height="900"> --}}
-                              <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                                  data-zoom-image="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                                  alt="{{$product->name}}" width="800" height="900">
-                          </figure>
-                      </div>
-                      @if($product->images)
-                          @foreach(json_decode($product->images) as $image)
-                          <div class="swiper-slide">
-                              <figure class="product-image">
-                                  {{-- <img src="{{asset('storage/'.$image)}}"
-                                      data-zoom-image="{{asset('storage/'.$image)}}"
-                                      alt="{{$product->name}}" width="488" height="549"> --}}
-                                  <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                                      data-zoom-image="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                                      alt="{{$product->name}}" width="488" height="549">
-                              </figure>
-                          </div>
-                          @endforeach
-                      @endif
-                  </div>
-                  <button class="swiper-button-next"></button>
-                  <button class="swiper-button-prev"></button>
-                  <a href="#" class="product-gallery-btn product-image-full"><i class="w-icon-zoom"></i></a>
-              </div>
-              <div class="product-thumbs-wrap swiper-container" data-swiper-options="{
-                  'navigation': {
-                      'nextEl': '.swiper-button-next',
-                      'prevEl': '.swiper-button-prev'
-                  }
-              }">
-                  <div class="product-thumbs swiper-wrapper row cols-4 gutter-sm">
+                    <div class="product product-single row">
+                        <div class="col-md-4 mb-6">
+                            <div class="product-gallery product-gallery-sticky">
+                                <div class="swiper-container product-single-swiper swiper-theme nav-inner" data-swiper-options="{
+                                    'navigation': {
+                                        'nextEl': '.swiper-button-next',
+                                        'prevEl': '.swiper-button-prev'
+                                    }
+                                }">
+                                    <div class="swiper-wrapper row cols-1 gutter-no">
+                                        <div class="swiper-slide">
+                                            <figure class="product-image">
+                                                <img src="{{asset('storage/'.$product->image)}}"
+                                                    data-zoom-image="{{asset('storage/'.$product->image)}}"
+                                                    alt="{{$product->name}}" width="800" height="900">
+                                            </figure>
+                                        </div>
+                                        @if($product->images)
+                                            @foreach(json_decode($product->images) as $image)
+                                            <div class="swiper-slide">
+                                                <figure class="product-image">
+                                                    <img src="{{asset('storage/'.$image)}}"
+                                                        data-zoom-image="{{asset('storage/'.$image)}}"
+                                                        alt="{{$product->name}}" width="488" height="549">
+                                                </figure>
+                                            </div>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                    <button class="swiper-button-next"></button>
+                                    <button class="swiper-button-prev"></button>
+                                    <a href="#" class="product-gallery-btn product-image-full"><i class="w-icon-zoom"></i></a>
+                                </div>
+                                <div class="product-thumbs-wrap swiper-container" data-swiper-options="{
+                                    'navigation': {
+                                        'nextEl': '.swiper-button-next',
+                                        'prevEl': '.swiper-button-prev'
+                                    }
+                                }">
+                                    <div class="product-thumbs swiper-wrapper row cols-4 gutter-sm">
 
-                      <div class="product-thumb swiper-slide">
-                          <img src="{{asset('storage/'.$product->image)}}"
-                              alt="{{$product->name}} Thumb" width="800" height="900">
-                      </div>
-                      @if($product->images)
-                          @foreach(json_decode($product->images) as $image)
-                          <div class="product-thumb swiper-slide">
-                              <img src="{{asset('storage/'.$image)}}"
-                                  alt="{{$product->name}} Thumb" width="800" height="900">
-                          </div>
-                          @endforeach
-                      @endif
-                  </div>
-                  <button class="swiper-button-next"></button>
-                  <button class="swiper-button-prev"></button>
-              </div>
-          </div>
+                                        <div class="product-thumb swiper-slide">
+                                            <img src="{{asset('storage/'.$product->image)}}"
+                                                alt="{{$product->name}} Thumb" width="800" height="900">
+                                        </div>
+                                        @if($product->images)
+                                            @foreach(json_decode($product->images) as $image)
+                                            <div class="product-thumb swiper-slide">
+                                                <img src="{{asset('storage/'.$image)}}"
+                                                    alt="{{$product->name}} Thumb" width="800" height="900">
+                                            </div>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                    <button class="swiper-button-next"></button>
+                                    <button class="swiper-button-prev"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 mb-4 mb-md-6">
+                            <div class="product-details" data-sticky-options="{'minWidth': 767}">
+                                <h1 class="product-title">{{$product->name}}</h1>
+                                <div class="product-bm-wrapper">
+                                    <figure class="brand">
+                                        <img src="{{asset('storage/'.$product->brand->image)}}" alt="Brand"
+                                            width="102" height="48" />
+                                    </figure>
+                                    <div class="product-meta">
+                                        <div class="product-categories">
+                                            Main Category:
+                                            <span class="product-category"><a href="#">{{$parentCategory->name}}</a></span>
+                                        </div>
+                                        <div class="product-sku">
+                                            Sub Category: <span>{{$childCategory->name}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="product-divider">
+
+                                <div class="product-price"><ins class="new-price">{{$product->code}}</ins></div>
+
+                                <div class="product-short-desc">
+                                    <p>
+                                        {{$product->details}}
+                                    </p>
+                                    <ul class="list-type-check list-style-none">
+                                        <li>Origin: {{$product->origin}}</li>
+                                        <li>Warranty: {{$product->warranty}}</li>
+                                        <li>Brand Name: {{$product->brand->name}}</li>
+                                    </ul>
+                                </div>
+
+                                <hr class="product-divider">
+
+
+                                <div class="row">
+                                    <div class="product-form container">
+
+                                        <form action="javascript:void(0)" method="POST" class="add-to-cart cart-form" id="{{$product->id}}">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$product->id}}">
+                                            <button type="submit" class="btn btn-primary btn-cart-design col-md-5" id="loading-alert-{{$product->id}}">
+                                                <i class="w-icon-cart"></i>
+                                                Add to Cart
+                                            </button>
+                                        </form>
+
+                                        <button class="d-none btn-cart" id="cart-response-{{$product->id}}">
+                                        </button>
+                                    </div>
+                                    <div class="product-form container col-md-5">
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
 
 
       <div

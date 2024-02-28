@@ -69,7 +69,7 @@
 <!-- End of Sticky Footer -->
 
 <!-- Start of Scroll Top -->
-<a id="scroll-top" class="scroll-top" href="#top" title="Top" role="button">
+<a id="scroll-top" class="scroll-top invisible" href="#top" title="Top" role="button">
     <i class="w-icon-angle-up"></i>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
         <circle id="progress-indicator" fill="transparent" stroke="#000000" stroke-miterlimit="10" cx="35" cy="35"

@@ -99,14 +99,14 @@
                   'description' => $category->title,
                 ]
               @endphp
-              <div class="swiper-slide p-2 category-panel"
+              <div class="swiper-slide p-2 category-panel group"
                 data-te-toggle="pill"
                 data-te-target="#category_{{ $category['id'] }}"
                 role="tab"
                 aria-controls="tabs-messages"
                 aria-selected="false"
               >
-                <div class="py-4 px-2 rounded-[30px] hover:border border-[theme(colors.blue)]">
+                <div class="py-4 px-2 rounded-[30px] border-[theme(colors.blue)]">
                   <x-items.category :category="$item" />
                 </div>
               </div>
@@ -127,8 +127,9 @@
           id="category_{{ $category['id'] }}"
           role="tabpanel"
           aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
-          <div class="relative border rounded-[30px] border-[theme(colors.blue)]">
+          <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
             <div class="triangle border border-[theme(colors.blue)]"></div>
+            <div class="absolute -top-1 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn"><i class="fa-solid fa-xmark"></i></div>
             <div class="p-6" x-data="{swiper: null}"
               x-init="swiper = new Swiper($refs.container, {
                 loop: true,
@@ -300,6 +301,10 @@
 
   @push('styles')
     <style>
+      [data-te-nav-active] > div {
+        border-width: 1px;
+      }
+      
       .triangle {
         content: "";
         position: absolute;
