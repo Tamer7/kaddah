@@ -18,7 +18,10 @@ module.exports = {
     extend: {
       colors: {
         blue: '#27aee4'
-      }
+      },
+      padding: {
+        '5': '2rem',
+      },
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],

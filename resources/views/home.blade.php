@@ -2,13 +2,13 @@
   <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex">
     <div>
       <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-      <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-center text-[theme(colors.blue)] py-2">
+      <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-left text-[theme(colors.blue)] py-2 pr-5">
       The region's biggest selection of <br>cleaning solutions
     </h1>
 
-      <p class="lg:w-8/12 xl:w-full sm:text-left text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <p class="lg:w-8/12 xl:w-full sm:text-left text-center pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
-      <div class="flex mt-6 justify-center sm:justify-start">
+      <div class="flex mt-6 justify-center sm:justify-start pr-5">
         <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
           Our Products
         </a>
