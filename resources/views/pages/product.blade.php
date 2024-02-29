@@ -160,7 +160,11 @@
             @if(!empty($product->file) && !empty($product->file[0]->download_link))
               <tr>
                 <td>Product Brochure</th>
-                <td><a href="/storage/{{$product->file[0]->download_link}}" class="btn btn-primary">Download</a></td>
+                <td>
+                  <a href="/storage/{{$product->file[0]->download_link}}" class="btn btn-primary text-blue bg-blue-500 hover:bg-blue-600">
+                    Download
+                  </a>
+                </td>
               </tr>
             @endif
           </table>

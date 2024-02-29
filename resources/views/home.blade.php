@@ -6,7 +6,7 @@
       The region's biggest selection of <br>cleaning solutions
     </h1>
 
-      <p class="lg:w-8/12 xl:w-full sm:text-left text-center pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 
       <div class="flex mt-6 justify-center sm:justify-start pr-5">
         <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -130,7 +130,7 @@
           aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
           <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
             <div class="triangle border border-[theme(colors.blue)]"></div>
-            <div class="absolute -top-1 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn"><i class="fa-solid fa-xmark"></i></div>
+            <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2"><i class="fa-solid fa-xmark"></i></div>
             <div class="p-6" x-data="{swiper: null}"
               x-init="swiper = new Swiper($refs.container, {
                 loop: true,
