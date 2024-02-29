@@ -37,20 +37,20 @@
                             <div class="toolbox-item toolbox-sort select-box text-dark">
                                 <label>Sort By :</label>
                                 <select name="orderby" class="form-control" onchange="window.location.href=this.value;">
-                                    <option value="{{ route('brand.show', $brand->slug) }}" {{ request()->sort ? '' : 'selected' }}>Default sorting</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => 'old']) }}" {{ request()->sort == 'old' ? 'selected' : '' }}>Sort by Oldest</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => 'ASC']) }}" {{ request()->sort == 'ASC' ? 'selected' : '' }}>Sort by Code: A to Z</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => 'DESC']) }}" {{ request()->sort == 'DESC' ? 'selected' : '' }}>Sort by Code: Z to A</option>
+                                    <option value="{{ route('brands.show', $brand->id) }}" {{ request()->sort ? '' : 'selected' }}>Default sorting</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => 'old']) }}" {{ request()->sort == 'old' ? 'selected' : '' }}>Sort by Oldest</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => 'ASC']) }}" {{ request()->sort == 'ASC' ? 'selected' : '' }}>Sort by Code: A to Z</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => 'DESC']) }}" {{ request()->sort == 'DESC' ? 'selected' : '' }}>Sort by Code: Z to A</option>
                                 </select>
                             </div>
                         </div>
                         <div class="toolbox-right">
                             <div class="toolbox-item toolbox-show select-box">
                                 <select name="count" class="form-control" onchange="window.location.href=this.value;">
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => request()->sort, 'show' => '12']) }}"  {{ request()->show == '12' ? 'selected' : '' }} data-display="Show: 12">Show 12</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => request()->sort, 'show' => '20']) }}"  {{ request()->show == '20' ? 'selected' : '' }} {{ request()->show == '' ? 'selected' : '' }} data-display="Show: 20">Show 20</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => request()->sort, 'show' => '40']) }}"  {{ request()->show == '40' ? 'selected' : '' }} data-display="Show: 40">Show 40</option>
-                                    <option value="{{ route('brand.show', ['slug'=> $brand->slug, 'sort' => request()->sort, 'show' => '70']) }}" {{ request()->show == '70' ? 'selected' : '' }} data-display="Show: 70">Show 70</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => request()->sort, 'show' => '12']) }}"  {{ request()->show == '12' ? 'selected' : '' }} data-display="Show: 12">Show 12</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => request()->sort, 'show' => '20']) }}"  {{ request()->show == '20' ? 'selected' : '' }} {{ request()->show == '' ? 'selected' : '' }} data-display="Show: 20">Show 20</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => request()->sort, 'show' => '40']) }}"  {{ request()->show == '40' ? 'selected' : '' }} data-display="Show: 40">Show 40</option>
+                                    <option value="{{ route('brands.show', ['brand'=> $brand->id, 'sort' => request()->sort, 'show' => '70']) }}" {{ request()->show == '70' ? 'selected' : '' }} data-display="Show: 70">Show 70</option>
                                 </select>
                             </div>
 
