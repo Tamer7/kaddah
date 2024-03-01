@@ -22,13 +22,24 @@ module.exports = {
       padding: {
         '5': '2rem',
       },
+      mixBlendMode: {
+        multiply: 'multiply',
+      },
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     }
   },
   plugins: [
-    require("tw-elements/dist/plugin.cjs")
+    require("tw-elements/dist/plugin.cjs"),
+    function({ addUtilities, theme, e }) {
+      const newUtilities = {};
+      Object.entries(theme('mixBlendMode')).forEach(([key, value]) => {
+        const className = `.blend-${e(key)}`;
+        newUtilities[className] = { mixBlendMode: value };
+      });
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
   ],
 }
 
