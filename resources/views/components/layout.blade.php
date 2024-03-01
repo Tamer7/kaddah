@@ -47,7 +47,7 @@
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
         <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Cleany</span>
+          <h1 class="sr-only">Kaddah</h1>
           <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
         </a>
       </div>
@@ -86,7 +86,7 @@
       <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Cleany</span>
+            <span class="sr-only">Kaddah</span>
             <img src="{{ asset('images/about/image 37.png') }}" alt="">
           </a>
           <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">

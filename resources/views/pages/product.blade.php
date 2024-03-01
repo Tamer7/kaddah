@@ -33,7 +33,7 @@
 
     <div class="col-span-4">
       <div
-        class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+        class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply"
         id="tabs-image-0"
         role="tabpanel"
         aria-labelledby="tabs-home-tab"
