@@ -43,7 +43,7 @@
       @if ($product->images)
         @foreach (json_decode($product->images) as $index => $image)
           <div
-            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+            class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply"
             id="tabs-image-{{ $index + 1 }}"
             role="tabpanel"
             aria-labelledby="tabs-image-tab">
@@ -64,11 +64,12 @@
         <div class="">
           <ins class="new-price">{{ $product->code }}</ins> - {{ $product->details }}
         </div>
-        <div class="grid grid-rows-3 divide-y pt-6 w-[80%] text-[#282938]">
+        <div class="grid grid-rows-3 divide-y pt-6 w-[80%] text-[#282938] pb-2 border-b">
           <div class="py-2">Brand Name: {{$product->brand->name}}</div>
           <div class="py-2">Warranty: {{$product->warranty}}</div>
           <div class="py-2">Origin: {{$product->origin}}</div>
         </div>
+
         <form action="javascript:void(0)" method="POST" class="py-4 add-to-cart cart-form" id="{{ $product->id }}">
           @csrf
           <input type="hidden" name="id" value="{{$product->id}}">
@@ -130,7 +131,7 @@
       <!--Tabs content-->
       <div class="mb-6">
         <div
-          class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+          class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply"
           id="tabs-description"
           role="tabpanel"
           aria-labelledby="tabs-home-tab"
@@ -138,7 +139,7 @@
           {!! $product->description !!}
         </div>
         <div
-          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply"
           id="tabs-tech_specification"
           role="tabpanel"
           aria-labelledby="tabs-profile-tab">
@@ -152,7 +153,7 @@
           </table>
         </div>
         <div
-          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+          class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply"
           id="tabs-downloads"
           role="tabpanel"
           aria-labelledby="tabs-profile-tab">

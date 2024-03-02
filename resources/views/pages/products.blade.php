@@ -17,7 +17,7 @@
       </div>
     @elseif(request()->has('search'))
       <div class="text-center py-8">
-        <h3 class="wishlist-title text-[20px]">Your search query for <span class="text-primary font-bold underline">{{ request()->query('search') }}</span> showed {{ $products->total() }} {{ $products->total() == 1 ? 'result' : 'results' }}</h3>
+        <h3 class="wishlist-title text-[20px] font-bold">Your search query for <span class="text-primary font-bold underline">{{ request()->query('search') }}</span> showed {{ $products->total() }} {{ $products->total() == 1 ? 'result' : 'results' }}</h3>
       </div>
     @endif
 
