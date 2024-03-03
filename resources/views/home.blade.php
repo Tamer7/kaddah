@@ -30,16 +30,16 @@
         <h2 class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
         <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
           <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">Market Leaders</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+            <h3 class="text-medium text-lg">Expertise and Knowledge</h3>
+            <p class="text-neutral-400">With over 30 years of experience, the company employs a team of experts who posses extensive knowledge about cleaning equipment and solutions.</p>
           </li>
           <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">We are Committed</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+            <h3 class="text-medium text-lg">Adaptability to Technology</h3>
+            <p class="text-neutral-400">The company has been through different market demands and technological advancements, we aim to continuously update our product offering and integrate new innovative technologies in the market.</p>
           </li>
           <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-            <h3 class="text-medium text-lg">Trusted Professionals</h3>
-            <p class="text-neutral-400">Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt</p>
+            <h3 class="text-medium text-lg">Comprehensive Selection</h3>
+            <p class="text-neutral-400">A wide range of cleaning equipment covering from the basics of cleaning to the most advanced cleaning technologies and techniques.</p>
           </li>
         </ul>
       </div>
@@ -130,7 +130,7 @@
           aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
           <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
             <div class="triangle border border-[theme(colors.blue)]"></div>
-            <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2"><i class="fa-solid fa-xmark"></i></div>
+            <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2" style="margin-top: 20px;"><i class="fa-solid fa-xmark"></i></div>
             <div class="p-6" x-data="{swiper: null}"
               x-init="swiper = new Swiper($refs.container, {
                 loop: true,

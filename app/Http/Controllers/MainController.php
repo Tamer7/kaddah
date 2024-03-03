@@ -116,6 +116,7 @@ class MainController extends Controller
 
         // return view('pages.contact');
         dispatch(new ContactMailJob($details));
+        $request->session()->flash('contact_form_submitted', true);
 
         return redirect()->route('contact.received');
     }

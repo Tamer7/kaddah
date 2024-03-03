@@ -4,7 +4,7 @@
       Your Partners in Cleaning
     </x-slot>
     <x-slot name="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      We KADDAH Group of company transformed the face of the cleaning industry in the region with 30 years of excellence, all while retaining a reputation as a reliable, well-known firm in the area.
     </x-slot>
   </x-panel>
 
@@ -68,15 +68,60 @@
               class="hidden opacity-100 transition-opacity duration-150 p-3 lg:pl-24 lg:pr-4 ease-linear data-[te-tab-active]:block"
               role="tabpanel"
               aria-labelledby="our_story_{{ $loop->index }}-tab"
-              >
-                <div class="flex items-center h-full">
-                  <div>
-                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">We proudly call ourselves the cleaning pioneers.</h5>
+            >
+              <div class="flex items-center h-full">
+                <div>
+                  @if($item == "1980s")
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Marking the inception of a solution-oriented journey
+                    </h5>
                     <p class="text-neutral-400 text-lg">
-                      Emerging from a modest warehouse in the emirate of Sharjah back in the 1980s, we have become deeply embedded in the cleaning industry with a reputation that represents a trusted and well-known name in the region.
+                      Led by Mr. Abdulhalim Kaddah, a visionary chemical engineer. While pursuing his studies abroad, he noticed an obvious absence of fundamental cleaning equipment in
+                      his hometown. Motivated to bridge this gap, he initiated local manufacturing in Syria, catering to domestic needs.
                     </p>
-                  </div>
+                  @elseif($item == "1990s")
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Sharing Expertise and Knowledge
+                    </h5>
+                    <p class="text-neutral-400 text-lg">
+                    AKC Cleaning Equipments had expanded its reach, exporting products from Syria to prominent GCC countries such as the UAE, KSA, Oman, Qatar, and Bahrain. 
+                    This strategic expansion underlined the company's commitment to sharing expertise and knowledge across the region.
+                    </p>
+                  @elseif($item == "2000s")
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Taking A Risk
+                    </h5>
+                    <p class="text-neutral-400 text-lg">
+                      AKC Cleaning Equipments took a bold step by establishing its first branch and warehouse in Sharjah Industrial Area.
+                      This crucial move triggered rapid growth and marked the onset of a flourishing movement.
+                    </p>
+                  @elseif($item == "2010s")
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Taking a step towards expansion
+                    </h5>
+                    <p class="text-neutral-400 text-lg">
+                      The company had further solidified its presence by inaugurating three branches in Dubai, along with additional branches in Oman and Bahrain.
+                      This expansion underscored AKC's commitment to meeting the escalating demand for quality cleaning solutions across diverse markets.
+                    </p>
+                  @elseif($item == "2022s")
+                    <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Looking forward to a brighter more successful future
+                    </h5>
+                    <p class="text-neutral-400 text-lg">
+                      The culmination of decades of dedication and innovation led to the relocation of AKC Cleaning Equipments to its state-of-the-art headquarters in Dubai Industrial Park.
+                      Here, the next generation, embodied by Mr. Kaddah's sons, proudly carries forward their father's enduring legacy, aimed to continue the company's trajectory of excellence and growth.
+                    </p>
+                  @else
+                  <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
+                      {{ $item }} | Marking the inception of a solution-oriented journey
+                    </h5>
+                    <p class="text-neutral-400 text-lg">
+                      Led by Mr. Abdulhalim Kaddah, a visionary chemical engineer. While pursuing his studies abroad, he noticed an obvious absence of fundamental cleaning equipment in
+                      his hometown. Motivated to bridge this gap, he initiated local manufacturing in Syria, catering to domestic needs.
+                    </p>
+                  @endif
                 </div>
+              </div>
             </div>
           @endforeach
         </div>
@@ -94,7 +139,8 @@
           <p class="text-lg">Our Mission</p>
           <h2 class="font-semibold text-4xl py-5">Inspire, Innovate, Share</h2>
           <p class="text-neutral-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            To endorse our clients, suppliers, and every stakeholder and participant in the cleaning industry with a growth-oriented philosophy that propels them to always seek better when it comes to efficiency and effectiveness in cleaning solutions.
+            With innovation as our main drive, and professional growth as our motive, we’re consistently aspiring to tailor-fit cleaning solutions that match the requirements of every diverse industry.
           </p>
         </div>
 

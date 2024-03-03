@@ -186,8 +186,13 @@ Route::get('/sendmail', function (Request $request) {
 });
 
 Route::get('/contact/received', function () {
+    if (!session()->has('contact_form_submitted')) {
+        return redirect('/');
+    }
+    session()->forget('contact_form_submitted');
     return view('email.thankyou');
 })->name('contact.received');
+
 
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
