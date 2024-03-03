@@ -796,3 +796,6 @@
 .qty-spinner:hover {
   color: var(--primary-color);
 }
+.justify-self-center {
+  justify-self: center;
+}
