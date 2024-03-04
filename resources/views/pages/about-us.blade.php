@@ -1,4 +1,9 @@
 <x-layout title="About">
+
+  @section('canonical')
+    <link rel="canonical" href="{{ url('/about-us') }}" />
+  @endsection
+
   <x-panel>
     <x-slot name="title">
       Your Partners in Cleaning

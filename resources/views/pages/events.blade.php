@@ -1,4 +1,9 @@
 <x-layout title="Events">
+
+  @section('canonical')
+    <link rel="canonical" href="{{ url('/events') }}" />
+  @endsection
+
   <x-panel>
     <x-slot name="title">
       Latest Events

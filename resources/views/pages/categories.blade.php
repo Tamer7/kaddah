@@ -10,6 +10,11 @@
 @endphp
 
 <x-layout title="{{ $title }}">
+
+  @section('canonical')
+    <link rel="canonical" href="{{ url('/categories') }}" />
+  @endsection
+
   <x-panel :breadcrumbs="$breadcrumbs">
     <x-slot name="title">{{ $title }}</x-slot>
 

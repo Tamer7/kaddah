@@ -1,4 +1,9 @@
 <x-layout noDecorator>
+
+  @section('canonical')
+    <link rel="canonical" href="{{ url('/') }}" />
+  @endsection
+
   <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex">
     <div>
       <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
@@ -130,7 +135,7 @@
           aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
           <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
             <div class="triangle border border-[theme(colors.blue)]"></div>
-            <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2" style="margin-top: 20px;"><i class="fa-solid fa-xmark"></i></div>
+            <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2"><i class="fa-solid fa-xmark"></i></div>
             <div class="p-6" x-data="{swiper: null}"
               x-init="swiper = new Swiper($refs.container, {
                 loop: true,
@@ -225,7 +230,7 @@
 
       @foreach ($data as $item)
         <div class="{{ $loop->index ===1 ? 'lg:pt-6' : '' }}">
-          <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
             <a href="#!">
               <img
                 class="rounded-t-lg"
@@ -233,10 +238,10 @@
                 alt="" />
             </a>
             <div class="pt-6">
-              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800">
                 {{ $item['title'] }}
               </h5>
-              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+              <p class="mb-4 text-base text-neutral-600">
                 {{ $item['description']}}
               </p>
             </div>
