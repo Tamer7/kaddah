@@ -333,15 +333,3 @@
     <script src="{{ asset('js/home.js') }}"></script>
   @endpush
 </x-layout>
-
-<script> 
-  $(".clickViewBrand").on('click', function() {
-      window.location.href = '/brands';
-  });
-  $(".clickViewEvents").on('click', function() {
-      window.location.href = '/events';
-  });
-  $(".clickViewAllCategories").on('click', function() {
-      window.location.href = '/categories';
-  });
-</script>
