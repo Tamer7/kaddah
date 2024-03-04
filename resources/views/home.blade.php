@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <x-subpanel title="The Cleaning Pioneers" more="View All Categories">
+  <x-subpanel title="The Cleaning Pioneers" more="View All Categories" class="clickViewAllCategories">
     <x-slot name="header">
       <div class="font-semibold text-2xl text-[theme(colors.blue)]">Main Categories</div>
     </x-slot>
@@ -201,7 +201,7 @@
   
   </x-subpanel>
 
-  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="bg-[#E5F8FF]">
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]">
     <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
       @php
         $data = [
@@ -246,7 +246,7 @@
     </div>
   </x-subpanel>
 
-  <x-subpanel title="Read our latest events" more="View All Events">
+  <x-subpanel title="Read our latest events" more="View All Events" class="clickViewEvents">
     <div x-data="{swiper: null}"
       x-init="swiper = new Swiper($refs.container, {
         loop: true,
@@ -333,3 +333,15 @@
     <script src="{{ asset('js/home.js') }}"></script>
   @endpush
 </x-layout>
+
+<script> 
+  $(".clickViewBrand").on('click', function() {
+      window.location.href = '/brands';
+  });
+  $(".clickViewEvents").on('click', function() {
+      window.location.href = '/events';
+  });
+  $(".clickViewAllCategories").on('click', function() {
+      window.location.href = '/categories';
+  });
+</script>
