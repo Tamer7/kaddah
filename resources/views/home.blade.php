@@ -7,7 +7,7 @@
   <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex">
     <div>
       <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-      <h1 class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-left text-[theme(colors.blue)] py-2 pr-5">
+      <h1 id="main-heading" class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-left text-[theme(colors.blue)] py-2 pr-5">
       The region's biggest selection of <br>cleaning solutions
     </h1>
 
@@ -23,8 +23,8 @@
       </div>
     </div>
 
-    <div class="flex">
-      <img src="/images/home/Mask group.png" alt="" class="absolute sm:max-w-3/4 -top-[96px] right-0">
+    <div class="flex image-moving">
+      <img src="/images/home/Mask group.png" alt="" id="dynamic-image" class="absolute sm:max-w-3/4 -top-[96px] right-0">
     </div>
   </div>
 
@@ -338,3 +338,84 @@
     <script src="{{ asset('js/home.js') }}"></script>
   @endpush
 </x-layout>
+
+<style>
+.img-animate {
+  transition: transform 0.5s ease;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const img = document.querySelector('.image-moving img');
+  img.classList.add('img-animate');
+  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  window.addEventListener('scroll', () => handleScrollEffect(img, lastScrollTop));
+
+  const texts = [
+    'The region\'s biggest selection of <br>cleaning solutions',
+    'Your trusted partner in <br>cleanliness',
+  ];
+  cycleContent('main-heading', texts, 6000);
+
+  const images = [
+    '/images/home/Mask group.png',
+    '/images/home/secondimage.png',
+  ];
+  cycleContent('dynamic-image', images, 6000, true);
+});
+
+function handleScrollEffect(element, lastScrollTop) {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    element.style.transform = 'translateY(-100px)';
+  } else {
+    element.style.transform = scrollTop < 50 ? 'translateY(0)' : 'translateY(50px)';
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}
+
+function cycleContent(elementId, contentArray, interval, isImage = false) {
+  const element = document.getElementById(elementId);
+  let currentIndex = 0;
+
+  setInterval(() => {
+    element.classList.add('fade-out');
+
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % contentArray.length;
+      if (isImage) {
+        element.src = contentArray[currentIndex];
+      } else {
+        element.innerHTML = contentArray[currentIndex];
+      }
+
+      element.classList.remove('fade-out');
+      element.classList.add('fade-in');
+
+      setTimeout(() => element.classList.remove('fade-in'), 1000);
+    }, 1000);
+  }, interval);
+}
+</script>

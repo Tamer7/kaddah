@@ -155,12 +155,12 @@
         <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
           <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pr-20 lg:pb-0 pb-8">
           <div class="flex justify-between items-center w-full">
-            <span>Products</span>
-            <span>Brands</span>
-            <span>About</span>
-            <span>Blog</span>
-            <span>Events</span>
-            <span>Contact</span>
+            <a href="/categories"><span>Products</span></a>
+            <a href="/brands"><span>Brands</span></a>
+            <a href="/about-us"><span>About</span></a>
+            <a href="/blogs"><span>Blog</span></a>
+            <a href="/events"><span>Events</span></a>
+            <a href="/contact-us"><span>Contact</span></a>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row text-center justify-between items-center pt-[44px] text-neutral-400">
