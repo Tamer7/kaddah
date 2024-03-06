@@ -21,7 +21,7 @@ class ArticleController extends Controller
         $blog = Article::where('slug', $slug)->where('status', 'PUBLISHED')->firstOrFail();
 
         $related = Article::where('slug', '<>', $slug)->where('status', 'PUBLISHED')->inRandomOrder()->limit(6)->get();
-        
+
         return view('pages.blog', compact('blog', 'related'));
     }
 }

@@ -4,7 +4,7 @@
       role="tablist"
       data-te-nav-ref
     >
-      <div class="flex">
+    <div class="flex">
         <img src="{{ asset("storage/{$product->image}") }}"
           class="max-h-[122px] m-auto hover:cursor-pointer hover:border hover:border-[theme(colors.blue)] hover:rounded-lg data-[te-nav-active]:rounded-lg data-[te-nav-active]:border data-[te-nav-active]:border-[theme(colors.blue)] data-[te-nav-active]:rounded-lg"
           data-te-toggle="pill"
@@ -92,7 +92,7 @@
         data-te-nav-ref>
         <li role="presentation">
           <a href="#tabs-description"
-            class="my-2 block border-x-0 border-2 border-t-0 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-description"
             data-te-nav-active
@@ -105,7 +105,7 @@
         <li role="presentation">
           <a
             href="#tabs-tech_specification"
-            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-tech_specification"
             role="tab"
@@ -117,7 +117,7 @@
         <li role="presentation">
           <a
             href="#tabs-downloads"
-            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] text-[theme(colors.blue)] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent dark:text-neutral-400 dark:hover:bg-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
+            class="my-2 block border-x-0 border-2 border-t-0 lg:ml-16 border-transparent px-2 pb-3.5 pt-4 text-[20px] text-[theme(colors.blue)] leading-tight hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[te-nav-active]:border-gray-800 data-[te-nav-active]:text-gray-800 data-[te-nav-active]:font-bold"
             data-te-toggle="pill"
             data-te-target="#tabs-downloads"
             role="tab"
@@ -181,7 +181,7 @@
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
-    
+
         breakpoints: {
           640: {
             slidesPerView: 1,
@@ -200,7 +200,7 @@
       class="relative w-10/12 mx-auto flex flex-row pt-4"
     >
       <div class="absolute inset-y-0 left-0 z-10 flex items-center">
-        <button @click="swiper.slidePrev()" 
+        <button @click="swiper.slidePrev()"
             class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
           <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
         </button>

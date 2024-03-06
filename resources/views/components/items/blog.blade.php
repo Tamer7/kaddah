@@ -2,7 +2,7 @@
 
 <div class="block relative rounded-xl rounded-b-none bg-white border border-neutral-200">
   <a href="{{ $blog->slug ? route('blog.show', $blog->slug) : 'javascript:;' }}">
-    <img class="rounded-xl rounded-b-none w-full h-auto h-[177px]"
+    <img class="rounded-xl rounded-b-none w-full h-auto"
       src="{{ asset('storage/'.$blog->image) }}"
       alt="" />
 
@@ -17,10 +17,10 @@
         </div> -->
       </div>
 
-      <h5 class="mb-2 mt-2 font-bold text-xl leading-tight text-neutral-800 dark:text-neutral-50">
+      <h5 class="mb-2 mt-2 font-bold text-xl leading-tight text-neutral-700">
         {{ $blog->title }}
       </h5>
-      <p class="mb-4 mt-4 text-base text-neutral-600 dark:text-neutral-200 max-h-[150px] overflow-auto">
+      <p class="mb-4 mt-4 text-base text-neutral-500 max-h-[150px] overflow-auto">
         {{ $blog->excerpt }}
       </p>
     </div>

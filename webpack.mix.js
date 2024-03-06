@@ -15,10 +15,12 @@ const tailwindcss = require('tailwindcss');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/home.js', 'public/js')
+    .js('resources/js/post-navigation.js', 'public/js')
     // .postCss('resources/css/app.css', 'public/css', [
     //     //
     // ])
     .sass('resources/styles/app.scss', 'public/css')
+    .postCss('resources/css/blog-styles.css', 'public/css')
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',
         'public/webfonts'

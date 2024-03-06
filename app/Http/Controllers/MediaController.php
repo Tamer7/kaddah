@@ -21,10 +21,13 @@ class MediaController extends Controller
         $blog = Article::where('slug', $slug)->where('status', 'PUBLISHED')->firstOrFail();
 
         $related = Article::where('slug', '<>', $slug)->where('status', 'PUBLISHED')->inRandomOrder()->limit(6)->get();
-        
-        return view('media.blog')->with([
-            'blog'  =>  $blog,
-            'related'   =>  $related
+
+        $popularPosts = Article::where('status', 'PUBLISHED')->latest()->take(6)->get();
+
+        return view('pages.blog', [
+            'blog' => $blog,
+            'related' => $related,
+            'popularPosts' => $popularPosts
         ]);
     }
 
@@ -35,7 +38,7 @@ class MediaController extends Controller
         return view('media.events')->with([
             'events'    =>  $events
         ]);
-        
+
     }
 
     public function eventShow($slug) {
@@ -43,7 +46,7 @@ class MediaController extends Controller
 
         $related = Post::where('slug', '<>', $slug)->where('status', 'PUBLISHED')->inRandomOrder()->limit(6)->get();
 
-        return view('media.event')->with([
+        return view('pages.event')->with([
             'event'     =>  $event,
             'related'   =>  $related
         ]);

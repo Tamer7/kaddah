@@ -17,7 +17,7 @@
             </h4>
             <h5 style="color: transparent; position: absolute;">
                 Dive into the Kaddah Cleaning blog for fresh perspectives on innovative cleaning methods, product unveilings,
-                and evolving industry dynamics. Whether you're tackling a stubborn stain or seeking the best mop for tiled floors, 
+                and evolving industry dynamics. Whether you're tackling a stubborn stain or seeking the best mop for tiled floors,
                 we've got the tips and tricks you need. Stay informed and stay clean with our expert advice.
             </h5>
         </div>

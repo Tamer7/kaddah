@@ -45,7 +45,7 @@
                 <p>
                   {{$blog->excerpt}}
                 </p>
-                
+
               </div>
             </div>
           </div>
@@ -53,10 +53,10 @@
             <i class="fas fa-quote-left"></i>
             <p class="font-weight-bold text-dark mt-1 mb-2">{{$blog->description}}</p>
           </blockquote>
-          
+
           <!-- End Blockquote -->
           {!! $blog->body !!}
-          
+
           <h4 class="title title-lg font-weight-bold mt-10 pt-1 mb-5">Related Posts</h4>
           <div class="swiper">
             <div class="post-slider swiper-container swiper-theme nav-top pb-2" data-swiper-options="{
@@ -101,7 +101,7 @@
             </div>
           </div>
           <!-- End Related Posts -->
-          
+
         </div>
         <!-- End of Main Content -->
         <aside class="sidebar right-sidebar blog-sidebar sidebar-fixed sticky-sidebar-wrapper">
@@ -115,7 +115,7 @@
           </a>
           <div class="sidebar-content">
             <div class="sticky-sidebar">
-              
+
               <div class="widget widget-posts">
                 <h3 class="widget-title bb-no">Popular Posts</h3>
                 <div class="widget-body">
@@ -151,7 +151,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="widget widget-calendar">
                 <h3 class="widget-title bb-no">Calendar</h3>
                 <div class="widget-body">

@@ -1,5 +1,5 @@
 <div class="dropdown-box">
-    <ul class="menu vertical-menu category-menu">       
+    <ul class="menu vertical-menu category-menu">
         @foreach($items as $index => $item)
         <li>
             <a href="{{$item->url}}">
@@ -24,7 +24,7 @@
                                 </li>
                                 @endif
                             @endif
-                            
+
                         @endforeach
                     </ul>
                 </li>
@@ -61,7 +61,7 @@
             </ul>
         </li>
         @endforeach
-        
+
         <li>
             <a href="/category"
                 class="font-weight-bold text-primary text-uppercase ls-25">

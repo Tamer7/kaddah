@@ -15,13 +15,13 @@
 
 <div class="px-8 py-4 lg:px-32 lg:py-{{ $paddingY }}">
 	<div class="relative flex flex-col">
-		<div class="font-bold text-lg h-[20px]">
+		<div class="font-bold text-lg h-[20px] mb-9">
 			@foreach ($breadcrumbs as $name => $url)
 				@if (!$loop->first) <i class="fa-solid fa-chevron-left mx-2 text-xs"></i>@endif <a href="{{ $url }}" class="underline max-w-[130px]">{{ $name }}</a>
 			@endforeach
 		</div>
 		@if ($title)
-			<h1 class="mx-auto font-semibold text-center text-[42px] text-[theme(colors.blue)]">{{ $title }}</h1>
+			<h1 class="text-2xl md:text-3xl lg:text-4xl mx-auto font-semibold text-center text-[theme(colors.blue)]">{{ $title }}</h1>
 		@endif
 	</div>
 	@if ($hasContent)

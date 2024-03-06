@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    
+
     <head>
 
         <meta charset="UTF-8">
@@ -40,7 +40,7 @@
         <!-- Vendor CSS -->
         <link rel="stylesheet" type="text/css" href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
 
-        
+
         <link rel="stylesheet" type="text/css" href="{{asset('vendor/animate/animate.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('vendor/magnific-popup/magnific-popup.min.css')}}">
         <!-- Link Swiper's CSS -->
@@ -54,7 +54,7 @@
         @endif
         <link rel="stylesheet" type="text/css" href="{{asset('css/comon.css')}}">
         @yield('css')
-        
+
         <!-- Google Tag Manager -->
         <script defer async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -62,7 +62,7 @@
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MGKRQXXG');</script>
         <!-- End Google Tag Manager -->
-        
+
     </head>
     <body class="home loaded">
 
@@ -71,23 +71,23 @@
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="page-wrapper">
             @include('header')
-            
+
             @yield('content')
             @include('footer')
 
-        </div>  
-        
-        
+        </div>
+
+
         @include('mobile')
         <div class="product product-single product-popup" id="product-modal">
         </div>
         <form id="logout-user" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
-        
+
         <!-- Plugin JS File -->
         <script data-cfasync="false" src="{{asset('js/email-decode.min.js')}}"></script>
-        
+
         <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('vendor/jquery.plugin/jquery.plugin.min.js')}}"></script>
         <script src="{{asset('vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
@@ -116,7 +116,7 @@
                     dataType: 'json',
                     success: function(res) {
                         var data = res.banners;
-                        
+
                         $.each(data, function(index, banner) {
                             $('#menu-'+banner.category_slug).html(
                                 `
@@ -139,8 +139,8 @@
                                 `
                             );
                             $('#banner-'+banner.category_slug).attr('src', "{{asset('storage/')}}" + '/' + banner.image);
-                            
-                            
+
+
                         });
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -148,7 +148,7 @@
                     }
                 });
             });
-            
+
             function getProduct(productSlug) {
                 var routeProduct = "{{route('product.single', ':slug')}}".replace(':slug', productSlug);
                 $.ajax({
@@ -163,17 +163,17 @@
                     }
                 });
             }
-            
+
             $('.show-modal').on('click', function(e) {
                 e.preventDefault();
-                
+
                 let el = $(this)[0];
                 var productSlug = el.id;
-                                
+
                 $(this).removeClass('w-icon-search');
                 $(this).addClass('atlantic-spinner');
-                $(this).addClass('atlantic-spinner-black'); 
-                
+                $(this).addClass('atlantic-spinner-black');
+
                 getProduct(productSlug);
 
             });
@@ -242,7 +242,7 @@
                                         <form action="javascript:void(0)" method="POST" onSubmit="removeCart(event)" id="${product.rowId}">
                                             @csrf
                                             @method('DELETE')
-                                            
+
                                             <button class="btn btn-link btn-close" aria-label="button" id="loading-alert-${product.rowId}">
                                                 <i class="fas fa-times"></i>
                                             </button>
@@ -262,13 +262,13 @@
                                         </div>
                                         <figure class="product-media" id="cartProduct-url-${product.rowId}">
                                             <a href="/" id="cartProduct-img-${product.rowId}">
-                                                
+
                                             </a>
                                         </figure>
                                         <form action="javascript:void(0)" method="POST" onSubmit="removeCart(event)" id="${product.rowId}">
                                             @csrf
                                             @method('DELETE')
-                                            
+
                                             <button class="btn btn-link btn-close" aria-label="button" id="loader-alert-${product.rowId}">
                                                 <i class="fas fa-times"></i>
                                             </button>
@@ -308,7 +308,7 @@
                             });
 
                             $.each(res, function(index, product) {
-                                
+
                                 var Cartimg = $('<img>').attr('src', "{{asset('storage/')}}" + '/' + product.model.image);
                                 $('#cart-img-'+product.rowId).html(Cartimg);
 
@@ -322,7 +322,7 @@
                             `;
                             $('.cart-action').html(cartButtons);
                         } else {
-                            
+
                             var emptyCart = `
                                 <div class="page-content mt-5 pb-2">
                                     <div class="container">
@@ -340,21 +340,21 @@
                             $('#cart-products').html(emptyCart);
                             $('.cart-action').html('');
                         }
-                        
+
                     },
                     error: function(error) {
                         console.log(error);
                     }
                 });
             }
-            
+
             function removeCart(event) {
                 event.preventDefault();
-                
+
 
                 var form = $(event.target);
                 var RowId = form.attr('id');
-                
+
                 var loadingAlert = $('#loading-alert-'+RowId);
                 var loaderAlert = $('#loader-alert-'+RowId);
                 var spinner = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
@@ -362,7 +362,7 @@
                 var formData = form.serialize();
 
                 var Durl = "{{route('cart.destroy', [':rowId', 'product'])}}".replace(':rowId', RowId);
-                
+
                 $.ajax({
                     type: 'DELETE',
                     url: Durl,
@@ -387,7 +387,7 @@
             $('.add-to-cart').on("submit", function(e) {
                 e.preventDefault();
                 var form = $(this);
-                
+
                 var formData = form.serialize();
 
                 var productId = form.attr('id');
@@ -429,13 +429,13 @@
                         loaderAlert.addClass('w-icon-cart');
                     }
                 });
-                
+
             });
 
             function SearchCategory() {
                 var categories = '';
                 var categoryUrl = "{{route('category.search')}}";
-                
+
                 $.ajax({
                     type: 'GET',
                     url: categoryUrl,
@@ -446,20 +446,20 @@
                             categories += `
                             <option name="searchCat" value="${category.slug}"> ${category.name} </option>
                             `;
-                            
+
                         });
-                        
+
                         $('#searchCategory').append(categories);
-                        
+
                     },
                     error: function(error) {
                         console.log(error);
                     }
                 });
             }
-            
+
             $('#search-form').on('submit', function(e) {
-                
+
                 var query = $('#text-search');
 
                 if (query.val().length > 2) {
@@ -501,14 +501,14 @@
                     error: function(errors) {
                         var message = errors.responseJSON;
                         var error = message.errors;
-                        
+
                         $('.errors-error').html(error.email) + 'Try Again.';
-                        
+
                         button.html('Sign In');
                         form.trigger('reset');
                     }
                 });
-                
+
             };
 
             $('.compare-form').on('submit', function(event) {
@@ -517,14 +517,14 @@
 
                 var form = $(this);
                 var productId = form.attr('id');
-                
+
                 var e, i = [], a = $(".compare-popup");
 
                 var s = $('#btn-compare-'+productId);
 
                 var formData = form.serialize();
 
-                
+
                 s.toggleClass("added")
                 .addClass("load-more-overlay loading"),
 
@@ -543,7 +543,7 @@
                                 }),
                                 500
                                 );
-                        
+
                         $('#compare-message').html(res.message);
                         console.log(res);
                     },
@@ -608,7 +608,7 @@
                 //         var o = $(a.currentTarget).closest("li"),
                 //             s = o.index(),
                 //             r = o.find("img").attr("src");
-                        
+
                 //         r && $(".page-wrapper .product img")
                 //             .each(
                 //                 (function() {
@@ -671,7 +671,7 @@
             });
 
             function compareProducts() {
-                
+
                 $.ajax({
                     url: `{{route('compare.ajax')}}`,
                     type: 'GET',
@@ -680,16 +680,16 @@
                         var products = '';
                         $.each(res, function(index, product) {
                             products += `
-                            <li> 
+                            <li>
                                 <a href="/products">
                                     <figure id="compare-img-${product.rowId}">
-                                    
+
                                     </figure>
                                 </a>
                                 <form action="javascript:void(0)" method="POST" onSubmit="removeCompare(event)" id="${product.rowId}">
                                     @csrf
                                     @method('DELETE')
-                                    
+
                                     <button class="btn btn-remove" aria-label="button" id="loading-alert-${product.rowId}">
                                         <i class="w-icon-times-solid"></i>
                                     </button>
@@ -706,13 +706,13 @@
                         $('#compare-products').html(products);
 
                         $.each(res, function(index, product) {
-                                
+
                             var Cartimg = $('<img>').attr('src', "{{asset('storage/')}}" + '/' + product.model.image);
                             $('#compare-img-'+product.rowId).html(Cartimg);
 
                         });
                         $('#compare-count').html('(' + res.length + ') Products!');
-                        
+
                     },
                     error: function(error) {
                         console.log(error);
@@ -723,11 +723,11 @@
             function removeCompare(event) {
 
                 event.preventDefault();
-                
+
 
                 var form = $(event.target);
                 var RowId = form.attr('id');
-                
+
                 var loadingAlert = $('#loading-alert-'+RowId);
                 var loaderAlert = $('#loader-alert-'+RowId);
                 var spinner = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
@@ -735,7 +735,7 @@
                 var formData = form.serialize();
 
                 var Durl = "{{route('compare.destroy', [':rowId', 'product'])}}".replace(':rowId', RowId);
-                
+
                 $.ajax({
                     type: 'DELETE',
                     url: Durl,
@@ -764,9 +764,9 @@
                 var loader = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
 
                 button.html(loader);
-                
+
             };
-            
+
             function dateFormat(date) {
                 var convertedDate = moment(date, "YYYY-MM-DD HH:mm:ss").format("MMMM D, YYYY");
 
@@ -778,7 +778,7 @@
                     input.value = Number(input.value) + 1;
                     updateOrderQuantity(prodRowId, input.value);
                 });
-                
+
             }
             const decrementQty = (prodRowId) => {
                 const inputs = document.querySelectorAll('.prod-qty-inp-' + prodRowId);
@@ -802,11 +802,11 @@
                         var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);
                         }
                 }
-                if (document.readyState !== 'loading') {handler();} 
-                else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} 
+                if (document.readyState !== 'loading') {handler();}
+                else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);}
                 else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {
                         prev(e);
-                    
+
                         if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}
                     };
                 }

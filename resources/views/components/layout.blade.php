@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="{{asset('vendor/magnific-popup/magnific-popup.min.css')}}">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="{{asset('vendor/swiper/swiper-bundle.min.css')}}">
-    
+
   <!-- Google Tag Manager -->
   <script defer async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,75 +43,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGKRQXXG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
-      <div class="flex lg:flex-1 p-21">
-        <a href="/" class="-m-1.5 p-1.5">
-          <h1 class="sr-only">Kaddah</h1>
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
-        </a>
-      </div>
-      <div class="flex lg:hidden">
-        <button type="button" id="open_mobile_menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-28">
-        <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
-        <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-        <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-        <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
-        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-start">
-        <form class="group relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
-          <div class="rounded-full text-sm bg-[theme(colors.blue)] text-white px-2 py-1 group-hover:hidden">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
-            placeholder="Search products"
-            value="{{ Request::get('search') }}"
-          >
-        </form>
-      </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden invisible" id="mobile_menu" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on `lide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Kaddah</span>
-            <img src="{{ asset('images/about/image 37.png') }}" alt="">
-          </a>
-          <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
-              <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
-              <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
-              <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
-              <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <main class="relative isolate pt-24 min-h-[650px]">
     @if (empty($attributes["noDecorator"]))
       <div class="absolute top-0 left-0 -z-10 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
@@ -127,37 +58,6 @@
       </div>
     @endif
   </main>
-
-  <footer class="pt-[72px] pb-[42px] bg-[#e5f8ff]">
-    <div class="lg:w-[985px] lg:px-0 px-8 mx-auto">
-      <div class="divide-y">
-        <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pr-20 lg:pb-0 pb-8">
-          <div class="flex justify-between items-center w-full">
-            <span>Products</span>
-            <span>Brands</span>
-            <span>About</span>
-            <span>Blog</span>
-            <span>Events</span>
-            <span>Contact</span>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row text-center justify-between items-center pt-[44px] text-neutral-400">
-          <div class="flex lg:gap-10 gap-3">
-            <span>© <?php echo date("Y"); ?> Kaddah </span>
-            <span>Privacy Policy</span>
-            <span>Cookies Policy</span>
-            <span>Terms of Service</span>
-          </div>
-          <div class="flex gap-8 pt-10 lg:pt-0">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <div class="product product-single product-popup scale-75 -translate-y-32" id="product-modal"></div>
   @include('modal')
@@ -197,7 +97,7 @@
               dataType: 'json',
               success: function(res) {
                   var data = res.banners;
-                  
+
                   $.each(data, function(index, banner) {
                       $('#menu-'+banner.category_slug).html(
                           `
@@ -220,8 +120,8 @@
                           `
                       );
                       $('#banner-'+banner.category_slug).attr('src', "{{asset('storage/')}}" + '/' + banner.image);
-                      
-                      
+
+
                   });
               },
               error: function(jqXHR, textStatus, errorThrown) {
@@ -229,7 +129,7 @@
               }
           });
       });
-      
+
       function getProduct(productSlug) {
           var routeProduct = "{{route('product.single', ':slug')}}".replace(':slug', productSlug);
           $.ajax({
@@ -244,17 +144,17 @@
               }
           });
       }
-      
+
       $('.show-modal').on('click', function(e) {
           e.preventDefault();
-          
+
           let el = $(this)[0];
           var productSlug = el.id;
-                          
+
           $(this).removeClass('w-icon-search');
           $(this).addClass('atlantic-spinner');
-          $(this).addClass('atlantic-spinner-black'); 
-          
+          $(this).addClass('atlantic-spinner-black');
+
           getProduct(productSlug);
 
       });
@@ -323,7 +223,7 @@
                                   <form action="javascript:void(0)" method="POST" onSubmit="removeCart(event)" id="${product.rowId}">
                                       @csrf
                                       @method('DELETE')
-                                      
+
                                       <button class="btn btn-link btn-close" aria-label="button" id="loading-alert-${product.rowId}">
                                           <i class="fas fa-times"></i>
                                       </button>
@@ -343,13 +243,13 @@
                                   </div>
                                   <figure class="product-media" id="cartProduct-url-${product.rowId}">
                                       <a href="/" id="cartProduct-img-${product.rowId}">
-                                          
+
                                       </a>
                                   </figure>
                                   <form action="javascript:void(0)" method="POST" onSubmit="removeCart(event)" id="${product.rowId}">
                                       @csrf
                                       @method('DELETE')
-                                      
+
                                       <button class="btn btn-link btn-close" aria-label="button" id="loader-alert-${product.rowId}">
                                           <i class="fas fa-times"></i>
                                       </button>
@@ -389,7 +289,7 @@
                       });
 
                       $.each(res, function(index, product) {
-                          
+
                           var Cartimg = $('<img>').attr('src', "{{asset('storage/')}}" + '/' + product.model.image);
                           $('#cart-img-'+product.rowId).html(Cartimg);
 
@@ -403,7 +303,7 @@
                       `;
                       $('.cart-action').html(cartButtons);
                   } else {
-                      
+
                       var emptyCart = `
                           <div class="page-content mt-5 pb-2">
                               <div class="container">
@@ -421,21 +321,21 @@
                       $('#cart-products').html(emptyCart);
                       $('.cart-action').html('');
                   }
-                  
+
               },
               error: function(error) {
                   console.log(error);
               }
           });
       }
-      
+
       function removeCart(event) {
           event.preventDefault();
-          
+
 
           var form = $(event.target);
           var RowId = form.attr('id');
-          
+
           var loadingAlert = $('#loading-alert-'+RowId);
           var loaderAlert = $('#loader-alert-'+RowId);
           var spinner = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
@@ -443,7 +343,7 @@
           var formData = form.serialize();
 
           var Durl = "{{route('cart.destroy', [':rowId', 'product'])}}".replace(':rowId', RowId);
-          
+
           $.ajax({
               type: 'DELETE',
               url: Durl,
@@ -468,7 +368,7 @@
       $('.add-to-cart').on("submit", function(e) {
           e.preventDefault();
           var form = $(this);
-          
+
           var formData = form.serialize();
 
           var productId = form.attr('id');
@@ -510,13 +410,13 @@
                   loaderAlert.addClass('w-icon-cart');
               }
           });
-          
+
       });
 
       function SearchCategory() {
           var categories = '';
           var categoryUrl = "{{route('category.search')}}";
-          
+
           $.ajax({
               type: 'GET',
               url: categoryUrl,
@@ -527,20 +427,20 @@
                       categories += `
                       <option name="searchCat" value="${category.slug}"> ${category.name} </option>
                       `;
-                      
+
                   });
-                  
+
                   $('#searchCategory').append(categories);
-                  
+
               },
               error: function(error) {
                   console.log(error);
               }
           });
       }
-      
+
       $('#search-form').on('submit', function(e) {
-          
+
           var query = $('#text-search');
 
           if (query.val().length > 2) {
@@ -582,14 +482,14 @@
               error: function(errors) {
                   var message = errors.responseJSON;
                   var error = message.errors;
-                  
+
                   $('.errors-error').html(error.email) + 'Try Again.';
-                  
+
                   button.html('Sign In');
                   form.trigger('reset');
               }
           });
-          
+
       };
 
       $('.compare-form').on('submit', function(event) {
@@ -598,14 +498,14 @@
 
           var form = $(this);
           var productId = form.attr('id');
-          
+
           var e, i = [], a = $(".compare-popup");
 
           var s = $('#btn-compare-'+productId);
 
           var formData = form.serialize();
 
-          
+
           s.toggleClass("added")
           .addClass("load-more-overlay loading"),
 
@@ -624,7 +524,7 @@
                           }),
                           500
                           );
-                  
+
                   $('#compare-message').html(res.message);
                   console.log(res);
               },
@@ -640,7 +540,7 @@
       });
 
       function compareProducts() {
-          
+
           $.ajax({
               url: `{{route('compare.ajax')}}`,
               type: 'GET',
@@ -649,16 +549,16 @@
                   var products = '';
                   $.each(res, function(index, product) {
                       products += `
-                      <li> 
+                      <li>
                           <a href="/products">
                               <figure id="compare-img-${product.rowId}">
-                              
+
                               </figure>
                           </a>
                           <form action="javascript:void(0)" method="POST" onSubmit="removeCompare(event)" id="${product.rowId}">
                               @csrf
                               @method('DELETE')
-                              
+
                               <button class="btn btn-remove" aria-label="button" id="loading-alert-${product.rowId}">
                                   <i class="w-icon-times-solid"></i>
                               </button>
@@ -675,13 +575,13 @@
                   $('#compare-products').html(products);
 
                   $.each(res, function(index, product) {
-                          
+
                       var Cartimg = $('<img>').attr('src', "{{asset('storage/')}}" + '/' + product.model.image);
                       $('#compare-img-'+product.rowId).html(Cartimg);
 
                   });
                   $('#compare-count').html('(' + res.length + ') Products!');
-                  
+
               },
               error: function(error) {
                   console.log(error);
@@ -692,11 +592,11 @@
       function removeCompare(event) {
 
           event.preventDefault();
-          
+
 
           var form = $(event.target);
           var RowId = form.attr('id');
-          
+
           var loadingAlert = $('#loading-alert-'+RowId);
           var loaderAlert = $('#loader-alert-'+RowId);
           var spinner = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
@@ -704,7 +604,7 @@
           var formData = form.serialize();
 
           var Durl = "{{route('compare.destroy', [':rowId', 'product'])}}".replace(':rowId', RowId);
-          
+
           $.ajax({
               type: 'DELETE',
               url: Durl,
@@ -733,9 +633,9 @@
           var loader = '<span class="atlantic-spinner atlantic-spinner-black"></span>';
 
           button.html(loader);
-          
+
       };
-      
+
       function dateFormat(date) {
           var convertedDate = moment(date, "YYYY-MM-DD HH:mm:ss").format("MMMM D, YYYY");
 
@@ -747,7 +647,7 @@
               input.value = Number(input.value) + 1;
               updateOrderQuantity(prodRowId, input.value);
           });
-          
+
       }
       const decrementQty = (prodRowId) => {
           const inputs = document.querySelectorAll('.prod-qty-inp-' + prodRowId);
@@ -759,6 +659,6 @@
       }
   </script>
   @stack('scripts')
-  
+
 </body>
 </html>

@@ -99,7 +99,7 @@
                             <span>Browse Products</span>
                         </a>
 
-                        {{menu('head', 'menu.dropdown')}}
+                        {{ menu('head', 'menu.dropdown') }}
 
                     </div>
                     <nav class="main-nav">

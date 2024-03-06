@@ -10,10 +10,10 @@
       src="{{ asset('storage/'.$event['image']) }}"
       alt="" />
     <div class="p-6">
-      <h5 class="mb-2 text-xl font-bold leading-tight text-neutral-800 dark:text-neutral-50 text-ellipsis overflow-hidden whitespace-nowrap">
+      <h5 class="mb-2 text-xl font-bold leading-tight text-neutral-700 text-ellipsis overflow-hidden whitespace-nowrap">
         {{ $event['title'] }}
       </h5>
-      <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200 h-[100px] overflow-auto">
+      <p class="mb-4 text-base text-neutral-500 h-[100px] overflow-auto">
         {{ $event['excerpt'] }}
       </p>
     </div>

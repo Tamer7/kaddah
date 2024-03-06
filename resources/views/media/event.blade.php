@@ -45,7 +45,7 @@
                                 <p>
                                     {{$event->excerpt}}
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -53,12 +53,12 @@
                         <i class="fas fa-quote-left"></i>
                         <p class="font-weight-bold text-dark mt-1 mb-2">{{$event->description}}</p>
                     </blockquote>
-                    
+
                     <!-- End Blockquote -->
                     {!! $event->body !!}
 
                     @if($event->images)
-                    
+
                     <h4 class="title title-lg font-weight-bold mt-10 pt-1 mb-5">Images Gallery</h4>
                     <div class="product product-single row">
                         <div class="product-gallery product-gallery-sticky">
@@ -69,7 +69,7 @@
                                 }
                             }">
                                 <div class="swiper-wrapper row cols-1 gutter-no">
-                                    
+
                                     @foreach(json_decode($event->images) as $image)
                                         <div class="swiper-slide">
                                             <figure class="product-image">
@@ -79,11 +79,11 @@
                                             </figure>
                                         </div>
                                     @endforeach
-                                    
+
                                 </div>
                                 <button class="swiper-button-next"></button>
                                 <button class="swiper-button-prev"></button>
-                                
+
                             </div>
                             <div class="product-thumbs-wrap swiper-container" data-swiper-options="{
                                 'navigation': {
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <!-- End Related Posts -->
-                    
+
                 </div>
                 <!-- End of Main Content -->
                 <aside class="sidebar right-sidebar blog-sidebar sidebar-fixed sticky-sidebar-wrapper">
@@ -164,7 +164,7 @@
                     </a>
                     <div class="sidebar-content">
                         <div class="sticky-sidebar">
-                            
+
                             <div class="widget widget-posts">
                                 <h3 class="widget-title bb-no">Popular Posts</h3>
                                 <div class="widget-body">
@@ -200,7 +200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="widget widget-calendar">
                                 <h3 class="widget-title bb-no">Calendar</h3>
                                 <div class="widget-body">

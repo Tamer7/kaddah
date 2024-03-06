@@ -21,7 +21,7 @@ class BrandController extends Controller
         $localBrands = Brand::where('slug', 'akc-brands')
             ->first()
             ->children()->with('products')->get();
-        
+
         return view('brands.brands', compact('globalBrands', 'localBrands'));
     }
 
@@ -38,7 +38,7 @@ class BrandController extends Controller
             $products = $brand->products()->where('status', 1)
                         ->orderBy('id')
                         ->paginate($pagination);
-                        
+
         } elseif($request->sort == 'ASC') {
             $products = $brand->products()->where('status', 1)
                         ->orderBy('code', 'ASC')
@@ -50,7 +50,7 @@ class BrandController extends Controller
                         ->paginate($pagination);
         } else {
             $products = $brand->products()->where('status', 1)->orderBy('id', 'DESC')->paginate($pagination);
-            
+
         }
 
         $product = $products;
