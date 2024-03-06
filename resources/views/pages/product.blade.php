@@ -27,7 +27,7 @@
     </div>
     <div class='col-span-4'>
       <div class="relative before:-z-10 before:absolute before:-top-[10px] before:-bottom-[10px] lg:before:-left-[400px] before:-left-8 lg:before:-right-[80px] before:-right-8 before:content-[''] before:bg-[#27AEE5] before:opacity-5 lg:before:rounded-l-full">
-        <div class="font-bold text-[21px]">Green Machine With Single Phase / 2 Hp</div>
+        <div class="font-bold text-[21px]">{{ $product->name }}</div>
         <div class="flex items-center py-8">
           <img src="{{ asset('storage/'.$product->brand->image) }}" alt="" class="w-[108px] h-[60px]">
           <div class="ml-4">
@@ -35,9 +35,10 @@
           </div>
         </div>
         <div class="">
-          <ins class="new-price">{{ $product->code }}</ins> - {{ $product->details }}
+          <ins class="new-price">{{ $product->details }}
         </div>
         <div class="grid grid-rows-3 divide-y pt-6 w-[80%] text-[#282938] pb-2 border-b">
+          <div class="py-2">Item Code: {{ $product->code }}</div>
           <div class="py-2">Brand Name: {{$product->brand->name}}</div>
           <div class="py-2">Warranty: {{$product->warranty}}</div>
           <div class="py-2">Origin: {{$product->origin}}</div>

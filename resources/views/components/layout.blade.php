@@ -93,7 +93,7 @@
           <div class="rounded-full text-sm bg-[theme(colors.blue)] text-white px-2 py-1 group-hover:hidden">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
+          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700"
             placeholder="Search products"
             value="{{ Request::get('search') }}"
           >
