@@ -18,8 +18,8 @@
         @php
           $item = [
             'url' => $category->children->count() === 0
-              ? route('products.index', ['category_id' => $category->id])
-              : route('categories.sub', $category->id),
+              ? route('products.index', ['category_slug' => $category->slug])
+              : route('categories.sub', $category->slug),
             'img' => asset('storage/' . $category->image),
             'title' => $category->name,
             'description' => $category->title,

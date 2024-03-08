@@ -32,14 +32,14 @@ Route::controller(CategoryController::class)
     ->name('categories.')
     ->group(function() {
         Route::get('/categories', 'index')->name('index');
-        Route::get('/categories/{category}', 'subcategory')->name('sub');
+        Route::get('/categories/{slug}', 'subcategory')->name('sub');
     }
 );
 Route::controller(ProductController::class)
     ->name('products.')
     ->group(function() {
         Route::get('/products', 'index')->name('index');
-        Route::get('/products/{product}', 'product')->name('product');
+        Route::get('/products/{slug}', 'product')->name('product');
     })
 ;
 Route::controller(EventController::class)

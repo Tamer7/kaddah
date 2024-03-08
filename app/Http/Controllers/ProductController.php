@@ -12,13 +12,13 @@ class ProductController extends Controller
     //
     public function index(Request $request)
     {
-        $categoryId = $request->category_id;
+        $categorySlug = $request->category_slug;
         $search = $request->search;
 
         $category = [];
         $parents = collect([]);
-        if ($categoryId) {
-            $category = Category::find($categoryId);
+        if ($categorySlug) {
+            $category = Category::where('slug', $categorySlug)->get()->first();
             $parents = Category::getParentList($category)
                 ->map(function ($_category) {
                     return [
@@ -34,9 +34,9 @@ class ProductController extends Controller
         }
 
         $products = Product::where('status', 1);
-        if ($categoryId) {
-            $products = $products->whereHas('categories', function (Builder $query) use ($categoryId) {
-                $query->where('category_id', $categoryId);
+        if ($category) {
+            $products = $products->whereHas('categories', function (Builder $query) use ($category) {
+                $query->where('category_id', $category->id);
             });
         }
         if ($search) {
@@ -47,13 +47,16 @@ class ProductController extends Controller
         return view('pages.products', compact('parents', 'category', 'products'));
     }
 
-    public function product(Request $request, Product $product)
+    public function product(Request $request, $slug)
     {
-        $productId = $product->id;
-        $categoryId = $request->category_id;
+        $product = Product::where('slug', $slug)
+            ->firstOrFail();
 
-        if ($categoryId) {
-            $category = Category::where('id', $request->category_id)->first();
+        $productId = $product->id;
+        $categorySlug = $request->category_slug;
+
+        if ($categorySlug) {
+            $category = Category::where('slug', $categorySlug)->first();
             $categoryNames = Category::getParentList($category)
                 ->map(function ($_category) {
                     return $_category->name;

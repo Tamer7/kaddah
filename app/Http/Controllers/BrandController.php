@@ -25,8 +25,10 @@ class BrandController extends Controller
         return view('brands.brands', compact('globalBrands', 'localBrands'));
     }
 
-    public function show(Request $request, Brand $brand)
+    public function show(Request $request, $brand)
     {
+        $brand = Brand::where('slug', $brand)
+            ->firstOrFail();
 
         if($request->show) {
             $pagination = $request->show;

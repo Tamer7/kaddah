@@ -206,7 +206,7 @@
           @foreach($related as $item)
             <div class="swiper-slide p-4">
               <figure class="group relative">
-                <a href="{{ route('products.product', $item->id) }}" class="flex justify-center">
+                <a href="{{ route('products.product', $item->slug) }}" class="flex justify-center">
                   <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="h-[232px]" />
                   @if($item->images)
                     @foreach(json_decode($item->images) as $image)

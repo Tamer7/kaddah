@@ -16,7 +16,7 @@
           if ($loop->index >= 6) break;
           $productsCount = $brand->products->count();
         @endphp
-        <a href="{{ route('brands.show', $brand->id) }}" class="bg-white rounded-3xl flex justify-center items-center group relative h-[316px]">
+        <a href="{{ route('brands.show', $brand->slug) }}" class="bg-white rounded-3xl flex justify-center items-center group relative h-[316px]">
           <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           @if ($productsCount > 0)
             @php
@@ -35,7 +35,7 @@
     <div class="px-[124px] py-[51px]">
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
         @foreach ($globalBrands as $brand)
-          <a href="{{ route('brands.show', $brand->id) }}">
+          <a href="{{ route('brands.show', $brand->slug) }}">
             <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           </a>
         @endforeach
@@ -45,7 +45,7 @@
       </div>
       <div class="p-[50px] grid lg:grid-cols-5 gap-2">
         @foreach ($localBrands as $brand)
-          <a href="{{ route('brands.show', $brand->id) }}">
+          <a href="{{ route('brands.show', $brand->slug) }}">
             <img src="{{ asset('storage/'.$brand->image) }}" alt="">
           </a>
         @endforeach

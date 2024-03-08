@@ -19,8 +19,13 @@ class CategoryController extends Controller
         return view('pages.categories', compact('categories'));
     }
 
-    public function subcategory(Category $category)
+    public function subcategory($slug)
     {
+        $category = Category::with(['children', 'products'])
+            ->where('slug', $slug)
+            ->get()
+            ->first();
+
         $categories = $category->children;
         $products = $category->products;
         $parents = $category->getParentList($category)
