@@ -1,4 +1,9 @@
 <x-layout title="Articles">
+
+  @section('canonical')
+    <link rel="canonical" href="{{ url('/brands') }}" />
+  @endsection
+
   <x-panel>
     <x-slot name="title">
       Latest Blogs and Updates

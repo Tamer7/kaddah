@@ -54,7 +54,9 @@ class BrandController extends Controller
             $products = $brand->products()->where('status', 1)->orderBy('id', 'DESC')->paginate($pagination);
             
         }
-        
-        return view('brands.brand', compact('brand', 'products'));
+
+        $product = $products;
+
+        return view('brands.brand', compact('brand', 'products', 'product'));
     }
 }

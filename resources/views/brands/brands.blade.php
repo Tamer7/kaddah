@@ -1,7 +1,7 @@
 <x-layout title="Brands">
   <x-panel>
     <x-slot name="title">
-      Discover Top Brands
+      Our Brands & Partners
     </x-slot>
     <x-slot name="content">
       At Kaddah Cleaning, we offer an extensive array of cleaning products and services for all your hygienic needs. Discover the best options that match your requirements.

@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="cleaning materials, cleaning products, cleaning supplies, cleaning equipment" />
-  <meta name="description" content="">
+  <meta name="description" content="Explore premium cleaning and care products for floors and stone at Kaddah. Find a wide selection of supplies and equipment for effective cleaning.">
   <meta name="author" content="D-THEMES">
+
+  @yield('canonical')
 
   <link rel="icon" type="image/png" href="{{ asset('images/favicon.ico') }}">
   <link rel="stylesheet" type="text/css" href="{{asset('vendor/animate/animate.min.css')}}">
@@ -21,6 +23,26 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MGKRQXXG');</script>
   <!-- End Google Tag Manager -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Kaddah",
+    "url": "http://www.example.com",
+    "logo": "http://www.example.com/images/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-800-555-1212",
+      "contactType": "customer service"
+    }],
+    "sameAs": [
+      "http://www.facebook.com/yourprofile",
+      "http://www.twitter.com/yourprofile",
+      "http://plus.google.com/yourprofile"
+    ]
+  }
+  </script>
 
   @csrf
 
@@ -47,7 +69,6 @@
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
         <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Cleany</span>
           <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
         </a>
       </div>
@@ -72,7 +93,7 @@
           <div class="rounded-full text-sm bg-[theme(colors.blue)] text-white px-2 py-1 group-hover:hidden">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200"
+          <input id="te-search-input" name="search" autocomplete="off" type="search" class="hidden group-hover:block focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:text-gray-700"
             placeholder="Search products"
             value="{{ Request::get('search') }}"
           >
@@ -86,7 +107,7 @@
       <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white py-4 px-9 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Cleany</span>
+            <span class="sr-only">Kaddah</span>
             <img src="{{ asset('images/about/image 37.png') }}" alt="">
           </a>
           <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -134,17 +155,17 @@
         <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
           <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pr-20 lg:pb-0 pb-8">
           <div class="flex justify-between items-center w-full">
-            <span>Products</span>
-            <span>Brands</span>
-            <span>About</span>
-            <span>Blog</span>
-            <span>Events</span>
-            <span>Contract</span>
+            <a href="/categories"><span>Products</span></a>
+            <a href="/brands"><span>Brands</span></a>
+            <a href="/about-us"><span>About</span></a>
+            <a href="/blogs"><span>Blog</span></a>
+            <a href="/events"><span>Events</span></a>
+            <a href="/contact-us"><span>Contact</span></a>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row text-center justify-between items-center pt-[44px] text-neutral-400">
           <div class="flex lg:gap-10 gap-3">
-            <span>© 2024 Kaddah </span>
+            <span>© <?php echo date("Y"); ?> Kaddah </span>
             <span>Privacy Policy</span>
             <span>Cookies Policy</span>
             <span>Terms of Service</span>
@@ -757,6 +778,23 @@
               updateOrderQuantity(prodRowId, input.value);
           });
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const cartToggle = document.getElementById('cartToggle');
+        const cartMenu = document.getElementById('cartMenu');
+        const closeCart = document.getElementById('closeCart');
+
+        cartToggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            cartMenu.classList.toggle('translate-x-full');
+        });
+
+        closeCart.addEventListener('click', function(event) {
+            event.preventDefault();
+            cartMenu.classList.add('translate-x-full');
+        });
+    });
+
   </script>
   @stack('scripts')
   
