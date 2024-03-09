@@ -104,30 +104,31 @@
           </table>
         </div>
         <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply" id="tabs-downloads" role="tabpanel" aria-labelledby="tabs-profile-tab">
-        <div class="bg-blue-50 p-4">
-        <div class="border rounded-lg shadow-sm p-6 bg-white">
-          <table class="w-full">
-            @if(!empty($product->file) && !empty($product->file[0]->download_link))
-              <tr>
-                <td class="text-sm font-medium text-gray-900">
-                  Product Brochure
-                </td>
-                <td class="flex justify-end items-center">
-                  <a href="/storage/{{$product->file[0]->download_link}}" class="inline-flex items-center text-white bg-black hover:bg-blue-600 font-medium rounded-lg text-sm px-4 py-2">
-                    <i class="fas fa-download mr-2"></i> Download
-                  </a>
-                </td>
-              </tr>
-            @else
-              <tr>
-                <td class="text-sm font-medium text-gray-900">
-                  No Product Brochure found to download
-                </td>
-              </tr>
-            @endif
-          </table>
+          <div class="bg-blue-50 p-4">
+            <div class="border rounded-lg shadow-sm p-6 bg-white">
+              <table class="w-full">
+                @if(!empty($product->file) && !empty($product->file[0]->download_link))
+                  <tr>
+                    <td class="text-sm font-medium text-gray-900">
+                      Product Brochure
+                    </td>
+                    <td class="flex justify-end items-center">
+                      <a href="/storage/{{$product->file[0]->download_link}}" class="inline-flex items-center text-white bg-black hover:bg-blue-600 font-medium rounded-lg text-sm px-4 py-2">
+                        <i class="fas fa-download mr-2"></i> Download
+                      </a>
+                    </td>
+                  </tr>
+                @else
+                  <tr>
+                    <td class="text-sm font-medium text-gray-900">
+                      No Product Brochure found to download
+                    </td>
+                  </tr>
+                @endif
+              </table>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -198,7 +199,8 @@
                 </div>
               </figure>
               <div class="pt-8">
-                <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis"><a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
+                <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                  <a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
                 </h4>
                 <div class="ratings-container text-neutral-400 text-sm">
                   <a href="{{ route('brands.show', $item->brand->slug) }}" class="rating-reviews">{{$item->brand->name}}</a>
@@ -208,7 +210,6 @@
                 </div>
               </div>
             </div>
-          </div>
           @endforeach
         </div>
       </div>
