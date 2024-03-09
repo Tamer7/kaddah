@@ -35,9 +35,10 @@
     <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2">
       @foreach ($categories as $category)
         @php
+        $parentSlug = optional($category->parent)->slug;
           $item = [
             'url' => $category->children->count() === 0
-              ? route('products.indexSpec', ['cateSlug' => $category->parent->slug, 'subCateSlug' => $category['slug']])
+              ? route('products.indexSpec', ['cateSlug' => $parentSlug ?? 'default-slug', 'subCateSlug' => $category['slug']])
               : route('categories.sub', $category->slug),
             'img' => asset('storage/' . $category->image),
             'title' => $category->name,
