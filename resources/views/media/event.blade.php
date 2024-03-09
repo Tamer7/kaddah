@@ -51,7 +51,7 @@
                     </div>
                     <blockquote class="text-center mb-8">
                         <i class="fas fa-quote-left"></i>
-                        <p class="font-weight-bold text-dark mt-1 mb-2">{{$event->description}}</p>
+                        <p class="font-weight-bold mt-1 mb-2">{{$event->description}}</p>
                     </blockquote>
                     
                     <!-- End Blockquote -->
@@ -140,7 +140,7 @@
                                             <a href="#" class="post-date">{{dateFormat($event->created_at, 'd m y')}}</a>
                                         </div>
                                         <h4 class="post-title mb-3"><a href="{{route('event.show', $event->slug)}}">{{$event->title}}</a></h4>
-                                        <a href="{{route('event.show', $event->slug)}}" class="btn btn-link btn-dark btn-underline font-weight-normal">Read More<i class="w-icon-long-arrow-right"></i></a>
+                                        <a href="{{route('event.show', $event->slug)}}" class="btn btn-link btn-underline font-weight-normal">Read More<i class="w-icon-long-arrow-right"></i></a>
                                     </div>
                                 </div>
                                 @endforeach

@@ -60,7 +60,7 @@
                                     {{$event->excerpt}}
                                 </p>
                             </div>
-                            <a href="{{route('event.show', $event->slug)}}" class="btn btn-link btn-dark btn-underline">Read
+                            <a href="{{route('event.show', $event->slug)}}" class="btn btn-link btn-underline">Read
                                 More<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                     </div>
