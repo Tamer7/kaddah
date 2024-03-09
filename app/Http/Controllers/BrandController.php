@@ -36,27 +36,23 @@ class BrandController extends Controller
             $pagination = 20;
         }
 
+        $orderKey = 'id';
+        $orderDir = 'DESC';
         if($request->sort == 'old') {
-            $products = $brand->products()->where('status', 1)
-                        ->orderBy('id')
-                        ->paginate($pagination);
-                        
+            $orderDir = 'ASC';
         } elseif($request->sort == 'ASC') {
-            $products = $brand->products()->where('status', 1)
-                        ->orderBy('code', 'ASC')
-                        ->paginate($pagination);
-                        // dd($products);
+            $orderKey = 'code';
+            $orderDir = 'ASC';
         } elseif($request->sort == 'DESC') {
-            $products = $brand->products()->where('status', 1)
-                        ->orderBy('code', 'DESC')
-                        ->paginate($pagination);
-        } else {
-            $products = $brand->products()->where('status', 1)->orderBy('id', 'DESC')->paginate($pagination);
-            
+            $orderKey = 'code';
         }
 
-        $product = $products;
+        $products = $brand->products()
+            ->with('categories.parent')
+            ->where('status', 1)
+            ->orderBy($orderKey, $orderDir)
+            ->paginate($pagination);
 
-        return view('brands.brand', compact('brand', 'products', 'product'));
+        return view('brands.brand', compact('brand', 'products'));
     }
 }

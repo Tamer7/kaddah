@@ -37,7 +37,7 @@
         @php
           $item = [
             'url' => $category->children->count() === 0
-              ? route('products.index', ['category_slug' => $category->slug])
+              ? route('products.indexSpec', ['cateSlug' => $category->parent->slug, 'subCateSlug' => $category['slug']])
               : route('categories.sub', $category->slug),
             'img' => asset('storage/' . $category->image),
             'title' => $category->name,

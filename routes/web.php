@@ -40,6 +40,10 @@ Route::controller(ProductController::class)
     ->group(function() {
         Route::get('/products', 'index')->name('index');
         Route::get('/products/{slug}', 'product')->name('product');
+
+        // special case from the client's requirements
+        Route::get('/categories/{cateSlug}/{subCateSlug}', 'indexSpec')->name('indexSpec');
+        Route::get('/categories/{cateSlug}/{subCateSlug}/{prodSlug}', 'productSpec')->name('productSpec');
     })
 ;
 Route::controller(EventController::class)

@@ -178,7 +178,7 @@
                         'img' => asset('storage/' . $subcategory->image),
                         'title' => $subcategory->name,
                         'description' => $subcategory->title,
-                        'url' => route('products.index', ['category_slug' => $subcategory['slug']])
+                        'url' => route('products.indexSpec', ['cateSlug' => $category->slug, 'subCateSlug' => $subcategory['slug']])
                       ]
                     @endphp
                     <div class="swiper-slide p-2">
