@@ -104,30 +104,31 @@
           </table>
         </div>
         <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block blend-multiply" id="tabs-downloads" role="tabpanel" aria-labelledby="tabs-profile-tab">
-        <div class="bg-blue-50 p-4">
-        <div class="border rounded-lg shadow-sm p-6 bg-white">
-          <table class="w-full">
-            @if(!empty($product->file) && !empty($product->file[0]->download_link))
-              <tr>
-                <td class="text-sm font-medium text-gray-900">
-                  Product Brochure
-                </td>
-                <td class="flex justify-end items-center">
-                  <a href="/storage/{{$product->file[0]->download_link}}" class="inline-flex items-center text-white bg-black hover:bg-blue-600 font-medium rounded-lg text-sm px-4 py-2">
-                    <i class="fas fa-download mr-2"></i> Download
-                  </a>
-                </td>
-              </tr>
-            @else
-              <tr>
-                <td class="text-sm font-medium text-gray-900">
-                  No Product Brochure found to download
-                </td>
-              </tr>
-            @endif
-          </table>
+          <div class="bg-blue-50 p-4">
+            <div class="border rounded-lg shadow-sm p-6 bg-white">
+              <table class="w-full">
+                @if(!empty($product->file) && !empty($product->file[0]->download_link))
+                  <tr>
+                    <td class="text-sm font-medium text-gray-900">
+                      Product Brochure
+                    </td>
+                    <td class="flex justify-end items-center">
+                      <a href="/storage/{{$product->file[0]->download_link}}" class="inline-flex items-center text-white bg-black hover:bg-blue-600 font-medium rounded-lg text-sm px-4 py-2">
+                        <i class="fas fa-download mr-2"></i> Download
+                      </a>
+                    </td>
+                  </tr>
+                @else
+                  <tr>
+                    <td class="text-sm font-medium text-gray-900">
+                      No Product Brochure found to download
+                    </td>
+                  </tr>
+                @endif
+              </table>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -165,41 +166,50 @@
       <div class="swiper-container" x-ref="container">
         <div class="swiper-wrapper">
           @foreach($related as $item)
-          <div class="swiper-slide p-4">
-            <figure class="group relative">
-              <a href="{{ route('products.product', $item->id) }}" class="flex justify-center">
-                <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="h-[232px]" />
-                @if($item->images)
-                @foreach(json_decode($item->images) as $image)
-                @if($loop->last)
-                <img src="{{asset('storage/'.$image)}}" alt="Product" class="absolute opacity-0 group-hover:opacity-100 top-0 left-0 right-0 left-0 h-[232px] transition-opacity duration-300" />
-                @endif
-                @endforeach
-                @endif
-              </a>
-              <div class="product-action-vertical group-hover:opacity-100 group-hover:visible">
-                <a href="javascript:void(0)" onclick="$('.cart-submit-{{$item->id}}').submit();" class="btn-product-icon btn-cart-design w-icon-cart loader-alert-{{$item->id}}"></a>
-                <form action="javascript:void(0)" method="POST" class="add-to-cart cart-form cart-submit-{{$item->id}}" id="{{$item->id}}">
-                  @csrf
-                  <input type="hidden" name="id" value="{{$item->id}}">
-                </form>
-              </div>
-              <div class="product-action absolute opacity-0 group-hover:opacity-100 group-hover:visible right-0 left-0 bottom-0 bg-gray-900 text-white font-semibold flex justify-center transition-opacity duration-300">
-                <a href="javascript:void(0);" class="show-modal py-4 text-center" title="Quick View" id="{{$item->slug}}">Quick View</a>
-                <a href="javascript:void(0);" class="d-none btn-quickview" id="quickview-{{$item->id}}"></a>
-              </div>
-            </figure>
-            <div class="pt-8">
-              <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis"><a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
-              </h4>
-              <div class="ratings-container text-neutral-400 text-sm">
-                <a href="{{ route('brands.show', $item->brand->slug) }}" class="rating-reviews">{{$item->brand->name}}</a>
-              </div>
-              <div class="font-semibold text-lg whitespace-nowrap overflow-hidden text-ellipsis">
-                <div class="product-price">{{$item->code}}</div>
+            @php
+              $category = $item->categories[0];
+              $prodSlug = $item->slug;
+              $subCateSlug = $category->slug;
+              $cateSlug = $category->parent->slug;
+            @endphp
+            <div class="swiper-slide p-4">
+              <figure class="group relative">
+                <a href="{{ route('products.productSpec', compact('prodSlug', 'subCateSlug', 'cateSlug')) }}" class="flex justify-center">
+                  <img src="{{asset('storage/'.$item->image)}}" alt="Product" class="h-[232px]" />
+                  @if($item->images)
+                    @foreach(json_decode($item->images) as $image)
+                      @if($loop->last)
+                        <img src="{{asset('storage/'.$image)}}" alt="Product" class="absolute opacity-0 group-hover:opacity-100 top-0 left-0 right-0 left-0 h-[232px] transition-opacity duration-300" />
+                      @endif
+                    @endforeach
+                  @endif
+                </a>
+                <div class="product-action-vertical group-hover:opacity-100 group-hover:visible">
+                  <a href="javascript:void(0)" onclick="$('.cart-submit-{{$item->id}}').submit();"
+                    class="btn-product-icon btn-cart-design w-icon-cart loader-alert-{{$item->id}}"></a>
+                    <form action="javascript:void(0)" method="POST" class="add-to-cart cart-form cart-submit-{{$item->id}}" id="{{$item->id}}">
+                      @csrf
+                      <input type="hidden" name="id" value="{{$item->id}}">
+                    </form>
+                </div>
+                <div class="product-action absolute opacity-0 group-hover:opacity-100 group-hover:visible right-0 left-0 bottom-0 bg-gray-900 text-white font-semibold flex justify-center transition-opacity duration-300">
+                  <a href="javascript:void(0);" class="show-modal py-4 text-center"
+                    title="Quick View" id="{{$item->slug}}">Quick View</a>
+                  <a href="javascript:void(0);" class="d-none btn-quickview" id="quickview-{{$item->id}}"></a>
+                </div>
+              </figure>
+              <div class="pt-8">
+                <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                  <a href="{{route('products.product', $item->id)}}">{{$item->name}}</a>
+                </h4>
+                <div class="ratings-container text-neutral-400 text-sm">
+                  <a href="{{ route('brands.show', $item->brand->slug) }}" class="rating-reviews">{{$item->brand->name}}</a>
+                </div>
+                <div class="font-semibold text-lg whitespace-nowrap overflow-hidden text-ellipsis">
+                  <div class="product-price">{{$item->code}}</div>
+                </div>
               </div>
             </div>
-          </div>
           @endforeach
         </div>
       </div>

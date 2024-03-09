@@ -12,7 +12,7 @@
     @if($products->count() > 0)
       <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2">
         @foreach ($products as $product)
-          <x-items.product :product="$product" :category="$category" />
+          <x-items.product :product="$product" />
         @endforeach
       </div>
     @elseif(request()->has('search'))

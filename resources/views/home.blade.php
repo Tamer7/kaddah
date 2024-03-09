@@ -178,7 +178,7 @@
                         'img' => asset('storage/' . $subcategory->image),
                         'title' => $subcategory->name,
                         'description' => $subcategory->title,
-                        'url' => route('products.index', ['category_id' => $subcategory['id']])
+                        'url' => route('products.indexSpec', ['cateSlug' => $category->slug, 'subCateSlug' => $subcategory['slug']])
                       ]
                     @endphp
                     <div class="swiper-slide p-2">
@@ -197,7 +197,7 @@
             </div>
 
             <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
-              <a href="{{ route('categories.sub', ['category' => $category['id']]) }}">View More Products <i class="fa-solid fa-chevron-right"></i></a>
+              <a href="{{ route('categories.sub', $category['slug']) }}">View More Products <i class="fa-solid fa-chevron-right"></i></a>
             </div>
           </div>
         </div>
