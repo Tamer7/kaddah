@@ -12,7 +12,7 @@
         </div>
         <blockquote class="text-center my-6 text-2xl bg-neutral-100 text-neutral-800 py-6 px-4">
             <i class="fas fa-quote-left"></i>
-            <p class="font-bold text-dark mt-1 mb-2">{{ $blog->description }}</p>
+            <p class="font-bold mt-1 mb-2">{{ $blog->description }}</p>
         </blockquote>
 
         <div class="blog-content">

@@ -66,7 +66,7 @@
                                     {{$blog->excerpt}}
                                 </p>
                             </div>
-                            <a href="{{route('blog.show', $blog->slug)}}" class="btn btn-link btn-dark btn-underline">Read
+                            <a href="{{route('blog.show', $blog->slug)}}" class="btn btn-link btn-underline">Read
                                 More<i class="w-icon-long-arrow-right"></i></a>
                         </div>
                     </div>

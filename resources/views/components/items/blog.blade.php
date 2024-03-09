@@ -27,7 +27,7 @@
   <a href="{{ $blog->slug ? route('blog.show', $blog->slug) : 'javascript:;' }}">
     <img class="rounded-xl rounded-b-none w-full h-auto h-[177px]"
       src="{{ asset('storage/'.$blog->image) }}"
-      alt="" />
+      alt="" /> 
 
     <div class="p-6">
       <div class="flex items-center">
@@ -40,10 +40,10 @@
         </div> -->
       </div>
 
-      <h5 class="mb-2 mt-2 font-bold text-xl leading-tight text-neutral-800 dark:text-neutral-50">
+      <h5 class="mb-2 mt-2 font-bold text-xl leading-tight text-neutral-800">
         {{ $blog->title }}
       </h5>
-      <p class="mb-4 mt-4 text-base text-neutral-600 dark:text-neutral-200 max-h-[150px] overflow-auto event-excerpt">
+      <p class="mb-4 mt-4 text-base text-neutral-600 max-h-[150px] overflow-auto event-excerpt">
         {{ $blog->excerpt }}
       </p>
     </div>

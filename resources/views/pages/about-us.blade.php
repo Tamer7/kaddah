@@ -78,7 +78,7 @@
                 <div>
                   @if($item == "1980s")
                     <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Marking the inception of a solution-oriented journey
+                      Marking the inception of a solution-oriented journey
                     </h5>
                     <p class="text-neutral-400 text-lg">
                       Led by Mr. Abdulhalim Kaddah, a visionary chemical engineer. While pursuing his studies abroad, he noticed an obvious absence of fundamental cleaning equipment in
@@ -86,7 +86,7 @@
                     </p>
                   @elseif($item == "1990s")
                     <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Sharing Expertise and Knowledge
+                      Sharing Expertise and Knowledge
                     </h5>
                     <p class="text-neutral-400 text-lg">
                     AKC Cleaning Equipments had expanded its reach, exporting products from Syria to prominent GCC countries such as the UAE, KSA, Oman, Qatar, and Bahrain. 
@@ -94,7 +94,7 @@
                     </p>
                   @elseif($item == "2000s")
                     <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Taking A Risk
+                      Taking A Risk
                     </h5>
                     <p class="text-neutral-400 text-lg">
                       AKC Cleaning Equipments took a bold step by establishing its first branch and warehouse in Sharjah Industrial Area.
@@ -102,7 +102,7 @@
                     </p>
                   @elseif($item == "2010s")
                     <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Taking a step towards expansion
+                      Taking a step towards expansion
                     </h5>
                     <p class="text-neutral-400 text-lg">
                       The company had further solidified its presence by inaugurating three branches in Dubai, along with additional branches in Oman and Bahrain.
@@ -110,7 +110,7 @@
                     </p>
                   @elseif($item == "2022s")
                     <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Looking forward to a brighter more successful future
+                      Looking forward to a brighter more successful future
                     </h5>
                     <p class="text-neutral-400 text-lg">
                       The culmination of decades of dedication and innovation led to the relocation of AKC Cleaning Equipments to its state-of-the-art headquarters in Dubai Industrial Park.
@@ -118,7 +118,7 @@
                     </p>
                   @else
                   <h5 class="text-4xl font-semibold mb-4 lg:leading-[60px] leading-10 text-gray-700">
-                      {{ $item }} | Marking the inception of a solution-oriented journey
+                      Marking the inception of a solution-oriented journey
                     </h5>
                     <p class="text-neutral-400 text-lg">
                       Led by Mr. Abdulhalim Kaddah, a visionary chemical engineer. While pursuing his studies abroad, he noticed an obvious absence of fundamental cleaning equipment in
