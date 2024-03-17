@@ -170,11 +170,11 @@
             <span>Cookies Policy</span>
             <span>Terms of Service</span>
           </div>
-          <div class="flex gap-8 pt-10 lg:pt-0">
+          <!-- <div class="flex gap-8 pt-10 lg:pt-0">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-square-instagram"></i>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

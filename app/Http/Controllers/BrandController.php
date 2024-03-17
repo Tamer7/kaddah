@@ -21,8 +21,16 @@ class BrandController extends Controller
         $localBrands = Brand::where('slug', 'akc-brands')
             ->first()
             ->children()->with('products')->get();
+
+        $mainBrands = Brand::where('slug', 'partners')
+            ->first()
+            ->children()
+            ->whereIn('slug', ['iteam', 'kraenzle', 'elsea', 'excentr', 'eko', 'lmamachine'])
+            ->with('products')
+            ->get();
+
         
-        return view('brands.brands', compact('globalBrands', 'localBrands'));
+        return view('brands.brands', compact('globalBrands', 'localBrands', 'mainBrands'));
     }
 
     public function show(Request $request, $brand)

@@ -11,7 +11,7 @@
       The region's biggest selection of <br>cleaning solutions
     </h1>
 
-      <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
 
       <div class="flex mt-6 justify-center sm:justify-start pr-5">
         <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
@@ -30,7 +30,7 @@
 
   <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
     <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-      <img src="/images/home/Group 59.png" alt="" class="py-4">
+      <img src="/images/home/Group 59.png" alt="" class="py-4 floating-animation">
       <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
         <h2 class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">Your Trusted Cleaning Supplies & Equipment Provider.</h2>
         <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
@@ -362,6 +362,26 @@
   to { opacity: 1; }
 }
 
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, -5px);
+    }
+    50% {
+        transform: translate(0, -10px);
+    }
+    75% {
+        transform: translate(5px, -5px);
+    }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+
 
 </style>
 
@@ -374,7 +394,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const texts = [
     'The region\'s biggest selection of <br>cleaning solutions',
-    'Your trusted partner in <br>cleanliness',
+    '35+ years of excellence in <br> cleaning solutions',
+    'Leading supplier in GCC',
+    '10,000+ products from <br> 30+ brands',
   ];
   cycleContent('main-heading', texts, 6000);
 

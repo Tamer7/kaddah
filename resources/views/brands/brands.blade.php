@@ -11,7 +11,7 @@
   <div>
     <h2 class="text-3xl text-center pt-24 pb-16 font-bold">Global Partners</h2>
     <div class="rounded-xl bg-[#e5f8ff] px-[168px] py-[50px] grid lg:grid-cols-3 gap-4">
-      @foreach ($globalBrands as $brand)
+      @foreach ($mainBrands as $brand)
         @php
           if ($loop->index >= 6) break;
           $productsCount = $brand->products->count();
