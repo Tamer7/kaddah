@@ -4,27 +4,36 @@
     <link rel="canonical" href="{{ url('/') }}" />
   @endsection
 
-  <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex">
-    <div>
-      <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>
-      <h1 id="main-heading" class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-left text-[theme(colors.blue)] py-2 pr-5">
-      The region's biggest selection of <br>cleaning solutions
-    </h1>
+{{--  <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex">--}}
+{{--    <div>--}}
+{{--      <div class="sm:pt-2 pt-60"><i class="fa-regular fa-circle-check"></i> Representing Since 1989</div>--}}
+{{--      <h1 id="main-heading" class="font-semibold lg:text-[52px] text-[40px] sm:text-left text-left text-[theme(colors.blue)] py-2 pr-5">--}}
+{{--      The region's biggest selection of <br>cleaning solutions--}}
+{{--    </h1>--}}
 
-      <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
+{{--      <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->--}}
 
-      <div class="flex mt-6 justify-center sm:justify-start pr-5">
-        <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-          Our Products
-        </a>
-        <a href="/about-us" class="bg-gray-800 rounded-[28px] ml-4 px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-          About Us
-        </a>
+{{--      <div class="flex mt-6 justify-center sm:justify-start pr-5">--}}
+{{--        <a href="/products" class="bg-[theme(colors.blue)] rounded-[28px] px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">--}}
+{{--          Our Products--}}
+{{--        </a>--}}
+{{--        <a href="/about-us" class="bg-gray-800 rounded-[28px] ml-4 px-12 py-6 text-sm font-semibold text-white hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">--}}
+{{--          About Us--}}
+{{--        </a>--}}
+{{--      </div>--}}
+{{--    </div>--}}
+
+    <div class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[106px] flex bg-[url('/images/home/Background.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+      <div>
+        <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase">
+          The <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">region's biggest</span><br>selection of cleaning solutions
+        </h1>
+
+        <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
       </div>
-    </div>
 
     <div class="flex image-moving">
-      <img src="/images/home/Mask group.png" alt="" id="dynamic-image" class="absolute sm:max-w-3/4 -top-[96px] right-0">
+      <img src="/images/home/trollies.png" alt="" id="dynamic-image" class="absolute w-3/4 bottom-[10px] right-0">
     </div>
   </div>
 
@@ -393,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', () => handleScrollEffect(img, lastScrollTop));
 
   const texts = [
-    'The region\'s biggest selection of <br>cleaning solutions',
+    'The <span class="font-black lg:text-[70px] text-[55px] sm:text-left text-left text-[#002F62]">region\'s biggest</span><br>selection of cleaning solutions',
     '35+ years of excellence in <br> cleaning solutions',
     'Leading supplier in GCC',
     '10,000+ products from <br> 30+ brands',
@@ -401,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
   cycleContent('main-heading', texts, 6000);
 
   const images = [
-    '/images/home/Mask group.png',
+    '/images/home/trollies.png',
     '/images/home/secondimage.png',
   ];
   cycleContent('dynamic-image', images, 6000, true);
