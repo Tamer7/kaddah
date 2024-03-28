@@ -33,7 +33,7 @@
                 <a href="#" class="mobile-menu-toggle  w-icon-hamburger" aria-label="menu-toggle">
                 </a>
                 <a href="/" class="logo">
-                    <img src="{{asset('images/logo-new.png')}}" alt="logo" width="100" height="100%" />
+                    <img src="{{asset('images/home/LOgo-05.png')}}" alt="logo" width="100" height="100%" />
                 </a>
                 <form method="GET" action="{{route('product.search')}}" id="search-form"
                     class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">

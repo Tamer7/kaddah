@@ -22,20 +22,122 @@
 {{--        </a>--}}
 {{--      </div>--}}
 {{--    </div>--}}
+{{--      <div id="owl-carousel" class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[106px] flex items-center justify-between bg-[url('/images/home/Background.png')] bg-cover bg-center bg-no-repeat overflow-hidden owl-carousel owl-theme">--}}
+{{--          <div class="item">--}}
+{{--            <div>--}}
+{{--              <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase">--}}
+{{--                The <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">region's biggest</span><br>selection of cleaning solutions--}}
+{{--              </h1>--}}
 
-    <div class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[106px] flex bg-[url('/images/home/Background.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
-      <div>
-        <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase">
-          The <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">region's biggest</span><br>selection of cleaning solutions
-        </h1>
+{{--              <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->--}}
+{{--            </div>--}}
 
-        <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->
+{{--            <div class="">--}}
+{{--              <img src="/images/home/trollies.png" alt="" class="object-cover">--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--          <div class="item">--}}
+{{--            <div>--}}
+{{--              <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase">--}}
+{{--                The <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">test</span><br>selection of cleaning solutions--}}
+{{--              </h1>--}}
+
+{{--              <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->--}}
+{{--            </div>--}}
+
+{{--            <div class="flex image-moving">--}}
+{{--              <img src="/images/home/Man.png" alt="" id="dynamic-image" class="h[75vh]">--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        <div class="item">--}}
+{{--          <div>--}}
+{{--            <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase">--}}
+{{--              The <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">test</span><br>selection of cleaning solutions--}}
+{{--            </h1>--}}
+
+{{--            <!-- <p class="lg:w-8/12 xl:w-full sm:text-left text-left pr-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> -->--}}
+{{--          </div>--}}
+
+{{--          <div class="flex image-moving">--}}
+{{--            <img src="/images/home/Man.png" alt="" id="dynamic-image" class="">--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--      </div>--}}
+
+    <div id="owl-carousel" class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[80px] bg-[url('/images/home/Background.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
+{{--      <div class="w-full item flex items-start justify-center gap-10">--}}
+{{--        <div class="flex flex-col items-start justify-between ml-16 mt-16">--}}
+{{--          <h1 id="main-heading" class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase">--}}
+{{--            Leading supplier in <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span><br>--}}
+{{--          </h1>--}}
+{{--          <a id="main-heading" class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize">--}}
+{{--            Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>>--}}
+{{--          </a>--}}
+{{--        </div>--}}
+{{--        <div class="">--}}
+{{--          <img src="/images/home/trollies.png" alt="" class="object-cover h-[75vh] text-left">--}}
+{{--        </div>--}}
+{{--      </div>--}}
+
+      <div class="w-full item flex flex-col md:flex-row items-start justify-start py-10 md:py-[80px] md:gap-10 relative">
+        <div class="flex flex-col items-start md:items-center justify-between md:ml-20 md:mt-16 md:h-[65vh] xl:h-[60vh]">
+                    <h1 class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase">
+                      Leading supplier in <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span>
+                    </h1>
+                    <a class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize">
+                      Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>>
+                    </a>
+                  </div>
+        <div class="hidden md:block md:absolute md:right-[5%] md:top-0">
+          <img src="/images/home/trollies.png" alt="" class="h-[50vh] md:h-[80vh]">
+        </div>
       </div>
 
-    <div class="flex image-moving">
-      <img src="/images/home/trollies.png" alt="" id="dynamic-image" class="absolute w-3/4 bottom-[10px] right-0">
+      <div class="w-full item flex flex-col md:flex-row items-start justify-start py-10 md:py-[80px] md:gap-10 relative">
+        <div class="flex flex-col items-start md:items-center justify-between md:ml-20 md:mt-16 md:h-[65vh] xl:h-[60vh]">
+          <h1 class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase">
+            <span class="font-black lg:text-[50px] text-[35px] text-center text-[#002F62]">15000+</span> products from <span class="font-black lg:text-[50px] text-[35px] sm:text-left text-left text-[#002F62]">30+ brands</span>
+          </h1>
+          <a class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize">
+            innovative cleaning machineries&nbsp;&nbsp;>>>>
+          </a>
+        </div>
+        <div class="hidden md:block md:absolute md:right-[5%] md:top-0">
+          <img src="/images/home/machine.png" alt="" class="h-[50vh] md:h-[80vh]">
+        </div>
+      </div>
+
+      <div class="w-full item flex flex-col md:flex-row items-start justify-start py-10 md:py-[80px] md:gap-10 relative">
+        <div class="flex flex-col items-start md:items-center justify-between md:ml-20 md:mt-16 md:h-[65vh] xl:h-[60vh]">
+          <h1 class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase">
+                        The <span class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">region's biggest</span><br>selection of cleaning solutions
+          </h1>
+          <a class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize">
+            Unique Design For Each Bins&nbsp;&nbsp;>>>>
+          </a>
+        </div>
+        <div class="hidden md:block md:absolute md:right-[5%] md:top-0">
+          <img src="/images/home/Man.png" alt="" class="h-[75vh]">
+          <img src="/images/home/Product.png" alt="" class="absolute bottom-[10%] right-[65%] scale-[2]">
+        </div>
+      </div>
+
+      <div class="w-full item flex flex-col md:flex-row items-start justify-start py-10 md:py-[80px] md:gap-10 relative">
+        <div class="flex flex-col items-start md:items-center justify-between md:ml-20 md:mt-16 md:h-[65vh] xl:h-[60vh]">
+          <h1 class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase">
+            <span class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">30 Years</span> of excellence<br>in cleaning solutions
+          </h1>
+          <a class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize">
+            Solution for every problems&nbsp;&nbsp;>>>>
+          </a>
+        </div>
+        <div class="hidden md:block md:absolute md:right-[5%] md:top-0">
+          <img src="/images/home/clean4.png" alt="" class="h-[70vh] xl:h-[65vh]">
+          <img src="/images/home/chemical.png" alt="" class="absolute bottom-0 xl:-bottom-[25%] 2xl:right-[35%] xl:right-[15%] right-[45%] 2xl:scale-[0.9] xl:scale-[0.8]">
+        </div>
+      </div>
+
     </div>
-  </div>
 
   <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
     <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
@@ -344,7 +446,20 @@
   @push('scripts')
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="{{ asset('js/home.js') }}"></script>
+      <script>
+        $('#owl-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          dots: false,
+          nav: false,
+          items: 1,
+          autoplay: true,
+          slideTransition: 'linear',
+          smartSpeed: 500,
+        })
+      </script>
   @endpush
 </x-layout>
 
@@ -395,26 +510,26 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const img = document.querySelector('.image-moving img');
-  img.classList.add('img-animate');
-  let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  window.addEventListener('scroll', () => handleScrollEffect(img, lastScrollTop));
-
-  const texts = [
-    'The <span class="font-black lg:text-[70px] text-[55px] sm:text-left text-left text-[#002F62]">region\'s biggest</span><br>selection of cleaning solutions',
-    '35+ years of excellence in <br> cleaning solutions',
-    'Leading supplier in GCC',
-    '10,000+ products from <br> 30+ brands',
-  ];
-  cycleContent('main-heading', texts, 6000);
-
-  const images = [
-    '/images/home/trollies.png',
-    '/images/home/secondimage.png',
-  ];
-  cycleContent('dynamic-image', images, 6000, true);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   const img = document.querySelector('.image-moving img');
+//   img.classList.add('img-animate');
+//   let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   window.addEventListener('scroll', () => handleScrollEffect(img, lastScrollTop));
+//
+//   const texts = [
+//     'The <span class="font-black lg:text-[70px] text-[55px] sm:text-left text-left text-[#002F62]">region\'s biggest</span><br>selection of cleaning solutions',
+//     '35+ years of excellence in <br> cleaning solutions',
+//     'Leading supplier in GCC',
+//     '10,000+ products from <br> 30+ brands',
+//   ];
+//   cycleContent('main-heading', texts, 6000);
+//
+//   const images = [
+//     '/images/home/trollies.png',
+//     '/images/home/secondimage.png',
+//   ];
+//   cycleContent('dynamic-image', images, 6000, true);
+// });
 
 function handleScrollEffect(element, lastScrollTop) {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
