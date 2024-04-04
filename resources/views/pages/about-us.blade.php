@@ -246,7 +246,7 @@
       </div>
       <div class="mt-5">
         <h5 class="text-xl">Abu Dahbi</h5>
-        <p class="text-neutral-400 mt-2">6th Street - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates</p>
+        <p class="text-neutral-400 mt-2">6th Street - Musaffah Industrial - Abu Dhabi - United Arab Emirates</p>
       </div>
     </div>
   </div>
