@@ -10,6 +10,12 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
+
+    - name: 📂 Install npm dependencies
+      run: npm install
+
+    - name: 📂 Build assets for production
+      run: npm run production
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
