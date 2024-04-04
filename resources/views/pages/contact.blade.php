@@ -289,22 +289,19 @@
 
     <div class="relative lg:px-[0] sm:px-16 px-8 lg:py-[160px] py-8 grid lg:grid-cols-2 gap-10">
       <div class="mx-auto lg:mx-0">
-        <img class="lg:absolute lg:-translate-y-1/4" src="{{ asset('images/about/image 54.png')}}" alt="">
+      <div id="map" style="height:500px;width:100%;"></div>
       </div>
       <div class="lg:px-[80px] px-8">
         <h3 class="text-3xl font-semibold py-5">Our Branches</h3>
         <div class="mt-5">
           <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Dubai</h5>
           <p class="text-neutral-400 mt-2 flex items-center">
-            <i class="fa-solid fa-phone-flip mr-4"></i>
-            Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt
-          </p>
+            Speedex Center - Salah Al Din St - Al Khabaisi - Dubai - United Arab Emirates
         </div>
         <div class="mt-5">
           <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Abu Dahbi</h5>
           <p class="text-neutral-400 mt-2 flex items-center">
-            <i class="fa-solid fa-phone-flip mr-4"></i>
-            Lorem ipsum dolor sit amet, consectetur dipiscing elit eiusmod tempor incididunt
+          6th Street - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates
           </p>
         </div>
       </div>
@@ -345,3 +342,67 @@
     </script>
   @endpush
 </x-layout>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaV86P6D9lLsq4_GrMp2fwn9_UK0MjO6E&callback=initMap">
+</script>
+<script>
+function initMap() {
+    var options = {
+        zoom: 8,
+        center: {lat: 25.272029663148057, lng: 55.295821490572585}
+    }
+
+    var map = new google.maps.Map(document.getElementById('map'), options);
+
+    var markers = [
+        {
+            coords: {lat: 25.272029663148057, lng: 55.295821490572585},
+            content: '<h3>Kaddah Cleaning Equipment - AKC</h3>'
+        },
+        {
+            coords: {lat: 25.274795548770626, lng: 55.330384323875855},
+            content: '<h3>Kaddah Cleaning Equipment - AKC</h3>'
+        },
+        {
+            coords: {lat: 24.989615464291038, lng: 55.18191408193595},
+            content: '<h3>Kaddah Building Cleaning Equipment ( AKC )</h3>'
+        },
+        {
+            coords: {lat: 24.42309689421993, lng: 54.54413013157494},
+            content: '<h3>Kaddah Cleaning Equipment - AKC</h3>'
+        }
+    ];
+
+    var bounds = new google.maps.LatLngBounds();
+
+    for(var i = 0; i < markers.length; i++){
+        addMarker(markers[i]);
+        bounds.extend(new google.maps.LatLng(markers[i].coords.lat, markers[i].coords.lng));
+    }
+
+    map.fitBounds(bounds);
+
+    function addMarker(props){
+        var marker = new google.maps.Marker({
+            position:props.coords,
+            map:map,
+        });
+
+        if(props.iconImage){
+            marker.setIcon(props.iconImage);
+        }
+
+        if(props.content){
+            var infoWindow = new google.maps.InfoWindow({
+                content:props.content
+            });
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker);
+            });
+        }
+    }
+}
+</script>
+
