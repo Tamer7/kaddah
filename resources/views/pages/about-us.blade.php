@@ -234,6 +234,7 @@
     <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
   </x-subpanel>
 
+  
   <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
     <div class="mx-auto lg:mx-0">
     <div id="map" style="height:500px;width:100%;"></div>
