@@ -168,9 +168,9 @@
       <div class="relative isolate overflow-hidden bg-[theme(colors.blue)] px-6 pt-16 sm:rounded-3xl rounded-xl lg:px-24 lg:pt-0 sm:px-12 md:pt-24 px-8 lg:flex lg:gap-x-20">
         <div class="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
           <h2 class="text-3xl font-semibold tracking-tight text-white">Download Our Company profile</h2>
-          <p class="mt-6 text-lg leading-8 text-white">Break the Figma limits and explore the endless possibilities with Anima.</p>
+          <p class="mt-6 text-lg leading-8 text-white">Click the button below to download and view our company profile.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-            <a href="#" class="rounded-[20px] bg-white px-12 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/images/company/kaddah_company_profile.pdf" class="rounded-[20px] bg-white px-12 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" download>Download Now <i class="fa-solid fa-download"></i></a>
           </div>
         </div>
         <div class="relative mt-16 h-80 lg:mt-8 flex">
@@ -234,7 +234,7 @@
     <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
   </x-subpanel>
 
-  
+
   <div class="lg:px-[210px] sm:px-16 px-8 lg:py-[100px] py-8 grid lg:grid-cols-2 gap-10">
     <div class="mx-auto lg:mx-0">
     <div id="map" style="height:500px;width:100%;"></div>

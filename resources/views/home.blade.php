@@ -393,22 +393,22 @@
             @php
                 $data = [
                     [
-                        'img' => '/images/test/LOGO 2.png',
-                        'title' => 'Bridfestone',
+                        'img' => '/images/test/alnabooda.png',
+                        'title' => 'Al Naboodah',
                         'description' =>
-                            'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the ',
+                            'KADDAH has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
                     ],
                     [
-                        'img' => '/images/test/LOGO 3.png',
-                        'title' => 'GIANT',
+                        'img' => '/images/test/ejadah.png',
+                        'title' => 'Ejadah',
                         'description' =>
-                            'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the ',
+                            'KADDAH Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
                     ],
                     [
-                        'img' => '/images/test/LOGO 3.png',
-                        'title' => 'GIANT',
+                        'img' => '/images/test/emaar.png',
+                        'title' => 'Emaar',
                         'description' =>
-                            'As a business engaged in the field of digital artists and content creators, we are greatly helpedAs a business engaged in the ',
+                            'KADDAH Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
                     ],
                 ];
             @endphp
