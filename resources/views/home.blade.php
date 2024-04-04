@@ -224,13 +224,9 @@
         </div>
     </div>
 
-    <x-subpanel title="The Cleaning Pioneers" more="View All Categories" class="clickViewAllCategories">
+    <x-subpanel title="The Cleaning Pioneers" more="View All Categories" class="clickViewAllCategories" url="/categories">
         <x-slot name="header">
             <div class="font-semibold text-2xl text-[theme(colors.blue)]">Main Categories</div>
-        </x-slot>
-
-        <x-slot name="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
         </x-slot>
 
         <div class="lg:-mx-[64px] sm:-mx-4 py-4" id="productOverview">
@@ -392,7 +388,7 @@
 
     </x-subpanel>
 
-    <x-subpanel title="They Satisfied With Our Service" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]">
+    <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
         <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
             @php
                 $data = [
@@ -438,7 +434,7 @@
         </div>
     </x-subpanel>
 
-    <x-subpanel title="Read our latest events" more="View All Events" class="clickViewEvents">
+    <x-subpanel title="Read our latest events" more="View All Events" class="clickViewEvents" url="/events">
         <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
             loop: true,
             slidesPerView: 1,

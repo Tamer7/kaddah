@@ -1312,6 +1312,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 .h-\[30px\] {
   height: 30px;
 }
+.h-\[30vh\] {
+  height: 30vh;
+}
 .h-\[316px\] {
   height: 316px;
 }
@@ -1360,9 +1363,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .h-\[75vh\] {
   height: 75vh;
 }
-.h-\[90vh\] {
-  height: 90vh;
-}
 .h-\[calc\(100\%-100px\)\] {
   height: calc(100% - 100px);
 }
@@ -1377,9 +1377,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[30vh\] {
-  height: 30vh;
 }
 .max-h-24 {
   max-height: 6rem;
@@ -1572,9 +1569,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .w-screen {
   width: 100vw;
-}
-.w-\[60\%\] {
-  width: 60%;
 }
 .min-w-0 {
   min-width: 0px;
@@ -15584,10 +15578,6 @@ readers do not read off random characters that represent icons */
     flex-direction: row;
   }
 
-  .sm\:items-start {
-    align-items: flex-start;
-  }
-
   .sm\:items-center {
     align-items: center;
   }
@@ -15708,22 +15698,6 @@ readers do not read off random characters that represent icons */
     height: 90vh;
   }
 
-  .md\:h-\[45vh\] {
-    height: 45vh;
-  }
-
-  .md\:h-\[55vh\] {
-    height: 55vh;
-  }
-
-  .md\:h-\[65vh\] {
-    height: 65vh;
-  }
-
-  .md\:h-\[85vh\] {
-    height: 85vh;
-  }
-
   .md\:min-h-screen {
     min-height: 100vh;
   }
@@ -15814,6 +15788,10 @@ readers do not read off random characters that represent icons */
     position: absolute;
   }
 
+  .lg\:bottom-\[15\%\] {
+    bottom: 15%;
+  }
+
   .lg\:left-0 {
     left: 0px;
   }
@@ -15824,22 +15802,6 @@ readers do not read off random characters that represent icons */
 
   .lg\:top-0 {
     top: 0px;
-  }
-
-  .lg\:bottom-0 {
-    bottom: 0px;
-  }
-
-  .lg\:bottom-\[30\%\] {
-    bottom: 30%;
-  }
-
-  .lg\:bottom-\[20\%\] {
-    bottom: 20%;
-  }
-
-  .lg\:bottom-\[15\%\] {
-    bottom: 15%;
   }
 
   .lg\:order-first {
@@ -15937,28 +15899,16 @@ readers do not read off random characters that represent icons */
     height: 65vh;
   }
 
+  .lg\:h-\[70vh\] {
+    height: 70vh;
+  }
+
   .lg\:h-\[80vh\] {
     height: 80vh;
   }
 
   .lg\:h-\[90vh\] {
     height: 90vh;
-  }
-
-  .lg\:h-\[55vh\] {
-    height: 55vh;
-  }
-
-  .lg\:h-\[70vh\] {
-    height: 70vh;
-  }
-
-  .lg\:h-\[30vh\] {
-    height: 30vh;
-  }
-
-  .lg\:h-\[40vh\] {
-    height: 40vh;
   }
 
   .lg\:w-8\/12 {
@@ -15971,10 +15921,6 @@ readers do not read off random characters that represent icons */
 
   .lg\:w-\[985px\] {
     width: 985px;
-  }
-
-  .lg\:w-\[60\%\] {
-    width: 60%;
   }
 
   .lg\:max-w-\[500px\] {
@@ -16185,6 +16131,11 @@ readers do not read off random characters that represent icons */
     padding-bottom: 20px;
   }
 
+  .lg\:py-\[50px\] {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .lg\:py-\[70px\] {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -16198,11 +16149,6 @@ readers do not read off random characters that represent icons */
   .lg\:py-\[90px\] {
     padding-top: 90px;
     padding-bottom: 90px;
-  }
-
-  .lg\:py-\[50px\] {
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   .lg\:pb-0 {
@@ -16325,6 +16271,10 @@ readers do not read off random characters that represent icons */
     right: 15%;
   }
 
+  .xl\:h-\[40vh\] {
+    height: 40vh;
+  }
+
   .xl\:h-\[60vh\] {
     height: 60vh;
   }
@@ -16333,26 +16283,18 @@ readers do not read off random characters that represent icons */
     height: 65vh;
   }
 
-  .xl\:h-\[40vh\] {
-    height: 40vh;
+  .xl\:w-\[60\%\] {
+    width: 60%;
   }
 
   .xl\:w-full {
     width: 100%;
   }
 
-  .xl\:w-\[60\%\] {
-    width: 60%;
-  }
-
   .xl\:scale-\[0\.8\] {
     --tw-scale-x: 0.8;
     --tw-scale-y: 0.8;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .xl\:items-start {
-    align-items: flex-start;
   }
 }
 
