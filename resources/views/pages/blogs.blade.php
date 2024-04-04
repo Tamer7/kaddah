@@ -15,7 +15,7 @@
 
   <div class="lg:container py-8 grid lg:grid-cols-3 lg:gap-3 sm:grid-cols-2 gap-4 px-8">
     @foreach ($blogs as $blog)
-      <x-items.blog :blog="$blog" />
+      <x-items.blog :blog="$blog"/>
     @endforeach
   </div>
 </x-layout>
