@@ -22,36 +22,10 @@
         <div class="container">
             <div class="row gutter-lg mb-10">
                 <div class="mb-6 cart-content">
-                    <table class="shop-table cart-table">
-                        <thead>
-                            <tr>
-                                <th class="product-name"><span>Image</span></th>
-                                <th>Product Name</th>
-                                <th class="product-price"><span>Code</span></th>
-                                <th class="product-stock-status"><span>Brand</span></th>
-                                <th class="product-stock-status"><span>Category</span></th>
-                                <th class="product-stock-status"><span>Qty</span></th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-page-products">
-                            @foreach(Cart::instance('product')->content() as $product)
-                            <tr>
-                                <td class="product-thumbnail">
-                                    
-                                </td>
-                                <td class="product-name">
-                                    <div class="items-loader"><div></div><div></div><div></div><div></div></div>
-                                </td>
-                                <td class="product-price">
-                                    
-                                </td>
-                                <td class="product-quantity">
-                                    
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div id="cart-page-products">
+                        @foreach(Cart::instance('product')->content() as $product)
+                        @endforeach
+                    </div>
 
                     <div class="cart-page-action mb-6">
                         <a href="/category" class="btn btn-dark btn-rounded btn-icon-left btn-shopping mr-auto"><i class="w-icon-long-arrow-left"></i>Continue Browsing</a>
@@ -86,57 +60,44 @@
                 {
                     $.each(res, function(index, product) {
                         cartProducts += `
-                        <tr>
-                            <td class="product-thumbnail">
-                                <div class="p-relative">
+                        <div class="flex justify-center w-full flex-row">
+                            <div class="product-item flex flex-row w-full">
+                                <div class="product-img">
                                     <a href="/" class="cart-product-url-${product.rowId}">
                                         <figure id="cart-product-img-${product.rowId}" >
-                                                    
+                                                
                                         </figure>
                                     </a>
+                                    
+                                    <div class="product-name text-center">
+                                        <a href="/" class="cart-product-url-${product.rowId}">
+                                            ${product.model.name}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-qty">
+                                    <span class="product-price number-input-qty">
+                                        <input type="number" class="prod-qty-inp-${product.rowId}" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
+                                        <span class="qty-spinners">
+                                            <button class="qty-spinner qty-increment" onclick="incrementQty('${product.rowId}')">&#9650;</button>
+                                            <button class="qty-spinner qty-decrement" onclick="decrementQty('${product.rowId}')">&#9660;</button>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="product-code">
+                                    ${product.model.code}
+                                </div>
+                                <div class="product-delete">
                                     <form action="javascript:void(0)" method="POST" onSubmit="removeCartPage(event)" class="${product.rowId}">
                                         @csrf
                                         @method('DELETE')
-                                        
-                                        <button class="btn btn-close" aria-label="button" id="cart-loader-${product.rowId}">
+                                        <button class="btn btn-delete">
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </form>
                                 </div>
-                            </td>
-                            <td class="product-name text-center">
-                                <a href="/" class="cart-product-url-${product.rowId}">
-                                    ${product.model.name}
-                                </a>
-                            </td>
-                            <td class="product-price"><span class="id-tag">Code:&nbsp;</span><span class="amount">${product.model.code}</span></td>
-
-                            <td class="product-stock-status text-center">
-                                <span class="wishlist-in-stock">
-                                    <span class="id-tag">Brand:</span>
-                                    <a href="/brands/${product.options.brand.slug}" id="brand-name-${product.id}">${product.options.brand.name}</a>
-                                </span>
-                            </td>
-                            <td class="product-stock-status text-center">
-                                <span class="wishlist-in-stock">
-                                    <span class="id-tag">Category:</span>
-                                    <a href="#" id="category-name-${product.id}">Loading...</a>
-                                </span>
-                            </td>
-                            <td class="product-stock-status text-center">
-                                <span class="product-price">
-                                    <span class="id-tag">Qty:</span>
-                                    <span class="product-price number-input-qty">
-                                    <input type="number" class="prod-qty-inp-${product.rowId}" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
-                                    <span class="qty-spinners">
-                                        <button class="qty-spinner qty-increment" onclick="incrementQty('${product.rowId}')">&#9650;</button>
-                                        <button class="qty-spinner qty-decrement" onclick="decrementQty('${product.rowId}')">&#9660;</button>
-                                    </span>
-                                    </span>
-                                </span>
-                                <span class="btn btn-link" aria-label="button" id="loader-alert-${product.rowId}"></span>
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
                         `;
                         
                     });
