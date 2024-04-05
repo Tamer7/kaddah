@@ -93,7 +93,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/trollies.png" alt="" class="h-[50vh] lg:h-[70vh]">
+                <img src="/images/home/trollies.png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]">
             </div>
         </div>
 
@@ -113,7 +113,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/machine.png" alt="" class="h-[50vh] lg:h-[80vh]">
+                <img src="/images/home/machine.png" alt="Kaddah Machine Image" class="h-[50vh] lg:h-[80vh]">
             </div>
         </div>
 
@@ -132,7 +132,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/Product.png" alt="" class="h-[30vh] xl:h-[40vh]">
+                <img src="/images/home/Product.png" alt="Kaddah Product Image" class="h-[30vh] xl:h-[40vh]">
             </div>
         </div>
 
@@ -150,7 +150,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/chemical.png" alt="" class="h-[30vh] xl:h-[40vh]">
+                <img src="/images/home/chemical.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh]">
             </div>
         </div>
 
@@ -197,7 +197,7 @@
 
     <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
         <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-            <img src="/images/home/Group 59.png" alt="" class="py-4 floating-animation">
+            <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
             <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
                 <h2
                     class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">

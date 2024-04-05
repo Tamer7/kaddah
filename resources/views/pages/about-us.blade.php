@@ -38,7 +38,7 @@
               <img
                 src="{{ asset('images/about/Group 47.png') }}"
                 class="block rounded-lg"
-                alt="Wild Landscape" />
+                alt="Kaddah Wild Landscape" />
             </div>
           @endforeach
         </div>
@@ -174,7 +174,7 @@
           </div>
         </div>
         <div class="relative mt-16 h-80 lg:mt-8 flex">
-          <img class="lg:absolute lg:left-0 lg:top-0 lg:w-[584px] sm:w-auto w-full sm:h-full mx-auto max-w-none" src="{{ asset('images/about/Mockup.png') }}" alt="App screenshot">
+          <img class="lg:absolute lg:left-0 lg:top-0 lg:w-[584px] sm:w-auto w-full sm:h-full mx-auto max-w-none" src="{{ asset('images/about/Mockup.png') }}" alt="Kaddah Company Profile">
         </div>
       </div>
     </div>
@@ -185,42 +185,42 @@
     <div class="mt-[50px] grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Janitor.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Janitor.svg') }}" alt="Kaddah Janitor">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Commercial cleaning</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Commercial cleaning providers understand the need for versatile and durable machinery suitable for various settings, including offices, retail spaces, and hospitality venues.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Out Patient Department.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Out Patient Department.svg') }}" alt="Kaddah Patient">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Healthcare</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Our clients in the healthcare sector face stringent hygiene and infection control requirements.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Factory.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Factory.svg') }}" alt="Kaddah Industry">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Industrial</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Industries and manufacturing sites regularly face difficult cleaning requirements with heavy-duty machinery, grease, and industrial residues.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Student Center.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Student Center.svg') }}" alt="Kaddah Education">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Education</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Educational institutes require user-friendly, reliable cleaning equipment that offer minimal disruption to the education setting.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Service Bell.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Service Bell.svg') }}" alt="Kaddah Hospitality">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Hospitality</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Hotels, resorts, cruise ships, and others in the hospitality sector require efficient, fast, and reliable solutions that can clean guest rooms, lobbies, dining spaces, and other areas in accordance with the industry's high cleanliness standards.</p>
         </div>
       </div>
       <div class="rounded-[30px] p-8 h-[320px] flex justify-center bg-white group">
         <div class="overflow-hidden flex flex-col items-center justify-center text-center group-hover:text-left group-hover:items-start group-hover:justify-center">
-          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Pizza.svg') }}" alt="">
+          <img class="transition ease-in-out delay-1500 w-20 group-hover:w-8" src="{{ asset('images/about/icons/Pizza.svg') }}" alt="Kaddah Food Service">
           <h3 class="transition ease-in-out delay-1500 text-3xl font-bold pt-8 pb-6 group-hover:pt-6 group-hover:pb-4 group-hover:text-xl">Food service</h3>
           <p class="transition ease-in-out delay-1500 duration-300 hidden group-hover:block max-h-[150px] overflow-auto text-neutral-400">Kitchens, restaurants, food processing plants, and others in the food service sector require chemicals and cleaning equipment that can simultaneously cover their intensive cleaning requirements and match the strict regulations and standards of sanitization required in the food service sector.</p>
         </div>
@@ -229,9 +229,9 @@
   </div>
 
   <x-subpanel title="They Satisfied With Our Service" more="View All Brands">
-    <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt=""></div>
-    <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt=""></div>
-    <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt=""></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt="Brand Images"></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt="Brand Images"></div>
+    <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt="Brand Images"></div>
   </x-subpanel>
 
 

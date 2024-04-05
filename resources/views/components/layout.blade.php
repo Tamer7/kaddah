@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" content="cleaning materials, cleaning products, cleaning supplies, cleaning equipment" />
-  <meta name="description" content="Explore premium cleaning and care products for floors and stone at Kaddah. Find a wide selection of supplies and equipment for effective cleaning.">
+  <meta name="description" content="Explore premium cleaning and care products for floors and stone at Kaddah. Find a wide selection of supplies and equipment for effective cleaning with Kaddah.">
   <meta name="author" content="D-THEMES">
 
   @yield('canonical')
@@ -73,7 +73,7 @@
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
         <a href="/" class="-m-1.5 p-1.5">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pl-20 md:pl-6">
+          <img src="{{ asset('images/about/image 37.png') }}" alt="Kaddah Logo" class="lg:pl-20 md:pl-6">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -112,7 +112,7 @@
         <div class="flex items-center justify-between">
           <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Kaddah</span>
-            <img src="{{ asset('images/about/image 37.png') }}" alt="">
+            <img src="{{ asset('images/about/image 37.png') }}" alt="Kaddah Logo">
           </a>
           <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
@@ -140,7 +140,7 @@
   <main class="relative isolate pt-24 min-h-[650px]">
     @if (empty($attributes["noDecorator"]))
       <div class="absolute top-0 left-0 -z-10 -translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
-        <img src="{{ asset('images/about/Vector-left.png') }}" alt="">
+        <img src="{{ asset('images/about/Vector-left.png') }}" alt="Side image Left">
       </div>
     @endif
 
@@ -148,7 +148,7 @@
 
     @if (empty($attributes["noDecorator"]))
       <div class="absolute top-[17px] -z-10 right-0 translate-x-1/4 -translate-y-16 scale-50 md:translate-x-0 md:translate-y-0 md:scale-100">
-        <img src="{{ asset('images/about/Vector-right.png') }}" alt="">
+        <img src="{{ asset('images/about/Vector-right.png') }}" alt="Side image Right">
       </div>
     @endif
   </main>
@@ -157,7 +157,7 @@
     <div class="lg:w-[985px] lg:px-0 px-8 mx-auto">
       <div class="divide-y">
         <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="" class="lg:pr-20 lg:pb-0 pb-8">
+          <img src="{{ asset('images/about/image 37.png') }}" alt="Logo Mobile Kaddah" class="lg:pr-20 lg:pb-0 pb-8">
           <div class="flex justify-between items-center w-full">
             <a href="/categories"><span>Products</span></a>
             <a href="/brands"><span>Brands</span></a>
