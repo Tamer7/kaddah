@@ -110,52 +110,42 @@
                         <div class="order-summary-wrapper sticky-sidebar">
                             <h3 class="title text-uppercase ls-10">Your Inquiry</h3>
                             <div class="order-summary">
-                                <table class="order-table shop-table">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2" style="text-align:center;">
-                                                <b>Product</b>
-                                            </th>
-                                            <th>&nbsp;&nbsp;&nbsp;</th>
-                                            <th>
-                                                <b>Code</b>
-                                            </th>
-                                            <th>&nbsp;&nbsp;&nbsp;</th>
-                                            <th>
-                                                <b>Qty</b>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach(Cart::instance('product')->content() as $product)
-                                        <tr class="bb-no flex-tr-cart">
-                                            <td class="product-total">
+                                <div class="w-full mt-4">
+                                    @foreach(Cart::instance('product')->content() as $product)
+                                    <div class="flex justify-center w-full flex-row">
+                                        <div class="product-item flex-col flex md:flex-row w-full gap-1 items-center border border-solid border-1 rounded shadow px-15 py-25 mb-4">
+                                            <div class="product-img flex flex-col items-center w-100px md:flex-row md:w-400px">
                                                 <figure>
-                                                    <img src="{{asset('storage/'.$product->model->image)}}" alt="">
+                                                    <img src="{{asset('storage/'.$product->model->image)}}" alt="" class="w-100px">
                                                 </figure>
-                                            </td>
-                                            <td>
-                                                <span class="id-tag">Product:</span>
-                                                {{$product->model->name}} 
-                                            </td>
-                                            <td>&nbsp;&nbsp;&nbsp;</td>
-                                            <td>
-                                                <span class="id-tag">Code:</span>
-                                                <span class="product-quantity">{{$product->model->code}}</span>
-                                            </td>
-                                            <td>&nbsp;&nbsp;&nbsp;</td>
-                                            <td>
-                                                <span class="id-tag">Qty:</span>
-                                                <span style="font-weight: normal;"> {{$product->qty}} </span>
-                                            </td>
-
-                                        </tr>
-                                        @endforeach
-
-                                    </tbody>
-
-                                </table>
-                                
+                                                
+                                                <div class="product-name flex w-full justify-center pl-0 md:mb-0 pl-2 items-center">
+                                                    <a href="/" class="cart-product-url-${product.rowId} md:w-400px truncate">
+                                                        {{$product->model->name}} 
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-qty flex-grow-2">
+                                                <span class="product-price number-input-qty">
+                                                    <input type="number" class="prod-qty-inp-${product.rowId}" name="qty" value="{{$product->qty}}" min="1" onKeyDown="return false" />
+                                                </span>
+                                            </div>
+                                            <div class="product-code flex-grow-2">
+                                                {{$product->model->code}}
+                                            </div>
+                                            <div class="product-delete grow flex justify-center">
+                                                <form action="javascript:void(0)" method="POST" onSubmit="removeCartPage(event)" class="${product.rowId}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-delete">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
                                 <div id="recaptcha-el" class="g-recaptcha mt-4 checkout-actions-pc" data-sitekey="{{config('services.recaptcha.key')}}" data-validate="{required:true}"></div>
                                 <div class="form-group place-order pt-6 checkout-actions-pc">
                                     <button type="submit" class="btn btn-dark btn-block btn-rounded">Ask For Quotation</button>
