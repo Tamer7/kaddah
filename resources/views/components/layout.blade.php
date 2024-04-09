@@ -73,7 +73,7 @@
     <nav class="flex items-center justify-between py-4 px-9" aria-label="Global">
       <div class="flex lg:flex-1 p-21">
         <a href="/" class="-m-1.5 p-1.5">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="Kaddah Logo" class="lg:pl-20 md:pl-6">
+          <img src="{{ asset('images/about/kaddahlogo.png') }}" alt="Kaddah Logo" class="lg:pl-20 md:pl-6">
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -112,7 +112,7 @@
         <div class="flex items-center justify-between">
           <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Kaddah</span>
-            <img src="{{ asset('images/about/image 37.png') }}" alt="Kaddah Logo">
+            <img src="{{ asset('images/about/kaddahlogo.png') }}" alt="Kaddah Logo">
           </a>
           <button type="button" id="close_mobile_menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
@@ -157,7 +157,7 @@
     <div class="lg:w-[985px] lg:px-0 px-8 mx-auto">
       <div class="divide-y">
         <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
-          <img src="{{ asset('images/about/image 37.png') }}" alt="Logo Mobile Kaddah" class="lg:pr-20 lg:pb-0 pb-8">
+          <img src="{{ asset('images/about/kaddahlogo.png') }}" alt="Logo Mobile Kaddah" class="lg:pr-20 lg:pb-0 pb-8">
           <div class="flex justify-between items-center w-full">
             <a href="/categories"><span>Products</span></a>
             <a href="/brands"><span>Brands</span></a>
@@ -174,11 +174,11 @@
             <span>Cookies Policy</span>
             <span>Terms of Service</span>
           </div>
-          <!-- <div class="flex gap-8 pt-10 lg:pt-0">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-          </div> -->
+          <div class="flex gap-8 pt-10 lg:pt-0">
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <!-- <i class="fa-brands fa-square-instagram"></i> -->
+          </div>
         </div>
       </div>
     </div>
