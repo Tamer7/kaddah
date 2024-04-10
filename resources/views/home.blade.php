@@ -195,34 +195,34 @@
 
     </div>
 
-    <div class="pt-8 bg-[#E5F8FF] sm:pt-16">
-    <div class="flex flex-col sm:flex-row items-center sm:items-start p-8 lg:pl-32 lg:py-24">
-        <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 mx-auto sm:mx-0 floating-animation w-full sm:w-auto sm:max-w-xs lg:max-w-sm">
-        <div class="pt-4 sm:pt-0 sm:pl-12 lg:pl-20 w-full">
-            <h2 class="font-bold text-center sm:text-left text-[36px] sm:text-[46px] lg:max-w-[500px] leading-[40px] sm:leading-[52px]">
-                Your Trusted Cleaning Supplies & Equipment Provider.
-            </h2>
-            <ul class="list-image-[url('/images/checkmark.png')] mt-8 sm:mt-4">
-                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
-                    <h3 class="text-lg text-medium">Expertise and Knowledge</h3>
-                    <p class="text-neutral-400">With over 30 years of experience, the company employs a team of
-                        experts who possess extensive knowledge about cleaning equipment and solutions.</p>
-                </li>
-                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
-                    <h3 class="text-lg text-medium">Adaptability to Technology</h3>
-                    <p class="text-neutral-400">The company has been through different market demands and
-                        technological advancements, we aim to continuously update our product offering and integrate
-                        new innovative technologies in the market.</p>
-                </li>
-                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
-                    <h3 class="text-lg text-medium">Comprehensive Selection</h3>
-                    <p class="text-neutral-400">A wide range of cleaning equipment covering from the basics of
-                        cleaning to the most advanced cleaning technologies and techniques.</p>
-                </li>
-            </ul>
+    <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
+        <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
+            <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
+            <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
+                <h2
+                    class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
+                    Your Trusted Cleaning Supplies & Equipment Provider.</h2>
+                <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
+                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
+                        <h3 class="text-medium text-lg">Expertise and Knowledge</h3>
+                        <p class="text-neutral-400">With over 30 years of experience, the company employs a team of
+                            experts who posses extensive knowledge about cleaning equipment and solutions.</p>
+                    </li>
+                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
+                        <h3 class="text-medium text-lg">Adaptability to Technology</h3>
+                        <p class="text-neutral-400">The company has been through different market demands and
+                            technological advancements, we aim to continuously update our product offering and integrate
+                            new innovative technologies in the market.</p>
+                    </li>
+                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
+                        <h3 class="text-medium text-lg">Comprehensive Selection</h3>
+                        <p class="text-neutral-400">A wide range of cleaning equipment covering from the basics of
+                            cleaning to the most advanced cleaning technologies and techniques.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
 
     <div class="find-us-section bg-white py-8">
