@@ -192,11 +192,11 @@
                       <input type="hidden" name="id" value="{{$item->id}}">
                     </form>
                 </div>
-                <div class="product-action absolute opacity-0 group-hover:opacity-100 group-hover:visible right-0 left-0 bottom-0 bg-gray-900 text-white font-semibold flex justify-center transition-opacity duration-300">
+                <!-- <div class="product-action absolute opacity-0 group-hover:opacity-100 group-hover:visible right-0 left-0 bottom-0 bg-gray-900 text-white font-semibold flex justify-center transition-opacity duration-300">
                   <a href="javascript:void(0);" class="show-modal py-4 text-center"
                     title="Quick View" id="{{$item->slug}}">Quick View</a>
                   <a href="javascript:void(0);" class="d-none btn-quickview" id="quickview-{{$item->id}}"></a>
-                </div>
+                </div> -->
               </figure>
               <div class="pt-8">
                 <h4 class="font-medium whitespace-nowrap overflow-hidden text-ellipsis">
