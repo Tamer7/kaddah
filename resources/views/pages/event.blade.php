@@ -20,7 +20,7 @@
 
                     <!-- Sidebar with popular posts -->
                     <div class="sidebar-content lg:col-span-1">
-                        @include('pages.partials.sidebar-popular-posts', ['popularPosts' => $related])
+                        @include('pages.partials.sidebar-popular-posts-events', ['popularPosts' => $related])
 
                         <!-- Calendar -->
                         @include('pages.partials.calendar')
