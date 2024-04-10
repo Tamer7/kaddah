@@ -21,6 +21,11 @@
   scrollbar-width: thin;
   scrollbar-color: #27aee4 transparent;
 }
+
+.image-resize {
+  width: 450px;
+  height: 300px;
+}
 </style>
 
 <div class="block relative bg-white border border-neutral-200 rounded-xl rounded-b-none">
@@ -29,7 +34,7 @@
       <div>{{ \Carbon\Carbon::parse($event['created_at'])->day }}</div>
       <div>{{ \Carbon\Carbon::parse($event['created_at'])->shortMonthName }}</div>
     </div>
-    <img class="rounded-xl w-full h-auto"
+    <img class="rounded-xl w-full image-resize"
       src="{{ asset('storage/'.$event['image']) }}"
       alt="" />
     <div class="p-6">
