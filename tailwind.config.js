@@ -25,6 +25,10 @@ module.exports = {
       mixBlendMode: {
         multiply: 'multiply',
       },
+      spacing: {
+        '14': '3.5rem',
+        '16': '4rem',
+      },
       width: {
         '48' : '210px'
       }

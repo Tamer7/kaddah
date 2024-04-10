@@ -195,31 +195,42 @@
 
     </div>
 
-    <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
-        <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-            <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
-            <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
-                <h2
-                    class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
-                    Your Trusted Cleaning Supplies & Equipment Provider.</h2>
-                <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
-                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-                        <h3 class="text-medium text-lg">Expertise and Knowledge</h3>
-                        <p class="text-neutral-400">With over 30 years of experience, the company employs a team of
-                            experts who posses extensive knowledge about cleaning equipment and solutions.</p>
-                    </li>
-                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-                        <h3 class="text-medium text-lg">Adaptability to Technology</h3>
-                        <p class="text-neutral-400">The company has been through different market demands and
-                            technological advancements, we aim to continuously update our product offering and integrate
-                            new innovative technologies in the market.</p>
-                    </li>
-                    <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
-                        <h3 class="text-medium text-lg">Comprehensive Selection</h3>
-                        <p class="text-neutral-400">A wide range of cleaning equipment covering from the basics of
-                            cleaning to the most advanced cleaning technologies and techniques.</p>
-                    </li>
-                </ul>
+    <div class="pt-8 bg-[#E5F8FF] sm:pt-16">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start p-8 lg:pl-32 lg:py-24">
+        <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 mx-auto sm:mx-0 floating-animation w-full sm:w-auto sm:max-w-xs lg:max-w-sm">
+        <div class="pt-4 sm:pt-0 sm:pl-12 lg:pl-20 w-full">
+            <h2 class="font-bold text-center sm:text-left text-[36px] sm:text-[46px] lg:max-w-[500px] leading-[40px] sm:leading-[52px]">
+                Your Trusted Cleaning Supplies & Equipment Provider.
+            </h2>
+            <ul class="list-image-[url('/images/checkmark.png')] mt-8 sm:mt-4">
+                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
+                    <h3 class="text-lg text-medium">Expertise and Knowledge</h3>
+                    <p class="text-neutral-400">With over 30 years of experience, the company employs a team of
+                        experts who possess extensive knowledge about cleaning equipment and solutions.</p>
+                </li>
+                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
+                    <h3 class="text-lg text-medium">Adaptability to Technology</h3>
+                    <p class="text-neutral-400">The company has been through different market demands and
+                        technological advancements, we aim to continuously update our product offering and integrate
+                        new innovative technologies in the market.</p>
+                </li>
+                <li class="py-3 pl-6 sm:-ml-6 lg:max-w-[500px]">
+                    <h3 class="text-lg text-medium">Comprehensive Selection</h3>
+                    <p class="text-neutral-400">A wide range of cleaning equipment covering from the basics of
+                        cleaning to the most advanced cleaning technologies and techniques.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <div class="find-us-section bg-white py-8">
+        <div class="container mx-auto flex flex-col items-center justify-center">
+            <h3 class="text-2xl font-semibold text-center mb-4 md:mb-8">Find Us In</h3>
+            <div class="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-14">
+                <img src="/images/flags/saudi.png" alt="Saudi Arabia Flag">
+                <img src="/images/flags/uae.png" alt="United Arab Emirates Flag">
             </div>
         </div>
     </div>
@@ -388,13 +399,13 @@
 
     </x-subpanel>
 
-    <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
+    <!-- <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
         <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
             @php
                 $data = [
                     [
-                        'img' => '/images/test/alnabooda.png',
-                        'title' => 'Al Naboodah',
+                        'img' => '/images/test/emrill.png',
+                        'title' => 'Emrill',
                         'description' =>
                             'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
                     ],
@@ -432,7 +443,106 @@
                 </div>
             @endforeach
         </div>
-    </x-subpanel>
+    </x-subpanel> -->
+
+    <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
+    <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        centeredSlides: false,
+        slidesPerGroup: 1,
+        
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    })" class="relative mx-auto flex flex-row pt-6">
+        <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+            <button @click="swiper.slidePrev()"
+                class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="swiper-container" x-ref="container">
+            <div class="swiper-wrapper">
+            @php
+                $data = [
+                    [
+                        'img' => '/images/test/emrill.png',
+                        'title' => 'Emrill',
+                        'description' =>
+                            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
+                    ],
+                    [
+                        'img' => '/images/test/ejadah.png',
+                        'title' => 'Ejadah',
+                        'description' =>
+                            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
+                    ],
+                    [
+                        'img' => '/images/test/emaar.png',
+                        'title' => 'Emaar',
+                        'description' =>
+                            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
+                    ],
+                    [
+                        'img' => '/images/test/emaar.png',
+                        'title' => 'Emaar',
+                        'description' =>
+                            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
+                    ],
+                ];
+            @endphp
+
+                @foreach ($data as $item)
+                    <div class="swiper-slide">
+                        <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                            <a href="#!">
+                                <img class="rounded-t-lg" src="{{ $item['img'] }}" alt="" />
+                            </a>
+                            <div class="pt-6">
+                                <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800">
+                                    {{ $item['title'] }}
+                                </h5>
+                                <p class="mb-4 text-base text-neutral-600">
+                                    {{ $item['description'] }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+            <button @click="swiper.slideNext()"
+                class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+                    <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</x-subpanel>
+
 
     <x-subpanel title="Read our latest events" more="View All Events" class="clickViewEvents" url="/events">
         <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
