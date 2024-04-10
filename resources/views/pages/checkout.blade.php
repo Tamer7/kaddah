@@ -101,7 +101,7 @@
                                     rows="4"
                                     placeholder="Do you require additional product information? Product specifications, catalogs, demonstrations, & others…"></textarea>
                             </div>
-                            <button type="submit" class="display:none;" id="btn-ask-quotation">Ask For Quotation</button>
+                            <button type="submit" style="display:none;" id="btn-ask-quotation">Ask For Quotation</button>
                         </form>
                         </div> 
                         <div class="col-span-12 md:col-span-5 mb-4 sticky-sidebar-wrapper">
