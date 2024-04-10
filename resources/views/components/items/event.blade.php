@@ -23,7 +23,7 @@
 }
 
 .image-resize {
-  width: 450px;
+  width: 100%;
   height: 300px;
 }
 </style>
