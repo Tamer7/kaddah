@@ -93,7 +93,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/trollies.png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]">
+                <img src="/images/home/trollies.png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]" loading="lazy">
             </div>
         </div>
 
@@ -113,7 +113,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/machine.png" alt="Kaddah Machine Image" class="h-[50vh] lg:h-[80vh]">
+                <img src="/images/home/machine.png" alt="Kaddah Machine Image" class="h-[50vh] lg:h-[80vh]" loading="lazy">
             </div>
         </div>
 
@@ -132,7 +132,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/Product.png" alt="Kaddah Product Image" class="h-[30vh] xl:h-[40vh]">
+                <img src="/images/home/Product.png" alt="Kaddah Product Image" class="h-[30vh] xl:h-[40vh]" loading="lazy">
             </div>
         </div>
 
@@ -150,7 +150,7 @@
                 </a>
             </div>
             <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/chemical.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh]">
+                <img src="/images/home/chemical.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh]" loading="lazy">
             </div>
         </div>
 
@@ -706,7 +706,7 @@
     }
 </style>
 
-<script>
+<!-- <script>
     // document.addEventListener('DOMContentLoaded', function() {
     //   const img = document.querySelector('.image-moving img');
     //   img.classList.add('img-animate');
@@ -761,4 +761,24 @@
             }, 1000);
         }, interval);
     }
+</script> -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        image.src = image.dataset.src;
+        imageObserver.unobserve(image);
+      }
+    });
+  });
+
+  images.forEach(image => {
+    imageObserver.observe(image);
+  });
+});
 </script>
+
