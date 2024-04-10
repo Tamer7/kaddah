@@ -122,11 +122,11 @@
                         </div>
                     </div>
 
-                    <div id="recaptcha-el" class="g-recaptcha mt-4 checkout-actions-mobile"
+                    {{-- <div id="recaptcha-el" class="g-recaptcha mt-4 checkout-actions-mobile"
                         data-sitekey="{{config('services.recaptcha.key')}}" data-validate="{required:true}"></div>
                     <div class="form-group place-order pt-6 checkout-actions-mobile">
                         <button type="submit" class="m-1  px-3  w-full h-12 font-bold justify-center rounded inline-flex items-center bg-gray-600 text-white">Ask For Quotation</button>
-                    </div>
+                    </div> --}}
 
                 </form>
             </div>
@@ -217,7 +217,7 @@ $(document).ready(function() {
                                     <span class="product-price relative">
 
                                         <span class="product-price number-input-qty flex text-xl font-bold h-10">
-                                            <input type="number"
+                                            <input type="text" readonly
                                                 class="prod-qty-inp-${product.rowId} w-10" name="qty"
                                                 value="${product.qty}" min="1" onkeydown="return false">
                                             <span class="qty-spinners flex flex-col text-sky-400 absolute right-0">

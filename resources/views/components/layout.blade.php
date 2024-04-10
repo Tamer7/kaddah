@@ -91,7 +91,7 @@
         <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
         <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
         <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6  data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
-        <a href="#" class="cart-toggle label-down link relative" data-drawer-target="cart-sidebar" data-drawer-toggle="cart-sidebar" aria-controls="cart-sidebar">
+        <a href="#" id="shopping-cart" class="cart-toggle label-down link relative" data-drawer-target="cart-sidebar" data-drawer-toggle="cart-sidebar" aria-controls="cart-sidebar">
             @if (Cart::instance('product')->count() > 0)    
                 <span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
                     {{Cart::instance('product')->count()}}
@@ -361,8 +361,9 @@
                   {
                       var html = '';
                       var mbHtml = '';
-                      console.log(res);
+                      var totalCnt = 0;
                       $.each(res, function(index, product) {
+                         totalCnt += Number(product.qty);
                           html += `
                               <div class="product product-cart flex">
                                   <div class="product-detail w-2/3 text-lg font-bold">
@@ -371,8 +372,8 @@
                                           <span class="product-price text-sky-400">Code: ${product.model.code}</span>
                                           <span class="product-price number-input-qty flex relative items-center w-28 mt-5">
                                               <span class="text-sky-400 flex items-center">Qty:</span>
-                                              <input type="number" class="prod-qty-inp-${product.rowId} ont-sm ml-4 pl-2 py-1 max-w-16 bg-gray-800 rounded-md text-white" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
-                                              <span class="qty-spinners flex flex-col justify-center absolute right-1 text-white font-sm">
+                                              <input type="text" readonly class="prod-qty-inp-${product.rowId} ont-sm ml-4 pl-2 py-1 max-w-16 bg-gray-800 rounded-md text-white" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
+                                              <span class="qty-spinners flex flex-col justify-center absolute z-100 right-[-5px] text-white font-sm">
                                                   <button class="qty-spinner qty-increment leading-none" onclick="incrementQty('${product.rowId}')">&#9650;</button>
                                                   <button class="qty-spinner qty-decrement leading-none" onclick="decrementQty('${product.rowId}')">&#9660;</button>
                                               </span>
@@ -461,10 +462,18 @@
                       });
 
                       var cartButtons = `
-                      <a href="/cart" class="flex-1 w-full m-1 border-4 border-gray-600 text-gray-600 h-12 font-medium justify-center rounded inline-flex items-center hover:bg-gray-600 hover:text-white">View Cart</a>
+                      <a href="/cart" class="flex-1 w-full m-1 border-4 border-gray-600 text-gray-600 h-12 font-medium justify-center rounded inline-flex items-center hover:bg-gray-600 hover:text-white">VIEW CART</a>
                       <a href="/cart/checkout" class="flex-1 m-1 w-full border-4 border-gray-600 text-gray-600 h-12 font-medium justify-center rounded inline-flex items-center hover:bg-gray-600 hover:text-white">REQUEST A QUOTE</a>
                       `;
                       $('.cart-action').html(cartButtons);
+                      $("#shopping-cart").html(
+                        `<span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
+                            ${totalCnt}
+                            </span>
+                        <i class="fa fa-shopping-cart text-xl text-slate-600"></i>
+                        `
+                      )
+
                   } else {
                       
                       var emptyCart = `
@@ -483,6 +492,7 @@
                       `;
                       $('#cart-products').html(emptyCart);
                       $('.cart-action').html('');
+                      $("#shopping-cart").html(`<i class="fa fa-shopping-cart text-xl text-slate-600"></i>`);
                   }
                   
               },
