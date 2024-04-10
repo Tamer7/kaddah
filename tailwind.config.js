@@ -25,6 +25,9 @@ module.exports = {
       mixBlendMode: {
         multiply: 'multiply',
       },
+      width: {
+        '48' : '210px'
+      }
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],

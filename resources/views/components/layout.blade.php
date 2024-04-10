@@ -90,7 +90,16 @@
         <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
         <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
         <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
-        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
+        <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6  data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
+        <a href="#" id="shopping-cart" class="cart-toggle label-down link relative mt-1" data-drawer-target="cart-sidebar" data-drawer-toggle="cart-sidebar" aria-controls="cart-sidebar">
+            @if (Cart::instance('product')->count() > 0)    
+                <span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
+                    {{Cart::instance('product')->count()}}
+                </span>
+            @endif
+            
+            <i class="fa fa-shopping-cart text-xl text-slate-600"></i>
+        </a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-start">
         <form class="group relative mb-0 flex flex-wrap items-stretch ml-16" method="GET" action="{{ route('products.index') }}">
@@ -130,6 +139,14 @@
               <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
               <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
               <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
+              <a href="#" class="cart-toggle label-down link relative" >
+                @if (Cart::instance('product')->count() > 0)    
+                    <span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
+                        {{Cart::instance('product')->count()}}
+                    </span>
+                @endif
+                <i class="fa fa-shopping-cart text-xl text-slate-600 mt-4"></i>
+            </a>
             </div>
           </div>
         </div>
@@ -152,7 +169,20 @@
       </div>
     @endif
   </main>
+    <div id="cart-sidebar" class=" w-96 shadow-2 border-l-2 -right-full h-screen bg-white fixed top-0 p-2 z-50 transition-all duration-300 ease-in-out">
+        <div class="border-b-2 border-gray-300 h-16 flex items-center justify-between px-4 mb-4">
+            <span class="text-lg font-extrabold text-gray-600" >Shopping Cart</span>
+            <a href="#" id="close-cart" class="btn-close text-gray-400">Close<i class="ml-1 fa fa-arrow-right"></i></a>
+        </div>
+        {{-- cart-products --}}
+        <div class="products" id="cart-products">
 
+        </div>
+
+        <div class="cart-action mt-2 mb-20 flex justify-between p-2">
+
+        </div>
+    </div>
   <footer class="pt-[72px] pb-[42px] bg-[#e5f8ff]">
     <div class="lg:w-[985px] lg:px-0 px-8 mx-auto">
       <div class="divide-y">
@@ -216,6 +246,10 @@
           cartProducts();
           SearchCategory();
           compareProducts();
+          $("main").click(function(){
+            // alert();
+            $("#cart-sidebar").removeClass('right-0');
+          })
           $.ajax({
               type: 'GET',
               url: `{{route('menu.banner')}}`,
@@ -245,8 +279,6 @@
                           `
                       );
                       $('#banner-'+banner.category_slug).attr('src', "{{asset('storage/')}}" + '/' + banner.image);
-                      
-                      
                   });
               },
               error: function(jqXHR, textStatus, errorThrown) {
@@ -254,7 +286,12 @@
               }
           });
       });
-      
+      $(".cart-toggle").click(function(){
+        $('#cart-sidebar').toggleClass('right-0');
+      })
+      $("#close-cart").click(function(){
+        $('#cart-sidebar').toggleClass('right-0');
+      })
       function getProduct(productSlug) {
           var routeProduct = "{{route('product.single', ':slug')}}".replace(':slug', productSlug);
           $.ajax({
@@ -324,24 +361,26 @@
                   {
                       var html = '';
                       var mbHtml = '';
-                      console.log(res);
+                      var totalCnt = 0;
                       $.each(res, function(index, product) {
+                         totalCnt += Number(product.qty);
                           html += `
-                              <div class="product product-cart">
-                                  <div class="product-detail">
+                              <div class="product product-cart flex">
+                                  <div class="product-detail w-2/3 text-lg font-bold">
                                       <a href="/"product class="product-name" id="product-name-${product.rowId}">${product.name}</a>
-                                      <div class="price-box" style="display:flex; flex-direction: column; align-items: flex-start;">
-                                          <span class="product-price">Code: ${product.model.code}</span>
-                                          <span class="product-price number-input-qty">
-                                              Qty: &nbsp;&nbsp;<input type="number" class="prod-qty-inp-${product.rowId}" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
-                                              <span class="qty-spinners">
-                                                  <button class="qty-spinner qty-increment" onclick="incrementQty('${product.rowId}')">&#9650;</button>
-                                                  <button class="qty-spinner qty-decrement" onclick="decrementQty('${product.rowId}')">&#9660;</button>
+                                      <div class="price-box  flex flex-col mt-5">
+                                          <span class="product-price text-sky-400">Code: ${product.model.code}</span>
+                                          <span class="product-price number-input-qty flex relative items-center w-28 mt-5">
+                                              <span class="text-sky-400 flex items-center">Qty:</span>
+                                              <input type="text" readonly class="prod-qty-inp-${product.rowId} ont-sm ml-4 pl-2 py-1 max-w-16 bg-gray-800 rounded-md text-white" name="qty" value="${product.qty}" min="1" onKeyDown="return false" />
+                                              <span class="qty-spinners flex flex-col justify-center absolute z-100 right-[-5px] text-white font-sm">
+                                                  <button class="qty-spinner qty-increment leading-none" onclick="incrementQty('${product.rowId}')">&#9650;</button>
+                                                  <button class="qty-spinner qty-decrement leading-none" onclick="decrementQty('${product.rowId}')">&#9660;</button>
                                               </span>
                                           </span>
                                       </div>
                                   </div>
-                                  <figure class="product-media" id="-url-${product.rowId}">
+                                  <figure class="product-media  w-1/3 flex justify-center items-center" id="-url-${product.rowId}">
                                       <a href="/" id="cart-img-${product.rowId}">
                                       </a>
                                   </figure>
@@ -349,7 +388,7 @@
                                       @csrf
                                       @method('DELETE')
                                       
-                                      <button class="btn btn-link btn-close" aria-label="button" id="loading-alert-${product.rowId}">
+                                      <button class=" border-2 border-gray-200 shadow-3 shadow-slate-400 rounded-full w-6 h-6" aria-label="button" id="loading-alert-${product.rowId}">
                                           <i class="fas fa-times"></i>
                                       </button>
                                   </form>
@@ -375,7 +414,7 @@
                                       @csrf
                                       @method('DELETE')
                                       
-                                      <button class="btn btn-link btn-close" aria-label="button" id="loader-alert-${product.rowId}">
+                                      <button class="border-2 border-gray-200 shadow-3 shadow-slate-400 rounded-full w-6 h-6" aria-label="button" id="loader-alert-${product.rowId}">
                                           <i class="fas fa-times"></i>
                                       </button>
                                   </form>
@@ -423,10 +462,18 @@
                       });
 
                       var cartButtons = `
-                      <a href="/cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                      <a href="/cart/checkout" class="btn btn-primary  btn-rounded">REQUEST A QUOTE</a>
+                      <a href="/cart" class="flex-1 w-full m-1 border-4 border-gray-600 text-gray-600 h-12 font-medium justify-center rounded inline-flex items-center hover:bg-gray-600 hover:text-white">VIEW CART</a>
+                      <a href="/cart/checkout" class="flex-1 m-1 w-full border-4 border-gray-600 text-gray-600 h-12 font-medium justify-center rounded inline-flex items-center hover:bg-gray-600 hover:text-white">REQUEST A QUOTE</a>
                       `;
                       $('.cart-action').html(cartButtons);
+                      $("#shopping-cart").html(
+                        `<span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
+                            ${totalCnt}
+                            </span>
+                        <i class="fa fa-shopping-cart text-xl text-slate-600"></i>
+                        `
+                      )
+
                   } else {
                       
                       var emptyCart = `
@@ -445,6 +492,7 @@
                       `;
                       $('#cart-products').html(emptyCart);
                       $('.cart-action').html('');
+                      $("#shopping-cart").html(`<i class="fa fa-shopping-cart text-xl text-slate-600"></i>`);
                   }
                   
               },
@@ -684,8 +732,8 @@
                               @csrf
                               @method('DELETE')
                               
-                              <button class="btn btn-remove" aria-label="button" id="loading-alert-${product.rowId}">
-                                  <i class="w-icon-times-solid"></i>
+                              <button class="border-2 border-gray-200 shadow-3 shadow-slate-400 rounded-full w-6 h-6" aria-label="button" id="loading-alert-${product.rowId}">
+                                  <i class="fas fa-times"></i>
                               </button>
                           </form>
                       </li>
