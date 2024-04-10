@@ -28,6 +28,9 @@ module.exports = {
       spacing: {
         '14': '3.5rem',
         '16': '4rem',
+      },
+      width: {
+        '48' : '210px'
       }
     },
     fontFamily: {
