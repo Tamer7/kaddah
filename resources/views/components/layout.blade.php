@@ -91,7 +91,7 @@
         <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
         <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
         <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6  data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
-        <a href="#" id="shopping-cart" class="cart-toggle label-down link relative" data-drawer-target="cart-sidebar" data-drawer-toggle="cart-sidebar" aria-controls="cart-sidebar">
+        <a href="#" id="shopping-cart" class="cart-toggle label-down link relative mt-1" data-drawer-target="cart-sidebar" data-drawer-toggle="cart-sidebar" aria-controls="cart-sidebar">
             @if (Cart::instance('product')->count() > 0)    
                 <span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
                     {{Cart::instance('product')->count()}}
@@ -139,13 +139,13 @@
               <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
               <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
               <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
-              <a href="#" class="cart-toggle label-down link relative my-2" >
+              <a href="#" class="cart-toggle label-down link relative" >
                 @if (Cart::instance('product')->count() > 0)    
                     <span class="absolute -top-2 -right-2 inline-block bg-sky-400 text-white text-[0.5rem] flex items-center justify-center text-center w-4 h-4 rounded-full font-sm uppercase tracking-wide">
                         {{Cart::instance('product')->count()}}
                     </span>
                 @endif
-                <i class="fa fa-shopping-cart text-xl text-slate-600"></i>
+                <i class="fa fa-shopping-cart text-xl text-slate-600 mt-4"></i>
             </a>
             </div>
           </div>

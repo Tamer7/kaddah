@@ -51,10 +51,10 @@
                     <button class="btn btn-rounded btn-login">Login</button>
                 </form>
                 @endguest --}}
-                <form class="form checkout-form" action="{{route('checkout.store')}}" method="post">
-                    @csrf
                     <div class=" grid grid-cols-12 mb-9 text-slate-800 text-sm ">
-                        <div class="col-span-12 md:col-span-7 px-3 mb-4">
+                        <form class="form checkout-form col-span-12 md:col-span-7" id="cart-checkout-form" action="{{route('checkout.store')}}" method="post">
+                            @csrf
+                        <div class=" px-3 mb-4">
                             <h3 class=" uppercase font-bold  text-lg ls-10 pt-1 pb-3 mb-0">
                                 GENERAL INFORMATION
                             </h3>
@@ -101,7 +101,9 @@
                                     rows="4"
                                     placeholder="Do you require additional product information? Product specifications, catalogs, demonstrations, & others…"></textarea>
                             </div>
-                        </div>
+                            <button type="submit" class="display:none;" id="btn-ask-quotation">Ask For Quotation</button>
+                        </form>
+                        </div> 
                         <div class="col-span-12 md:col-span-5 mb-4 sticky-sidebar-wrapper">
                             <div class="order-summary-wrapper sticky-sidebar">
                                 <h3 class=" uppercase text-lg font-bold text-slate-800 ls-10">Your Inquiry</h3>
@@ -113,7 +115,7 @@
                                         data-sitekey="{{config('services.recaptcha.key')}}"
                                         data-validate="{required:true}"></div>
                                     <div class="form-group place-order pt-6 checkout-actions-pc">
-                                        <button type="submit" class="m-1  px-3  w-full h-12 font-bold justify-center rounded inline-flex items-center bg-gray-600 text-white">Ask For
+                                        <button type="submit" onclick="$('#btn-ask-quotation').click();" id="btn-ask-quotation" class="m-1  px-3  w-full h-12 font-bold justify-center rounded inline-flex items-center bg-gray-600 text-white">Ask For
                                             Quotation</button>
                                     </div>
 
@@ -127,8 +129,6 @@
                     <div class="form-group place-order pt-6 checkout-actions-mobile">
                         <button type="submit" class="m-1  px-3  w-full h-12 font-bold justify-center rounded inline-flex items-center bg-gray-600 text-white">Ask For Quotation</button>
                     </div> --}}
-
-                </form>
             </div>
         </div>
         <!-- End of PageContent -->
@@ -150,6 +150,10 @@
 });
 
 $(document).ready(function() {
+    $("#btn-ask-quotation").click(function(e){
+        // e.preventDefault();
+        // $("#cart-checkout-form").submit();
+    })
     setTimeout(() => {
         if(screen.width <= 767) 
             $('.checkout-actions-pc').remove()
@@ -186,7 +190,6 @@ $(document).ready(function() {
                 {
                     $('#cart-page-products').html('');
                     $.each(res, function(index, product) {
-                        console.log(product,'000');
                         cartProducts += `
                         <div class="flex  p-2 flex-col sm:flex-row justify-between h-40 lg:h-32 items-center shadow-lg shadow-slate-200 mt-4 border-2 border-slate-100 rounded-md">
                             <div class="w-full sm:1/2 flex items-center">
