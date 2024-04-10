@@ -205,9 +205,11 @@
             <span>Terms of Service</span>
           </div>
           <div class="flex gap-8 pt-10 lg:pt-0">
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <!-- <i class="fa-brands fa-square-instagram"></i> -->
+            <a href="https://www.linkedin.com/company/kaddah-cleaning-equipment" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="tel:+971042384774">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://youtube.com/@KaddahCleaningEquipment?si=wza0n1CXW0YiuVCo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
       </div>

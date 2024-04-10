@@ -450,8 +450,6 @@
         loop: false,
         slidesPerView: 1,
         spaceBetween: 30,
-        centeredSlides: false,
-        slidesPerGroup: 1,
         
         breakpoints: {
             640: {
@@ -490,8 +488,8 @@
                             'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
                     ],
                     [
-                        'img' => '/images/test/ejadah.png',
-                        'title' => 'Ejadah',
+                        'img' => '/images/test/farnek.png',
+                        'title' => 'Farnek',
                         'description' =>
                             'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
                     ],
@@ -502,27 +500,29 @@
                             'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
                     ],
                     [
-                        'img' => '/images/test/emaar.png',
-                        'title' => 'Emaar',
+                        'img' => '/images/test/fam.png',
+                        'title' => 'Fam',
                         'description' =>
-                            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
+                            'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems with innovative products and equipments, we appreciate it. Everything seems very professional.',
                     ],
                 ];
             @endphp
 
                 @foreach ($data as $item)
-                    <div class="swiper-slide">
-                        <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-                            <a href="#!">
-                                <img class="rounded-t-lg" src="{{ $item['img'] }}" alt="" />
-                            </a>
-                            <div class="pt-6">
-                                <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800">
-                                    {{ $item['title'] }}
-                                </h5>
-                                <p class="mb-4 text-base text-neutral-600">
-                                    {{ $item['description'] }}
-                                </p>
+                        <div class="swiper-slide">
+                        <div class="{{ $loop->index === 1 ? 'lg:pt-6' : '' }}">
+                            <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                                <a href="#!">
+                                    <img class="rounded-t-lg" src="{{ $item['img'] }}" alt="" />
+                                </a>
+                                <div class="pt-6">
+                                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800">
+                                        {{ $item['title'] }}
+                                    </h5>
+                                    <p class="mb-4 text-base text-neutral-600">
+                                        {{ $item['description'] }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

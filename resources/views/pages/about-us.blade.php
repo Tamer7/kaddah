@@ -35,10 +35,37 @@
               role="tabpanel"
               aria-labelledby="our_story_{{ $loop->index }}-tab"
               >
+              @if($item == "1980s")
               <img
-                src="{{ asset('images/about/Group 47.png') }}"
+                src="{{ asset('images/about/worker1.png') }}"
                 class="block rounded-lg"
                 alt="Kaddah Wild Landscape" />
+              @elseif($item == "1990s")
+                <img
+                  src="{{ asset('images/about/cap4.png') }}"
+                  class="block rounded-lg"
+                  alt="Kaddah Wild Landscape" />
+              @elseif($item == "2000s")
+                <img
+                  src="{{ asset('images/about/year3.png') }}"
+                  class="block rounded-lg"
+                  alt="Kaddah Wild Landscape" />
+              @elseif($item == "2010s")
+                <img
+                  src="{{ asset('images/about/office4.png') }}"
+                  class="block rounded-lg"
+                  alt="Kaddah Wild Landscape" />
+              @elseif($item == "2022s")
+                <img
+                  src="{{ asset('images/about/cleaning.png') }}"
+                  class="block rounded-lg"
+                  alt="Kaddah Wild Landscape" />
+              @else
+                <img
+                  src="{{ asset('images/about/Group 47.png') }}"
+                  class="block rounded-lg"
+                  alt="Kaddah Wild Landscape" />
+              @endif
             </div>
           @endforeach
         </div>
