@@ -296,12 +296,19 @@
         <div class="mt-5">
           <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Dubai</h5>
           <p class="text-neutral-400 mt-2 flex items-center">
-            Speedex Center - Salah Al Din St - Al Khabaisi - Dubai - United Arab Emirates
+            Kaddah Cleaning Equipment - AKC Speedex Center - Salah Al Din St - Al Khabaisi - Dubai - United Arab Emirates
+          </p>
+          <p class="text-neutral-400 mt-2 flex items-center">
+            Kaddah Cleaning Equipment - AKC G Floor - Al Khor Street - Deira - Al Ras - Dubai - United Arab Emirates
+          </p>
+          <p class="text-neutral-400 mt-2 flex items-center">
+            Office Dubai Investment Park 1 Dubai - UAE
+          </p>
         </div>
         <div class="mt-5">
           <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Abu Dahbi</h5>
           <p class="text-neutral-400 mt-2 flex items-center">
-          6th Street - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates
+            Kaddah Cleaning Equipment - AKC 6th Street - Musaffah - Musaffah Industrial - Abu Dhabi
           </p>
         </div>
       </div>

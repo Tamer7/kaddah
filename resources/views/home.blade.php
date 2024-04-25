@@ -84,11 +84,11 @@
             class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
             <div class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] md:w-[60%]">
                 <h1
-                    class="font-semibold tracking-wide lg:text-[35px] md:text-[35px] sm:text-[25px] text-center text-white py-5 pr-5 uppercase">
+                    class="font-semibold tracking-wide lg:text-[45px] md:text-[45px] sm:text-[35px] text-center text-white py-5 pr-5 uppercase">
                     Leading supplier in <span
-                        class="font-black lg:text-[45px] text-[35px] sm:text-left text-left text-[#002F62]">GCC</span>
+                        class="font-black lg:text-[55px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span>
                 </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -103,12 +103,12 @@
                 class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] md:w-[60%]">
                 <h1
                     class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white py-5 pr-5 uppercase">
-                    <span class="font-black lg:text-[50px] text-[35px] text-center text-[#002F62]">15000+</span>
+                    <span class="font-black lg:text-[60px] text-[45px] text-center text-[#002F62]">15000+</span>
                     products from <span
-                        class="font-black lg:text-[50px] text-[35px] sm:text-left text-left text-[#002F62]">30+
+                        class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">30+
                         brands</span>
                 </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -124,12 +124,15 @@
                 <h1
                     class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center md:text-left text-white py-5 pr-5 uppercase">
                     The <span
-                        class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">region's
+                        class="font-black lg:text-[65px] text-[50px] sm:text-left text-left text-[#002F62]">region's
                         biggest</span><br>selection of cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
+            </div>
+            <div class="lg:absolute lg:right-[5%] lg:top-0">
+                <img src="/images/home/Man (2).png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]" loading="lazy">
             </div>
             <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
                 <img src="/images/home/Product.png" alt="Kaddah Product Image" class="h-[30vh] xl:h-[40vh]" loading="lazy">
@@ -141,11 +144,11 @@
             <div
                 class="flex flex-col items-center md:items-start justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] xl:w-[60%]">
                 <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center md:text-left text-white py-5 pr-5 uppercase">
+                    class="font-semibold tracking-wide lg:text-[55px] text-[45px] text-center md:text-left text-white py-5 pr-5 uppercase">
                     <span class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">30
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>

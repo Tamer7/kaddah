@@ -85,9 +85,9 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-28">
-        <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
         <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
+        <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
+        <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
         <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
         <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="text-lg leading-6 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
         <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="text-lg leading-6  data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
@@ -133,9 +133,9 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
-              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
               <a href="/about-us" {{ $segment_1 === "about-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">About</a>
+              <a href="/brands" {{ $segment_1 === "brands" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Brands</a>
+              <a href="/categories" {{ $segment_1 == "categories" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Products</a>
               <a href="/blogs" {{ $segment_1 === "blogs" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Blog</a>
               <a href="/events" {{ $segment_1 === "events" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Events</a>
               <a href="/contact-us" {{ $segment_1 === "contact-us" ? 'data-te-nav-active' : '' }} class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 hover:text-sky-300 data-[te-nav-active]:text-[theme(colors.blue)]">Contact</a>
@@ -189,9 +189,9 @@
         <div class="flex flex-col lg:flex-row items-center pb-[40px] text-gray-600">
           <img src="{{ asset('images/about/kaddahlogo.png') }}" alt="Logo Mobile Kaddah" class="lg:pr-20 lg:pb-0 pb-8">
           <div class="flex justify-between items-center w-full">
-            <a href="/categories"><span>Products</span></a>
-            <a href="/brands"><span>Brands</span></a>
             <a href="/about-us"><span>About</span></a>
+            <a href="/brands"><span>Brands</span></a>
+            <a href="/categories"><span>Products</span></a>
             <a href="/blogs"><span>Blog</span></a>
             <a href="/events"><span>Events</span></a>
             <a href="/contact-us"><span>Contact</span></a>
