@@ -113,7 +113,7 @@
                                                         <input type="number"
                                                             class="prod-qty-inp-${product.rowId} w-10" name="qty"
                                                             value="${product.qty}" min="1" onkeydown="return false">
-                                                        <span class="qty-spinners flex flex-col text-sky-400 absolute right-0">
+                                                        <span class="qty-spinners flex flex-col text-sky-400 absolute right-0" style="background-color: white;">
                                                             <button class="qty-spinner qty-increment leading-none"
                                                                 onclick="incrementQty('${product.rowId}')">▲</button>
                                                             <button class="qty-spinner qty-decrement leading-none"

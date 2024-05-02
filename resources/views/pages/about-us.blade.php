@@ -255,7 +255,7 @@
     </div>
   </div>
 
-  <x-subpanel title="They Satisfied With Our Service" more="View All Brands">
+  <x-subpanel title="They Satisfied With Our Service" more="View All Brands" url="/brands">
     <div class="flex justify-center"><img src="{{ asset('images/about/image 34.png') }}" alt="Brand Images"></div>
     <div class="flex justify-center"><img src="{{ asset('images/about/image 35.png') }}" alt="Brand Images"></div>
     <div class="flex justify-center"><img src="{{ asset('images/about/image 36.png') }}" alt="Brand Images"></div>
