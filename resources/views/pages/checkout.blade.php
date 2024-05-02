@@ -234,7 +234,7 @@ $(document).ready(function() {
                                     <span class="btn btn-link" aria-label="button"
                                         id="loader-alert-${product.rowId}"></span>
                                 </div>
-                                <div class="product-price"><span class="amount">ST18</span></div>
+                                <div class="product-price"><span class="amount">${product.model.code}</span></div>
                                 <div class="product-action-remove">
                                     <form action="javascript:void(0)" method="POST" onsubmit="removeCartPage(event)"
                                         class="${product.rowId}">
