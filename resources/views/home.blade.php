@@ -22,7 +22,7 @@
     {{--        </a> --}}
     {{--      </div> --}}
     {{--    </div> --}}
-    {{--      <div id="owl-carousel" class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[106px] flex items-center justify-between bg-[url('/images/home/Background.png')] bg-cover bg-center bg-no-repeat overflow-hidden owl-carousel owl-theme"> --}}
+    {{--      <div id="owl-carousel" class="lg:pl-32 pl-10 relative lg:h-[90vh] py-[106px] flex items-center justify-between bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-center bg-no-repeat overflow-hidden owl-carousel owl-theme"> --}}
     {{--          <div class="item"> --}}
     {{--            <div> --}}
     {{--              <h1 id="main-heading" class="font-semibold lg:text-[45px] text-[35px] sm:text-left text-left text-white py-5 pr-5 uppercase"> --}}
@@ -33,7 +33,7 @@
     {{--            </div> --}}
 
     {{--            <div class=""> --}}
-    {{--              <img src="/images/home/trollies.png" alt="" class="object-cover"> --}}
+    {{--              <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="" class="object-cover"> --}}
     {{--            </div> --}}
     {{--          </div> --}}
     {{--          <div class="item"> --}}
@@ -46,7 +46,7 @@
     {{--            </div> --}}
 
     {{--            <div class="flex image-moving"> --}}
-    {{--              <img src="/images/home/Man.png" alt="" id="dynamic-image" class="h[75vh]"> --}}
+    {{--              <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="" id="dynamic-image" class="h[75vh]"> --}}
     {{--            </div> --}}
     {{--          </div> --}}
     {{--        <div class="item"> --}}
@@ -59,15 +59,15 @@
     {{--          </div> --}}
 
     {{--          <div class="flex image-moving"> --}}
-    {{--            <img src="/images/home/Man.png" alt="" id="dynamic-image" class=""> --}}
+    {{--            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="" id="dynamic-image" class=""> --}}
     {{--          </div> --}}
     {{--        </div> --}}
     {{--      </div> --}}
 
     <div id="owl-carousel"
-        class="lg:pl-32 pl-10 relative md:h-[90vh] lg:py-[50px] bg-[url('/images/home/Background.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
-        {{--      <div class="w-full item flex items-start justify-center gap-10"> --}}
-        {{--        <div class="flex flex-col items-start justify-between ml-16 mt-16"> --}}
+        class="lg:pl-32 pl-10 relative md:h-[90vh] lg:py-[50px] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
+        {{--      <div class="w-full item flex items-start justify-center md:gap-10"> --}}
+        {{--        <div class="flex flex-col items-start justify-between md:ml-16 md:mt-16"> --}}
         {{--          <h1 id="main-heading" class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase"> --}}
         {{--            Leading supplier in <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span><br> --}}
         {{--          </h1> --}}
@@ -76,13 +76,14 @@
         {{--          </a> --}}
         {{--        </div> --}}
         {{--        <div class=""> --}}
-        {{--          <img src="/images/home/trollies.png" alt="" class="object-cover h-[75vh] text-left"> --}}
+        {{--          <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="" class="object-cover h-[75vh] text-left"> --}}
         {{--        </div> --}}
         {{--      </div> --}}
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
-            <div class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] md:w-[60%]">
+            class="w-full item flex flex-col md:flex-row items-center lg:items-center justify-center  lg:gap-10 relative">
+            <div class="flex flex-col items-center justify-between  lg:h-[60vh] xl:h-[75vh] md:w-[60%]">
+                <div></div>
                 <h1
                     class="font-semibold tracking-wide lg:text-[45px] md:text-[45px] sm:text-[35px] text-center text-white py-5 pr-5 uppercase">
                     Leading supplier in <span
@@ -92,17 +93,18 @@
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/trollies.png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]" loading="lazy">
+            <div class="">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="Kaddah Trolley Image" class="  lg:h-[85vh]" loading="lazy">
             </div>
         </div>
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
+            class="w-full item flex flex-col md:flex-row  relative">
             <div
-                class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] md:w-[60%]">
+                class="flex flex-col items-center justify-between">
+                <div></div>
                 <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white py-5 pr-5 uppercase">
+                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white lg:py-5 lg:pl-20 uppercase">
                     <span class="font-black lg:text-[60px] text-[45px] text-center text-[#002F62]">15000+</span>
                     products from <span
                         class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">30+
@@ -112,13 +114,13 @@
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/machine.png" alt="Kaddah Machine Image" class="h-[50vh] lg:h-[80vh]" loading="lazy">
+            <div class="">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png" alt="Kaddah Machine Image" class=" lg:h-[80vh]" loading="lazy">
             </div>
         </div>
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
+            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start  lg:py-[80px] lg:gap-10 relative h-screen lg:h-full">
             <div
                 class="flex flex-col items-center md:items-start justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] xl:w-[60%]">
                 <h1
@@ -131,11 +133,11 @@
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="lg:absolute lg:right-[5%] lg:top-0">
-                <img src="/images/home/Man (2).png" alt="Kaddah Trolley Image" class="h-[50vh] lg:h-[70vh]" loading="lazy">
+            <div class="absolute bottom-[-30%] lg:top-0 lg:bottom-0 right-0 ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="Kaddah Trolley Image" class="h-[60vh] lg:h-full" loading="lazy">
             </div>
-            <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/Product.png" alt="Kaddah Product Image" class="h-[30vh] xl:h-[40vh]" loading="lazy">
+            <div class="absolute right-[5%] bottom-[-32%] lg:bottom-[5%]">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Product_p5wpmb.png" alt="Kaddah Product Image" class="h-[30vh] lg:h-[40vh]" loading="lazy">
             </div>
         </div>
 
@@ -152,8 +154,11 @@
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="lg:absolute lg:right-[5%] lg:bottom-[15%]">
-                <img src="/images/home/chemical.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh]" loading="lazy">
+            <div class="absolute top-0 right-0  ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661848/clean4_q3a9xi.png" alt="Kaddah Chemical Image" class="" loading="lazy">
+            </div>
+            <div class="lg:absolute lg:right-1/4 lg:bottom-8">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661859/chemical_afsnqd.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh] scale-[.85]" loading="lazy">
             </div>
         </div>
 
@@ -171,8 +176,8 @@
                 </a>
             </div>
             <div class="">
-                <img src="/images/home/Man.png" alt="" class="h-[50vh] xl:h-[65vh]">
-                <img src="/images/home/Product.png" alt=""
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="" class="h-[50vh] xl:h-[65vh]">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Product_p5wpmb.png" alt=""
                     class="absolute bottom-0 xl:-bottom-[25%] 2xl:right-[35%] xl:right-[15%] 2xl:scale-[0.9] xl:scale-[0.8] scale-100">
             </div>
         </div> --}}
@@ -190,8 +195,8 @@
                 </a>
             </div>
             <div class="">
-                <img src="/images/home/clean4.png" alt="" class="h-[50vh] xl:h-[65vh]">
-                <img src="/images/home/chemical.png" alt=""
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661848/clean4_q3a9xi.png" alt="" class="h-[50vh] xl:h-[65vh]">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661859/chemical_afsnqd.png" alt=""
                     class="absolute -bottom-[10%] xl:-bottom-[25%] 2xl:right-[35%] xl:right-[15%] 2xl:scale-[0.9] xl:scale-[0.8] scale-50">
             </div>
         </div> --}}
@@ -200,7 +205,7 @@
 
     <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
         <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-            <img src="/images/home/Group 59.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
+            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661849/Group_59_qzh5pl.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
             <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
                 <h2
                     class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
@@ -767,6 +772,37 @@
 </script> -->
 
 <script>
+            // Function to check if all images are loaded
+            function allImagesLoaded(images) {
+            for (var i = 0; i < images.length; i++) {
+                if (!images[i].complete) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Function to load the page when all images are loaded
+        function loadPageWhenImagesLoaded() {
+            var images = document.getElementsByTagName('img');
+
+            if (allImagesLoaded(images)) {
+                // All images are already loaded, load the page
+                loadPage();
+            } else {
+                // Wait for all images to load
+                window.addEventListener('load', loadPage);
+            }
+        }
+
+        // Function to load the page
+        function loadPage() {
+            // Your code to load the page goes here
+            console.log('All images loaded, loading page...');
+        }
+
+        // Call the function to load the page when images are loaded
+        loadPageWhenImagesLoaded();
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -784,4 +820,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
 
