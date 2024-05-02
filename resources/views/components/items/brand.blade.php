@@ -2,7 +2,7 @@
   $category = $product->categories[0];
   $prodSlug = $product->slug;
   $subCateSlug = $category->slug;
-  $cateSlug = $category->parent->slug;
+  $cateSlug = $category->parent->slug ?? "empty";
 @endphp
 
 <div class="px-4 py-2 lg:text-left text-center">

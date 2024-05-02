@@ -227,7 +227,7 @@
                             loadingAlert.html('<span class="atlantic-spinner atlantic-spinner-black"></span>');
                         },
                         success: function(response) {
-                            loadingAlert.html('<i class="fas fa-check"></i>');
+                            // loadingAlert.html('<i class="fas fa-check"></i>');
                             cartProducts();
                             CartPageProducts();
                         },

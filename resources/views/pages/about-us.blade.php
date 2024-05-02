@@ -18,7 +18,7 @@
       <div class="text-center text-2xl">Our Story</div>
       <div class="grid lg:grid-cols-8 lg:h-[480px] mt-3">
 
-        @php $data = ["1980s", "1990s", "2000s", "2010s", "2022s"] @endphp
+        @php $data = ["1980s", "1990s", "2000s", "2010s", "2020s"] @endphp
         
         <div class="sr-only" data-te-nav-ref role="tablist">
           @foreach ($data as $item)
@@ -37,32 +37,32 @@
               >
               @if($item == "1980s")
               <img
-                src="{{ asset('images/about/worker1.png') }}"
+                src="{{ asset('images/about/1.png') }}"
                 class="block rounded-lg"
                 alt="Kaddah Wild Landscape" />
               @elseif($item == "1990s")
                 <img
-                  src="{{ asset('images/about/cap4.png') }}"
+                  src="{{ asset('images/about/worker1.png') }}"
                   class="block rounded-lg"
                   alt="Kaddah Wild Landscape" />
               @elseif($item == "2000s")
                 <img
-                  src="{{ asset('images/about/year3.png') }}"
+                  src="{{ asset('images/about/office4.png') }}"
                   class="block rounded-lg"
                   alt="Kaddah Wild Landscape" />
               @elseif($item == "2010s")
                 <img
-                  src="{{ asset('images/about/office4.png') }}"
+                  src="{{ asset('images/about/2.png') }}"
                   class="block rounded-lg"
                   alt="Kaddah Wild Landscape" />
-              @elseif($item == "2022s")
+              @elseif($item == "2020s")
                 <img
-                  src="{{ asset('images/about/cleaning.png') }}"
+                  src="{{ asset('images/about/year3.png') }}"
                   class="block rounded-lg"
                   alt="Kaddah Wild Landscape" />
               @else
                 <img
-                  src="{{ asset('images/about/Group 47.png') }}"
+                  src="{{ asset('images/about/year3.png') }}"
                   class="block rounded-lg"
                   alt="Kaddah Wild Landscape" />
               @endif
@@ -269,12 +269,22 @@
     <div class="lg:px-[80px] px-8">
       <h3 class="text-3xl font-semibold py-5">Our Branches</h3>
       <div class="mt-5">
-        <h5 class="text-xl">Dubai</h5>
-        <p class="text-neutral-400 mt-2">Speedex Center - Salah Al Din St - Al Khabaisi - Dubai - United Arab Emirates</p>
+        <h5 class="text-xl"><i class="fa-solid fa-location-dot text-neutral-400 mr-4"></i> Dubai</h5>
+        <p class="text-neutral-400 mt-2 flex items-center">
+          Kaddah Cleaning Equipment - AKC Speedex Center - Salah Al Din St - Al Khabaisi - Dubai - United Arab Emirates
+        </p>
+        <p class="text-neutral-400 mt-2 flex items-center">
+          Kaddah Cleaning Equipment - AKC G Floor - Al Khor Street - Deira - Al Ras - Dubai - United Arab Emirates
+        </p>
+        <p class="text-neutral-400 mt-2 flex items-center">
+          Office Dubai Investment Park 1 Dubai - UAE
+        </p>
       </div>
       <div class="mt-5">
         <h5 class="text-xl">Abu Dahbi</h5>
-        <p class="text-neutral-400 mt-2">6th Street - Musaffah Industrial - Abu Dhabi - United Arab Emirates</p>
+        <p class="text-neutral-400 mt-2 flex items-center">
+          Kaddah Cleaning Equipment - AKC 6th Street - Musaffah - Musaffah Industrial - Abu Dhabi
+        </p>
       </div>
     </div>
   </div>

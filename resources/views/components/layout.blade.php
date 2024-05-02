@@ -337,8 +337,8 @@
                   loaderAlert.html(spinner);
               },
               success: function(response) {
-                  loadingAlert.html('<i class="fas fa-check"></i>');
-                  loaderAlert.html('<i class="fas fa-check"></i>');
+                //   loadingAlert.html('<i class="fas fa-check"></i>');
+                //   loaderAlert.html('<i class="fas fa-check"></i>');
                   console.log("SUCESSS");
                   cartProducts();
               },
