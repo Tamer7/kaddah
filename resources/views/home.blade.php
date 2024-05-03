@@ -77,12 +77,12 @@
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold sm:text-nowrap  tracking-widest  lg:text-3xl xl:text-5xl 3xl:text-6xl  4xl:text-7xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
+                    class="custom-font font-semibold sm:text-nowrap  tracking-widest  lg:text-3xl xl:text-5xl 3xl:text-6xl  4xl:text-7xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
                     Leading supplier in <span
                         class="font-bold md:text-[45px] lg:text-4xl  xl:text-6xl  3xl:text-7xl  4xl:text-9xl text-[25px] text-center text-[#002F62]">GCC</span>
                 </h1>
                 <a
-                    class="tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-10 4xl:pb-20 capitalize">
+                    class="custom-font tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-10 4xl:pb-20 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
@@ -96,7 +96,7 @@
             <div class="flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold sm:text-nowrap  tracking-wide lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
+                    class="custom-font font-semibold sm:text-nowrap  tracking-wide lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
                     <span
                         class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">1500+</span>
                     products from <span
@@ -104,7 +104,7 @@
                         brands</span>
                 </h1>
                 <a
-                    class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -119,13 +119,13 @@
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] 4xl:pl-[40%]  w-full  uppercase lg:mb-24 ">
+                    class="custom-font font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] 4xl:pl-[40%]  w-full  uppercase lg:mb-24 ">
                     The <span
                         class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">region's
                         biggest</span><br>selection of cleaning solutions
                 </h1>
                 <a
-                    class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -144,13 +144,13 @@
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] xl:pl-[30%]  4xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    class="custom-font font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] xl:pl-[30%]  4xl:pl-[40%]  w-full  uppercase lg:mb-24">
                     <span
                         class="font-bold md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">30
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
                 <a
-                    class="tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-20 capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-20 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -170,7 +170,7 @@
                 alt="Kaddah Machinery Image" class="py-4 floating-animation">
             <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
                 <h2
-                    class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
+                    class=" font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
                     Your Trusted Cleaning Supplies & Equipment Provider.</h2>
                 <ul class="list-image-[url(/images/checkmark.png)] marker:mt-4 mt-8">
                     <li class="py-3 pl-6 -ml-6 lg:max-w-[500px]">
@@ -685,7 +685,7 @@ $data = [
 
 
 /* You can use the custom font by specifying the font-family */
-body {
+.custom-font {
     font-family: 'Titillium Web', sans-serif;
 }
 
