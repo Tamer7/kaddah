@@ -1420,6 +1420,18 @@ input[type="range"]:active::-webkit-slider-thumb {
 .\!h-full {
   height: 100% !important;
 }
+.h-\[30vh\] {
+  height: 30vh;
+}
+.h-\[0vh\] {
+  height: 0vh;
+}
+.h-\[50vh\] {
+  height: 50vh;
+}
+.h-\[45vh\] {
+  height: 45vh;
+}
 .max-h-24 {
   max-height: 6rem;
 }
@@ -3133,6 +3145,12 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .pl-\[20\%\] {
   padding-left: 20%;
+}
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
 }
 .text-left {
   text-align: left;
@@ -15909,6 +15927,11 @@ readers do not read off random characters that represent icons */
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .sm\:pt-0 {

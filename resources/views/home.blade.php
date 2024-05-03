@@ -108,9 +108,9 @@
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end py-10    ">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end pb-20 sm:py-10    ">
                 <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png"
-                    alt="Kaddah Machine Image" class="h-full max-w-full object-center object-fit" loading="lazy">
+                    alt="Kaddah Machine Image" class=" h-[45vh] sm:h-full sm:max-w-full object-center object-fit" loading="lazy">
             </div>
 
         </div>
@@ -154,7 +154,7 @@
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end   ">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end pt-10  ">
                 <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714743139/Group_5_2_yoxks1.png"
                     alt="Kaddah Chemical Image" class="!h-full max-w-full object-center  object-fit" loading="lazy">
             </div>
