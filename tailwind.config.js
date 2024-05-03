@@ -35,6 +35,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
+      arkibal: ['arkibal', 'sans-serif'],
     }
   },
   plugins: [
