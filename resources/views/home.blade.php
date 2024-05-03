@@ -70,22 +70,9 @@
             rel="stylesheet">
 
     </head>
-    <div
-        class=" relative  h-[85vh] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full ">
-        {{--      <div class="w-full item flex items-start justify-center md:gap-10"> --}}
-        {{--        <div class="flex flex-col items-start justify-between md:ml-16 md:mt-16"> --}}
-        {{--          <h1 id="main-heading" class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase"> --}}
-        {{--            Leading supplier in <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span><br> --}}
-        {{--          </h1> --}}
-        {{--          <a id="main-heading" class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize"> --}}
-        {{--            Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>> --}}
-        {{--          </a> --}}
-        {{--        </div> --}}
-        {{--        <div class=""> --}}
-        {{--          <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="" class="object-cover h-[75vh] text-left"> --}}
-        {{--        </div> --}}
-        {{--      </div> --}}
-
+    <div 
+    id="owl-carousel"
+        class=" relative  h-[85vh] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme ">
         <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
@@ -95,7 +82,7 @@
                         class="font-bold md:text-[45px] lg:text-4xl  xl:text-6xl  3xl:text-7xl  4xl:text-9xl text-[25px] text-center text-[#002F62]">GCC</span>
                 </h1>
                 <a
-                    class="tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-20 capitalize">
+                    class="tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-10 4xl:pb-20 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
@@ -105,7 +92,7 @@
             </div>
         </div>
 
-        <!-- <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
+        <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
             <div class="flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
@@ -121,23 +108,24 @@
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class=" h-full flex items-center justify-center p-10 ">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end py-10    ">
                 <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png"
-                    alt="Kaddah Machine Image" class="h-full max-w-full object-center object-fit"
-                    loading="lazy">
+                    alt="Kaddah Machine Image" class="h-full max-w-full object-center object-fit" loading="lazy">
             </div>
 
-        </div> -->
+        </div>
 
-        <!-- <div class=" item flex flex-col lg:flex-row relative justify-between w-full h-full">
+        <div class=" item flex flex-col lg:flex-row relative justify-between w-full h-full">
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white 3xl:pl-[20%] 4xl:pl-[40%]  w-full  uppercase lg:mb-24 ">
-                    The <span class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">region's
+                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] 4xl:pl-[40%]  w-full  uppercase lg:mb-24 ">
+                    The <span
+                        class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">region's
                         biggest</span><br>selection of cleaning solutions
                 </h1>
-                <a class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-20 capitalize">
+                <a
+                    class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -145,30 +133,32 @@
 
             <div class="h-full flex items-center justify-center lg:items-end lg:justify-end p-10 lg:p-0">
                 <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714686931/Group_4_2_l8vfcq.png"
-                    alt="Kaddah Product Image" class="  h-full max-w-full object-center lg:object-bottom object-fit " loading="lazy">
+                    alt="Kaddah Product Image" class="  h-full !max-w-full object-center lg:object-bottom object-fit "
+                    loading="lazy">
 
             </div>
 
-        </div> -->
+        </div>
 
-        <!-- <div class="item flex flex-col lg:flex-row relative w-full h-screen">
-            <div class="  flex flex-col justify-around lg:items-center relative  lg:justify-between  h-screen">
+        <div class="item flex flex-col lg:flex-row relative justify-between w-full h-full">
+            <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[30%]  w-full  uppercase lg:mb-24">
-                    <span class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">30
+                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] xl:pl-[30%]  4xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    <span
+                        class="font-bold md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">30
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[25px] text-[18px] text-center text-white py-5 capitalize">
+                <a
+                    class="tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-20 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class=" flex items-end justify-end h-full  ">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714694761/Group_5_1_slvldu.png"
-                    alt="Kaddah Chemical Image" class="pb-10 pt-4 lg:[h-80vh] 2xl:h-screen  xl:h-[90vh] xl:w-full "
-                    loading="lazy">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end   ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714743139/Group_5_2_yoxks1.png"
+                    alt="Kaddah Chemical Image" class="!h-full max-w-full object-center  object-fit" loading="lazy">
             </div>
-        </div>  -->
+        </div>
 
 
 
@@ -694,11 +684,20 @@ $data = [
 }
 
 
-
 /* You can use the custom font by specifying the font-family */
 body {
     font-family: 'Titillium Web', sans-serif;
 }
+
+.owl-item {
+    height: 80vh;
+}
+.owl-carousel .owl-item img {
+    display: block;
+   width : auto;
+    max-width: 100% !important; /* Higher specificity */
+}
+
 </style>
 
 <!-- <script>
