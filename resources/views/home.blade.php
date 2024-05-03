@@ -1,7 +1,7 @@
 <x-layout noDecorator>
 
     @section('canonical')
-        <link rel="canonical" href="{{ url('/') }}" />
+    <link rel="canonical" href="{{ url('/') }}" />
     @endsection
 
     {{--  <div class="lg:pl-24 pl-8 relative lg:h-[600px] py-[106px] flex"> --}}
@@ -63,116 +63,111 @@
     {{--          </div> --}}
     {{--        </div> --}}
     {{--      </div> --}}
-<head>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
-</head>
-    <div id="owl-carousel"
-        class=" relative h-screen  bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
-        {{--      <div class="w-full item flex items-start justify-center md:gap-10"> --}}
-        {{--        <div class="flex flex-col items-start justify-between md:ml-16 md:mt-16"> --}}
-        {{--          <h1 id="main-heading" class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase"> --}}
-        {{--            Leading supplier in <span class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span><br> --}}
-        {{--          </h1> --}}
-        {{--          <a id="main-heading" class="tracking-wide lg:text-[20px] text-[15px] sm:text-center text-left text-white py-5 pr-5 capitalize"> --}}
-        {{--            Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>> --}}
-        {{--          </a> --}}
-        {{--        </div> --}}
-        {{--        <div class=""> --}}
-        {{--          <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="" class="object-cover h-[75vh] text-left"> --}}
-        {{--        </div> --}}
-        {{--      </div> --}}
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+            rel="stylesheet">
 
-        <div
-            class="item flex flex-col  lg:flex-row relative w-full h-screen justify-around gap-28 ">
-            <div class=" w-full xl:w-1/3 2xl:w-2/3 flex flex-col items-center justify-between ">
-            <div class="xl:block"></div>
+    </head>
+    <div 
+    id="owl-carousel"
+        class=" relative  h-[85vh] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme ">
+        <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
+            <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
+                <div class="xl:block"></div>
                 <h1
-                    class="font-semibold xl:text-nowrap tracking-wide xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%] xl:pl-[20%] 2xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    class="font-semibold sm:text-nowrap  tracking-widest  lg:text-3xl xl:text-5xl 3xl:text-6xl  4xl:text-7xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
                     Leading supplier in <span
-                        class="font-black  md:text-[45px] xl:text-[55px] text-[25px]   text-[#002F62]">GCC</span>
+                        class="font-bold md:text-[45px] lg:text-4xl  xl:text-6xl  3xl:text-7xl  4xl:text-9xl text-[25px] text-center text-[#002F62]">GCC</span>
                 </h1>
-                <a class="tracking-wide text-[18px] xl:text-[20px] 2xl:text-[30px] text-center xl:text-nowrap text-white py-5 pl-10 xl:-mr-[50%]  2xl:-mr-[30%]  capitalize">
+                <a
+                    class="tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-10 4xl:pb-20 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
-            <div class="w-full xl:w-1/2 2xl:w-1/2 h-full flex items-center justify-center lg:items-end lg:justify-end">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="Kaddah Trolley Image" class=" object-center !max-w-full  md:h-[800px] md:!w-[600px] lg:!w-[800px] xl:!w-full lg:h-[90vh] xl:h-screen 2xl:h-screen" loading="lazy">
+            <div class="h-full flex items-center justify-center p-10">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png"
+                    alt="Kaddah Trolley Image" class=" h-full max-w-full object-center object-fit" loading="lazy">
             </div>
         </div>
 
-        <div
-            class="item flex flex-col md:flex-row relative gap-28 w-full h-screen ">
-            <div
-                class="flex flex-col items-center justify-between">
+        <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
+            <div class="flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold xl:text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%] xl:pl-[40%]  w-full  uppercase lg:mb-24">
-                    <span class="font-black md:text-[45px] 2xl:text-[55px] text-[25px] text-center text-[#002F62]">1500+</span>
+                    class="font-semibold sm:text-nowrap  tracking-wide lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
+                    <span
+                        class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">1500+</span>
                     products from <span
-                        class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px] text-[#002F62]">30+
+                        class="font-black  md:text-[45px] lg:text-4xl 2xl:text-6xl 3xl:text-7xl  4xl:text-8xl text-[25px] text-[#002F62]">30+
                         brands</span>
                 </h1>
-                <a class="tracking-wide xl:text-nowrap lg:text-[30px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
+                <a
+                    class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="h-full flex items-center justify-center lg:items-end lg:justify-end">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png" alt="Kaddah Machine Image" class=" !w-[300px] h-[600px]  lg:h-screen md:!w-full" loading="lazy">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end pb-20 sm:py-10    ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png"
+                    alt="Kaddah Machine Image" class=" h-[45vh] sm:h-full sm:max-w-full object-center object-fit" loading="lazy">
             </div>
+
         </div>
 
-        <div
-            class=" item flex flex-col md:flex-row relative w-full h-screen">
-            <div
-                class=" lg:w-2/3  flex flex-col items-center relative  justify-between  h-screen ">
+        <div class=" item flex flex-col lg:flex-row relative justify-between w-full h-full">
+            <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold xl:text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%]  w-full  uppercase lg:mb-24 ">
+                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] 4xl:pl-[40%]  w-full  uppercase lg:mb-24 ">
                     The <span
-                        class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">region's
+                        class="font-black md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">region's
                         biggest</span><br>selection of cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5  capitalize">
+                <a
+                    class="tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
-         
-       
-             <div class="">
-            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714686931/Group_4_2_l8vfcq.png" alt="Kaddah Product Image" class="  md:pt-10  md:h-screen  lg:w-full  " loading="lazy">
 
-             </div>
-    
+
+            <div class="h-full flex items-center justify-center lg:items-end lg:justify-end p-10 lg:p-0">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714686931/Group_4_2_l8vfcq.png"
+                    alt="Kaddah Product Image" class="  h-full !max-w-full object-center lg:object-bottom object-fit "
+                    loading="lazy">
+
+            </div>
+
         </div>
 
-        <div
-            class="item flex flex-col lg:flex-row relative w-full h-screen">
-            <div
-                class="  flex flex-col justify-around lg:items-center relative  lg:justify-between  h-screen">
+        <div class="item flex flex-col lg:flex-row relative justify-between w-full h-full">
+            <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[30%]  w-full  uppercase lg:mb-24">
-                    <span class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">30 
+                    class="font-semibold sm:text-nowrap  tracking-widest lg:text-3xl 2xl:text-5xl 3xl:text-6xl  4xl:text-6xl  md:text-[35px] text-2xl  text-center  text-white lg:pl-[20%] xl:pl-[30%]  4xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    <span
+                        class="font-bold md:text-[45px] lg:text-4xl 2xl:text-6xl  3xl:text-7xl  4xl:text-8xl text-[25px] text-center text-[#002F62]">30
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[25px] text-[18px] text-center text-white py-5 capitalize">
+                <a
+                    class="tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-20 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class=" flex items-end justify-end h-full  ">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714694761/Group_5_1_slvldu.png" alt="Kaddah Chemical Image" class="pb-10 pt-4 lg:[h-80vh] 2xl:h-screen  xl:h-[90vh] xl:w-full " loading="lazy">
+            <div class=" h-full flex items-center justify-center lg:items-end lg:justify-end pt-10  ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714743139/Group_5_2_yoxks1.png"
+                    alt="Kaddah Chemical Image" class="!h-full max-w-full object-center  object-fit" loading="lazy">
             </div>
-           
         </div>
 
- 
+
 
     </div>
 
     <div class="sm:pt-16 pt-8 bg-[#E5F8FF]">
         <div class="lg:pl-32 lg:py-24 p-8 flex sm:flex-row flex-col">
-            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661849/Group_59_qzh5pl.png" alt="Kaddah Machinery Image" class="py-4 floating-animation">
+            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661849/Group_59_qzh5pl.png"
+                alt="Kaddah Machinery Image" class="py-4 floating-animation">
             <div class="lg:pl-20 pl-12 sm:pt-0 pt-4">
                 <h2
                     class="font-bold sm:text-[46px] sm:ml-0 -ml-8 text-[36px] lg:max-w-[500px] sm:leading-[52px] leading-[40px]">
@@ -210,7 +205,8 @@
         </div>
     </div>
 
-    <x-subpanel title="The Cleaning Pioneers" more="View All Categories" class="clickViewAllCategories" url="/categories">
+    <x-subpanel title="The Cleaning Pioneers" more="View All Categories" class="clickViewAllCategories"
+        url="/categories">
         <x-slot name="header">
             <div class="font-semibold text-2xl text-[theme(colors.blue)]">Main Categories</div>
         </x-slot>
@@ -254,20 +250,20 @@
                 <div class="swiper-container" x-ref="container">
                     <div class="swiper-wrapper" data-te-nav-ref>
                         @foreach ($categories as $category)
-                            @php
-    $item = [
-        'img' => asset('storage/' . $category->image),
-        'title' => $category->name,
-        'description' => $category->title,
-    ];
-                            @endphp
-                            <div class="swiper-slide p-2 category-panel group" data-te-toggle="pill"
-                                data-te-target="#category_{{ $category['id'] }}" role="tab"
-                                aria-controls="tabs-messages" aria-selected="false">
-                                <div class="py-4 px-2 rounded-[30px] border-[theme(colors.blue)]">
-                                    <x-items.category :category="$item" />
-                                </div>
+                        @php
+                        $item = [
+                        'img' => asset('storage/' . $category->image),
+                        'title' => $category->name,
+                        'description' => $category->title,
+                        ];
+                        @endphp
+                        <div class="swiper-slide p-2 category-panel group" data-te-toggle="pill"
+                            data-te-target="#category_{{ $category['id'] }}" role="tab" aria-controls="tabs-messages"
+                            aria-selected="false">
+                            <div class="py-4 px-2 rounded-[30px] border-[theme(colors.blue)]">
+                                <x-items.category :category="$item" />
                             </div>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -285,16 +281,15 @@
             </div>
 
             @foreach ($categories as $category)
-                <div class="tab-panel opacity-100 transition-opacity duration-150 relative pt-6 -mx-6 ease-linear data-[te-tab-active]:block"
-                    id="category_{{ $category['id'] }}" role="tabpanel"
-                    aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
-                    <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
-                        <div class="triangle border border-[theme(colors.blue)]"></div>
-                        <div
-                            class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                        <div class="p-6" x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
+            <div class="tab-panel opacity-100 transition-opacity duration-150 relative pt-6 -mx-6 ease-linear data-[te-tab-active]:block"
+                id="category_{{ $category['id'] }}" role="tabpanel"
+                aria-labelledby="tabs-category_{{ $category['id'] }}-tab">
+                <div class="relative border rounded-[30px] border-[theme(colors.blue)] ">
+                    <div class="triangle border border-[theme(colors.blue)]"></div>
+                    <div class="absolute -top-3 right-8 font-bold text-2xl hover:cursor-pointer tab-close-btn mt-2">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="p-6" x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
                             loop: true,
                             slidesPerView: 1,
                             spaceBetween: 0,
@@ -317,58 +312,57 @@
                                     spaceBetween: 0,
                                 },
                             },
-                        })"
-                            class="relative mx-auto flex flex-row pt-4">
-                            <div class="absolute inset-y-0 left-0 z-10 flex items-center">
-                                <button @click="swiper.slidePrev()"
-                                    class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
-                                        <path fill-rule="evenodd"
-                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </button>
-                            </div>
+                        })" class="relative mx-auto flex flex-row pt-4">
+                        <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+                            <button @click="swiper.slidePrev()"
+                                class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+                                    <path fill-rule="evenodd"
+                                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
 
-                            <div class="swiper-container" x-ref="container">
-                                <div class="swiper-wrapper" data-te-nav-ref>
-                                    @foreach ($category->children as $subcategory)
-                                        @php
-        $item = [
-            'img' => asset('storage/' . $subcategory->image),
-            'title' => $subcategory->name,
-            'description' => $subcategory->title,
-            'url' => route('products.indexSpec', [
-                'cateSlug' => $category->slug,
-                'subCateSlug' => $subcategory['slug'],
-            ]),
-        ];
-                                        @endphp
-                                        <div class="swiper-slide p-2">
-                                            <x-items.category :category="$item" />
-                                        </div>
-                                    @endforeach
+                        <div class="swiper-container" x-ref="container">
+                            <div class="swiper-wrapper" data-te-nav-ref>
+                                @foreach ($category->children as $subcategory)
+                                @php
+                                $item = [
+                                'img' => asset('storage/' . $subcategory->image),
+                                'title' => $subcategory->name,
+                                'description' => $subcategory->title,
+                                'url' => route('products.indexSpec', [
+                                'cateSlug' => $category->slug,
+                                'subCateSlug' => $subcategory['slug'],
+                                ]),
+                                ];
+                                @endphp
+                                <div class="swiper-slide p-2">
+                                    <x-items.category :category="$item" />
                                 </div>
-                            </div>
-
-                            <div class="absolute inset-y-0 right-0 z-10 flex items-center">
-                                <button @click="swiper.slideNext()"
-                                    class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
-                                        <path fill-rule="evenodd"
-                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </button>
+                                @endforeach
                             </div>
                         </div>
 
-                        <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
-                            <a href="{{ route('categories.sub', $category['slug']) }}">View More Products <i
-                                    class="fa-solid fa-chevron-right"></i></a>
+                        <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+                            <button @click="swiper.slideNext()"
+                                class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+                                    <path fill-rule="evenodd"
+                                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
+
+                    <div class="font-semibold text-[22px] text-center py-3 text-[theme(colors.blue)]">
+                        <a href="{{ route('categories.sub', $category['slug']) }}">View More Products <i
+                                class="fa-solid fa-chevron-right"></i></a>
+                    </div>
                 </div>
+            </div>
             @endforeach
         </div>
 
@@ -421,7 +415,7 @@ $data = [
     </x-subpanel> -->
 
     <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
-    <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
+        <div x-data="{ swiper: null }" x-init="swiper = new Swiper($refs.container, {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 30,
@@ -441,52 +435,61 @@ $data = [
             },
         },
     })" class="relative mx-auto flex flex-row pt-6">
-        <div class="absolute inset-y-0 left-0 z-10 flex items-center">
-            <button @click="swiper.slidePrev()"
-                class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
-                    <path fill-rule="evenodd"
-                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
+            <div class="absolute inset-y-0 left-0 z-10 flex items-center">
+                <button @click="swiper.slidePrev()"
+                    class="bg-white -ml-2 lg:-ml-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-left w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
 
-        <div class="swiper-container" x-ref="container">
-            <div class="swiper-wrapper">
-            @php
-$data = [
-    [
-        'img' => '/images/test/emrill.png',
-        'title' => 'Emrill',
-        'description' =>
-            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
-    ],
-    [
-        'img' => '/images/test/farnek.png',
-        'title' => 'Farnek',
-        'description' =>
-            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
-    ],
-    [
-        'img' => '/images/test/emaar.png',
-        'title' => 'Emaar',
-        'description' =>
-            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
-    ],
-    [
-        'img' => '/images/test/fam.png',
-        'title' => 'Fam',
-        'description' =>
-            'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems with innovative products and equipments, we appreciate it. Everything seems very professional.',
-    ],
-];
-            @endphp
+            <div class="swiper-container" x-ref="container">
+                <div class="swiper-wrapper">
+                    @php
+                    $data = [
+                    [
+                    'img' => '/images/test/emrill.png',
+                    'title' => 'Emrill',
+                    'description' =>
+                    'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly
+                    professional. We are extremely happy with the quality of their products, their reliability and
+                    always providing high quality service and products on time.',
+                    ],
+                    [
+                    'img' => '/images/test/farnek.png',
+                    'title' => 'Farnek',
+                    'description' =>
+                    'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as
+                    effective products consistent with the needs of our corporate has been a hallmark of this Dubai
+                    based company. highly recommended for their professionalism, high quality products ',
+                    ],
+                    [
+                    'img' => '/images/test/emaar.png',
+                    'title' => 'Emaar',
+                    'description' =>
+                    'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions,
+                    demonstrating innovation in every aspect of their products, ensuring for solution of any problems in
+                    cleaning industry.',
+                    ],
+                    [
+                    'img' => '/images/test/fam.png',
+                    'title' => 'Fam',
+                    'description' =>
+                    'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an
+                    innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems
+                    with innovative products and equipments, we appreciate it. Everything seems very professional.',
+                    ],
+                    ];
+                    @endphp
 
-                @foreach ($data as $item)
-                        <div class="swiper-slide">
+                    @foreach ($data as $item)
+                    <div class="swiper-slide">
                         <div class="{{ $loop->index === 1 ? 'lg:pt-6' : '' }}">
-                            <div class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                            <div
+                                class="block rounded-[32px] p-6 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                                 <a href="#!">
                                     <img class="rounded-t-lg" src="{{ $item['img'] }}" alt="" />
                                 </a>
@@ -501,22 +504,22 @@ $data = [
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="absolute inset-y-0 right-0 z-10 flex items-center">
+                <button @click="swiper.slideNext()"
+                    class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-
-        <div class="absolute inset-y-0 right-0 z-10 flex items-center">
-            <button @click="swiper.slideNext()"
-                class="bg-white -mr-2 lg:-mr-4 flex justify-center items-center w-10 h-10 rounded-full shadow focus:outline-none">
-                <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-right w-6 h-6">
-                    <path fill-rule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-</x-subpanel>
+    </x-subpanel>
 
 
     <x-subpanel title="Read our latest events" more="View All Events" class="clickViewEvents" url="/events">
@@ -558,9 +561,9 @@ $data = [
             <div class="swiper-container" x-ref="container">
                 <div class="swiper-wrapper" data-te-nav-ref>
                     @foreach ($events as $event)
-                        <div class="swiper-slide p-2">
-                            <x-items.event :event="$event" />
-                        </div>
+                    <div class="swiper-slide p-2">
+                        <x-items.event :event="$event" />
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -579,117 +582,121 @@ $data = [
     </x-subpanel>
 
     @push('styles')
-        <style>
-            [data-te-nav-active]>div {
-                border-width: 1px;
-            }
+    <style>
+    [data-te-nav-active]>div {
+        border-width: 1px;
+    }
 
-            .triangle {
-                content: "";
-                position: absolute;
-                z-index: 2;
-                top: -20px;
-                left: 60px;
-                margin: auto 0;
-                width: 42px;
-                height: 42px;
-                transform: rotate(-135deg);
-                background: white;
-                clip-path: polygon(100% 100%,
-                        2% 100%,
-                        100% 2%);
-                border-radius: 0 0 20px 0;
-            }
-        </style>
+    .triangle {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: -20px;
+        left: 60px;
+        margin: auto 0;
+        width: 42px;
+        height: 42px;
+        transform: rotate(-135deg);
+        background: white;
+        clip-path: polygon(100% 100%,
+                2% 100%,
+                100% 2%);
+        border-radius: 0 0 20px 0;
+    }
+    </style>
     @endpush
 
     @push('scripts')
-        <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="{{ asset('js/home.js') }}"></script>
-        <script>
-            $('#owl-carousel').owlCarousel({
-                loop: true,
-                margin: 0,
-                dots: false,
-                nav: false,
-                items: 1,
-                autoplay: true,
-                slideTransition: 'linear',
-                smartSpeed: 500,
-            })
-        </script>
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
+    <script>
+    $('#owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: false,
+        nav: false,
+        items: 1,
+        autoplay: true,
+        slideTransition: 'linear',
+        smartSpeed: 500,
+    })
+    </script>
     @endpush
 </x-layout>
 
 <style>
-    .img-animate {
-        transition: transform 0.5s ease;
+.img-animate {
+    transition: transform 0.5s ease;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
     }
 
-    .fade-out {
-        animation: fadeOut 1s forwards;
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .fade-in {
-        animation: fadeIn 1s forwards;
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
     }
 
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
+    25% {
+        transform: translate(-5px, -5px);
     }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
+    50% {
+        transform: translate(0, -10px);
     }
 
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translate(0, 0);
-        }
-
-        25% {
-            transform: translate(-5px, -5px);
-        }
-
-        50% {
-            transform: translate(0, -10px);
-        }
-
-        75% {
-            transform: translate(5px, -5px);
-        }
+    75% {
+        transform: translate(5px, -5px);
     }
+}
 
-    .floating {
-        animation: float 4s ease-in-out infinite;
-    }
-    @font-face {
-        font-family: 'arkibal';
-        src: url('/fonts/arkibal.ttf') format('ttf'),
-         
-        /* Add more src declarations for different font formats if necessary */
-    }
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
 
-    /* You can use the custom font by specifying the font-family */
-    body {
-        font-family: 'Titillium Web', sans-serif;
-    }
+
+/* You can use the custom font by specifying the font-family */
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.owl-item {
+    height: 80vh;
+}
+.owl-carousel .owl-item img {
+    display: block;
+   width : auto;
+    max-width: 100% !important; /* Higher specificity */
+}
 
 </style>
 
@@ -751,23 +758,20 @@ $data = [
 </script> -->
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const image = entry.target;
-        image.src = image.dataset.src;
-        imageObserver.unobserve(image);
-      }
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                image.src = image.dataset.src;
+                imageObserver.unobserve(image);
+            }
+        });
     });
-  });
 
-  images.forEach(image => {
-    imageObserver.observe(image);
-  });
+    images.forEach(image => {
+        imageObserver.observe(image);
+    });
 });
 </script>
-
-
