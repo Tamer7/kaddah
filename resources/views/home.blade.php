@@ -63,9 +63,12 @@
     {{--          </div> --}}
     {{--        </div> --}}
     {{--      </div> --}}
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
+</head>
     <div id="owl-carousel"
-        class="lg:pl-32 pl-10 relative md:h-[90vh] lg:py-[50px] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
+        class=" relative h-screen  bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full owl-carousel owl-theme">
         {{--      <div class="w-full item flex items-start justify-center md:gap-10"> --}}
         {{--        <div class="flex flex-col items-start justify-between md:ml-16 md:mt-16"> --}}
         {{--          <h1 id="main-heading" class="font-semibold tracking-wide lg:text-[45px] text-[35px] sm:text-center text-left text-white py-5 pr-5 uppercase"> --}}
@@ -81,125 +84,89 @@
         {{--      </div> --}}
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-center justify-center  lg:gap-10 relative">
-            <div class="flex flex-col items-center justify-between  lg:h-[60vh] xl:h-[75vh] md:w-[60%]">
-                <div></div>
+            class="item flex flex-col  lg:flex-row relative w-full h-screen justify-around gap-28 ">
+            <div class=" w-full xl:w-1/3 2xl:w-2/3 flex flex-col items-center justify-between ">
+            <div class="xl:block"></div>
                 <h1
-                    class="font-semibold tracking-wide lg:text-[45px] md:text-[45px] sm:text-[35px] text-center text-white py-5 pr-5 uppercase">
+                    class="font-semibold xl:text-nowrap tracking-wide xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%] xl:pl-[20%] 2xl:pl-[40%]  w-full  uppercase lg:mb-24">
                     Leading supplier in <span
-                        class="font-black lg:text-[55px] text-[45px] sm:text-left text-left text-[#002F62]">GCC</span>
+                        class="font-black  md:text-[45px] xl:text-[55px] text-[25px]   text-[#002F62]">GCC</span>
                 </h1>
-                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
-                    Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;>>>>
+                <a class="tracking-wide text-[18px] xl:text-[20px] 2xl:text-[30px] text-center xl:text-nowrap text-white py-5 pl-10 xl:-mr-[50%]  2xl:-mr-[30%]  capitalize">
+                    Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
-            <div class="">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="Kaddah Trolley Image" class="  lg:h-[85vh]" loading="lazy">
+            <div class="w-full xl:w-1/2 2xl:w-1/2 h-full flex items-center justify-center lg:items-end lg:justify-end">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png" alt="Kaddah Trolley Image" class=" object-center !max-w-full  md:h-[800px] md:!w-[600px] lg:!w-[800px] xl:!w-full lg:h-[90vh] xl:h-screen 2xl:h-screen" loading="lazy">
             </div>
         </div>
 
         <div
-            class="w-full item flex flex-col md:flex-row  relative">
+            class="item flex flex-col md:flex-row relative gap-28 w-full h-screen ">
             <div
                 class="flex flex-col items-center justify-between">
-                <div></div>
+                <div class="xl:block"></div>
                 <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white lg:py-5 lg:pl-20 uppercase">
-                    <span class="font-black lg:text-[60px] text-[45px] text-center text-[#002F62]">15000+</span>
+                    class="font-semibold xl:text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%] xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    <span class="font-black md:text-[45px] 2xl:text-[55px] text-[25px] text-center text-[#002F62]">1500+</span>
                     products from <span
-                        class="font-black lg:text-[60px] text-[45px] sm:text-left text-left text-[#002F62]">30+
+                        class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px] text-[#002F62]">30+
                         brands</span>
                 </h1>
-                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide xl:text-nowrap lg:text-[30px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png" alt="Kaddah Machine Image" class=" lg:h-[80vh]" loading="lazy">
+            <div class="h-full flex items-center justify-center lg:items-end lg:justify-end">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/machine_iqmqdn.png" alt="Kaddah Machine Image" class=" !w-[300px] h-[600px]  lg:h-screen md:!w-full" loading="lazy">
             </div>
         </div>
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start  lg:py-[80px] lg:gap-10 relative h-screen lg:h-full">
+            class=" item flex flex-col md:flex-row relative w-full h-screen">
             <div
-                class="flex flex-col items-center md:items-start justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] xl:w-[60%]">
+                class=" lg:w-2/3  flex flex-col items-center relative  justify-between  h-screen ">
+                <div class="xl:block"></div>
                 <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center md:text-left text-white py-5 pr-5 uppercase">
+                    class="font-semibold xl:text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%]  w-full  uppercase lg:mb-24 ">
                     The <span
-                        class="font-black lg:text-[65px] text-[50px] sm:text-left text-left text-[#002F62]">region's
+                        class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">region's
                         biggest</span><br>selection of cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5  capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="absolute bottom-[-30%] lg:top-0 lg:bottom-0 right-0 ">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="Kaddah Trolley Image" class="h-[60vh] lg:h-full" loading="lazy">
-            </div>
-            <div class="absolute right-[5%] bottom-[-32%] lg:bottom-[5%]">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Product_p5wpmb.png" alt="Kaddah Product Image" class="h-[30vh] lg:h-[40vh]" loading="lazy">
-            </div>
+         
+       
+             <div class="">
+            <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714686931/Group_4_2_l8vfcq.png" alt="Kaddah Product Image" class="  md:pt-10  md:h-screen  lg:w-full  " loading="lazy">
+
+             </div>
+    
         </div>
 
         <div
-            class="w-full item flex flex-col md:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
+            class="item flex flex-col lg:flex-row relative w-full h-screen">
             <div
-                class="flex flex-col items-center md:items-start justify-between lg:ml-20 lg:mt-16 lg:h-[60vh] xl:h-[65vh] xl:w-[60%]">
+                class="  flex flex-col justify-around lg:items-center relative  lg:justify-between  h-screen">
+                <div class="xl:block"></div>
                 <h1
-                    class="font-semibold tracking-wide lg:text-[55px] text-[45px] text-center md:text-left text-white py-5 pr-5 uppercase">
-                    <span class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">30
+                    class="font-semibold text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[30%]  w-full  uppercase lg:mb-24">
+                    <span class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">30 
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
-                <a class="tracking-wide lg:text-[30px] text-[25px] text-center text-white py-5 pr-5 capitalize">
+                <a class="tracking-wide lg:text-[25px] text-[18px] text-center text-white py-5 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
-            <div class="absolute top-0 right-0  ">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661848/clean4_q3a9xi.png" alt="Kaddah Chemical Image" class="" loading="lazy">
+            <div class=" flex items-end justify-end h-full  ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714694761/Group_5_1_slvldu.png" alt="Kaddah Chemical Image" class="pb-10 pt-4 lg:[h-80vh] 2xl:h-screen  xl:h-[90vh] xl:w-full " loading="lazy">
             </div>
-            <div class="lg:absolute lg:right-1/4 lg:bottom-8">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661859/chemical_afsnqd.png" alt="Kaddah Chemical Image" class="h-[30vh] xl:h-[40vh] scale-[.85]" loading="lazy">
-            </div>
+           
         </div>
 
-        {{-- <div
-            class="w-full item flex flex-col lg:flex-row items-center lg:items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
-            <div class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[65vh] xl:h-[60vh]">
-                <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white py-5 pr-5 uppercase">
-                    The <span
-                        class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">region's
-                        biggest</span><br>selection of cleaning solutions
-                </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
-                    Unique Design For Each Bins&nbsp;&nbsp;>>>>
-                </a>
-            </div>
-            <div class="">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Man_kdlnpj.png" alt="" class="h-[50vh] xl:h-[65vh]">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661855/Product_p5wpmb.png" alt=""
-                    class="absolute bottom-0 xl:-bottom-[25%] 2xl:right-[35%] xl:right-[15%] 2xl:scale-[0.9] xl:scale-[0.8] scale-100">
-            </div>
-        </div> --}}
-
-        {{-- <div
-            class="w-full item flex flex-col lg:flex-row items-start justify-start py-10 lg:py-[80px] lg:gap-10 relative">
-            <div class="flex flex-col items-center justify-between lg:ml-20 lg:mt-16 lg:h-[65vh] xl:h-[60vh]">
-                <h1
-                    class="font-semibold tracking-wide lg:text-[45px] text-[35px] text-center text-white py-5 pr-5 uppercase">
-                    <span class="font-black lg:text-[55px] text-[40px] sm:text-left text-left text-[#002F62]">30
-                        Years</span> of excellence<br>in cleaning solutions
-                </h1>
-                <a class="tracking-wide lg:text-[20px] text-[15px] text-center text-white py-5 pr-5 capitalize">
-                    Solution for every problems&nbsp;&nbsp;>>>>
-                </a>
-            </div>
-            <div class="">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661848/clean4_q3a9xi.png" alt="" class="h-[50vh] xl:h-[65vh]">
-                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661859/chemical_afsnqd.png" alt=""
-                    class="absolute -bottom-[10%] xl:-bottom-[25%] 2xl:right-[35%] xl:right-[15%] 2xl:scale-[0.9] xl:scale-[0.8] scale-50">
-            </div>
-        </div> --}}
+ 
 
     </div>
 
@@ -288,11 +255,11 @@
                     <div class="swiper-wrapper" data-te-nav-ref>
                         @foreach ($categories as $category)
                             @php
-                                $item = [
-                                    'img' => asset('storage/' . $category->image),
-                                    'title' => $category->name,
-                                    'description' => $category->title,
-                                ];
+    $item = [
+        'img' => asset('storage/' . $category->image),
+        'title' => $category->name,
+        'description' => $category->title,
+    ];
                             @endphp
                             <div class="swiper-slide p-2 category-panel group" data-te-toggle="pill"
                                 data-te-target="#category_{{ $category['id'] }}" role="tab"
@@ -367,15 +334,15 @@
                                 <div class="swiper-wrapper" data-te-nav-ref>
                                     @foreach ($category->children as $subcategory)
                                         @php
-                                            $item = [
-                                                'img' => asset('storage/' . $subcategory->image),
-                                                'title' => $subcategory->name,
-                                                'description' => $subcategory->title,
-                                                'url' => route('products.indexSpec', [
-                                                    'cateSlug' => $category->slug,
-                                                    'subCateSlug' => $subcategory['slug'],
-                                                ]),
-                                            ];
+        $item = [
+            'img' => asset('storage/' . $subcategory->image),
+            'title' => $subcategory->name,
+            'description' => $subcategory->title,
+            'url' => route('products.indexSpec', [
+                'cateSlug' => $category->slug,
+                'subCateSlug' => $subcategory['slug'],
+            ]),
+        ];
                                         @endphp
                                         <div class="swiper-slide p-2">
                                             <x-items.category :category="$item" />
@@ -410,26 +377,26 @@
     <!-- <x-subpanel title="Our Beloved Clients" more="View All Brands" class="clickViewBrand bg-[#E5F8FF]" url="/brands">
         <div class="grid lg:grid-cols-3 gap-8 pt-6 px-4">
             @php
-                $data = [
-                    [
-                        'img' => '/images/test/emrill.png',
-                        'title' => 'Emrill',
-                        'description' =>
-                            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
-                    ],
-                    [
-                        'img' => '/images/test/ejadah.png',
-                        'title' => 'Ejadah',
-                        'description' =>
-                            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
-                    ],
-                    [
-                        'img' => '/images/test/emaar.png',
-                        'title' => 'Emaar',
-                        'description' =>
-                            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
-                    ],
-                ];
+$data = [
+    [
+        'img' => '/images/test/emrill.png',
+        'title' => 'Emrill',
+        'description' =>
+            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
+    ],
+    [
+        'img' => '/images/test/ejadah.png',
+        'title' => 'Ejadah',
+        'description' =>
+            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
+    ],
+    [
+        'img' => '/images/test/emaar.png',
+        'title' => 'Emaar',
+        'description' =>
+            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
+    ],
+];
             @endphp
 
             @foreach ($data as $item)
@@ -488,32 +455,32 @@
         <div class="swiper-container" x-ref="container">
             <div class="swiper-wrapper">
             @php
-                $data = [
-                    [
-                        'img' => '/images/test/emrill.png',
-                        'title' => 'Emrill',
-                        'description' =>
-                            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
-                    ],
-                    [
-                        'img' => '/images/test/farnek.png',
-                        'title' => 'Farnek',
-                        'description' =>
-                            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
-                    ],
-                    [
-                        'img' => '/images/test/emaar.png',
-                        'title' => 'Emaar',
-                        'description' =>
-                            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
-                    ],
-                    [
-                        'img' => '/images/test/fam.png',
-                        'title' => 'Fam',
-                        'description' =>
-                            'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems with innovative products and equipments, we appreciate it. Everything seems very professional.',
-                    ],
-                ];
+$data = [
+    [
+        'img' => '/images/test/emrill.png',
+        'title' => 'Emrill',
+        'description' =>
+            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly professional. We are extremely happy with the quality of their products, their reliability and always providing high quality service and products on time.',
+    ],
+    [
+        'img' => '/images/test/farnek.png',
+        'title' => 'Farnek',
+        'description' =>
+            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as effective products consistent with the needs of our corporate has been a hallmark of this Dubai based company. highly recommended for their professionalism, high quality products ',
+    ],
+    [
+        'img' => '/images/test/emaar.png',
+        'title' => 'Emaar',
+        'description' =>
+            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions, demonstrating innovation in every aspect of their products, ensuring for solution of any problems in cleaning industry.',
+    ],
+    [
+        'img' => '/images/test/fam.png',
+        'title' => 'Fam',
+        'description' =>
+            'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems with innovative products and equipments, we appreciate it. Everything seems very professional.',
+    ],
+];
             @endphp
 
                 @foreach ($data as $item)
@@ -712,6 +679,18 @@
     .floating {
         animation: float 4s ease-in-out infinite;
     }
+    @font-face {
+        font-family: 'arkibal';
+        src: url('/fonts/arkibal.ttf') format('ttf'),
+         
+        /* Add more src declarations for different font formats if necessary */
+    }
+
+    /* You can use the custom font by specifying the font-family */
+    body {
+        font-family: 'Titillium Web', sans-serif;
+    }
+
 </style>
 
 <!-- <script>
@@ -772,37 +751,7 @@
 </script> -->
 
 <script>
-            // Function to check if all images are loaded
-            function allImagesLoaded(images) {
-            for (var i = 0; i < images.length; i++) {
-                if (!images[i].complete) {
-                    return false;
-                }
-            }
-            return true;
-        }
 
-        // Function to load the page when all images are loaded
-        function loadPageWhenImagesLoaded() {
-            var images = document.getElementsByTagName('img');
-
-            if (allImagesLoaded(images)) {
-                // All images are already loaded, load the page
-                loadPage();
-            } else {
-                // Wait for all images to load
-                window.addEventListener('load', loadPage);
-            }
-        }
-
-        // Function to load the page
-        function loadPage() {
-            // Your code to load the page goes here
-            console.log('All images loaded, loading page...');
-        }
-
-        // Call the function to load the page when images are loaded
-        loadPageWhenImagesLoaded();
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries, observer) => {
