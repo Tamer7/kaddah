@@ -70,7 +70,7 @@
             rel="stylesheet">
 
     </head>
-    <div 
+    <div
         class=" relative  h-[85vh] bg-[url('https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661857/Background_q0qjtw.png')] bg-cover bg-bottom bg-no-repeat overflow-hidden w-full ">
         {{--      <div class="w-full item flex items-start justify-center md:gap-10"> --}}
         {{--        <div class="flex flex-col items-start justify-between md:ml-16 md:mt-16"> --}}
@@ -86,26 +86,24 @@
         {{--        </div> --}}
         {{--      </div> --}}
 
-        <!-- <div class="item flex flex-col  lg:flex-row relative w-full h-screen justify-around gap-28 ">
-            <div class=" w-full xl:w-1/3 2xl:w-2/3 flex flex-col items-center justify-between ">
+        <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
+            <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
-                    class="font-semibold xl:text-nowrap tracking-wide xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[20%] xl:pl-[20%] 2xl:pl-[40%]  w-full  uppercase lg:mb-24">
+                    class="font-semibold sm:text-nowrap  tracking-widest  lg:text-3xl xl:text-5xl 3xl:text-6xl  4xl:text-7xl  md:text-[35px] text-2xl  text-center  text-white xl:pl-[20%]  w-full  uppercase lg:mb-24">
                     Leading supplier in <span
-                        class="font-black  md:text-[45px] xl:text-[55px] text-[25px]   text-[#002F62]">GCC</span>
+                        class="font-bold md:text-[45px] lg:text-4xl  xl:text-6xl  3xl:text-7xl  4xl:text-9xl text-[25px] text-center text-[#002F62]">GCC</span>
                 </h1>
                 <a
-                    class="tracking-wide text-[18px] xl:text-[20px] 2xl:text-[30px] text-center xl:text-nowrap text-white py-5 pl-10 xl:-mr-[50%]  2xl:-mr-[30%]  capitalize">
+                    class="tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-20 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
-            <div class="w-full xl:w-1/2 2xl:w-1/2 h-full flex items-center justify-center lg:items-end lg:justify-end">
+            <div class="h-full flex items-center justify-center p-10">
                 <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714661856/trollies_ipujnj.png"
-                    alt="Kaddah Trolley Image"
-                    class=" object-center !max-w-full  md:h-[800px] md:!w-[600px] lg:!w-[800px] xl:!w-full lg:h-[90vh] xl:h-screen 2xl:h-screen"
-                    loading="lazy">
+                    alt="Kaddah Trolley Image" class=" h-full max-w-full object-center object-fit" loading="lazy">
             </div>
-        </div> -->
+        </div>
 
         <!-- <div class="item flex flex-col lg:flex-row relative justify-around w-full h-full ">
             <div class="flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
@@ -131,7 +129,7 @@
 
         </div> -->
 
-        <div class=" item flex flex-col lg:flex-row relative justify-between w-full h-full">
+        <!-- <div class=" item flex flex-col lg:flex-row relative justify-between w-full h-full">
             <div class=" flex  flex-col items-center justify-between pt-10 lg:pt-0 ">
                 <div class="xl:block"></div>
                 <h1
@@ -151,9 +149,26 @@
 
             </div>
 
-        </div>
+        </div> -->
 
-     
+        <!-- <div class="item flex flex-col lg:flex-row relative w-full h-screen">
+            <div class="  flex flex-col justify-around lg:items-center relative  lg:justify-between  h-screen">
+                <div class="xl:block"></div>
+                <h1
+                    class="font-semibold text-nowrap  tracking-wide 2xl:text-[50px]  md:text-[35px] text-[18px]  text-center  text-white lg:pl-[30%]  w-full  uppercase lg:mb-24">
+                    <span class="font-black  md:text-[45px] 2xl:text-[55px] text-[25px]   text-[#002F62]">30
+                        Years</span> of excellence<br>in cleaning solutions
+                </h1>
+                <a class="tracking-wide lg:text-[25px] text-[18px] text-center text-white py-5 capitalize">
+                    Solution for every problems&nbsp;&nbsp;>>>>
+                </a>
+            </div>
+            <div class=" flex items-end justify-end h-full  ">
+                <img src="https://res.cloudinary.com/ddgg5p7pv/image/upload/v1714694761/Group_5_1_slvldu.png"
+                    alt="Kaddah Chemical Image" class="pb-10 pt-4 lg:[h-80vh] 2xl:h-screen  xl:h-[90vh] xl:w-full "
+                    loading="lazy">
+            </div>
+        </div>  -->
 
 
 
@@ -246,11 +261,11 @@
                     <div class="swiper-wrapper" data-te-nav-ref>
                         @foreach ($categories as $category)
                         @php
-    $item = [
-        'img' => asset('storage/' . $category->image),
-        'title' => $category->name,
-        'description' => $category->title,
-    ];
+                        $item = [
+                        'img' => asset('storage/' . $category->image),
+                        'title' => $category->name,
+                        'description' => $category->title,
+                        ];
                         @endphp
                         <div class="swiper-slide p-2 category-panel group" data-te-toggle="pill"
                             data-te-target="#category_{{ $category['id'] }}" role="tab" aria-controls="tabs-messages"
@@ -323,15 +338,15 @@
                             <div class="swiper-wrapper" data-te-nav-ref>
                                 @foreach ($category->children as $subcategory)
                                 @php
-        $item = [
-            'img' => asset('storage/' . $subcategory->image),
-            'title' => $subcategory->name,
-            'description' => $subcategory->title,
-            'url' => route('products.indexSpec', [
-                'cateSlug' => $category->slug,
-                'subCateSlug' => $subcategory['slug'],
-            ]),
-        ];
+                                $item = [
+                                'img' => asset('storage/' . $subcategory->image),
+                                'title' => $subcategory->name,
+                                'description' => $subcategory->title,
+                                'url' => route('products.indexSpec', [
+                                'cateSlug' => $category->slug,
+                                'subCateSlug' => $subcategory['slug'],
+                                ]),
+                                ];
                                 @endphp
                                 <div class="swiper-slide p-2">
                                     <x-items.category :category="$item" />
@@ -444,40 +459,40 @@ $data = [
             <div class="swiper-container" x-ref="container">
                 <div class="swiper-wrapper">
                     @php
-$data = [
-    [
-        'img' => '/images/test/emrill.png',
-        'title' => 'Emrill',
-        'description' =>
-            'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly
+                    $data = [
+                    [
+                    'img' => '/images/test/emrill.png',
+                    'title' => 'Emrill',
+                    'description' =>
+                    'Kaddah has always maintained a personal touch. Their team is genuinely friendly and highly
                     professional. We are extremely happy with the quality of their products, their reliability and
                     always providing high quality service and products on time.',
-    ],
-    [
-        'img' => '/images/test/farnek.png',
-        'title' => 'Farnek',
-        'description' =>
-            'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as
+                    ],
+                    [
+                    'img' => '/images/test/farnek.png',
+                    'title' => 'Farnek',
+                    'description' =>
+                    'Kaddah Cleaning company is Providing clean, efficient and environmentally appropriate, as well as
                     effective products consistent with the needs of our corporate has been a hallmark of this Dubai
                     based company. highly recommended for their professionalism, high quality products ',
-    ],
-    [
-        'img' => '/images/test/emaar.png',
-        'title' => 'Emaar',
-        'description' =>
-            'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions,
+                    ],
+                    [
+                    'img' => '/images/test/emaar.png',
+                    'title' => 'Emaar',
+                    'description' =>
+                    'Kaddah Cleaning equipment Company consistently delivers exceptional cleaning ssolutions,
                     demonstrating innovation in every aspect of their products, ensuring for solution of any problems in
                     cleaning industry.',
-    ],
-    [
-        'img' => '/images/test/fam.png',
-        'title' => 'Fam',
-        'description' =>
-            'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an
+                    ],
+                    [
+                    'img' => '/images/test/fam.png',
+                    'title' => 'Fam',
+                    'description' =>
+                    'In the cleaning industry, KADDAH Cleaning Company consistently works wonders.Every cleaning is an
                     innovative experience for us. They\ve verity of cleaning products for all kind of cleanings problems
                     with innovative products and equipments, we appreciate it. Everything seems very professional.',
-    ],
-];
+                    ],
+                    ];
                     @endphp
 
                     @foreach ($data as $item)
