@@ -3346,6 +3346,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 .tracking-wider {
   letter-spacing: 0.05em;
 }
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
 .\!text-\[\#14a44d\] {
   --tw-text-opacity: 1 !important;
   color: rgb(20 164 77 / var(--tw-text-opacity)) !important;
@@ -15866,6 +15869,11 @@ readers do not read off random characters that represent icons */
     padding-right: 1.5rem;
   }
 
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .sm\:pt-0 {
     padding-top: 0px;
   }
@@ -16200,6 +16208,14 @@ readers do not read off random characters that represent icons */
     height: 85vh;
   }
 
+  .lg\:h-\[60vh\] {
+    height: 60vh;
+  }
+
+  .lg\:\!h-\[85vh\] {
+    height: 85vh !important;
+  }
+
   .lg\:\!w-\[800px\] {
     width: 800px !important;
   }
@@ -16322,12 +16338,21 @@ readers do not read off random characters that represent icons */
     border-right-width: 1px;
   }
 
+  .lg\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
   .lg\:p-16 {
     padding: 4rem;
   }
 
   .lg\:p-\[60px\] {
     padding: 60px;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:px-0 {
@@ -16493,6 +16518,14 @@ readers do not read off random characters that represent icons */
     padding-top: 1.5rem;
   }
 
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
   .lg\:text-left {
     text-align: left;
   }
@@ -16615,6 +16648,10 @@ readers do not read off random characters that represent icons */
     padding-left: 40%;
   }
 
+  .xl\:pl-\[60\%\] {
+    padding-left: 60%;
+  }
+
   .xl\:text-\[20px\] {
     font-size: 20px;
   }
@@ -16675,6 +16712,18 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 1800px) {
 
+  .\33xl\:pl-\[\] {
+    padding-left: ;
+  }
+
+  .\33xl\:pl-\[40\%\] {
+    padding-left: 40%;
+  }
+
+  .\33xl\:pl-\[20\%\] {
+    padding-left: 20%;
+  }
+
   .\33xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -16687,6 +16736,14 @@ readers do not read off random characters that represent icons */
 }
 
 @media (min-width: 2400px) {
+
+  .\34xl\:pl-\[40\%\] {
+    padding-left: 40%;
+  }
+
+  .\34xl\:pl-\[60\%\] {
+    padding-left: 60%;
+  }
 
   .\34xl\:text-6xl {
     font-size: 3.75rem;
