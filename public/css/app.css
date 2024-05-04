@@ -16431,6 +16431,18 @@ readers do not read off random characters that represent icons */
     padding-top: 1.5rem;
   }
 
+  .lg\:pb-5 {
+    padding-bottom: 2rem;
+  }
+
+  .lg\:pt-1 {
+    padding-top: 0.25rem;
+  }
+
+  .lg\:pt-4 {
+    padding-top: 1rem;
+  }
+
   .lg\:text-left {
     text-align: left;
   }
