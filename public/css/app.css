@@ -1234,6 +1234,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 .\!h-0 {
   height: 0px !important;
 }
+.\!h-full {
+  height: 100% !important;
+}
 .\!h-px {
   height: 1px !important;
 }
@@ -1357,6 +1360,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 .h-\[42px\] {
   height: 42px;
 }
+.h-\[45vh\] {
+  height: 45vh;
+}
 .h-\[48px\] {
   height: 48px;
 }
@@ -1381,9 +1387,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .h-\[72px\] {
   height: 72px;
 }
-.h-\[75vh\] {
-  height: 75vh;
-}
 .h-\[85vh\] {
   height: 85vh;
 }
@@ -1401,36 +1404,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[60vh\] {
-  height: 60vh;
-}
-.h-\[\] {
-  height: ;
-}
-.h-\[400px\] {
-  height: 400px;
-}
-.h-\[600px\] {
-  height: 600px;
-}
-.h-\[500px\] {
-  height: 500px;
-}
-.\!h-full {
-  height: 100% !important;
-}
-.h-\[30vh\] {
-  height: 30vh;
-}
-.h-\[0vh\] {
-  height: 0vh;
-}
-.h-\[50vh\] {
-  height: 50vh;
-}
-.h-\[45vh\] {
-  height: 45vh;
 }
 .max-h-24 {
   max-height: 6rem;
@@ -1642,18 +1615,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .w-screen {
   width: 100vw;
 }
-.w-\[400px\] {
-  width: 400px;
-}
-.\!w-\[400px\] {
-  width: 400px !important;
-}
-.\!w-\[300px\] {
-  width: 300px !important;
-}
-.\!w-\[200px\] {
-  width: 200px !important;
-}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1677,6 +1638,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .min-w-full {
   min-width: 100%;
+}
+.\!max-w-full {
+  max-width: 100% !important;
 }
 .max-w-16 {
   max-width: 4rem;
@@ -1722,9 +1686,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .max-w-xl {
   max-width: 36rem;
-}
-.\!max-w-full {
-  max-width: 100% !important;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -2121,9 +2082,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .flex-wrap {
   flex-wrap: wrap;
-}
-.items-start {
-  align-items: flex-start;
 }
 .items-end {
   align-items: flex-end;
@@ -2992,10 +2950,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -3010,6 +2964,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pb-20 {
+  padding-bottom: 5rem;
 }
 .pb-3 {
   padding-bottom: 0.75rem;
@@ -3143,15 +3100,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 .pt-\[72px\] {
   padding-top: 72px;
 }
-.pl-\[20\%\] {
-  padding-left: 20%;
-}
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-.pb-20 {
-  padding-bottom: 5rem;
-}
 .text-left {
   text-align: left;
 }
@@ -3212,9 +3160,6 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 .text-\[13px\] {
   font-size: 13px;
-}
-.text-\[15px\] {
-  font-size: 15px;
 }
 .text-\[16px\] {
   font-size: 16px;
@@ -15836,10 +15781,6 @@ readers do not read off random characters that represent icons */
     height: 100%;
   }
 
-  .sm\:\!h-full {
-    height: 100% !important;
-  }
-
   .sm\:max-h-\[320px\] {
     max-height: 320px;
   }
@@ -15852,16 +15793,12 @@ readers do not read off random characters that represent icons */
     width: auto;
   }
 
-  .sm\:max-w-sm {
-    max-width: 24rem;
-  }
-
   .sm\:max-w-full {
     max-width: 100%;
   }
 
-  .sm\:\!max-w-full {
-    max-width: 100% !important;
+  .sm\:max-w-sm {
+    max-width: 24rem;
   }
 
   .sm\:flex-1 {
@@ -15898,10 +15835,6 @@ readers do not read off random characters that represent icons */
 
   .sm\:rounded-lg {
     border-radius: 0.5rem;
-  }
-
-  .sm\:p-10 {
-    padding: 2.5rem;
   }
 
   .sm\:px-0 {
@@ -15948,10 +15881,6 @@ readers do not read off random characters that represent icons */
 
   .sm\:text-left {
     text-align: left;
-  }
-
-  .sm\:text-center {
-    text-align: center;
   }
 
   .sm\:text-\[46px\] {
@@ -16019,14 +15948,6 @@ readers do not read off random characters that represent icons */
     margin-bottom: 2rem;
   }
 
-  .md\:ml-16 {
-    margin-left: 4rem;
-  }
-
-  .md\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -16061,10 +15982,6 @@ readers do not read off random characters that represent icons */
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:gap-10 {
-    gap: 2.5rem;
   }
 
   .md\:space-x-14 > :not([hidden]) ~ :not([hidden]) {
@@ -16466,6 +16383,10 @@ readers do not read off random characters that represent icons */
     padding-bottom: 0px;
   }
 
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:pb-20 {
     padding-bottom: 5rem;
   }
@@ -16480,6 +16401,10 @@ readers do not read off random characters that represent icons */
 
   .lg\:pl-32 {
     padding-left: 8rem;
+  }
+
+  .lg\:pl-\[20\%\] {
+    padding-left: 20%;
   }
 
   .lg\:pr-20 {
@@ -16506,14 +16431,6 @@ readers do not read off random characters that represent icons */
     padding-top: 1.5rem;
   }
 
-  .lg\:pl-\[20\%\] {
-    padding-left: 20%;
-  }
-
-  .lg\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
   .lg\:text-left {
     text-align: left;
   }
@@ -16530,10 +16447,6 @@ readers do not read off random characters that represent icons */
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .lg\:text-\[20px\] {
-    font-size: 20px;
   }
 
   .lg\:text-\[30px\] {
@@ -16596,24 +16509,28 @@ readers do not read off random characters that represent icons */
     width: 100%;
   }
 
+  .xl\:pl-\[10\%\] {
+    padding-left: 10%;
+  }
+
   .xl\:pl-\[20\%\] {
     padding-left: 20%;
-  }
-
-  .xl\:pl-\[40\%\] {
-    padding-left: 40%;
-  }
-
-  .xl\:pl-\[\] {
-    padding-left: ;
   }
 
   .xl\:pl-\[30\%\] {
     padding-left: 30%;
   }
 
-  .xl\:pl-\[10\%\] {
-    padding-left: 10%;
+  .xl\:pl-\[40\%\] {
+    padding-left: 40%;
+  }
+
+  .xl\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .xl\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .xl\:text-5xl {
@@ -16625,22 +16542,6 @@ readers do not read off random characters that represent icons */
     font-size: 3.75rem;
     line-height: 1;
   }
-
-  .xl\:text-\[35px\] {
-    font-size: 35px;
-  }
-
-  .xl\:text-\[30px\] {
-    font-size: 30px;
-  }
-
-  .xl\:text-\[20px\] {
-    font-size: 20px;
-  }
-
-  .xl\:text-\[\] {
-    color: ;
-  }
 }
 
 @media (min-width: 1536px) {
@@ -16649,16 +16550,17 @@ readers do not read off random characters that represent icons */
     text-wrap: nowrap;
   }
 
-  .\32xl\:pl-\[\] {
-    padding-left: ;
-  }
-
-  .\32xl\:pl-\[30\%\] {
-    padding-left: 30%;
-  }
-
   .\32xl\:pl-\[20\%\] {
     padding-left: 20%;
+  }
+
+  .\32xl\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .\32xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .\32xl\:text-5xl {
@@ -16670,35 +16572,12 @@ readers do not read off random characters that represent icons */
     font-size: 3.75rem;
     line-height: 1;
   }
-
-  .\32xl\:text-\[20px\] {
-    font-size: 20px;
-  }
-
-  .\32xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .\32xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .\32xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 1800px) {
 
   .\33xl\:pl-\[20\%\] {
     padding-left: 20%;
-  }
-
-  .\33xl\:pl-\[30\%\] {
-    padding-left: 30%;
   }
 
   .\33xl\:text-6xl {
@@ -16714,6 +16593,14 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 2400px) {
 
+  .\34xl\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
+  .\34xl\:pl-\[10\%\] {
+    padding-left: 10%;
+  }
+
   .\34xl\:pl-\[40\%\] {
     padding-left: 40%;
   }
@@ -16724,18 +16611,6 @@ readers do not read off random characters that represent icons */
 
   .\34xl\:pl-\[60\%\] {
     padding-left: 60%;
-  }
-
-  .\34xl\:pl-\[20\%\] {
-    padding-left: 20%;
-  }
-
-  .\34xl\:pl-\[10\%\] {
-    padding-left: 10%;
-  }
-
-  .\34xl\:pb-20 {
-    padding-bottom: 5rem;
   }
 
   .\34xl\:text-6xl {
