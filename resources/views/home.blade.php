@@ -82,7 +82,7 @@
                         class="font-bold md:text-[45px] lg:text-4xl  xl:text-6xl  3xl:text-7xl  4xl:text-9xl text-[25px] text-center text-[#002F62]">GCC</span>
                 </h1>
                 <a
-                    class="custom-font tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-10 4xl:pb-20 capitalize">
+                    class="custom-font tracking-wide 2xl:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[50%] text-center text-white lg:pb-0 lg:pt-4 4xl:pb-20 capitalize">
                     Best Quality Cleaning Trollies, Tools & Equipment&nbsp;&nbsp;<span class="font-bold">>>>></span>
                 </a>
             </div>
