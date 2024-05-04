@@ -150,7 +150,7 @@
                         Years</span> of excellence<br>in cleaning solutions
                 </h1>
                 <a
-                    class="custom-font tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-20 capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap 2xl:text-3xl 4xl:text-[40px] text-[20px] 2xl:pl-[20%] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0 xl:pl-[10%]  4xl:pl-[10%] text-center text-white lg:pb-10  xl:pb-10 2xl:pb-20 capitalize">
                     Solution for every problems&nbsp;&nbsp;>>>>
                 </a>
             </div>
