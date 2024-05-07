@@ -16387,10 +16387,6 @@ readers do not read off random characters that represent icons */
     padding-bottom: 2.5rem;
   }
 
-  .lg\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
   .lg\:pl-20 {
     padding-left: 5rem;
   }
@@ -16427,20 +16423,12 @@ readers do not read off random characters that represent icons */
     padding-top: 3rem;
   }
 
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .lg\:pb-5 {
-    padding-bottom: 2rem;
-  }
-
-  .lg\:pt-1 {
-    padding-top: 0.25rem;
-  }
-
   .lg\:pt-4 {
     padding-top: 1rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
   }
 
   .lg\:text-left {
@@ -16521,6 +16509,10 @@ readers do not read off random characters that represent icons */
     width: 100%;
   }
 
+  .xl\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .xl\:pl-\[10\%\] {
     padding-left: 10%;
   }
@@ -16535,14 +16527,6 @@ readers do not read off random characters that represent icons */
 
   .xl\:pl-\[40\%\] {
     padding-left: 40%;
-  }
-
-  .xl\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .xl\:pb-10 {
-    padding-bottom: 2.5rem;
   }
 
   .xl\:text-5xl {
@@ -16562,12 +16546,12 @@ readers do not read off random characters that represent icons */
     text-wrap: nowrap;
   }
 
-  .\32xl\:pl-\[20\%\] {
-    padding-left: 20%;
-  }
-
   .\32xl\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .\32xl\:pl-\[20\%\] {
+    padding-left: 20%;
   }
 
   .\32xl\:text-3xl {
