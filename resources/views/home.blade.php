@@ -104,7 +104,7 @@
                         brands</span>
                 </h1>
                 <a
-                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[25px]  xl:pl-[40%] text-center text-white py-5  capitalize">
                     innovative cleaning machineries&nbsp;&nbsp;>>>>
                 </a>
             </div>
@@ -125,7 +125,7 @@
                         biggest</span><br>selection of cleaning solutions
                 </h1>
                 <a
-                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[50px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
+                    class="custom-font tracking-wide sm:text-nowrap lg:text-[30px] 4xl:text-[40px] text-[20px] 3xl:pl-[20%] px-6 pt-5 sm:pt-0 sm:px-0  4xl:pl-[60%] text-center text-white lg:pb-10 capitalize">
                     Unique Design For Each Bins&nbsp;&nbsp;>>>>
                 </a>
             </div>
